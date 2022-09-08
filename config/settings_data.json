@@ -1825,6 +1825,7 @@
           },
           "e628641c-0d11-481b-9aee-da991eece550": {
             "type": "announcement-bar",
+            "disabled": true,
             "settings": {
               "show_announcement_bar": true,
               "title": "SUMMER SOLSTICE SALE  - 10% OFF ALL PRODUCTS - USE CODE SUMMER10",
@@ -1841,6 +1842,7 @@
           },
           "1591110688544": {
             "type": "announcement-bar",
+            "disabled": true,
             "settings": {
               "show_announcement_bar": true,
               "title": "FREE SHIPPING TO ANYWHERE IN CANADA AND THE US FOR ORDERS OVER $120 USD",
@@ -1857,6 +1859,7 @@
           },
           "6efac18b-859a-432b-8994-469963dc4214": {
             "type": "announcement-bar",
+            "disabled": true,
             "settings": {
               "show_announcement_bar": true,
               "title": "OUR REDESIGNED SKY ONE-PIECE                 SWIMSUIT NOW AVAILABLE",
