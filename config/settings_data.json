@@ -1809,12 +1809,11 @@
         "blocks": {
           "a47d61b2-c6fd-4cd4-ac31-a45b0b3cb5a3": {
             "type": "announcement-bar",
-            "disabled": true,
             "settings": {
               "show_announcement_bar": true,
               "title": "CONTRIBUTE TO OUR GOFUNDME TO DONATE CLOTHING TO FAMILIES IN NEED",
               "link": "https:\/\/www.gofundme.com\/f\/nz7aec-help-me-send-form-fitting-swimwear-to-trans-girls",
-              "color_background": "#fb00ff",
+              "color_background": "#ffebff",
               "color_text": "#ffffff",
               "homepage_limit": true,
               "show_for": "both",
@@ -1826,12 +1825,11 @@
           },
           "e628641c-0d11-481b-9aee-da991eece550": {
             "type": "announcement-bar",
-            "disabled": true,
             "settings": {
               "show_announcement_bar": true,
               "title": "SUMMER SOLSTICE SALE  - 10% OFF ALL PRODUCTS - USE CODE SUMMER10",
               "link": "",
-              "color_background": "#fb00ff",
+              "color_background": "#ffebff",
               "color_text": "#ffffff",
               "homepage_limit": false,
               "show_for": "both",
@@ -1843,12 +1841,11 @@
           },
           "1591110688544": {
             "type": "announcement-bar",
-            "disabled": true,
             "settings": {
               "show_announcement_bar": true,
               "title": "FREE SHIPPING TO ANYWHERE IN CANADA AND THE US FOR ORDERS OVER $120 USD",
               "link": "",
-              "color_background": "#ff6d6d",
+              "color_background": "#ffebff",
               "color_text": "#ffffff",
               "homepage_limit": false,
               "show_for": "both",
@@ -1860,12 +1857,11 @@
           },
           "6efac18b-859a-432b-8994-469963dc4214": {
             "type": "announcement-bar",
-            "disabled": true,
             "settings": {
               "show_announcement_bar": true,
               "title": "OUR REDESIGNED SKY ONE-PIECE                 SWIMSUIT NOW AVAILABLE",
               "link": "shopify:\/\/products\/the-sky-shaping-one-piece",
-              "color_background": "#1abafc",
+              "color_background": "#ffebff",
               "color_text": "#ffffff",
               "homepage_limit": false,
               "show_for": "both",
