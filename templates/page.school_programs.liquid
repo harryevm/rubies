@@ -1,0 +1,54 @@
+<!-- /templates/page.liquid -->
+<section class="page page-top">
+  <div class="wrapper">
+    <header class="content-util">
+    {% include 'breadcrumb' %}
+    {% include 'social-icons' %}
+    </header>
+  </div>
+</section>
+
+
+<section class="page">
+   <div class="wrapper">
+      <div class="content-container narrow rte">
+        <header class="page-header">
+      		<h1><ls-static-128818>School and Community Program Ideas</ls-static-128818></h1>
+    	</header>
+    	<p><ls-static-155677>Groups of kids in school clubs, classes, and sports teams can make a difference in the lives of trans girls everywhere. They can get involved in a few ways:</ls-static-155677></p>
+		<h3 style="margin-top: 30px;"><strong><ls-static-871810>1. DESIGN POSTCARD ART</ls-static-871810></strong></h3>
+		<p><ls-static-521225>Through the</ls-static-521225> <a target="_self" href="https://rubyshines.com/pages/every-girl-deserves-to-shine-campaign-to-support-trans-kids" target="_blank" title="Every Girl Deserves To Shine campaign" rel="noopener noreferrer"><ls-static-276825>Every Girl Deserves To Shine campaign</ls-static-276825></a><ls-static-267084>, RUBIES hopes to slip a postcard into every package we send out.</ls-static-267084></p>
+		<p><ls-static-646945>Students can join many other kids across North America who are submitting artwork for postcards with affirming messages.  All artwork will be posted on the campaign’s Instagram account. Your group can vote on the best designs which we can turn into postcards.</ls-static-646945></p>
+		<p><ls-static-800034>Below are some of the amazing artwork that has already been contributed by students.</ls-static-800034></p>
+		<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/61f00dd94e1b5efabdc8477b36266979.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+
+        <div style=float:right;margin-top:-10px;><a target="_blank" href="https://www.instagram.com/every.girl.deserves.to.shine/" class="button small outline"><ls-static-969797>FOLLOW ON INSTAGRAM</ls-static-969797></a></div>
+        
+        <h3 style="margin-top: 30px;"><strong><ls-static-865748>2. WRITE MESSAGES ON POSTCARDS</ls-static-865748></strong></h3>
+		<p><ls-static-490055>Your group can organize an activity to write messages on postcards which we will distribute.  </ls-static-490055></p>
+		<p><ls-static-605841>Below are some heartwarming messages that kids have already written:</ls-static-605841></p>
+        <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/a91bb017c8ca5d649b6c5dd376906816.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+        <div style=text-align:right;margin-top:-5px;><a target="_blank" href="https://www.instagram.com/every.girl.deserves.to.shine/" class="button small outline"><ls-static-687665>FOLLOW ON INSTAGRAM</ls-static-687665></a></div>
+		<p style="width:100%;margin-top:10px;"><ls-static-169491>Order a pack of postcards with an assortment of art or get custom printed postcards with your student’s artwork.</ls-static-169491></p>
+		<div class="simple-collection layout-3">
+		  <div class="wrapper">
+			<div class="product-container">
+			  {% for product in collections['every-girl-deserves-to-shine-campaign-postcards'].products limit: 3  %}
+			  {% include 'product-grid-item' %}
+			  {% else %}
+			  {% for i in (1..product_limit) %}
+			  {% include 'placeholder-product-grid-item' %}
+			  {% endfor %}
+			  {% endfor %}
+			</div>
+		  </div>
+		</div>
+		<p style="margin-top:30px;"><ls-static-599602>When you are ready you can mail the cards back to us. Please include a note with your group name and city so we can credit you.</ls-static-599602></p>
+		<p><ls-static-942574>Mail the postcards to:</ls-static-942574></p>
+		<p><ls-static-525856>RUBIES, 110 Bond St, Toronto, Ontario, M5B 1X8</ls-static-525856></p>
+		<h3 style="margin-top: 30px;"><strong><ls-static-724577>3. SPREAD THE WORD TO OTHER TEACHERS</ls-static-724577></strong></h3>
+		<p><ls-static-714356>Share this program with your teacher friends.  They can also make an active contribution towards a more inclusive world.  It's just a Facebook post away!</ls-static-714356></p>
+	     <p style="margin-top:100px;text-align:center"><img style="width:400px" src="https://cdn.shopify.com/s/files/1/0255/9636/2837/files/EveryGirlDeservesToShine_OneLine-pink.png?v=1581501683"/></p>
+      </div>
+   </div>
+</section>

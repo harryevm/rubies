@@ -1,0 +1,70 @@
+<!-- /templates/page.liquid -->
+<section class="page page-top">
+  <div class="wrapper">
+    <header class="content-util">
+    {% include 'breadcrumb' %}
+    {% include 'social-icons' %}
+    </header>
+  </div>
+</section>
+
+
+<section class="page">
+   <div class="wrapper">
+       <div class="content-container narrow rte">
+
+
+
+           <p><img style="width:900px" src="https://cdn.shopify.com/s/files/1/0255/9636/2837/files/EveryGirlDeservesToShine_OneLine-pink.png?v=1581501683" /></p>
+           <p><ls-static-293757>There are over 400,000 trans girls in North America and so many more around the world.</ls-static-293757></p>
+           <p><strong><ls-static-189049>Every Girl Deserves To Shine</ls-static-189049></strong> <ls-static-461879>is a campaign brought to you by RUBIES to support trans girls everywhere.</ls-static-461879></p>
+           <p><ls-static-470538>You can get involved in 4 ways:</ls-static-470538></p>
+
+           <h3 style="margin-top: 30px;"><strong><ls-static-179128>1. BUY A FEW RUBIES TEES</ls-static-179128></strong></h3>
+           <p><ls-static-509291>Pick up some RUBIES T-shirts in many vibrant styles for the whole family.  All proceeds go towards helping achieve my goal of sending 1000 pairs of RUBIES swimwear to trans girls from families in need.  Every girl should feel comfortable swimming and chilling out at the beach!</ls-static-509291></p>
+           <p> </p>
+
+           <div class="simple-collection layout-3">
+               <div class="wrapper">
+                   <div class="product-container">
+
+                       {% for product in collections['every-girl-deserves-to-shine-campaign-tees'].products limit: 3  %}
+                       {% include 'product-grid-item' %}
+                       {% else %}
+                       {% for i in (1..product_limit) %}
+                       {% include 'placeholder-product-grid-item' %}
+                       {% endfor %}
+                       {% endfor %}
+                   </div>
+               </div>
+           </div>
+            
+
+
+           <h3><strong><ls-static-108680>2. MAKE A DONATION</ls-static-108680></strong></h3>
+           <p><ls-static-767179>Donate directly using my</ls-static-767179> <a target="_blank" href="https://www.gofundme.com/f/help-me-send-form-fitting-swimwear-to-trans-girls"><ls-static-975085>Go Fund Me</ls-static-975085></a> <ls-static-675208>page. Or you can contact me if you would like to buy swimwear and have me ship it to a family need.</ls-static-675208> </p>
+           <p> </p>
+           <h3 style="margin-top: 30px;"><strong><ls-static-465793>3. SEND A POSTCARD</ls-static-465793></strong></h3>
+           <p><ls-static-614115>If you have a kid that wants to make a difference in the lives of trans girls, get them to send a message or drawing of support on a postcard.  The postcards will be given out to trans girls around the world and posted online.</ls-static-614115></p>
+
+           <!-- LightWidget WIDGET -->
+           <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/61f00dd94e1b5efabdc8477b36266979.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+           <div style=float:right;margin-top:-10px;><a target="_blank" href="https://www.instagram.com/every.girl.deserves.to.shine/" class="button small outline"><ls-static-225637>FOLLOW ON INSTAGRAM</ls-static-225637></a></div>
+           <p style="width:100%;margin-top:20px;"><span><ls-static-206854>Mail the postcard to:</ls-static-206854></span></p>
+           <p><span> <ls-static-399330>RUBIES, 110 Bond St, Toronto, Ontario, M5B 1X8</ls-static-399330></span> </p>
+           <p><ls-static-799193>OR</ls-static-799193></p>
+           <p><ls-static-609987>email scanned postcard to everygirl@rubyshines.com</ls-static-609987></p>
+           <p><ls-static-233416>Be sure to include your kid's first name, age and city so they can get credited in a discrete way.</ls-static-233416></p>
+           <p><ls-static-82670>If you are a school teacher or work with kids sports teams you can organize a postcard writing program.  Check out our</ls-static-82670> <a target="_self" href="https://rubyshines.com/pages/school-and-community-program-ideas"><ls-static-878900>School and Community Program Ideas</ls-static-878900></a> <ls-static-410882>page.</ls-static-410882></p>
+
+           <meta charset="utf-8" />
+           <h3><strong><ls-static-108644>4. GET YOUR COMPANY INVOLVED</ls-static-108644></strong></h3>
+           <p><ls-static-912771>Get your company involved in making a significant impact to supporting the 2SLGBTQ+ community.  Sponsor our campaign to send out RUBIES swimwear to families in need.  Be part of a worldwide storytelling video celebrating trans kids.</ls-static-912771></p>
+           <ls-static-886039>Check out our</ls-static-886039> <a target="_self" href="https://rubyshines.com/pages/corporate-program-ideas"><ls-static-318344>Corporate Program Ideas</ls-static-318344></a> <ls-static-406110>page.</ls-static-406110></p>
+           <p><ls-static-590142>Get in touch with me through the online chat.</ls-static-590142></p>
+           <p> </p>
+           <p style="margin-top:60px"><ls-static-7743>Thank you for being an awesome human being!</ls-static-7743></p>
+           <p><ls-static-414041>Jamie Alexander, RUBIES Founder</ls-static-414041></p>
+       </div>
+   </div>
+</section>
