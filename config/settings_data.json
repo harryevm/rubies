@@ -1834,7 +1834,7 @@
               "homepage_limit": true,
               "show_for": "both",
               "bar_size": "default",
-              "bar_placement": "top",
+              "bar_placement": "bottom",
               "autohide": false,
               "autohide_delay_range": 15
             }
@@ -1850,7 +1850,7 @@
               "homepage_limit": false,
               "show_for": "both",
               "bar_size": "default",
-              "bar_placement": "top",
+              "bar_placement": "bottom",
               "autohide": true,
               "autohide_delay_range": 19
             }
@@ -1866,7 +1866,7 @@
               "homepage_limit": false,
               "show_for": "both",
               "bar_size": "default",
-              "bar_placement": "top",
+              "bar_placement": "bottom",
               "autohide": false,
               "autohide_delay_range": 15
             }
