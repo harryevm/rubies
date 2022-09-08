@@ -1895,7 +1895,7 @@
           "mega_menu": true,
           "scroll_lock": "header",
           "minimal_padding": "minimal",
-          "top_bar_full_width": true,
+          "top_bar_full_width": false,
           "header_full_width": true
         }
       },
