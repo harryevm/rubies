@@ -1819,8 +1819,8 @@
               "show_for": "both",
               "bar_size": "default",
               "bar_placement": "top",
-              "autohide": false,
-              "autohide_delay_range": 20
+              "autohide": true,
+              "autohide_delay_range": 11
             }
           },
           "e628641c-0d11-481b-9aee-da991eece550": {
@@ -1835,8 +1835,8 @@
               "show_for": "both",
               "bar_size": "default",
               "bar_placement": "bottom",
-              "autohide": false,
-              "autohide_delay_range": 15
+              "autohide": true,
+              "autohide_delay_range": 10
             }
           },
           "1591110688544": {
@@ -1852,7 +1852,7 @@
               "bar_size": "default",
               "bar_placement": "bottom",
               "autohide": true,
-              "autohide_delay_range": 19
+              "autohide_delay_range": 10
             }
           },
           "6efac18b-859a-432b-8994-469963dc4214": {
@@ -1867,8 +1867,8 @@
               "show_for": "both",
               "bar_size": "default",
               "bar_placement": "bottom",
-              "autohide": false,
-              "autohide_delay_range": 15
+              "autohide": true,
+              "autohide_delay_range": 10
             }
           }
         },
