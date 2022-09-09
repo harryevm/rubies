@@ -53,60 +53,9 @@
               <div class="slide__item-image">
             {% endif %}
 
-            <div class="slide__item-image-contain desktop">
-              {% if block.settings.image != blank %}
-                {% assign image = block.settings.image %}
-                {% assign image_widths = '400,600,800,900,1000,1200,1500,1800,2000,2400' %}
-                {% include 'theme-rias' %}
-                <img class="slide__image slide__image-desktop lazymanual"
-                  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                  data-src="{{ image_url_pattern }}"
-                  data-widths="[{{ image_widths }}]"
-                  data-aspectratio="{{ image.aspect_ratio }}"
-                  data-sizes="auto"
-                  alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
-                {% if forloop.first %}
-                <noscript>
-                  <img src="{% comment ls-rpl %}{{ image | img_url: '900x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '900x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}" alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
-                </noscript>
-                {% endif %}
-                {% assign height = image.height | plus: 0 %}
-                {% assign width = image.width | plus: 0 %}
-                {% assign padding_ratio = height | times: 100 | divided_by: width %}
-              {% else %}
-                {% capture current %}{% cycle 1, 2 %}{% endcapture %}
-                {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
-                {% assign padding_ratio = 40 %}
-              {% endif %}
-            </div>
+  
 
-            <div class="slide__item-image-contain mobile">
-              {% if block.settings.mobile_image != blank %}
-                {% assign image = block.settings.mobile_image %}
-                {% assign image_widths = '400,600,800,1000,1200' %}
-                {% include 'theme-rias' %}
-                <img class="slide__image slide__image-mobile lazymanual"
-                  {% if forloop.first %}
-                  src="{% comment ls-rpl %}{{ image | img_url: '400x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '400x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}"
-                  {% else %}
-                  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                  {% endif %}
-                  data-preload="{% comment ls-rpl %}{{ image | img_url: '400x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '400x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}"
-                  data-src="{{ image_url_pattern }}"
-                  data-widths="[{{ image_widths }}]"
-                  data-aspectratio="{{ image.aspect_ratio }}"
-                  data-sizes="auto"
-                  alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
-                {% if forloop.first %}
-                <noscript>
-                  <img src="{% comment ls-rpl %}{{ image | img_url: '400x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '400x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}" alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
-                </noscript>
-                {% endif %}
-                {% assign height = image.height | plus: 0 %}
-                {% assign width = image.width | plus: 0 %}
-                {% assign mobile_padding_ratio = height | times: 100 | divided_by: width %}
-              {% endif %}
-            </div>
+
 
             {% if block.settings.link != blank %}
               </a>
