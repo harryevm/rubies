@@ -2332,13 +2332,15 @@
           "16627222910bad4250-0": {
             "type": "featured_collection",
             "settings": {
-              "collection": ""
+              "collection": "bikini-tops-and-bottoms",
+              "collection_img": "shopify:\/\/shop_images\/Group_328_2x_1ff25d60-c05b-4fed-b9c0-3962dceed892.png"
             }
           },
           "16627222910bad4250-1": {
             "type": "featured_collection",
             "settings": {
-              "collection": ""
+              "collection": "every-girl-deserves-to-shine-campaign",
+              "collection_img": "shopify:\/\/shop_images\/Group_329_2x_b47ac7c1-6675-435e-9b31-34533d3386c9.png"
             }
           },
           "16627222910bad4250-2": {
@@ -2356,7 +2358,8 @@
           "6b62283e-2a40-4810-9bfa-13c2db928163": {
             "type": "featured_collection",
             "settings": {
-              "collection": ""
+              "collection": "bikini-tops-and-bottoms",
+              "collection_img": "shopify:\/\/shop_images\/Group_328_2x_1ff25d60-c05b-4fed-b9c0-3962dceed892.png"
             }
           }
         },
