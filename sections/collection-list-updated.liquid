@@ -1,5 +1,6 @@
 <style>
-    {% case section.settings.columns_range %}
+.flex-data.grid { display: flex; }
+{% case section.settings.columns_range %}
           {% when 2 %}
              .collection-list-updated .flex-data > .grid__item{width:calc(100%/2)}
           {% when 3 %}
