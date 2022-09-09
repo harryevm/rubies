@@ -1947,15 +1947,17 @@
           "1481011869014-0": {
             "type": "image",
             "settings": {
+              "image": "shopify:\/\/shop_images\/banner.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/banner_image1.png",
               "link": "",
-              "title": "",
-              "text": "",
-              "button_label": "See more",
+              "title": "EVERY GIRL DESERVES TO SHINE",
+              "text": "<p>Form-fitting clothing for active trans girls and non-binary kjds<\/p>",
+              "button_label": "Shop Shaping Wear",
               "button_link": "#",
               "vertical_alignment": "align-center",
               "horizontal_alignment": "justify-center",
-              "color_text": "#000000",
-              "color_accent": "#7c51cd",
+              "color_text": "#ffffff",
+              "color_accent": "#fe3d05",
               "color_overlay": "#000000",
               "color_overlay_alpha_range": 0
             }
