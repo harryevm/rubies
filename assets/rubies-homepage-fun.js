@@ -404,11 +404,11 @@ function rotateGIF(id, speed) {
 /* home page text */
 
 function setHomePageText() {
-	const homepageText1 = "<div  id=homepage-text1>Form-fitting clothing for trans girls.</div>"
-	const homepageText2 = "<div id=homepage-text2>We want every active trans girl to be as confident and comfortable in her clothes as her friends.</div>"
-	$(".jdgm-carousel-title").text("What our customers are saying");
-	$(".slide__item-image-contain").prepend(homepageText1);
-	$(".slide__item-image-contain").prepend(homepageText2);
+	// const homepageText1 = "<div  id=homepage-text1>Form-fitting clothing for trans girls.</div>"
+	// const homepageText2 = "<div id=homepage-text2>We want every active trans girl to be as confident and comfortable in her clothes as her friends.</div>"
+	// $(".jdgm-carousel-title").text("What our customers are saying");
+	// $(".slide__item-image-contain").prepend(homepageText1);
+	// $(".slide__item-image-contain").prepend(homepageText2);
 }
 
 
