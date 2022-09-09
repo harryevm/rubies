@@ -2326,130 +2326,139 @@
           "maxwidth": 1080
         }
       },
-      "162102445434a3afa1": {
-        "type": "featured-row",
+      "1662722242e7339ea4": {
+        "type": "collection-list",
+        "blocks": {
+          "1662722242e7339ea4-0": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "1662722242e7339ea4-1": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "1662722242e7339ea4-2": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          }
+        },
+        "block_order": [
+          "1662722242e7339ea4-0",
+          "1662722242e7339ea4-1",
+          "1662722242e7339ea4-2"
+        ],
         "settings": {
-          "section_padding": true,
-          "layout": "left",
-          "text_align": "left",
-          "title": "CONFIDENCE AT THE BEACH",
-          "text": "<p>Ruby knows that every girl can feel comfortable and confident at the beach in their RUBIES bikini bottoms.<\/p>",
-          "button_label": "ORDER BIKINI BOTTOMS",
-          "button_link": "shopify:\/\/products\/form-fitting-bikini-bottom"
+          "title": "Collection grid",
+          "full_width": true,
+          "section_padding": false,
+          "gutter": false,
+          "columns_range": 4,
+          "text_placement": "over",
+          "color_overlay": "#4f4f4f",
+          "color_overlay_hover": "#000000",
+          "color_overlay_text": "#FFFFFF",
+          "color_overlay_alpha_range": 30,
+          "zoom": true
         }
       },
-      "1621026146ca4e002f": {
-        "type": "featured-row",
+      "16627222627a91a6ff": {
+        "type": "collection-list-updated",
+        "blocks": {
+          "16627222627a91a6ff-0": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "16627222627a91a6ff-1": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "16627222627a91a6ff-2": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          }
+        },
+        "block_order": [
+          "16627222627a91a6ff-0",
+          "16627222627a91a6ff-1",
+          "16627222627a91a6ff-2"
+        ],
         "settings": {
-          "section_padding": true,
-          "layout": "left",
-          "text_align": "left",
-          "title": "COMFORTABLE IN EVERYTHING",
-          "text": "<p>RUBIES underwear let's our kids keep doing the activities they love! They can feel great in their leggings,  leotards and dresses.<\/p><p><\/p>",
-          "button_label": "ORDER UNDERWEAR",
-          "button_link": "shopify:\/\/products\/the-aj-shaping-underwear"
+          "title": "Collection grid",
+          "full_width": true,
+          "section_padding": false,
+          "gutter": false,
+          "columns_range": 5,
+          "text_placement": "over",
+          "color_overlay": "#4f4f4f",
+          "color_overlay_hover": "#000000",
+          "color_overlay_text": "#FFFFFF",
+          "color_overlay_alpha_range": 30,
+          "zoom": true
         }
       },
-      "16210269473c1113b8": {
-        "type": "featured-row",
+      "16627222910bad4250": {
+        "type": "collection-list-updated",
+        "blocks": {
+          "16627222910bad4250-0": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "16627222910bad4250-1": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "16627222910bad4250-2": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          }
+        },
+        "block_order": [
+          "16627222910bad4250-0",
+          "16627222910bad4250-1",
+          "16627222910bad4250-2"
+        ],
         "settings": {
+          "title": "Collection list",
+          "full_width": false,
           "section_padding": true,
-          "layout": "left",
-          "text_align": "left",
-          "title": "DONATE A PAIR TO FAMILIES IN NEED",
-          "text": "<p>RUBIES has been able to donate over 15% of all bikini bottoms to families all around the world through generous donations from people like you. Every girl should be able to have a bikini bottom no matter what their economic situation.<\/p>",
-          "button_label": "DONATE NOW",
-          "button_link": "https:\/\/www.gofundme.com\/f\/nz7aec-help-me-send-form-fitting-swimwear-to-trans-girls"
-        }
-      },
-      "1621043229cfe1c25e": {
-        "type": "featured-row",
-        "settings": {
-          "section_padding": true,
-          "layout": "left",
-          "text_align": "left",
-          "title": "CELEBRATE TRANS AND NON BINARY KIDS  WITH OUR COLOURFUL TEES",
-          "text": "<p>Spread the word that Every Girl Deserves to Shine with a RUBIES tee.  All proceeds go towards donating more swim suits to families in need.<\/p>",
-          "button_label": "ORDER T-SHIRTS",
-          "button_link": "https:\/\/rubyshines.com\/collections\/tees"
-        }
-      },
-      "16235454421b04d3e1": {
-        "type": "featured-row",
-        "settings": {
-          "section_padding": true,
-          "layout": "left",
-          "text_align": "left",
-          "title": "SEND A GIFT OF COMFORT AND CONFIDENCE",
-          "text": "<p>Let's get our trans and non-binary family and friends back into the pool and doing the activities they love.  <\/p>",
-          "button_label": "ORDER GIFT CARDS",
-          "button_link": "shopify:\/\/products\/rubies-gift-card"
-        }
-      },
-      "1633841960fb8c928e": {
-        "type": "featured-row",
-        "settings": {
-          "section_padding": true,
-          "layout": "left",
-          "text_align": "left",
-          "title": "A PERFECT MATCH",
-          "text": "<p>This super cute halter bikini top pairs perfectly with RUBIES bikini bottoms.<\/p><p>Tweens and teens can experiment with various levels of shaping .<\/p>",
-          "button_label": "ORDER BIKINI TOP",
-          "button_link": "shopify:\/\/products\/the-mia-halter-bikini-top"
-        }
-      },
-      "16518494121c422e32": {
-        "type": "featured-row",
-        "settings": {
-          "section_padding": true,
-          "layout": "left",
-          "text_align": "left",
-          "title": "THE BROOKE BRA PRE-ORDER IS HERE",
-          "text": "<p>Introducing the first ever bra designed specifically for trans girls and non-binary tweens and teens.<\/p>",
-          "button_label": "PRE-ORDER BRAS",
-          "button_link": "shopify:\/\/products\/the-brooke-bra"
-        }
-      },
-      "1654912220ffc52388": {
-        "type": "featured-row",
-        "settings": {
-          "section_padding": true,
-          "layout": "left",
-          "text_align": "left",
-          "title": "Find LGBTQ+ Support Near You",
-          "text": "<p>RUBIES is building the world's largest list of LGBTQ+ Centres and Groups.  Find a group near you or submit one for others to discover.<\/p>",
-          "button_label": "Find an LGBTQ+ Group",
-          "button_link": "https:\/\/community.rubyshines.com\/"
-        }
-      },
-      "16626338591ff1667b": {
-        "type": "featured-row",
-        "settings": {
-          "section_padding": true,
-          "layout": "left",
-          "text_align": "left",
-          "title": "Image with text",
-          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-          "button_label": "red",
-          "button_link": "#"
+          "gutter": true,
+          "columns_range": 3,
+          "text_placement": "below",
+          "color_overlay": "#4f4f4f",
+          "color_overlay_hover": "#000000",
+          "color_overlay_text": "#FFFFFF",
+          "color_overlay_alpha_range": 0,
+          "zoom": true
         }
       }
     },
     "content_for_index": [
       "1481011869014",
       "1591114062327",
-      "16518494121c422e32",
-      "162102445434a3afa1",
-      "1633841960fb8c928e",
-      "1621026146ca4e002f",
-      "1654912220ffc52388",
-      "16235454421b04d3e1",
-      "16210269473c1113b8",
-      "1621043229cfe1c25e",
       "1591112397728",
       "1591276235899",
       "1482134273124",
-      "16626338591ff1667b"
+      "1662722242e7339ea4",
+      "16627222627a91a6ff",
+      "16627222910bad4250"
     ]
   }
 }
