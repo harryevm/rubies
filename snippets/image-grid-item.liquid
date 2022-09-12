@@ -10,7 +10,7 @@
 {%- assign image_rollover = block.settings.image_rollover -%}
 {%- assign image = block.settings.image -%}
 
-<div class="box">
+<div class="box gallery-box-wr">
   {% if block.settings.link != blank %}
     <a href="{{ block.settings.link }}" class="{% if zoom %}zoom text-overlay{% endif %} {% if image_rollover != blank %}rollover{% endif %}">
   {% else %}
