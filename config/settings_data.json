@@ -2338,12 +2338,60 @@
           "color_overlay_alpha_range": 0,
           "zoom": true
         }
+      },
+      "166296728818c2c2ea": {
+        "type": "featured-grid",
+        "blocks": {
+          "166296728818c2c2ea-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/CONFIDENCE.png",
+              "link": "shopify:\/\/pages\/contact",
+              "title": "Confidence And Comfort"
+            }
+          },
+          "166296728818c2c2ea-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_333.png",
+              "link": "",
+              "title": "Image title"
+            }
+          },
+          "166296728818c2c2ea-3": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Image_18.png",
+              "link": "",
+              "title": "Image title"
+            }
+          }
+        },
+        "block_order": [
+          "166296728818c2c2ea-0",
+          "166296728818c2c2ea-1",
+          "166296728818c2c2ea-3"
+        ],
+        "settings": {
+          "title": "Featured grid",
+          "full_width": false,
+          "section_padding": true,
+          "gutter": true,
+          "images_per_row_range": 3,
+          "text_placement": "below",
+          "color_overlay": "#4f4f4f",
+          "color_overlay_hover": "#000000",
+          "color_overlay_text": "#FFFFFF",
+          "color_overlay_alpha_range": 0,
+          "zoom": true
+        }
       }
     },
     "content_for_index": [
       "1481011869014",
       "1591114062327",
-      "16627222910bad4250"
+      "16627222910bad4250",
+      "166296728818c2c2ea"
     ]
   }
 }
