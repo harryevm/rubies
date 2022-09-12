@@ -132,7 +132,7 @@
                         {% assign variant_avialable = false %}
                       {% endunless %}
                     {% endif %}
-                    <span class="size-values {% unless variant_avialable %}soldout{% endunless %} text-center">{{ value | escape }}</span>
+                    <span class="text-center size-values {% unless variant_avialable %}soldout{% endunless %} ">{{ value | escape }}</span>
                   {% endfor %}      
                 {% endif %}
             {% endfor %}
