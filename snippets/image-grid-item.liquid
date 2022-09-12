@@ -35,6 +35,9 @@
       {% if text_placement == 'over' and block.settings.title != blank %}
         <figcaption>
           <h4>{{ block.settings.title | escape }}</h4>
+          {%  block.settings.content != blank %}
+          <div>{{ block.settings.content  }}</div>
+          {% endif %}
         </figcaption>
       {% endif %}
     </figure>
@@ -55,6 +58,9 @@
           </a>
         {% endif %}
       </h3>
+      {%  block.settings.content != blank %}
+      <div>{{ block.settings.content  }}</div>
+      {% endif %}
     </figcaption>
   {% endif %}
 </div>
