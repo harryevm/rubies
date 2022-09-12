@@ -2352,16 +2352,6 @@
               "content": "<p>Ruby knows that every girl can feel comfortable and confident at the beach in their RUBIES bikini bottoms.<\/p>"
             }
           },
-          "166296728818c2c2ea-1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Group_333.png",
-              "label": "Shop Evryday Wear",
-              "link": "#",
-              "title": "Comfortable In Everything",
-              "content": "<p>RUBIES underwear let's our kids keep doing the activities they love! They can feel great in their leggings, leotards and dresses.<\/p>"
-            }
-          },
           "166296728818c2c2ea-3": {
             "type": "image",
             "settings": {
@@ -2371,12 +2361,22 @@
               "title": "Ready For The Gym And Dance",
               "content": "<p>RUBIES underwear let's our kids keep doing the activities they love! They can feel great in their leggings, leotards and dresses.<\/p>"
             }
+          },
+          "166296728818c2c2ea-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_333.png",
+              "label": "Shop Evryday Wear",
+              "link": "#",
+              "title": "Comfortable In Everything",
+              "content": "<p>RUBIES underwear let's our kids keep doing the activities they love! They can feel great in their leggings, leotards and dresses.<\/p>"
+            }
           }
         },
         "block_order": [
           "166296728818c2c2ea-0",
-          "166296728818c2c2ea-1",
-          "166296728818c2c2ea-3"
+          "166296728818c2c2ea-3",
+          "166296728818c2c2ea-1"
         ],
         "settings": {
           "title": "Featured grid",
