@@ -2412,7 +2412,8 @@
           "title": "Donate A Pair To Families In Need",
           "text": "<p>RUBIES has been able to donate over 15% of all bikini bottoms to families all around the world through generous donations from people like you. Every girl should be able to have a bikini bottom no matter what their economic situation.<\/p>",
           "button_label": "Dontate Now",
-          "button_link": "#"
+          "button_link": "#",
+          "bg_color": "#eeeff0"
         }
       }
     },
