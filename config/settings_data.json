@@ -1751,14 +1751,14 @@
     "newsletter_discount_code": "",
     "newsletter_redirect_link": "",
     "collections_product_ratio": "100%",
-    "collection_product_auto_crop": false,
+    "collection_product_auto_crop": true,
     "variant_rollover": true,
-    "collection_swatches": false,
-    "collection_swatches_images": false,
+    "collection_swatches": true,
+    "collection_swatches_images": true,
     "collection_swatches_shape": "circle",
-    "collections_product_columns": "2",
+    "collections_product_columns": "1",
     "show_vendors": false,
-    "collections_text_alignment": "center",
+    "collections_text_alignment": "left",
     "collections_badge_placement": "bottom-right",
     "collections_badge_onsale": "",
     "collections_badge_soldout": "",
@@ -2406,13 +2406,39 @@
         "type": "featured-row",
         "settings": {
           "section_padding": true,
-          "image": "shopify:\/\/shop_images\/Group_113.png",
+          "image": "shopify:\/\/shop_images\/Group_113_2x_de0a001e-f66e-4e46-bb07-2b307f09630c.png",
           "layout": "left",
           "text_align": "left",
           "title": "Donate A Pair To Families In Need",
           "text": "<p>RUBIES has been able to donate over 15% of all bikini bottoms to families all around the world through generous donations from people like you. Every girl should be able to have a bikini bottom no matter what their economic situation.<\/p>",
           "button_label": "Dontate Now",
-          "button_link": "#"
+          "button_link": "#",
+          "bg_color": "#eeeff0"
+        }
+      },
+      "1662976991610d8e6e": {
+        "type": "featured-row",
+        "settings": {
+          "section_padding": true,
+          "image": "shopify:\/\/shop_images\/Group_334_2x_205d037c-9f38-478e-b3c7-6a991456fb05.png",
+          "layout": "left",
+          "text_align": "left",
+          "title": "Send A Gift Of Comfort And Confidence",
+          "text": "<p>RUBIES has been able to donate over 15% of all bikini bottoms to families all around the world through generous donations from people like you. Every girl should be able to have a bikini bottom no matter what their economic situation.<\/p>",
+          "button_label": "Order Gift Cards",
+          "button_link": "shopify:\/\/products\/every-girl-deserves-to-shine-gender-neutral-tee",
+          "bg_color": "#eeeff0"
+        }
+      },
+      "1662977266f9153198": {
+        "type": "simple-collection",
+        "settings": {
+          "title": "What’s New",
+          "center_heading": true,
+          "button_label": "",
+          "button_link": "",
+          "collection": "underwear",
+          "product_count_range": 4
         }
       }
     },
@@ -2422,7 +2448,9 @@
       "16627222910bad4250",
       "1662975491150131ea",
       "166296728818c2c2ea",
-      "166297655829f69ad1"
+      "166297655829f69ad1",
+      "1662976991610d8e6e",
+      "1662977266f9153198"
     ]
   }
 }
