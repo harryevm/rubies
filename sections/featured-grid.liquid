@@ -57,7 +57,6 @@
 
           <div class="grid__item {{ block_grid_item_width }} medium-down--one-whole {% if section.settings.section_padding == false and section.settings.gutter == false and forloop.index >= last_row_start %}no-bottom-margin{% endif %}" {{ block.shopify_attributes }}>
             {% include 'image-grid-item', image_size: block_image_size, text_placement: section.settings.text_placement, zoom: section.settings.zoom, full_width: section.settings.full_width %}
-            {{ block.settings.content  }}
           </div>
         {% endfor %}
       </div>
