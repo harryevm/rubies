@@ -10,7 +10,7 @@
     padding: 15px 25px !important;
     font-size: 17px;
     line-height: 30px;
-    margin-top: 30px;
+    margin-top: 10px;
     text-transform: capitalize !important;
     text-decoration: none;
     background-color: #fe3d05;
@@ -19,3 +19,4 @@
     display: inline-block !important;
     border-radius: 4px;
 }
+.gallery-box-wr figcaption.below h3 { font-size: 22px; line-height: 30px; font-weight: 700; letter-spacing: -1px; margin: 20px 0 10px !important; }
