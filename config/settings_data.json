@@ -2440,6 +2440,17 @@
           "collection": "underwear",
           "product_count_range": 4
         }
+      },
+      "16629848551f1ad81a": {
+        "type": "simple-collection",
+        "settings": {
+          "title": "Featured Product",
+          "center_heading": true,
+          "button_label": "",
+          "button_link": "",
+          "collection": "swimwear",
+          "product_count_range": 4
+        }
       }
     },
     "content_for_index": [
@@ -2449,8 +2460,9 @@
       "1662975491150131ea",
       "166296728818c2c2ea",
       "166297655829f69ad1",
+      "1662977266f9153198",
       "1662976991610d8e6e",
-      "1662977266f9153198"
+      "16629848551f1ad81a"
     ]
   }
 }
