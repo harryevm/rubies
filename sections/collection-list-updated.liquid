@@ -28,7 +28,7 @@
 
             <div class="grid__item" {{ block.shopify_attributes }}>
               {%- assign collection = collections[block.settings.collection] -%}
-              {% include 'collection-grid-item', text_placement: section.settings.text_placement, zoom: section.settings.zoom , cimage: block.settings.collection_img %}
+              {% include 'collection-grid-item', text_placement: section.settings.text_placement, zoom: section.settings.zoom , cimage: block.settings.collection_img, ctitle: block.settings.collection_title %}
             </div>
           {% endfor %}
         </div>
@@ -152,6 +152,11 @@
             "label": "Image",
             "id": "collection_img",
             "type": "image_picker"
+          },
+          {
+            "label": "Title",
+            "id": "collection_title",
+            "type": "text"
           }
         ]
       }

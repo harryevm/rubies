@@ -56,6 +56,8 @@
       <h3>
         {% if collection.empty? %}
           <a href="#">{{ 'homepage.onboarding.collection_title' | t }}</a>
+        {% elsif ctitle != blank %}
+        <a href="{{ collection.url }}">{{ ctitle }}</a>
         {% else %}
           <a href="{{ collection.url }}">{{ collection.title }}</a>
         {% endif %}
