@@ -6,3 +6,16 @@
 .collection-list-updated .flex-data > .grid__item { width: calc(100%/3); padding: 0; }
 .collection-list-updated .flex-data > .grid__item h3 { font-size: 18px; line-height: 30px; margin-top: 15px !important; }
 .collection-list-updated .flex-data > .grid__item h3>a { font-weight: 600 !important;}
+.btn-primary {
+    padding: 15px 25px !important;
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 30px;
+    text-transform: capitalize !important;
+    text-decoration: none;
+    background-color: #fe3d05;
+    border-color: #fe3d05;
+    color: #ffffff !important;
+    display: inline-block !important;
+    border-radius: 4px;
+}
