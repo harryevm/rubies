@@ -1907,7 +1907,7 @@
             "settings": {
               "title": "Popular products",
               "text": "",
-              "footer_linklist": ""
+              "footer_linklist": "main-menu"
             }
           },
           "63403eca-f29c-47b6-89a1-932b0380bbda": {
@@ -1929,15 +1929,23 @@
               "address": "",
               "show_social": true
             }
+          },
+          "4a397a78-000f-4c3b-837f-c1243c79ca49": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Signup For Newsletter",
+              "text_richtext": ""
+            }
           }
         },
         "block_order": [
           "6e3799b7-4ef3-4977-95f4-ee159724ae4f",
           "63403eca-f29c-47b6-89a1-932b0380bbda",
-          "ae889cab-fb6b-46b2-8387-d8a9aeb84619"
+          "ae889cab-fb6b-46b2-8387-d8a9aeb84619",
+          "4a397a78-000f-4c3b-837f-c1243c79ca49"
         ],
         "settings": {
-          "show_payment_icons": false,
+          "show_payment_icons": true,
           "trust_richtext": ""
         }
       },
@@ -2451,6 +2459,12 @@
           "collection": "swimwear",
           "product_count_range": 4
         }
+      },
+      "1662985167514c68ca": {
+        "type": "judgeme_carousel_section",
+        "settings": {
+          "maxwidth": 1080
+        }
       }
     },
     "content_for_index": [
@@ -2462,7 +2476,8 @@
       "166297655829f69ad1",
       "1662977266f9153198",
       "1662976991610d8e6e",
-      "16629848551f1ad81a"
+      "16629848551f1ad81a",
+      "1662985167514c68ca"
     ]
   }
 }
