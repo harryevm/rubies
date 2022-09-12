@@ -51,7 +51,7 @@
       <div>{{ block.settings.content  }}</div>
       {% endif %}
        {% if block.settings.link != blank and block.settings.label != blank %}
-        <a href="{{ block.settings.link }}">{{ block.settings.label }}</a>
+        <a class="btn btn-primary" href="{{ block.settings.link }}">{{ block.settings.label }}</a>
       {% endif %} 
     </figcaption>
   {% endif %}
