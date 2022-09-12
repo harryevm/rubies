@@ -1753,12 +1753,12 @@
     "collections_product_ratio": "100%",
     "collection_product_auto_crop": false,
     "variant_rollover": true,
-    "collection_swatches": false,
+    "collection_swatches": true,
     "collection_swatches_images": false,
     "collection_swatches_shape": "circle",
-    "collections_product_columns": "2",
+    "collections_product_columns": "1",
     "show_vendors": false,
-    "collections_text_alignment": "center",
+    "collections_text_alignment": "left",
     "collections_badge_placement": "bottom-right",
     "collections_badge_onsale": "",
     "collections_badge_soldout": "",
@@ -2429,6 +2429,17 @@
           "button_link": "shopify:\/\/products\/every-girl-deserves-to-shine-gender-neutral-tee",
           "bg_color": "#eeeff0"
         }
+      },
+      "1662977266f9153198": {
+        "type": "simple-collection",
+        "settings": {
+          "title": "What’s New",
+          "center_heading": true,
+          "button_label": "",
+          "button_link": "",
+          "collection": "underwear",
+          "product_count_range": 4
+        }
       }
     },
     "content_for_index": [
@@ -2438,7 +2449,8 @@
       "1662975491150131ea",
       "166296728818c2c2ea",
       "166297655829f69ad1",
-      "1662976991610d8e6e"
+      "1662976991610d8e6e",
+      "1662977266f9153198"
     ]
   }
 }
