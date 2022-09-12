@@ -22,7 +22,7 @@
         {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
         {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
       {% elsif cimage != blank %}
-        <img class="card__image" src="{{cimage | image_url:''}}" />
+        <img class="card__image" src="{{cimage | img_url:''}}" />
       {% else %}
         <div class="card__image-wrapper" style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%">
           {% assign image_widths = '295,394,590,700,800,1000,1200,1500,1800,2000,2400' %}
