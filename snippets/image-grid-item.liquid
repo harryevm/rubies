@@ -49,17 +49,12 @@
 
   {% if text_placement == 'below' and block.settings.title != blank %}
     <figcaption class="below">
-      <h3>
-        {% if block.settings.link != blank %}
-          <a href="{{ block.settings.link }}">
-        {% endif %}
-            {{ block.settings.title | escape }}
-        {% if block.settings.link != blank %}
-          </a>
-        {% endif %}
-      </h3>
+      <h3>{{ block.settings.title | escape }}</h3>
       {%  block.settings.content %}
       <div>{{ block.settings.content  }}</div>
+      {% endif %}
+      {% if block.settings.link != blank and block.settings.label != blank %}
+        <a href="{{ block.settings.link }}">{{ block.settings.label }}</a>
       {% endif %}
     </figcaption>
   {% endif %}
