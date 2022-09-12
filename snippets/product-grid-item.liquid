@@ -142,44 +142,44 @@
             
       {% include 'product-grid-item-swatches' %}
     {%- endif -%}
-    <figcaption>
-      <div class="product-title">
-        <a href="{{ product.url | within: collection }}" class="title">{{ product.title }}</a>
-        {% if settings.show_vendors %}
-          <span class="vendor">{{ product.vendor | link_to_vendor }}</span>
-        {% endif %}
+        <figcaption>
+          <div class="product-title">
+            <a href="{{ product.url | within: collection }}" class="title">{{ product.title }}</a>
+            {% if settings.show_vendors %}
+              <span class="vendor">{{ product.vendor | link_to_vendor }}</span>
+            {% endif %}
+          </div>
+          
+    {% comment %}Start automatically added Judge.me widget{% endcomment %}
+      {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+    {% comment %}End automatically added Judge.me widget{% endcomment %}
+    <span class="price">
+          {% if on_sale %}
+            {% if product.price_varies %}
+              <span class="from">{{ 'products.general.from' | t }}</span>
+              <span class="money">{{ product.price | money }}</span>
+              <span class="original-price money">{{ product.compare_at_price | money }}</span>
+            {% else %}
+              <span class="money">{{ product.price | money }}</span>
+              <span class="original-price money">{{ product.compare_at_price | money }}</span>
+            {% endif %}
+          {% else %}
+            {% if product.price_varies %}<span class="from">{{ 'products.general.from' | t }}</span>{% endif %}
+            <span class="money">{{ product.price | money }}</span>
+          {% endif %}
+          </span>
+    
+          <form method="post" action="/cart/add">
+            <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+            <input type="hidden" name="Color" value="black" />
+            <input type="hidden" name="Youth Size" value="8" />
+            <input type="hidden" name="quantity" value="1" />
+            
+            <input type="submit" value="Add To Cart" class="btn btn-primary" /> 
+          </form>
+          
+        </figcaption>
       </div>
-      
-{% comment %}Start automatically added Judge.me widget{% endcomment %}
-  {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
-{% comment %}End automatically added Judge.me widget{% endcomment %}
-<span class="price">
-      {% if on_sale %}
-        {% if product.price_varies %}
-          <span class="from">{{ 'products.general.from' | t }}</span>
-          <span class="money">{{ product.price | money }}</span>
-          <span class="original-price money">{{ product.compare_at_price | money }}</span>
-        {% else %}
-          <span class="money">{{ product.price | money }}</span>
-          <span class="original-price money">{{ product.compare_at_price | money }}</span>
-        {% endif %}
-      {% else %}
-        {% if product.price_varies %}<span class="from">{{ 'products.general.from' | t }}</span>{% endif %}
-        <span class="money">{{ product.price | money }}</span>
-      {% endif %}
-      </span>
-
-      <form method="post" action="/cart/add">
-        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-        <input type="hidden" name="Color" value="black" />
-        <input type="hidden" name="Youth Size" value="8" />
-        <input type="hidden" name="quantity" value="1" />
-        
-        <input type="submit" value="Add To Cart" class="btn btn-primary" /> 
-      </form>
-      
-    </figcaption>
-      </span>
     
     
   </figure>
