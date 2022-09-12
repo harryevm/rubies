@@ -2391,12 +2391,21 @@
           "color_overlay_alpha_range": 0,
           "zoom": true
         }
+      },
+      "1662975491150131ea": {
+        "type": "featured-text",
+        "settings": {
+          "title": "Confidence And Comfort",
+          "text": "<p>We want every trans girl has the freedom to be who she is, wherever she is ? and to shine.<\/p>",
+          "alignment": "center"
+        }
       }
     },
     "content_for_index": [
       "1481011869014",
       "1591114062327",
       "16627222910bad4250",
+      "1662975491150131ea",
       "166296728818c2c2ea"
     ]
   }
