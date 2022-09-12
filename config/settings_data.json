@@ -2401,6 +2401,19 @@
           "bg_color": "#fa768e",
           "text_color": "#ffffff"
         }
+      },
+      "166297655829f69ad1": {
+        "type": "featured-row",
+        "settings": {
+          "section_padding": true,
+          "image": "shopify:\/\/shop_images\/Group_113.png",
+          "layout": "left",
+          "text_align": "left",
+          "title": "Donate A Pair To Families In Need",
+          "text": "<p>RUBIES has been able to donate over 15% of all bikini bottoms to families all around the world through generous donations from people like you. Every girl should be able to have a bikini bottom no matter what their economic situation.<\/p>",
+          "button_label": "Dontate Now",
+          "button_link": "#"
+        }
       }
     },
     "content_for_index": [
@@ -2408,7 +2421,8 @@
       "1591114062327",
       "16627222910bad4250",
       "1662975491150131ea",
-      "166296728818c2c2ea"
+      "166296728818c2c2ea",
+      "166297655829f69ad1"
     ]
   }
 }
