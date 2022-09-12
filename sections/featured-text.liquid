@@ -18,22 +18,7 @@
         {% endif %}
       </div>
 
-      {% for block in section.blocks %}
-        <div class="content content-page rte">
-          {% case block.type %}
-            {% when 'page' %}
-              {% if block.settings.show_title %}
-                <h2 class="align-{{ section.settings.alignment }}">{{ pages[block.settings.page].title }}</h2>
-              {% endif %}
-              <div class="richtext">{{ pages[block.settings.page].content }}</div>
-            {% when 'richtext' %}
-              {% if block.settings.title != blank %}
-                <h2 class="align-{{ section.settings.alignment }}">{{ block.settings.title | escape }}</h2>
-              {% endif %}
-              <div class="richtext">{{ block.settings.text }}</div>
-          {% endcase %}
-        </div>
-      {% endfor %}
+     
 
     </div>
   </div>
@@ -73,9 +58,40 @@
       "id": "bg_color",
       "label": "Background Color",
       "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000"
     }
   ],
-  "blocks": [
+  "presets": [
+    {
+      "name": "Rich text",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+{% comment %}
+   {% for block in section.blocks %}
+        <div class="content content-page rte">
+          {% case block.type %}
+            {% when 'page' %}
+              {% if block.settings.show_title %}
+                <h2 class="align-{{ section.settings.alignment }}">{{ pages[block.settings.page].title }}</h2>
+              {% endif %}
+              <div class="richtext">{{ pages[block.settings.page].content }}</div>
+            {% when 'richtext' %}
+              {% if block.settings.title != blank %}
+                <h2 class="align-{{ section.settings.alignment }}">{{ block.settings.title | escape }}</h2>
+              {% endif %}
+              <div class="richtext">{{ block.settings.text }}</div>
+          {% endcase %}
+        </div>
+      {% endfor %}
+"blocks": [
     {
       "type": "page",
       "name": "Page",
@@ -112,11 +128,4 @@
       ]
     }
   ],
-  "presets": [
-    {
-      "name": "Rich text",
-      "category": "Text"
-    }
-  ]
-}
-{% endschema %}
+{% endcomment %}
