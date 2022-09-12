@@ -2346,24 +2346,30 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/CONFIDENCE.png",
+              "label": "",
               "link": "shopify:\/\/pages\/contact",
-              "title": "Confidence And Comfort"
+              "title": "Confidence And Comfort",
+              "content": "<p>gfddfg<\/p>"
             }
           },
           "166296728818c2c2ea-1": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Group_333.png",
+              "label": "",
               "link": "",
-              "title": "Image title"
+              "title": "Image title",
+              "content": ""
             }
           },
           "166296728818c2c2ea-3": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Image_18.png",
+              "label": "",
               "link": "",
-              "title": "Image title"
+              "title": "Image title",
+              "content": ""
             }
           }
         },
@@ -2381,7 +2387,7 @@
           "text_placement": "below",
           "color_overlay": "#4f4f4f",
           "color_overlay_hover": "#000000",
-          "color_overlay_text": "#FFFFFF",
+          "color_overlay_text": "#ffffff",
           "color_overlay_alpha_range": 0,
           "zoom": true
         }
