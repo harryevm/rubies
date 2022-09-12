@@ -14,9 +14,11 @@
     text-transform: capitalize !important;
     text-decoration: none;
     background-color: #fe3d05;
-    border-color: #fe3d05;
+    border:1px solid #fe3d05;
     color: #ffffff !important;
     display: inline-block !important;
     border-radius: 4px;
+    transition: all 0.35s ease-out;
 }
+.btn-primary:hover { background-color: transparent; color: #fe3d05 !important; transition: all 0.35s ease-in; }
 .gallery-box-wr figcaption.below h3 { font-size: 22px; line-height: 30px; font-weight: 700; letter-spacing: -1px; margin: 20px 0 10px !important; }
