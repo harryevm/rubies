@@ -116,6 +116,9 @@
         {%- endif -%}
       </div>
     </a>
+    {%- if settings.collection_swatches -%}
+      {% include 'product-grid-item-swatches' %}
+    {%- endif -%}
     <figcaption>
       <div class="product-title">
         <a href="{{ product.url | within: collection }}" class="title">{{ product.title }}</a>
@@ -144,9 +147,7 @@
       </span>
     </figcaption>
 
-    {%- if settings.collection_swatches -%}
-      {% include 'product-grid-item-swatches' %}
-    {%- endif -%}
+    
     
   </figure>
 {% render 'preorder-now-collection-item', product: product %}</div>
