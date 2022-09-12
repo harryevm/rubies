@@ -2333,35 +2333,40 @@
             "type": "featured_collection",
             "settings": {
               "collection": "bikini-tops-and-bottoms",
-              "collection_img": "shopify:\/\/shop_images\/Group_328_2x_1ff25d60-c05b-4fed-b9c0-3962dceed892.png"
+              "collection_img": "shopify:\/\/shop_images\/Group_328_2x_1ff25d60-c05b-4fed-b9c0-3962dceed892.png",
+              "collection_title": "Beach & Pool"
             }
           },
           "16627222910bad4250-1": {
             "type": "featured_collection",
             "settings": {
               "collection": "every-girl-deserves-to-shine-campaign",
-              "collection_img": "shopify:\/\/shop_images\/Group_329_2x_b47ac7c1-6675-435e-9b31-34533d3386c9.png"
+              "collection_img": "shopify:\/\/shop_images\/Group_329_2x_b47ac7c1-6675-435e-9b31-34533d3386c9.png",
+              "collection_title": "Dance & Gym"
             }
           },
           "16627222910bad4250-2": {
             "type": "featured_collection",
             "settings": {
               "collection": "every-girl-deserves-to-shine-campaign-postcards",
-              "collection_img": "shopify:\/\/shop_images\/Group_330_2x_a08efd72-957b-4d24-9d46-5feefee98308.png"
+              "collection_img": "shopify:\/\/shop_images\/Group_330_2x_a08efd72-957b-4d24-9d46-5feefee98308.png",
+              "collection_title": "Everyday Comfort"
             }
           },
           "a26b1406-718f-4f13-a020-5eb5cd7f7e08": {
             "type": "featured_collection",
             "settings": {
               "collection": "frontpage",
-              "collection_img": "shopify:\/\/shop_images\/Group_331_2x_5e123233-2b0c-4fcb-809d-1cc68abb3d7e.png"
+              "collection_img": "shopify:\/\/shop_images\/Group_331_2x_5e123233-2b0c-4fcb-809d-1cc68abb3d7e.png",
+              "collection_title": "Pride"
             }
           },
           "6b62283e-2a40-4810-9bfa-13c2db928163": {
             "type": "featured_collection",
             "settings": {
               "collection": "bikini-tops-and-bottoms",
-              "collection_img": "shopify:\/\/shop_images\/Group_332_2x_aae5da9d-3295-4b07-9ee1-11435a06d3b8.png"
+              "collection_img": "shopify:\/\/shop_images\/Group_332_2x_aae5da9d-3295-4b07-9ee1-11435a06d3b8.png",
+              "collection_title": "Bundles"
             }
           }
         },
