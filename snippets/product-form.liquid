@@ -91,7 +91,7 @@
   {% endcomment %}
   <div class="selection-wrapper variant no-js">
     <div class="selector-wrapper full-width">
-      <select name="id" id="ProductSelect-{{ section.id }}" data-section="{{ section.id }}" class="product-form__variants no-js">
+      <select name="id" id="ProductSelect-{{ section.id }}" data-section="{{ section.id }}" class="dfdfsfdsf product-form__variants no-js">
         {% for variant in product.variants %}
           {% if variant.available %}
             <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">
