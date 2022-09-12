@@ -1906,7 +1906,7 @@
             "type": "menu",
             "settings": {
               "title": "Popular products",
-              "text": "",
+              "text": "df",
               "footer_linklist": "footer"
             }
           },
