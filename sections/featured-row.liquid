@@ -2,7 +2,7 @@
   <div class="contain-site-width {% unless section.settings.section_padding %}no-padding{% endunless %}">
     <div class="wrapper">
 
-      <div class="feature-row">
+      <div class="feature-row" style="background-color: {{section.settings.bg_color}};">
         {% capture image_grid_item %}
           <div class="feature-row__item feature-row__image">
             {%- assign image = section.settings.image -%}
@@ -129,6 +129,12 @@
       "type": "url",
       "id": "button_link",
       "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default":"#fff"
     }
   ],
   "presets": [
