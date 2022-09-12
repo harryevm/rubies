@@ -2415,6 +2415,20 @@
           "button_link": "#",
           "bg_color": "#eeeff0"
         }
+      },
+      "1662976991610d8e6e": {
+        "type": "featured-row",
+        "settings": {
+          "section_padding": true,
+          "image": "shopify:\/\/shop_images\/Group_334_2x_205d037c-9f38-478e-b3c7-6a991456fb05.png",
+          "layout": "left",
+          "text_align": "left",
+          "title": "Send A Gift Of Comfort And Confidence",
+          "text": "<p>RUBIES has been able to donate over 15% of all bikini bottoms to families all around the world through generous donations from people like you. Every girl should be able to have a bikini bottom no matter what their economic situation.<\/p>",
+          "button_label": "Order Gift Cards",
+          "button_link": "shopify:\/\/products\/every-girl-deserves-to-shine-gender-neutral-tee",
+          "bg_color": "#eeeff0"
+        }
       }
     },
     "content_for_index": [
@@ -2423,7 +2437,8 @@
       "16627222910bad4250",
       "1662975491150131ea",
       "166296728818c2c2ea",
-      "166297655829f69ad1"
+      "166297655829f69ad1",
+      "1662976991610d8e6e"
     ]
   }
 }
