@@ -93,17 +93,23 @@
     <div class="selector-wrapper full-width">
       <select name="id" id="ProductSelect-{{ section.id }}" data-section="{{ section.id }}" class="product-form__variants no-js">
         {% for variant in product.variants %}
-           <option value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
+           
+        {% if variant.available %}  
+        <option value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
+          {% else %}
+        <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+         {% endif %}
           <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">
               {{ variant.title }} - {{ variant.price | money_with_currency }}
             </option>
+        {% comment %}
           {% if variant.available %}
             <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">
               {{ variant.title }} - {{ variant.price | money_with_currency }}
             </option>
           {% else %}
             <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
-          {% endif %}
+          {% endif %}{% endcomment %}
         {% endfor %}
       </select>
     </div>
