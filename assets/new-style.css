@@ -26,3 +26,6 @@ h1, h2, h3 { font-weight: 600 !important; }
 .simple-collection ul.product-swatches { margin: 25px 0 15px !important; }
 .simple-collection span.price { display: block; margin: 10px 0; font-size: 20px !important; line-height: 30px; font-weight: 700 !important; }
 header h4 { font-weight: 700 !important; font-size: 32px !important; line-height: 40px; margin-bottom: 30px !important; }
+
+span.collection-size-swatch { position: absolute; top: -50px; display: flex; align-items: center; }
+.collection-size-swatch .size-values { margin-right: 5px; background-color: #fff; width: 32px; height: 32px; border: 1px solid #cccccc91; color: #040F21; font-size: 14px; line-height: 30px; }
