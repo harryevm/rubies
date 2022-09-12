@@ -114,11 +114,7 @@
             {%- endif -%}
           </span>
         {%- endif -%}
-      </div>
-    </a>
-    <div style="position:relative">
-    {%- if settings.collection_swatches -%}
-      <span class="collection-size-swatch">
+        <span class="collection-size-swatch">
         {% unless sold_out %}      
           {% unless product.has_only_default_variant %}
             {% for option in product.options_with_values %}
@@ -139,7 +135,10 @@
           {% endunless %}      
         {% endunless %} 
         </span>
-            
+      </div>
+    </a>
+
+    {%- if settings.collection_swatches -%}
       {% include 'product-grid-item-swatches' %}
     {%- endif -%}
         <figcaption>
@@ -179,7 +178,6 @@
           </form>
           
         </figcaption>
-      </div>
     
     
   </figure>
