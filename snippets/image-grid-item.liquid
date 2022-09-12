@@ -35,9 +35,6 @@
       {% if text_placement == 'over' and block.settings.title != blank %}
         <figcaption>
           <h4>{{ block.settings.title | escape }}</h4>
-          {%  block.settings.content != blank %}
-          <div>{{ block.settings.content  }}</div>
-          {% endif %}
         </figcaption>
       {% endif %}
     </figure>
@@ -48,12 +45,12 @@
   {% endif %}
 
   {% if text_placement == 'below' and block.settings.title != blank %}
-    <figcaption class="below e">
+    <figcaption class="below">
       <h3>{{ block.settings.title | escape }}</h3>
-      {%  block.settings.content %}
+      {% if block.settings.content %}
       <div>{{ block.settings.content  }}</div>
       {% endif %}
-      {% if block.settings.link != blank and block.settings.label != blank %}
+       {% if block.settings.link != blank and block.settings.label != blank %}
         <a href="{{ block.settings.link }}">{{ block.settings.label }}</a>
       {% endif %} 
     </figcaption>
