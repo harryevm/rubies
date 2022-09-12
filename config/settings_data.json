@@ -2145,11 +2145,6 @@
           "variant_rollover": true
         }
       },
-      "1482134273124": {
-        "type": "instagram",
-        "settings": {
-        }
-      },
       "collection-list-template": {
         "type": "collection-list-template",
         "blocks": {
@@ -2201,47 +2196,6 @@
           "color_background": "#fafafa",
           "color_accent": "#442778",
           "background_image": ""
-        }
-      },
-      "1591112397728": {
-        "type": "collection-list",
-        "blocks": {
-          "1591112397728-0": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "swimwear"
-            }
-          },
-          "1591112397728-2": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "underwear"
-            }
-          },
-          "1591112397728-1": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "tees"
-            }
-          }
-        },
-        "block_order": [
-          "1591112397728-0",
-          "1591112397728-2",
-          "1591112397728-1"
-        ],
-        "settings": {
-          "title": "Check out our collection",
-          "full_width": false,
-          "section_padding": true,
-          "gutter": true,
-          "columns_range": 3,
-          "text_placement": "below",
-          "color_overlay": "rgba(0,0,0,0)",
-          "color_overlay_hover": "rgba(0,0,0,0)",
-          "color_overlay_text": "#ffffff",
-          "color_overlay_alpha_range": 0,
-          "zoom": true
         }
       },
       "product-recommendations": {
@@ -2320,12 +2274,6 @@
           "logo_margins": 10
         }
       },
-      "1591276235899": {
-        "type": "judgeme_carousel_section",
-        "settings": {
-          "maxwidth": 1080
-        }
-      },
       "16627222910bad4250": {
         "type": "collection-list-updated",
         "blocks": {
@@ -2395,9 +2343,6 @@
     "content_for_index": [
       "1481011869014",
       "1591114062327",
-      "1591112397728",
-      "1591276235899",
-      "1482134273124",
       "16627222910bad4250"
     ]
   }
