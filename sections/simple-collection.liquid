@@ -77,9 +77,8 @@
 
 <script>
 
-$('#collection-{{ section.id }}').slick({
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1
+
+$(document).ready(function(){
+  $('#collection-{{ section.id }}').owlCarousel();
 });
 </script>
