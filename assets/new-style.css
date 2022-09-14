@@ -123,6 +123,7 @@ footer.site-footer .box.payment-types { text-align: right; }
   footer.site-footer .box.payment-types { text-align: center; }
   .simple-collection .product-container.slick-slider .slick-list { height: 100%; width: 100%; }
   .simple-collection { padding-left: 0 !important; padding-right: 0 !important; }
+  .simple-collection .product-container .box { padding: 0 20px; }
 }
 @media(max-width:480px){
   .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 50vh; }
