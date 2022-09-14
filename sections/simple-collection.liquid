@@ -9,7 +9,7 @@
         <a href="{{ section.settings.button_link }}" class="button outline">{{ section.settings.button_label | escape }}</a>
       {% endif %}
     </header>
-    <div class="product-container owl-carousel owl-theme" id="collection-{{ section.id }}">
+    <div class="product-container owl-carousel" id="collection-{{ section.id }}">
       {%- assign collection = collections[section.settings.collection] -%}
       {%- assign product_limit = section.settings.product_count_range -%}
       {% for product in collection.products limit: product_limit  %}
@@ -77,7 +77,11 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script>
-$('.owl-carousel').slick();
+$('.owl-carousel').slick({
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
 
 
 </script>
