@@ -1,3 +1,4 @@
+.contain-site-width, .wrapper { max-width: 1400px !important; }
 .slide__item-content h2 { font-size: 60px; line-height: 65px; font-weight: 600; }
 .slide__item-content a.button { padding: 15px 20px; font-size: 17px; line-height: 30px; font-weight: 400; margin-top: 30px; text-transform: capitalize; }
 .slide__item-content p { font-size: 18px; line-height: 30px; font-weight: 600; margin-top: 15px; }
@@ -32,7 +33,7 @@ span.collection-size-swatch { position: absolute; bottom: 0; display: flex; alig
 .collection-size-swatch .size-values { margin: 0 5px 5px 0; background-color: #fff; min-width: 32px; height: 32px; border: 1px solid #cccccc91; color: #040f21; font-size: 14px; line-height: 30px; padding: 0 5px; }
 .simple-collection input.btn.btn-primary { width: 100%; }
 /* Footer */
-footer.site-footer .wrapper { max-width: 1400px; }
+
 footer.site-footer .grid { font-size: initial; display: flex; justify-content: space-between; margin: 0; }
 footer.site-footer .grid .box { padding: 0 20px 0 0; width: 25%; text-align: left; }
 footer.site-footer .grid .box:last-child { padding: 0; }
