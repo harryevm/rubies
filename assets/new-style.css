@@ -19,6 +19,7 @@ header.util a#CartButton:hover svg path, header.util a#CartButton:focus svg path
     a#CartButton { right: 3%; }
     header.util li.search-wrap {right: 5%;}
     .slideshow .contain-full-width.no-padding .wrapper { width: 100%; }
+    .slide__item-content.justify-center .inner-wrapper .content-contain { max-width: 75%; }
 }
 
 
