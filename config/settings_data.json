@@ -1819,7 +1819,7 @@
               "show_for": "both",
               "bar_size": "default",
               "bar_placement": "top",
-              "autohide": true,
+              "autohide": false,
               "autohide_delay_range": 11
             }
           },
