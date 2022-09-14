@@ -118,11 +118,14 @@ footer.site-footer .box.payment-types { text-align: right; }
   footer.site-footer h4.activate:before { transform: rotate(180deg); transition: transform .3s ease-in; }
   .bottom-bar { flex-direction: column-reverse; align-items: flex-start; }
   .bottom-bar>* { width: 100%; text-align: center; }
-  
+  .bottom-bar { top: 0; }
   footer.site-footer .box.payment-types { text-align: center; }
 }
 @media(max-width:480px){
   .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 50vh; }
   .collection-list-updated .flex-data>.grid__item h3 { font-size: 14px; line-height: 20px;}
   div.collection-list .box a figure { width: 75%; }
+
+  header.util .left-wrapper ul.text-links li.search-wrap{bottom: -20px; right: 25px;}
+  header.util .left-wrapper ul.text-links li.mobile-menu,header.util a#CartButton{bottom: -18px;}
 }
