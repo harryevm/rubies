@@ -117,7 +117,7 @@ footer.site-footer .box.payment-types { text-align: right; }
   footer.site-footer h4::before { transform: rotate(90deg); transition: transform 0.3s ease-in; }
   footer.site-footer h4.activate:before { transform: rotate(180deg); transition: transform .3s ease-in; }
   .bottom-bar { flex-direction: column-reverse; align-items: flex-start; }
-  .bottom-bar>* { width: 100%; }
+  .bottom-bar>* { width: 100%; text-align: center; }
   footer.site-footer .box.payment-types { text-align: center; }
 }
 @media(max-width:480px){
