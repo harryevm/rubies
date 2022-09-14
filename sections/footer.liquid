@@ -305,8 +305,9 @@ $(window).scroll(function() {
 
      //>=, not <=
     if (scroll >= 100) {
-        //clearHeader, not clearheader - caps H
         $("div#shopify-section-header").addClass("darkHeader");
+    }else{
+      $("div#shopify-section-header").removeClass("darkHeader");
     }
 });
 </script>
