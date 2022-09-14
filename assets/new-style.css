@@ -4,7 +4,7 @@ a#CartButton { position: absolute; padding: 0 !important; border: none !importan
 span.icon.icon-search svg { width: 20px; height: 20px; }
 a#CartButton svg { width: 22px; height: 22px; }
 header.util li.search-wrap{position: absolute; right: 20px; bottom: -60px;}
-
+header.site-header .layout-horizontal nav.nav-bar { padding-right: 10%; }
 
 .slideshow .contain-full-width.no-padding .wrapper { max-width: unset !important; }
 .slide__item-content h2 { font-size: 60px; line-height: 65px; font-weight: 600; }
