@@ -36,3 +36,4 @@ footer.site-footer .grid { font-size: initial; display: flex; justify-content: s
 footer.site-footer .grid .box { padding: 0 20px 0 0; width: 25%; text-align: left; }
 footer.site-footer .grid .box:last-child { padding: 0; }
 button#subscribe { background-color: #fe3d05; border: 1px solid #fe3d05; font-size: 17px !important; height: 44px; margin-top: 0; line-height: 0; }
+footer.site-footer h4, footer.site-footer .h4 { font-weight: 500; }
