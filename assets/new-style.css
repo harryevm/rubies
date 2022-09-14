@@ -6,7 +6,7 @@ a#CartButton svg { width: 22px; height: 22px; }
 header.util li.search-wrap{position: absolute; right: 20px; bottom: -60px;}
 header.site-header .layout-horizontal nav.nav-bar { padding-right: 10%; }
 a#CartButton span#CartCount { position: absolute; right: -10px; background: #FC01FF; width: 20px; height: 20px; border-radius: 50%; top: -5px; text-align: center; font-size: 10px; line-height: 22px; color: #fff; }
-
+header.util a#CartButton:hover svg path, header.util a#CartButton:focus svg path { fill: #000; }
 .slideshow .contain-full-width.no-padding .wrapper { max-width: unset !important; }
 .slide__item-content h2 { font-size: 60px; line-height: 65px; font-weight: 600; }
 .slide__item-content a.button { padding: 15px 20px; font-size: 17px; line-height: 30px; font-weight: 400; margin-top: 30px; text-transform: capitalize; }
