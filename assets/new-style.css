@@ -27,6 +27,9 @@ header.util a#CartButton:hover svg path, header.util a#CartButton:focus svg path
     .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 400px; }
     .slideshow-carousel.flickity-enabled .flickity-viewport .slide__item-image, .slide__item-image-contain.desktop { height: 100% !important; }
     .section-standard { padding: 0; }
+
+    footer.site-footer .grid { flex-wrap: wrap; }
+    footer.site-footer .grid .box { width: 50%; margin-bottom: 30px; }
 }
 @media(max-width:700px){
     .gallery-section figure { width: 100%; max-width: unset !important; }
