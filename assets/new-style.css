@@ -128,7 +128,9 @@ footer.site-footer .box.payment-types { text-align: right; }
 
   
   header.site-header.minimal .layout-horizontal .logo-contain { padding: 0; display: block; flex: auto; }
-  header.site-header .layout-horizontal { top: -15px; z-index: 9999; width: 50%; margin: 0 auto; }
+ header.site-header .layout-horizontal { top: -55px; z-index: 9999; width: 50%; margin: 0 auto; }
+  header.site-header.minimal { height: 0; }
+  header.util { height: 70px; }
   header.util .left-wrapper ul.text-links li.search-wrap{bottom: -20px; right: 25px;}
   header.util .left-wrapper ul.text-links li.mobile-menu,header.util a#CartButton{bottom: -18px;}
 }
