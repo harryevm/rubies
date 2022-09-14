@@ -146,7 +146,9 @@
    
 {% render 'hucs-honey-app' %}
 {% include 'cscode_discount' %}
-{% include 'upsellio' %}</head>
+{% include 'upsellio' %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
 
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" data-template-directory="{{ template.directory }}" data-template="{{ template.name }}" >
 
