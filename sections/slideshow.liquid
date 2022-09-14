@@ -85,7 +85,7 @@
                 {% assign image = block.settings.mobile_image %}
                 {% assign image_widths = '400,600,800,1000,1200' %}
                
-                <img class="slide__image slide__image-mobile lazymanual"
+                <img class="slide__image_this slide__image slide__image-mobile lazymanual"
                   {% if forloop.first %}
                   src="{% comment ls-rpl %}{{ image | img_url: '400x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '400x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}"
                   {% else %}
