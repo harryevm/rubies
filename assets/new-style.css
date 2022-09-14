@@ -1,4 +1,5 @@
 .contain-site-width, .wrapper { max-width: 1400px !important; }
+.slideshow .contain-full-width.no-padding .wrapper { max-width: unset !important; }
 .slide__item-content h2 { font-size: 60px; line-height: 65px; font-weight: 600; }
 .slide__item-content a.button { padding: 15px 20px; font-size: 17px; line-height: 30px; font-weight: 400; margin-top: 30px; text-transform: capitalize; }
 .slide__item-content p { font-size: 18px; line-height: 30px; font-weight: 600; margin-top: 15px; }
