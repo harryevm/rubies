@@ -31,4 +31,8 @@ header h4 { font-weight: 700 !important; font-size: 32px !important; line-height
 span.collection-size-swatch { position: absolute; bottom: 0; display: flex; align-items: center; flex-wrap: wrap; }
 .collection-size-swatch .size-values { margin: 0 5px 5px 0; background-color: #fff; min-width: 32px; height: 32px; border: 1px solid #cccccc91; color: #040f21; font-size: 14px; line-height: 30px; padding: 0 5px; }
 .simple-collection input.btn.btn-primary { width: 100%; }
-footer.site-footer .grid { font-size: initial; }
+/* Footer */
+footer.site-footer .grid { font-size: initial; display: flex; justify-content: space-between; }
+footer.site-footer .grid .box { padding: 0 20px 0 0; width: 25%; text-align: left; }
+footer.site-footer .grid .box:last-child { padding: 0; }
+button#subscribe { background-color: #fe3d05; border: 1px solid #fe3d05; font-size: 17px !important; height: 44px; margin-top: 0; line-height: 0; }
