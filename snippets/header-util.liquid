@@ -19,7 +19,7 @@
           <a href="#" class="search">
             <span class="icon-text">
               <span class="icon icon-search" aria-hidden="true">{% include 'icon-ui-search' %}</span>
-              <span class="text">{{ 'general.search.submit' | t }}</span>
+              {%comment%}<span class="text">{{ 'general.search.submit' | t }}</span> {%endcomment%}
             </span>
           </a>
         </li>
@@ -48,8 +48,8 @@
           <span class="icon icon-cart" aria-hidden="true">{% include cart_icon %}</span>
         </span>
         <span id="CartCount">{{ cart.item_count }}</span>
-        {{ 'layout.cart.title' | t }}
-        <span id="CartCost" class="money">{% unless cart.item_count == 0 %}{{ cart.total_price | money }}{% endunless %}</span>
+        {%comment%} {{ 'layout.cart.title' | t }}
+        <span id="CartCost" class="money">{% unless cart.item_count == 0 %}{{ cart.total_price | money }}{% endunless %}</span>{%endcomment%}
 
       </a>
       {% if settings.ajax_cart_enable %}
