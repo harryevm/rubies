@@ -23,6 +23,7 @@ header.util a#CartButton:hover svg path, header.util a#CartButton:focus svg path
 }
 @media(max-width:900px){
     .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 400px; }
+    .slideshow-carousel.flickity-enabled .flickity-viewport .slide__item-image, .slide__item-image-contain.desktop { height: 100% !important; }
 }
 
 
