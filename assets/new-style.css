@@ -134,6 +134,8 @@ footer.site-footer .box.payment-types { text-align: right; }
   header.util .left-wrapper ul.text-links li.mobile-menu { left: 0; }
   header.util .search-wrapper { position: fixed; left: 0; right: 0; top: 40px; }
   header.util .search-wrapper form.input-group.search-bar { margin: 0; }
+  header.util .search-wrapper form.input-group.search-bar { margin: 0; display: flex; align-items: center; }
+  header.util .search-wrapper form.input-group.search-bar>* { padding: 0; }
   header.util .left-wrapper ul.text-links li.search-wrap{bottom: -20px; right: 25px;}
   header.util .left-wrapper ul.text-links li.mobile-menu,header.util a#CartButton{bottom: -18px;}
 }
