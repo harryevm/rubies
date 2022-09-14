@@ -15,6 +15,7 @@ header.util a#CartButton:hover svg path, header.util a#CartButton:focus svg path
 }
 @media(max-width:1400px){
     .contain-site-width, .wrapper { max-width: unset!important; width: 96%; margin: 0 auto; }
+    .contain-site-width>.wrapper { width: 100%; }
     a#CartButton { right: 3%; }
     header.util li.search-wrap {right: 5%;}
     .slideshow .contain-full-width.no-padding .wrapper { width: 100%; }
