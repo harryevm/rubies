@@ -44,8 +44,9 @@
             {% if block.settings.title != blank %}
               <h4 id="nav-{{ block.settings.title | handle }}">{{ block.settings.title | escape }}</h4>
             {% endif %}
+           <div>
             {% if block.settings.text != blank %}
-              <p>{{ block.settings.text | escape }}</p>
+              < p>{{ block.settings.text | escape }}</p>
             {% endif %}
             <ul {% if linklists[block.settings.footer_linklist].levels > 1 %}class="nested-menu"{% endif %}>
               {% for link in linklists[block.settings.footer_linklist].links %}
@@ -78,6 +79,7 @@
                 </li>
               {% endfor %}
             </ul>
+           </div>
           </div>
         {% endif %}
 
@@ -89,6 +91,7 @@
            {% if block.settings.title != blank %}
                 <h4>{{ block.settings.title | escape }}</h4>
               {% endif %}
+          <div>
           {% if block.settings.text_richtext != blank %}
             <div class="offer-message">
               
@@ -98,6 +101,7 @@
             <div class="offer-email">
               {% include 'newsletter-subscribe', subscribe_source: 'footer' %}
             </div>
+          </div>
           </div>
         {% endif %}
 
@@ -109,6 +113,7 @@
             {% if block.settings.title != blank %}
               <h4>{{ block.settings.title | escape }}</h4>
             {% endif %}
+          <div>
             {% if block.settings.show_contact %}
               <p>
                 {% if block.settings.phone != blank %}
@@ -132,7 +137,7 @@
             {% if block.settings.show_social %}
               {% include 'social-icons' %}
             {% endif %}
-
+            </div>
           </div>
         {% endif %}
 
