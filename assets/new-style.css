@@ -21,6 +21,9 @@ header.util a#CartButton:hover svg path, header.util a#CartButton:focus svg path
     .slideshow .contain-full-width.no-padding .wrapper { width: 100%; }
     .slide__item-content.justify-center .inner-wrapper .content-contain { max-width: 75%; }
 }
+@media(max-width:900px){
+    .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 400px; }
+}
 
 
 
