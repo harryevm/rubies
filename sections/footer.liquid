@@ -293,8 +293,10 @@
 {% endschema %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>
+if ($(window).width() < 600) {
  $('footer.site-footer .grid .box>h4').click(function(){
    $(this).next().slideToggle();
    $(this).toggleClass('activate');
  });
+}
 </script>
