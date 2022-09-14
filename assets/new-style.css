@@ -13,6 +13,11 @@ header.util a#CartButton:hover svg path, header.util a#CartButton:focus svg path
     header.util li.search-wrap{position: absolute; right: 20px; bottom: -42px;}
     header.site-header .layout-horizontal nav.nav-bar { padding-right: 10%; }
 }
+@media(max-width:1400px){
+    .contain-site-width, .wrapper { max-width: unset !important; width: 96%; }
+    a#CartButton { right: 3%; }
+    header.util li.search-wrap {right: 5%;}
+}
 
 
 
