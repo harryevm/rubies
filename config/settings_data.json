@@ -1892,7 +1892,7 @@
           "logo": "shopify:\/\/shop_images\/rubies_logo.png",
           "logo_max_width": 200,
           "main_linklist": "main-menu",
-          "mega_menu": true,
+          "mega_menu": false,
           "scroll_lock": "header",
           "minimal_padding": "minimal",
           "top_bar_full_width": false,
