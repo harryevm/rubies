@@ -140,7 +140,8 @@ footer.site-footer .box.payment-types { text-align: right; }
   .logo-bar >.logo-bar__item img { width: 100%; height: auto; }
 
   header h4 {font-size: 20px!important; line-height: 30px !important;}
-  
+  .collection-list-updated header { margin-bottom: 30px; }
+  .gallery-box-wr figcaption.below h3 { font-size: 18px; line-height: 28px;}
  
 }
 @media(max-width:480px){
