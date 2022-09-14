@@ -4,6 +4,16 @@
       <div class="search-wrapper">
         {% include 'search-bar' %}
       </div>
+      <div class="left-wrapper">
+        <ul class="text-links"><li>
+          <a href="#" class="search">
+            <span class="icon-text">
+              <span class="icon icon-search" aria-hidden="true">{% include 'icon-ui-search' %}</span>
+              <span class="text">{{ 'general.search.submit' | t }}</span>
+            </span>
+          </a>
+        </li></ul>
+        </div>
       <div class="wrapper">
         <div class="logo-nav-contain layout-{{ section.settings.header_layout }}">
           {% comment %}
