@@ -101,5 +101,6 @@ footer.site-footer .box.payment-types { text-align: right; }
 }
 @media(max-width:480px){
   .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 50vh; }
-  
+  .collection-list-updated .flex-data>.grid__item h3 { font-size: 14px; line-height: 20px;}
+  div.collection-list .box a figure { width: 75%; }
 }
