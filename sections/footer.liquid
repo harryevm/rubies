@@ -89,11 +89,12 @@
            {% if block.settings.title != blank %}
                 <h4>{{ block.settings.title | escape }}</h4>
               {% endif %}
+          {% if block.settings.text_richtext != blank %}
             <div class="offer-message">
-              {% if block.settings.text_richtext != blank %}
+              
                 <div class="rte">{{ block.settings.text_richtext }}</div>
-              {% endif %}
-            </div>
+              
+            </div>{% endif %}
             <div class="offer-email">
               {% include 'newsletter-subscribe', subscribe_source: 'footer' %}
             </div>
