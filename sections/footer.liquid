@@ -144,7 +144,7 @@
             Loop through available payment methods and show their icons.
           {% endcomment %}
           {% unless shop.enabled_payment_types == empty %}
-            {% comment %}<p>{{ 'layout.footer.accepted_payments' | t }}</p>{% endcomment %}
+            {% comment %}<p>{{ 'layout.footer.accepted_payments' | t }}</p>{% endcomment %} 
               <ul>
               {% for type in shop.enabled_payment_types %}
                 {%- assign icon_class = 'payment-icon payment-icon--' | append: type -%}
