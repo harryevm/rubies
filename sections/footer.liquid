@@ -1,6 +1,32 @@
 <div data-section-id="{{ section.id }}" data-section-type="footer-section">
   <footer class="site-footer">
     <div class="wrapper">
+      {% if section.settings.trust_badge or section.settings.trust_richtext != blank %}
+        <div class="box trust-badge">
+          {% if section.settings.trust_richtext != blank %}
+            <div class="rte">{{ section.settings.trust_richtext }}</div>
+          {% endif %}
+          {% if section.settings.trust_badge %}
+            {%- assign image = section.settings.trust_badge -%}
+            {% assign image_widths = '295,394,590,700,800,1000,1200,1500,1800,2000,2400' %}
+            {% include 'theme-rias' %}
+            <img class="trust-badge--image lazyload"
+              src="{% comment ls-rpl %}{{ image | img_url: '295x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '295x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}"
+              data-src="{{ image_url_pattern }}"
+              data-widths="[{{ image_widths }}]"
+              data-aspectratio="{{ image.aspect_ratio }}"
+              data-sizes="auto"
+              alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+              <style>
+              {%- if image.width >= 600 -%}
+                footer.site-footer .trust-badge--image { width: 600px; }
+              {%-else -%}
+                footer.site-footer .trust-badge--image { width: {{ image.width }}px; }
+              {%- endif -%}
+              </style>
+          {% endif %}
+        </div>
+      {% endif %}
       <div class="grid">
       {%- for block in section.blocks -%}
         {%- capture box_classes -%}box box-{{ forloop.index }} {% if forloop.first == true %}box-first{% endif %} {% if forloop.last == true %}box-last{% endif %} layout-{{ section.blocks.size }}{%- endcapture -%}
@@ -131,32 +157,7 @@
         </div>
       {% endif %}
 
-      {% if section.settings.trust_badge or section.settings.trust_richtext != blank %}
-        <div class="box trust-badge">
-          {% if section.settings.trust_richtext != blank %}
-            <div class="rte">{{ section.settings.trust_richtext }}</div>
-          {% endif %}
-          {% if section.settings.trust_badge %}
-            {%- assign image = section.settings.trust_badge -%}
-            {% assign image_widths = '295,394,590,700,800,1000,1200,1500,1800,2000,2400' %}
-            {% include 'theme-rias' %}
-            <img class="trust-badge--image lazyload"
-              src="{% comment ls-rpl %}{{ image | img_url: '295x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '295x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}"
-              data-src="{{ image_url_pattern }}"
-              data-widths="[{{ image_widths }}]"
-              data-aspectratio="{{ image.aspect_ratio }}"
-              data-sizes="auto"
-              alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
-              <style>
-              {%- if image.width >= 600 -%}
-                footer.site-footer .trust-badge--image { width: 600px; }
-              {%-else -%}
-                footer.site-footer .trust-badge--image { width: {{ image.width }}px; }
-              {%- endif -%}
-              </style>
-          {% endif %}
-        </div>
-      {% endif %}
+      
 
       <p class="copyright">&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url }}<br>
       </p>
