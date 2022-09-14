@@ -139,6 +139,7 @@ footer.site-footer .box.payment-types { text-align: right; }
   .logo-bar >.logo-bar__item { width: 18% !important; }
   .logo-bar >.logo-bar__item img { width: 100%; height: auto; }
 
+  header h4 {font-size: 20px!important; line-height: 30px !important;}
  
 }
 @media(max-width:480px){
@@ -148,5 +149,5 @@ footer.site-footer .box.payment-types { text-align: right; }
 }
 @media(max-width:375px){
   header.site-header .layout-horizontal { top: -55px;}
-  
+  .collection-list-updated .flex-data>.grid__item h3 { font-size: 12px; line-height: 17px; }
 }
