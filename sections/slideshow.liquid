@@ -154,6 +154,11 @@
                 #block-{{ block.id }} .slide__item-content p { font-size: 20px; }
                 #block-{{ block.id }} .slide__item-content .content-box { padding: 20px; }
               }
+              @media (max-width: 480px) {
+                #block-{{ block.id }} .slide__item-content h2 { font-size: 40px; line-height: 50px; }
+                #block-{{ block.id }} .slide__item-content p { font-size: 16px; line-height: 25px; }
+                #block-{{ block.id }} .slide__item-content .content-box { padding: 20px; }
+              }
               {% endif %}
               {% assign overlay_alpha = block.settings.color_overlay_alpha_range | times: 0.01 %}
               #block-{{ block.id }} .slide__item-content {
