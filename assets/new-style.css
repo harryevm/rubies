@@ -29,9 +29,11 @@ header.util a#CartButton:hover svg path, header.util a#CartButton:focus svg path
 }
 @media(max-width:700px){
     .gallery-section figure { width: 100%; max-width: unset !important; }
-    .gallery-section .contain-site-width,.featured-row.section-standard .contain-site-width{ width: 100%; }
+    .gallery-section .contain-site-width{ width: 100%; }
+    .featured-row.section-standard .contain-site-width { width: 100%; padding: 0; }
     .gallery-section .contain-site-width .grid__item { margin-bottom: 50px; }
     .gallery-section .contain-site-width .grid__item figcaption.below { width: 96%; margin: 0 auto; }
+    .featured-row.section-standard .contain-site-width .feature-row__item.feature-row__text { text-align: center; padding: 30px 0; width: 96%; }
 }
 
 
