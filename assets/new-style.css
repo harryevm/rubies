@@ -32,7 +32,8 @@ span.collection-size-swatch { position: absolute; bottom: 0; display: flex; alig
 .collection-size-swatch .size-values { margin: 0 5px 5px 0; background-color: #fff; min-width: 32px; height: 32px; border: 1px solid #cccccc91; color: #040f21; font-size: 14px; line-height: 30px; padding: 0 5px; }
 .simple-collection input.btn.btn-primary { width: 100%; }
 /* Footer */
-footer.site-footer .grid { font-size: initial; display: flex; justify-content: space-between; }
+footer.site-footer .wrapper { max-width: 1400px; }
+footer.site-footer .grid { font-size: initial; display: flex; justify-content: space-between; margin: 0; }
 footer.site-footer .grid .box { padding: 0 20px 0 0; width: 25%; text-align: left; }
 footer.site-footer .grid .box:last-child { padding: 0; }
 button#subscribe { background-color: #fe3d05; border: 1px solid #fe3d05; font-size: 17px !important; height: 44px; margin-top: 0; line-height: 0; }
@@ -40,3 +41,5 @@ footer.site-footer h4, footer.site-footer .h4 { font-weight: 500; }
 .offer-email { margin-top: 15px; }
 footer.site-footer .trust-badge--image { max-width: 250px; }
 footer.site-footer .box.trust-badge { padding: 0; margin-bottom: 30px; }
+.bottom-bar { display: flex; justify-content: space-between; align-items: center; flex-direction: row-reverse; }
+.bottom-bar>* { padding: 0 !important; width: 50%; text-align: left; }
