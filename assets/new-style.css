@@ -7,8 +7,7 @@ a#CartButton svg { width: 22px; height: 22px; }
 
 a#CartButton span#CartCount { position: absolute; right: -10px; background: #FC01FF; width: 20px; height: 20px; border-radius: 50%; top: -5px; text-align: center; font-size: 10px; line-height: 22px; color: #fff; }
 header.util a#CartButton:hover svg path, header.util a#CartButton:focus svg path { fill: #000; }
-eatured-row.section-standard .contain-site-width .feature-row__item.feature-row__text { text-align: center; padding: 30px 0; width: 96%; }
-}
+
 
 
 
@@ -61,9 +60,6 @@ footer.site-footer .box.trust-badge { padding: 0; margin-bottom: 30px; }
 .bottom-bar>* { padding: 0 !important; width: 50%; text-align: left; }
 footer.site-footer .box.payment-types { text-align: right; }
 
-
-
-
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
@@ -95,4 +91,5 @@ footer.site-footer .box.payment-types { text-align: right; }
     .featured-row.section-standard .contain-site-width { width: 100%; padding: 0; }
     .gallery-section .contain-site-width .grid__item { margin-bottom: 50px; }
     .gallery-section .contain-site-width .grid__item figcaption.below { width: 96%; margin: 0 auto; }
-    .f
+    .featured-row.section-standard .contain-site-width .feature-row__item.feature-row__text { text-align: center; padding: 30px 0; width: 96%; }
+}
