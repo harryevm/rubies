@@ -486,6 +486,10 @@
           {
             "value": "basket",
             "label": "Basket"
+          },
+          {
+            "value": "bag2",
+            "label": "Bag New"
           }
         ],
         "default": "cart"
