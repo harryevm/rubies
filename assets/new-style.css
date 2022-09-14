@@ -86,6 +86,10 @@ footer.site-footer .box.payment-types { text-align: right; }
     .bottom-bar { top: -15px; }
 }
 @media(max-width:700px){
+    header.util .left-wrapper ul.text-links li.search-wrap { display: block; position: absolute; bottom: -50px; right: 35px; }
+    header.util a#CartButton { border: none; position: absolute; bottom: -47px; right: 0; }
+
+
     .gallery-section figure { width: 100%; max-width: unset !important; }
     .gallery-section .contain-site-width{ width: 100%; }
     .featured-row.section-standard .contain-site-width { width: 100%; padding: 0; }
