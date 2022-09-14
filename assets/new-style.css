@@ -27,7 +27,11 @@ header.util a#CartButton:hover svg path, header.util a#CartButton:focus svg path
     .slideshow-carousel.flickity-enabled .flickity-viewport .slide__item-image, .slide__item-image-contain.desktop { height: 100% !important; }
     .section-standard { padding: 0; }
 }
-
+@media(max-width:700px){
+    .gallery-section figure { width: 100%; max-width: unset !important; }
+    .gallery-section .contain-site-width { width: 100%; }
+    .gallery-section .contain-site-width .grid__item { margin-bottom: 50px; }
+}
 
 
 
