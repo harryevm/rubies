@@ -29,7 +29,7 @@ header.util a#CartButton:hover svg path, header.util a#CartButton:focus svg path
     .section-standard { padding: 0; }
 
     footer.site-footer .grid { flex-wrap: wrap; }
-    footer.site-footer .grid .box { width: 50%; margin-bottom: 30px; }
+    footer.site-footer .grid .box { width: 50% !important; margin-bottom: 30px; }
     .bottom-bar { top: -15px; }
 }
 @media(max-width:700px){
