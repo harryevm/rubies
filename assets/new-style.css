@@ -148,4 +148,5 @@ footer.site-footer .box.payment-types { text-align: right; }
 }
 @media(max-width:375px){
   header.site-header .layout-horizontal { top: -55px;}
+  
 }
