@@ -1946,7 +1946,8 @@
         ],
         "settings": {
           "show_payment_icons": true,
-          "trust_richtext": ""
+          "trust_richtext": "",
+          "trust_badge": "shopify:\/\/shop_images\/rubies_logo.png"
         }
       },
       "1481011869014": {
