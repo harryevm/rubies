@@ -159,4 +159,6 @@ footer.site-footer .box.payment-types { text-align: right; }
 @media(max-width:375px){
   header.site-header .layout-horizontal { top: -55px;}
   .collection-list-updated .flex-data>.grid__item h3 { font-size: 12px; line-height: 17px; }
+  div.collection-list .box a figure>img.card__image{height: 50px;}
+  div.collection-list .box figcaption.below a { padding: 0; }
 }
