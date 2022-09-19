@@ -144,7 +144,9 @@ footer.site-footer .box.payment-types { text-align: right; }
 
   header h4 {font-size: 20px!important; line-height: 30px !important;}
   .collection-list-updated header { margin-bottom: 30px; }
-  .gallery-box-wr figcaption.below h3 { font-size: 18px; line-height: 28px;}
+  .gallery-box-wr figcaption.below h3 { font-size: 18px; line-height: 25px; font-weight: 900 !important; letter-spacing: 0; }
+  .gallery-box-wr figcaption.below p { font-size: 14px; line-height: 25px; }
+  .gallery-section .contain-site-width .grid__item figcaption.below { width: 70%; }
  
 }
 @media(max-width:600px){
