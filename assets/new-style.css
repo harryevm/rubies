@@ -116,7 +116,7 @@ footer.site-footer .box.payment-types { text-align: right; }
 }
 @media(max-width:650px){
   footer.site-footer .grid .box { width: 100% !important; padding: 0; margin: 0 0 20px; border-bottom: 1px solid #ffffff2b; padding-bottom: 5px; }
-  footer.site-footer .grid .box>h4+div { display: none; border: none; margin-bottom: 20px; }
+  footer.site-footer .grid .box>h4+div { display: none; border: none; margin-bottom: 10px; padding: 0; }
   footer.site-footer form { margin: 0; }
     footer.site-footer h4, footer.site-footer .h4 { position: relative; font-weight: 300; text-transform: capitalize; font-size: 18px; line-height: 30px; }
     footer.site-footer h4::after, footer.site-footer h4::before {
@@ -147,6 +147,8 @@ footer.site-footer .box.payment-types { text-align: right; }
   .gallery-box-wr figcaption.below h3 { font-size: 18px; line-height: 25px; font-weight: 900 !important; letter-spacing: 0; }
   .gallery-box-wr figcaption.below p { font-size: 14px; line-height: 25px; }
   .gallery-section .contain-site-width .grid__item figcaption.below { width: 70%; }
+  .simple-collection input.btn.btn-primary { width: 100%; padding: 10px !important; font-size: 18px !important; line-height: 30px; }
+  footer.site-footer .box.trust-badge { text-align: left; }
  
 }
 @media(max-width:600px){
