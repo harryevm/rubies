@@ -62,7 +62,7 @@ footer.site-footer .box.trust-badge { padding: 0; margin-bottom: 30px; }
 .bottom-bar>* { padding: 0 !important; width: 50%; text-align: left; }
 footer.site-footer .box.payment-types { text-align: right; }
 
-.jdgm-prev-badge[data-average-rating='0.00'], .jdgm-preview-badge[data-template="index"] { display: block !important; }
+body .jdgm-prev-badge[data-average-rating="0.00"], body .jdgm-preview-badge[data-template=index] { display: block !important; }
 
 
 @media(min-width:700px){
