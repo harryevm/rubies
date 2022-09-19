@@ -161,6 +161,7 @@ footer.site-footer .box.payment-types { text-align: right; }
   div.collection-list .box a figure>img.card__image { width: auto; height: 60px; object-fit: contain; }
   h2 { font-size: 20px !important; line-height: 30px; margin-bottom: 10px !important; }
   div.featured-text .content { padding: 0 10%; }
+  .slide__item-content.justify-center .inner-wrapper .content-contain { width: 100%; max-width: unset; }
 }
 @media(max-width:375px){
   header.site-header .layout-horizontal { top: -55px;}
