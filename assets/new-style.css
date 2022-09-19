@@ -20,7 +20,7 @@ header.util a#CartButton:hover, header.util a#CartButton:focus { background: tra
 .flex-data.grid img.card__image { position: relative; width: auto; height: auto; object-fit: contain; object-position: center; }
 .collection-list-updated header { margin-bottom: 50px; }
 .collection-list-updated .flex-data > .grid__item { width: calc(100%/3); padding: 0; }
-.collection-list-updated .flex-data > .grid__item h3 { font-size: 18px; line-height: 30px; margin-top: 15px !important; }
+.collection-list-updated .flex-data > .grid__item h3 { font-size: 18px; line-height: 25px; margin-top: 15px !important; }
 .collection-list-updated .flex-data > .grid__item h3>a { font-weight: 600 !important;}
 .btn-primary {
     padding: 15px 25px !important;
