@@ -162,6 +162,7 @@ footer.site-footer .box.payment-types { text-align: right; }
   h2 { font-size: 20px !important; line-height: 30px; margin-bottom: 10px !important; }
   div.featured-text .content { padding: 0 10%; }
   .slide__item-content.justify-center .inner-wrapper .content-contain { width: 100%; max-width: unset; }
+  .gallery-section .contain-site-width .grid__item figcaption.below { width: 90%; }
 }
 @media(max-width:375px){
   header.site-header .layout-horizontal { top: -55px;}
