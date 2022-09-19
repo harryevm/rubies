@@ -40,7 +40,7 @@ data-auto-install='{% if auto_install != nil %}{{ auto_install }}{% else %}false
   <div class='jdgm-revs-tab__header'>
     <a class='jdgm-close-ico'></a>
     <h3 class='jdgm-revs-tab__title'>Let customers speak for us</h3>
-    <a class='jdgm-revs-tab__url' href='/pages/reviews'>
+    <a class='jdgm-revs-tab__url' href='https://rubies-v2-testing.myshopify.com/pages/reviews'>
       <div data-score='{{ jm_metafields.all_reviews_rating }}' class='jdgm-all-reviews-rating' aria-label='Average rating is {{ jm_metafields.all_reviews_rating }}' role='img'></div>{{ jm_metafields.all_reviews_count }} reviews
     </a>
   </div>
@@ -53,7 +53,7 @@ data-auto-install='{% if auto_install != nil %}{{ auto_install }}{% else %}false
 data-from-snippet='{% if concierge_install != nil %}{{ concierge_install }}{% else %}true{% endif %}'
 data-auto-install='{% if auto_install != nil %}{{ auto_install }}{% else %}false{% endif %}' >
   <div class="jdgm-carousel-title-and-link">
-    <h2 class='jdgm-carousel-title'>What our customers say</h2>
+    <h2 class='jdgm-carousel-title'>Let customers speak for us</h2>
     <span class="jdgm-all-reviews-rating-wrapper" href="javascript:void(0)">
       <span style="display:block"  data-score='{{ shop.metafields.judgeme.all_reviews_rating }}' class='jdgm-all-reviews-rating' aria-label='{{ shop.metafields.judgeme.all_reviews_rating }} stars' tabindex='0' role='img'></span>
       <span style="display: block" class='jdgm-carousel-number-of-reviews' data-number-of-reviews='{{ shop.metafields.judgeme.all_reviews_count }}'>
@@ -69,6 +69,14 @@ data-auto-install='{% if auto_install != nil %}{{ auto_install }}{% else %}false
 data-template='{% if concierge_install == true or concierge_install == nil %}{{ template }}{% else %}manual-installation{% endif %}'
 data-auto-install='{% if auto_install != nil %}{{ auto_install }}{% else %}false{% endif %}'>
   {{ product.metafields.judgeme.badge }}
+</div>
+{% endif %}
+
+{% if widget_type == 'judgeme_ugc_media_grid' %}
+<div class='jdgm-widget jdgm-ugc-media-wrapper'
+    data-from-snippet='{% if concierge_install != nil %}{{ concierge_install }}{% else %}true{% endif %}'
+    data-auto-install='{% if auto_install != nil %}{{ auto_install }}{% else %}false{% endif %}' >
+  {{ shop.metafields.judgeme.ugc_media_grid }}
 </div>
 {% endif %}
 
