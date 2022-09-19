@@ -149,9 +149,7 @@
             {% endif %}
           </div>
           
-    {% comment %}Start automatically added Judge.me widget{% endcomment %}
-      {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
-    {% comment %}End automatically added Judge.me widget{% endcomment %}
+    
     <span class="price">
           {% if on_sale %}
             {% if product.price_varies %}
@@ -167,7 +165,9 @@
             <span class="money">{{ product.price | money }}</span>
           {% endif %}
           </span>
-    
+          {% comment %}Start automatically added Judge.me widget{% endcomment %}
+          {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+        {% comment %}End automatically added Judge.me widget{% endcomment %}
           <form method="post" action="/cart/add">
             <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
             <input type="hidden" name="Color" value="black" />
