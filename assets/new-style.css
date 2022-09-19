@@ -145,6 +145,9 @@ footer.site-footer .box.payment-types { text-align: right; }
   .gallery-box-wr figcaption.below h3 { font-size: 18px; line-height: 28px;}
  
 }
+@media(max-width:600px){
+  img#dancer1{height: 250px !important; left: 70% !important; top: -14px !important;}
+}
 @media(max-width:480px){
 /*   .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 50vh; } */
   .collection-list-updated .flex-data>.grid__item h3 { font-size: 14px; line-height: 20px;}
