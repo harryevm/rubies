@@ -140,6 +140,7 @@ footer.site-footer .box.payment-types { text-align: right; }
   .simple-collection .product-container .box { padding: 0 20px; }
   .logo-bar >.logo-bar__item { width: 18% !important; }
   .logo-bar >.logo-bar__item img { width: 100%; height: auto; }
+  .gallery-section .contain-site-width { padding: 0; }
 
   header h4 {font-size: 20px!important; line-height: 30px !important;}
   .collection-list-updated header { margin-bottom: 30px; }
@@ -148,6 +149,7 @@ footer.site-footer .box.payment-types { text-align: right; }
 }
 @media(max-width:600px){
   img#dancer1{height: 250px !important; left: 70% !important; top: -14px !important;}
+  
 }
 @media(max-width:480px){
 /*   .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 50vh; } */
