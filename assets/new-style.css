@@ -150,7 +150,7 @@ body .jdgm-prev-badge[data-average-rating="0.00"], body .jdgm-preview-badge[data
   .gallery-box-wr figcaption.below h3 { font-size: 18px; line-height: 25px; font-weight: 900 !important; letter-spacing: 0; }
   .gallery-box-wr figcaption.below p { font-size: 14px; line-height: 25px; }
   .gallery-section .contain-site-width .grid__item figcaption.below { width: 70%; }
-  .simple-collection input.btn.btn-primary { width: 100%; padding: 10px !important; font-size: 18px !important; line-height: 30px; }
+  .simple-collection input.btn.btn-primary { width: 100%; padding: 10px !important; font-size: 18px !important; line-height: 30px;margin-top:20px; }
   footer.site-footer .box.trust-badge { text-align: left; }
  
 }
