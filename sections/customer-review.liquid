@@ -1,8 +1,11 @@
 <div class="testimonial-wrapper">
   <div class="wrapper">
+    {% if section.settings.heading != blank %}
     <h2>{{ section.settings.heading }}</h2>
+    {% endif %}
     <div class="testimonial-wr ">
       {% for block in section.blocks %}
+      {% if block.settings.heading != blank and block.settings.info != blank %}
       <div class="testimonial">
         <div class="star">
           <span><img src="{{ 'star.png' | asset_img_url:'' }}" /></span>
@@ -11,11 +14,16 @@
           <span><img src="{{ 'star.png' | asset_img_url:'' }}" /></span>
           <span><img src="{{ 'star.png' | asset_img_url:'' }}" /></span>
         </div>
-        <h3>{{ block.settings.heading }}</h3>
-        <p>{{ block.settings.info }}</p>
-        <h4>{{ block.settings.name }}</h4>
-        <span class="date">{{ block.settings.date }}</span>
+          <h3>{{ block.settings.heading }}</h3>
+          <p>{{ block.settings.info }}</p>
+        {% if block.settings.name != blank %}
+          <h4>{{ block.settings.name }}</h4>
+        {% endif %}
+        {% if block.settings.date != blank %}
+          <span class="date">{{ block.settings.date }}</span>
+        {% endif %}
       </div>
+      {% endif %} 
       {% endfor %}
     </div>
   </div>
