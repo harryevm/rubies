@@ -12,7 +12,38 @@
 {% schema %}
   {
     "name": "Section name",
-    "settings": []
+    "settings": [],
+    "blocks":[
+      {
+        "type":"tesimonial",
+        "name":"Tesimonial",
+        "settings":[
+          {
+            "type":"text",
+            "id":"heading",
+            "label":"Heading",
+            "default":"Heading"
+          },
+          {
+            "type":"textarea",
+            "id":"info",
+            "label":"Review"
+          },
+          {
+            "type":"text",
+            "id":"name",
+            "label":"Name",
+            "default":"Name"
+          },
+          {
+            "type":"text",
+            "id":"date",
+            "label":"Date",
+            "default":"06/07/2022"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
 
