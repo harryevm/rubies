@@ -1,7 +1,7 @@
 <div class="testimonial-wrapper">
   <div class="wrapper">
     <h2>{{ section.settings.heading }}</h2>
-    <div class="testimonial-wr owl-carousel owl-theme">
+    <div class="testimonial-wr ">
       {% for block in section.blocks %}
       <div class="testimonial">
         <div class="star">
@@ -85,7 +85,6 @@
   .testimonial-wr .testimonial p { font-weight: 500; line-height: 25px; }
   .testimonial-wr .testimonial span.date { color: #4E5663; }
 {% endstylesheet %}
-
-{% javascript %}
+<script>
   $('.testimonial-wr').slick();
-{% endjavascript %}
+</script>
