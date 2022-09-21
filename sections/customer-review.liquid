@@ -11,8 +11,13 @@
 </div>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": [],
+    "name": "Testimonials",
+    "settings": [{
+      "type":"text",
+      "id":"heading",
+      "label":"Heading",
+      "default":"Heading"
+    }],
     "blocks":[
       {
         "type":"tesimonial",
@@ -40,6 +45,19 @@
             "id":"date",
             "label":"Date",
             "default":"06/07/2022"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Testimonials",
+        "category": "Custom layout",
+        "blocks": [
+          {
+            "type": "tesimonial",
+            "type": "tesimonial",
+            "type": "tesimonial"
           }
         ]
       }
