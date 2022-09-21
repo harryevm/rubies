@@ -2474,6 +2474,86 @@
           "feed_width": 100,
           "html_area": ""
         }
+      },
+      "1663737217fb136d00": {
+        "type": "customer-review",
+        "blocks": {
+          "1663737217fb136d00-0": {
+            "type": "tesimonial",
+            "settings": {
+              "heading": "Almost perfect",
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
+              "name": "Amy Ackert",
+              "date": "06\/07\/2022"
+            }
+          },
+          "323b42b6-7f0e-4c9a-b464-510131a9ae99": {
+            "type": "tesimonial",
+            "settings": {
+              "heading": "Almost perfect",
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
+              "name": "Amy Ackert",
+              "date": "06\/07\/2022"
+            }
+          },
+          "67105895-5020-4b09-b03c-2e51e2477a0f": {
+            "type": "tesimonial",
+            "settings": {
+              "heading": "Almost perfect",
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
+              "name": "Amy Ackert",
+              "date": "06\/07\/2022"
+            }
+          },
+          "3f17d2f0-dd2c-4507-a314-d504fc2f669f": {
+            "type": "tesimonial",
+            "settings": {
+              "heading": "Almost perfect",
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
+              "name": "Amy Ackert",
+              "date": "06\/07\/2022"
+            }
+          },
+          "c07335b3-2259-4c0e-8eeb-4d7b0c9708b7": {
+            "type": "tesimonial",
+            "settings": {
+              "heading": "Almost perfect",
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
+              "name": "Amy Ackert",
+              "date": "06\/07\/2022"
+            }
+          },
+          "17bc53a0-d46d-4363-b279-fdf7da06544c": {
+            "type": "tesimonial",
+            "settings": {
+              "heading": "Almost perfect",
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
+              "name": "Amy Ackert",
+              "date": "06\/07\/2022"
+            }
+          },
+          "51153e64-814f-47b1-bda6-49c5c818d5d7": {
+            "type": "tesimonial",
+            "settings": {
+              "heading": "Almost perfect",
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
+              "name": "Amy Ackert",
+              "date": "06\/07\/2022"
+            }
+          }
+        },
+        "block_order": [
+          "1663737217fb136d00-0",
+          "323b42b6-7f0e-4c9a-b464-510131a9ae99",
+          "67105895-5020-4b09-b03c-2e51e2477a0f",
+          "3f17d2f0-dd2c-4507-a314-d504fc2f669f",
+          "c07335b3-2259-4c0e-8eeb-4d7b0c9708b7",
+          "17bc53a0-d46d-4363-b279-fdf7da06544c",
+          "51153e64-814f-47b1-bda6-49c5c818d5d7"
+        ],
+        "settings": {
+          "heading": "Heading"
+        }
       }
     },
     "content_for_index": [
@@ -2487,7 +2567,8 @@
       "1662976991610d8e6e",
       "16629848551f1ad81a",
       "1662985167514c68ca",
-      "1663735858989f6aa1"
+      "1663735858989f6aa1",
+      "1663737217fb136d00"
     ]
   }
 }
