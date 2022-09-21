@@ -2466,6 +2466,14 @@
         "settings": {
           "maxwidth": 1080
         }
+      },
+      "1663735858989f6aa1": {
+        "type": "instafeed",
+        "settings": {
+          "heading_size": 30,
+          "feed_width": 100,
+          "html_area": ""
+        }
       }
     },
     "content_for_index": [
@@ -2478,7 +2486,8 @@
       "1662977266f9153198",
       "1662976991610d8e6e",
       "16629848551f1ad81a",
-      "1662985167514c68ca"
+      "1662985167514c68ca",
+      "1663735858989f6aa1"
     ]
   }
 }
