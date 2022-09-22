@@ -103,6 +103,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
     a#CartButton span#CartCount { right: 0; }
   .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 520px; }
   footer.site-footer .menu ul li a { font-size: 14px; line-height: 20px; }
+  footer.site-footer h4.activate { margin-bottom: 20px; }
 
     .gallery-section figure { width: 100%; max-width: unset !important; }
     .gallery-section .contain-site-width{ width: 100%; }
