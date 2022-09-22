@@ -78,7 +78,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
   
 }
 @media(max-width:1400px){
-    .contain-site-width, .wrapper { max-width: unset!important; width: 96%; margin: 0 auto; }
+    .contain-site-width, .wrapper { max-width: 1200px !important; width: 96%; margin: 0 auto; }
     .contain-site-width>.wrapper { width: 100%; }
     a#CartButton { right: 3%; }
     header.util li.search-wrap {right: 5%;}
