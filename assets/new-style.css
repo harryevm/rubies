@@ -1,6 +1,7 @@
 .contain-site-width, .wrapper { max-width: 1400px !important;margin: 0 auto; }
 header.site-header nav.nav-bar ul.dropdown li a { font-size: 14px; line-height: 20px; color: #000; }
 header.site-header nav.nav-bar ul.dropdown li a:hover { color: #fc01ff; }
+
 /* Header */
 
 span.icon.icon-search svg { width: 20px; height: 20px; }
@@ -72,6 +73,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
     header.util li.search-wrap{position: absolute; right: 20px; bottom: -42px;}
     header.site-header .layout-horizontal nav.nav-bar { padding-right: 10%; }
+  footer.site-footer .menu ul li a { margin-bottom: 10px; display: block; font-size: 16px; line-height: 25px; }
 }
 @media(max-width:1400px){
     .contain-site-width, .wrapper { max-width: unset!important; width: 96%; margin: 0 auto; }
