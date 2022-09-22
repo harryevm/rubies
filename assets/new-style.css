@@ -2,7 +2,7 @@
 header.site-header nav.nav-bar ul.dropdown li a { font-size: 14px; line-height: 20px; color: #000; }
 header.site-header nav.nav-bar ul.dropdown li a:hover { color: #fc01ff; }
 footer.site-footer .menu ul li a { margin-bottom: 10px; display: block; font-size: 16px; line-height: 25px; }
-footer.site-footer h4 { margin-bottom: 30px; }
+
 /* Header */
 
 span.icon.icon-search svg { width: 20px; height: 20px; }
@@ -74,6 +74,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
     header.util li.search-wrap{position: absolute; right: 20px; bottom: -42px;}
     header.site-header .layout-horizontal nav.nav-bar { padding-right: 10%; }
+  footer.site-footer h4 { margin-bottom: 30px; }
   
 }
 @media(max-width:1400px){
