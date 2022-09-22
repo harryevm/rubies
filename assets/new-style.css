@@ -87,6 +87,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
     .flex-data.grid { margin: 0; }
     footer.site-footer .box.trust-badge,footer.site-footer .box.payment-types { border: none; }
   .gallery-box-wr figcaption.below h3 { font-size: 18px; line-height: 25px; }
+  .btn-primary { padding: 8px 20px !important; font-size: 16px; line-height: 25px; }
 }
 @media(max-width:900px){
     .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 400px; }
