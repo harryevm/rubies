@@ -2462,12 +2462,6 @@
           "product_count_range": 4
         }
       },
-      "1662985167514c68ca": {
-        "type": "judgeme_carousel_section",
-        "settings": {
-          "maxwidth": 1080
-        }
-      },
       "1663735858989f6aa1": {
         "type": "instafeed",
         "settings": {
@@ -2568,7 +2562,6 @@
       "1662976991610d8e6e",
       "16629848551f1ad81a",
       "1663737217fb136d00",
-      "1662985167514c68ca",
       "1663735858989f6aa1"
     ]
   }
