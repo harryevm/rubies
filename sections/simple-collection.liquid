@@ -94,8 +94,8 @@ $('select#ProductSelect-0').change(function(){
 });
 $('.simple-collection input.btn.btn-primary').click(function(){
   console.log($('select#ProductSelect-0').val());
-  console.log(test+" / "+test2)
-  if($('#variant-select option').attr('data-title') == test+" / "+test2){
+  console.log(test+" / "+$('select#ProductSelect-0').val())
+  if($('#variant-select option').attr('data-title') == test+" / "+$('select#ProductSelect-0').val()){
     $('#variant-select option').addClass('test');
   }else{
     $('#variant-select option').addClass('te');
