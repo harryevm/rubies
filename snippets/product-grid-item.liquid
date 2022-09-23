@@ -114,6 +114,7 @@
             {%- endif -%}
           </span>
         {%- endif -%}
+        <span class="collection-size-swatch">
         <select id="variant-select" name="id">
           {% for variant in product.variants %}
           {% if variant.available %}
@@ -123,7 +124,8 @@
           {% endif %}
           {% endfor %}
           </select>
-        <span class="collection-size-swatch">
+        
+          {% comment %}
         {% unless sold_out %}      
           {% unless product.has_only_default_variant %}
             {% for option in product.options_with_values %}
@@ -142,7 +144,7 @@
                 {% endif %}
             {% endfor %}
           {% endunless %}      
-        {% endunless %} 
+        {% endunless %} {% endcomment %}
         </span>
       </div>
     </a>
