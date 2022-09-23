@@ -86,6 +86,6 @@ $('#collection-{{section.id}}').slick({
 }
 $('.product-swatches__li').click(function(){
   var test = $(this).closest().children('.product-swatches__label').text();
-  console.log($(this).closest());
+  console.log($(this).closest().children('.product-swatches__label').text());
 });
 </script>
