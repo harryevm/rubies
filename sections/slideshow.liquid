@@ -80,7 +80,7 @@
               {% endif %}
             </div>
 
-            <div class="slide__item-image-contain mobile">
+            <div class="slide__item-image-contain mobile  {{ block.settings.mobile_image }}">
               {% if block.settings.mobile_image != blank %}
                 {{ block.settings.mobile_image }}
                 {% assign image = block.settings.mobile_image %}
