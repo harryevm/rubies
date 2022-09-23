@@ -91,14 +91,10 @@ $('.product-swatches__li').click(function(){
 });
 $('select[id*=ProductSelect-]').change(function(){
     test2 = $(this).val();
-  console.log(test2);
 });
-  console.log(test2);
 $('.simple-collection input.btn.btn-primary').click(function(){
- 
-  
-   console.log(test2);
-  console.log(test+" / "+$('select#ProductSelect-0').val())
+
+  console.log(test+" / "+test2)
   
   if($('#variant-select option').attr('data-title') == test+" / "+$('select#ProductSelect-0').val()){
     $('#variant-select option').addClass('test');
