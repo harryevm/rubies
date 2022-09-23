@@ -80,9 +80,9 @@
               {% endif %}
             </div>
 
-            <div class="slide__item-image-contain mobile  {{ block.settings.mobile_image }}">
+            <div class="slide__item-image-contain mobile ">
               {% if block.settings.mobile_image != blank %}
-                {{ block.settings.mobile_image }}
+                <img src="{{ block.settings.mobile_image | img_url:''}}" />
                 {% assign image = block.settings.mobile_image %}
                 {% assign image_widths = '400,600,800,1000,1200' %}
                
