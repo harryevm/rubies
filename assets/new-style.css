@@ -26,6 +26,7 @@ header.util a#CartButton:hover, header.util a#CartButton:focus { background: tra
 .collection-list-updated .flex-data > .grid__item { width: calc(100%/3); padding: 0; }
 .collection-list-updated .flex-data > .grid__item h3 { font-size: 18px; line-height: 25px; margin-top: 15px !important; }
 .collection-list-updated .flex-data > .grid__item h3>a { font-weight: 600 !important;}
+.slide__item-image-contain.mobile .mob-img-updated + img.slide__image_this.slide__image.slide__image-mobile{display: none;}
 .btn-primary {
     padding: 15px 25px !important;
     font-size: 17px;
