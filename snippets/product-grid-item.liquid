@@ -127,7 +127,7 @@
         {%- unless product.has_only_default_variant -%}
   {%- for option in product.options_with_values -%}
 
-    {%- if section.settings.product_selector == 'radio' -%}
+    {%- unless section.settings.product_selector == 'radio' -%}
       <fieldset id="ProductSelect-option-{{ forloop.index0 }}" name="{{ option.name | handleize }}">
         <legend>
           {{ option.name | escape }}
@@ -165,7 +165,7 @@
           </option>
         {%- endfor -%}
       </select>
-    {%- endif -%}
+    {%- endunless -%}
 
   {%- endfor -%}
 {%- endunless -%}
