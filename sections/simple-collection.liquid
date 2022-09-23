@@ -84,5 +84,8 @@ $('#collection-{{section.id}}').slick({
   autoplaySpeed: 2000,
 });
 }
-
+$('.product-swatches__li').click(function(){
+  var test = $(this).closest().children('.product-swatches__label').text();
+  alert(test);
+});
 </script>
