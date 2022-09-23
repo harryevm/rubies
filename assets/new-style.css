@@ -139,7 +139,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
   header.util .left-wrapper ul.text-links li.mobile-menu,header.util a#CartButton{bottom: -18px;}
   header.util svg { height: 14px; width: 30px; }
 
-  .slide__item-image-contain.mobile .mob-img-updated { object-fit: contain; background: #d1f550; }
+ .slide__item-image-contain.mobile .mob-img-updated { object-fit: contain; background: #d1f550; object-position: 0 30px; }
 }
 @media(max-width:650px){
   footer.site-footer .grid .box { width: 100% !important; padding: 0; margin: 0 0 20px; border-bottom: 1px solid #ffffff2b; padding-bottom: 5px; }
