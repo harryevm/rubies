@@ -165,15 +165,15 @@
           {% if on_sale %}
             {% if product.price_varies %}
               <span class="from">{{ 'products.general.from' | t }}</span>
-              <span class="money">{{ product.price | money }}</span>
-              <span class="original-price money">{{ product.compare_at_price | money }}</span>
+              <span class="money">{{ product.price | money_with_currency  }}</span>
+              <span class="original-price money">{{ product.compare_at_price | money_with_currency  }}</span>
             {% else %}
-              <span class="money">{{ product.price | money }}</span>
-              <span class="original-price money">{{ product.compare_at_price | money }}</span>
+              <span class="money">{{ product.price | money_with_currency  }}</span>
+              <span class="original-price money">{{ product.compare_at_price | money_with_currency  }}</span>
             {% endif %}
           {% else %}
             {% if product.price_varies %}<span class="from">{{ 'products.general.from' | t }}</span>{% endif %}
-            <span class="money">{{ product.price | money }}</span>
+            <span class="money">{{ product.price | money_with_currency  }}</span>
           {% endif %}
           </span>
           {% comment %}Start automatically added Judge.me widget{% endcomment %}
