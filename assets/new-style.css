@@ -69,6 +69,16 @@ footer.site-footer .box.payment-types { text-align: right; }
 body .jdgm-prev-badge[data-average-rating="0.00"], body .jdgm-preview-badge[data-template=index] { display: block !important; }
 div#insta-feed { padding: 20px 0 50px !important; }
 
+.simple-collection-section .product-title>a.title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 45px;
+}
+
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
