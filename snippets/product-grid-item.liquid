@@ -117,8 +117,7 @@
         <select id="variant-select" name="id">
           {% for variant in product.variants %}
           {% if variant.available %}
-          <option data-title="{{ variant.title }}" data-img="{{variant.image|img_url:"master"}}"value="{{variant.id}}">{{ variant.title }} for {{ variant.price | money_with_currency }}
-          {% if variant.price < variant.compare_at_price %} usually {{ variant.compare_at_price | money_with_currency }}{% endif %}</option>
+          <option data-title="{{ variant.title }}" data-img="{{variant.image|img_url:"master"}}"value="{{variant.id}}">{{ variant.title }}</option>
           {% else %}
           <option value="{{variant.id}}" disabled="disabled">{{ variant.title }} - sold out!</option>
           {% endif %}
