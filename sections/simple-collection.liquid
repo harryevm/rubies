@@ -93,6 +93,7 @@ $('select#ProductSelect-0').change(function(){
     test2 = $(this).val();
 });
 $('.simple-collection input.btn.btn-primary').click(function(){
+  console.log(test2);
   console.log(test+" / "+test2)
   if($('#variant-select option').attr('data-title') == test+" / "+test2){
     $('#variant-select option').addClass('test');
