@@ -141,6 +141,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
 .slideshow-carousel.flickity-enabled { height: 70vh; }
  .slide__item-image-contain.mobile .mob-img-updated { object-fit: contain; background: #d1f550; object-position: 0 30px; }
   .slide__item-content.align-center .inner-wrapper { position: absolute; bottom: 30px; left: 0; right: 0; text-align: left; max-width: 90%; margin: 0 auto; }
+  .slide__item-content.align-center .inner-wrapper .rte.content-contain { max-width: unset; }
 }
 @media(max-width:650px){
   footer.site-footer .grid .box { width: 100% !important; padding: 0; margin: 0 0 20px; border-bottom: 1px solid #ffffff2b; padding-bottom: 5px; }
