@@ -85,7 +85,7 @@ $('#collection-{{section.id}}').slick({
 });
 }
 $('.product-swatches__li').click(function(elem,html){
-  var test = $(this).children('.product-swatches__label').text();
+  var test = $(this).find('.product-swatches__label').text();
   console.log(test);
 });
 </script>
