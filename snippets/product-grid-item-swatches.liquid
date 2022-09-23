@@ -70,11 +70,13 @@
         {%- endcapture -%}
         <li class="product-swatches__li">
           <a href="javascript:;" 
+          {% comment %}<a href="{{ swatch_url | strip }}" {% endcomment %}
             class="product-swatches__link {% if option.selected_value == value %}product-swatches__link--selected{% endif %}"
             aria-label="{{ value | escape }}"
             title="{{ value | escape }}"
             data-variant-id="{{ color_variant_id }}"
-            data-variant-url="{{ swatch_url | strip }}"
+            {% comment %}data-variant-url="{{ swatch_url | strip }}"{% endcomment %}
+            data-variant-url=""
             data-variant-image="{{ color_variant_image }}"
             data-variant-image-pattern="{{ color_variant_image_pattern }}">
             <div class="product-swatches__color lazyload" {% if settings.collection_swatches_images %}data-bgset="{{ swatch_image_url_20x }} 20w, {{ swatch_image_url_40x }} 40w, {{ swatch_image_url_80x }} 80w"{% endif %} style="background-color: {{ swatch_css_color }}; {% if settings.collection_swatches_images %}background-image: url({{ swatch_image_url_1x }});{% endif %}">
