@@ -94,18 +94,14 @@ $('select[id*=ProductSelect-]').change(function(){
 });
 $('.simple-collection input.btn.btn-primary').click(function(){
 
-  console.log(test+" / "+test2)
   $("#variant-select option").each(function(){
         if($(this).attr('data-title')==test+" / "+test2 || $(this).attr('data-title')==test2+" / "+test){ 
              $(this).attr("selected","selected");  
         }
     });
   
-  // if($('#variant-select option').attr('data-title') == test+" / "+$('select#ProductSelect-0').val()){
-  //   $('#variant-select option').addClass('test');
-  // }else{
-  //   $('#variant-select option').addClass('te');
-  // }
+  jQuery.post(window.Shopify.routes.root + 'cart/add.js', $('form[action$="/cart/add"]').serialize());
+
 });
   
 </script>
