@@ -69,7 +69,7 @@
           {%- endif -%}
         {%- endcapture -%}
         <li class="product-swatches__li">
-          <a href="{{ swatch_url | strip }}" 
+          <a href="javascript:;" 
             class="product-swatches__link {% if option.selected_value == value %}product-swatches__link--selected{% endif %}"
             aria-label="{{ value | escape }}"
             title="{{ value | escape }}"
