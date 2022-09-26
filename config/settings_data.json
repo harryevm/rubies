@@ -1952,6 +1952,7 @@
       },
       "1481011869014": {
         "type": "slideshow",
+        "disabled": true,
         "blocks": {
           "1481011869014-0": {
             "type": "image",
@@ -2549,9 +2550,43 @@
         "settings": {
           "heading": ""
         }
+      },
+      "1664173457268d2b5f": {
+        "type": "updated-slideshow",
+        "blocks": {
+          "1664173457268d2b5f-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_340.png",
+              "mobile_image": "shopify:\/\/shop_images\/Group_327.png",
+              "link": "",
+              "title": "shopify:\/\/shop_images\/Group_336.png",
+              "text": "<p>Form-fitting clothing for active trans girls and non-binary kids<\/p>",
+              "button_label": "Shop Shaping Wear",
+              "button_link": "#",
+              "vertical_alignment": "align-center",
+              "horizontal_alignment": "justify-center",
+              "color_text": "#ffffff",
+              "color_accent": "#fe3d05",
+              "color_overlay": "#040f21",
+              "color_overlay_alpha_range": 0
+            }
+          }
+        },
+        "block_order": [
+          "1664173457268d2b5f-0"
+        ],
+        "settings": {
+          "full_width": true,
+          "autoplay": true,
+          "autoplay_speed_range": 5,
+          "show_dots": true,
+          "show_arrows": false
+        }
       }
     },
     "content_for_index": [
+      "1664173457268d2b5f",
       "1481011869014",
       "1591114062327",
       "16627222910bad4250",
