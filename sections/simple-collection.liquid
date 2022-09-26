@@ -1,3 +1,4 @@
+
 {% include 'spurit_po2_section_snippet', product: null, products: collections[section.settings.collection].products %}
 <div class="simple-collection layout-{{ section.settings.product_count_range }}" data-section-id="{{ section.id }}" data-section-type="simple-collection-section">
   <div class="wrapper">
@@ -9,6 +10,40 @@
         <a href="{{ section.settings.button_link }}" class="button outline">{{ section.settings.button_label | escape }}</a>
       {% endif %}
     </header>
+    <script>
+  function valget($this){
+  console.log($this.parents('.box.product').find('#variant-select').val(););
+  
+  $("#variant-select option").each(function(){
+        if($(this).attr('data-title')==test+" / "+test2 || $(this).attr('data-title')==test2+" / "+test){ 
+             $(this).attr("selected","selected");  
+        }
+    });
+  console.log($('select#variant-select').val());
+  // jQuery.post(window.Shopify.routes.root + 'cart/add.js', $('form[action$="/cart/add"]').serialize());
+  // let formData = {
+  //  'items': [{
+  //   'id': 36110175633573,
+  //   'quantity': 2
+  //   }]
+  // };
+  // fetch(window.Shopify.routes.root + 'cart/add.js', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify(formData)
+  // })
+  // .then(response => {
+  //   return response.json();
+  // })
+  // .catch((error) => {
+  //   console.error('Error:', error);
+  // });
+
+// });
+  }
+</script>
     <div class="product-container owl-carousel" id="collection-{{ section.id }}">
       {%- assign collection = collections[section.settings.collection] -%}
       {%- assign product_limit = section.settings.product_count_range -%}
@@ -93,37 +128,6 @@ $('select[id*=ProductSelect-]').change(function(){
     test2 = $(this).val();
 });
 // $('.simple-collection input.btn.btn-primary').click(function(){
-function valget($this){
-  console.log($this.parents('.box.product').find('#variant-select').val(););
-  
-  $("#variant-select option").each(function(){
-        if($(this).attr('data-title')==test+" / "+test2 || $(this).attr('data-title')==test2+" / "+test){ 
-             $(this).attr("selected","selected");  
-        }
-    });
-  console.log($('select#variant-select').val());
-  // jQuery.post(window.Shopify.routes.root + 'cart/add.js', $('form[action$="/cart/add"]').serialize());
-  // let formData = {
-  //  'items': [{
-  //   'id': 36110175633573,
-  //   'quantity': 2
-  //   }]
-  // };
-  // fetch(window.Shopify.routes.root + 'cart/add.js', {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json'
-  //   },
-  //   body: JSON.stringify(formData)
-  // })
-  // .then(response => {
-  //   return response.json();
-  // })
-  // .catch((error) => {
-  //   console.error('Error:', error);
-  // });
 
-// });
-  }
   
 </script>
