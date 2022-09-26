@@ -119,7 +119,7 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
     .then(()=>{
       setTimeout(() => {
         this.setAttribute('value','Add To Cart');
-      }, "5000")
+      }, "3000")
       this.setAttribute('value','Added');
       jQuery.getJSON('/cart.js', function(cart) { console.log(cart.item_count); jQuery("#CartCount").text(cart.item_count); });
     })
