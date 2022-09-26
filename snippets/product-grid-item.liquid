@@ -119,28 +119,12 @@
           {% for variant in product.variants %}
           {% if variant.available %}
           <option data-title="{{ variant.title }}" data-img="{{variant.image|img_url:"master"}}"value="{{variant.id}}">{{ variant.title }}</option>
-         
+          {% else %}
+          <option value="{{variant.id}}" disabled="disabled">{{ variant.title }} - sold out!</option>
           {% endif %}
           {% endfor %}
           </select>
-{% for variant in product.variants %}
 
-     {% if variant.available %}
-       {% assign value = variant.options[option_index] %}
-         {% unless values contains value %}
-         {% assign values = values | join: ',' %}
-         {% assign values = values | append: ',' | append: value %}
-         {% assign values = values | split: ',' %} 
-           {% if is_color %}
-            {{ value }}ds
-           {% endif %}
-           {% if is_color %}  
-           {% else %}
-             {{ value }}ds
-           {% endif %}
-         {% endunless %}
-     {% endif %}
- {% endfor %}
 
           
         {%- unless product.has_only_default_variant -%}
@@ -164,7 +148,7 @@
 
 
           
-          {% comment %}
+          
         {% unless sold_out %}      
           {% unless product.has_only_default_variant %}
             {% for option in product.options_with_values %}
@@ -183,7 +167,7 @@
                 {% endif %}
             {% endfor %}
           {% endunless %}      
-        {% endunless %} {% endcomment %}
+        {% endunless %}
         </span>
       </div>
     </a>
