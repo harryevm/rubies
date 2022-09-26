@@ -80,6 +80,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
     min-height: 45px;
 }
 
+
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
