@@ -100,6 +100,7 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
   // swatchVal2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val();
 
   $(this).parents('.box.product').find('#variant-select option').each(function(){
+        console.log($(this).attr('data-title')+"=="+swatchVal+" / "+swatchVal2);
         if($(this).attr('data-title')==swatchVal+" / "+swatchVal2 || $(this).attr('data-title')==swatchVal2+" / "+swatchVal){ 
              $(this).attr("selected","selected");  
         }
