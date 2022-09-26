@@ -99,8 +99,27 @@ $('.simple-collection input.btn.btn-primary').click(function(){
              $(this).attr("selected","selected");  
         }
     });
-  
+  console.log($('select#variant-select').val());
   // jQuery.post(window.Shopify.routes.root + 'cart/add.js', $('form[action$="/cart/add"]').serialize());
+  // let formData = {
+  //  'items': [{
+  //   'id': 36110175633573,
+  //   'quantity': 2
+  //   }]
+  // };
+  // fetch(window.Shopify.routes.root + 'cart/add.js', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify(formData)
+  // })
+  // .then(response => {
+  //   return response.json();
+  // })
+  // .catch((error) => {
+  //   console.error('Error:', error);
+  // });
 
 });
   
