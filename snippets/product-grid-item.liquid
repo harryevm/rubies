@@ -123,7 +123,24 @@
           {% endif %}
           {% endfor %}
           </select>
+{% for variant in product.variants %}
 
+     {% if variant.available %}
+       {% assign value = variant.options[option_index] %}
+         {% unless values contains value %}
+         {% assign values = values | join: ',' %}
+         {% assign values = values | append: ',' | append: value %}
+         {% assign values = values | split: ',' %} 
+           {% if is_color %}
+            {{ value }}
+           {% endif %}
+           {% if is_color %}  
+           {% else %}
+             {{ value }}
+           {% endif %}
+         {% endunless %}
+     {% endif %}
+ {% endfor %}
 
           
         {%- unless product.has_only_default_variant -%}
