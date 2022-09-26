@@ -102,7 +102,6 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
         }
     });
    var oriValue = $(this).parents('.box.product').find('#variant-select').val();
-
  
   let formData = {
    'items': [{
@@ -117,16 +116,12 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
       },
       body: JSON.stringify(formData)
     })
-    .then((response )=>{
-      if(response.ok == 'true'){
-        setTimeout(() => {
-          this.setAttribute('value','Add To Cart');
-        }, "3000")
-        this.setAttribute('value','Added');
-        jQuery.getJSON('/cart.js', function(cart) { jQuery("#CartCount").text(cart.item_count); });
-      }else{
-        alert('Out of stock')
-      }
+    .then(()=>{
+      setTimeout(() => {
+        this.setAttribute('value','Add To Cart');
+      }, "3000")
+      this.setAttribute('value','Added');
+      jQuery.getJSON('/cart.js', function(cart) { jQuery("#CartCount").text(cart.item_count); });
     })
     .catch((error) => {
       console.error('Error:', error);
