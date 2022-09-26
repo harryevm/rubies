@@ -118,12 +118,9 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
     })
     .then(()=>{
       setTimeout(() => {
-        this.setAttribute('value','Added');
-      }, "1000")
-      const para = document.createElement("p");
-    const node = document.createTextNode("This is new.");
-    para.appendChild(node);
-      this.parentElement.appendChild(para)
+        this.setAttribute('value','Add To Cart');
+      }, "5000")
+      this.setAttribute('value','Added');
     })
     .catch((error) => {
       console.error('Error:', error);
