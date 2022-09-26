@@ -145,6 +145,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
 /*   .slide__item-content.align-center .inner-wrapper { position: absolute; bottom: 30px; left: 0; right: 0; text-align: left; max-width: 90%; margin: 0 auto; } */
   .slide__item-content.align-center .inner-wrapper .rte.content-contain { max-width: unset; }
   .slide__item-content.align-center .inner-wrapper { text-align: left;}
+  .slide__item-content.justify-center .inner-wrapper .content-contain { max-width: inherit; width: 50%; margin: 0 0 0; }
 }
 @media(max-width:650px){
   footer.site-footer .grid .box { width: 100% !important; padding: 0; margin: 0 0 20px; border-bottom: 1px solid #ffffff2b; padding-bottom: 5px; }
