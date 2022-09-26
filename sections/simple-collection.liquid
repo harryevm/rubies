@@ -85,11 +85,11 @@ $('#collection-{{section.id}}').slick({
 });
 }
   var test,test2;
-$('.product-swatches__li').click(function(){
+$('.simple-collection .box.product .product-swatches__li').click(function(){
     test = $(this).find('.product-swatches__label').text();
     
 });
-$('select[id*=ProductSelect-]').change(function(){
+$('.simple-collection .box.productselect[id*=ProductSelect-]').change(function(){
     test2 = $(this).val();
 });
 $('.simple-collection .box.product input.btn.btn-primary').click(function(){
