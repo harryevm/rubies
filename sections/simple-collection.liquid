@@ -117,7 +117,12 @@ test2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val()
       },
       body: JSON.stringify(formData)
     })
-    .then(console.log(this))
+    .then(()=>{
+      this.setAttribute('value','Added');
+      setTimeout(function(){
+        this.setAttribute('value','Add To Cart')
+      }, 5000);
+    })
     .catch((error) => {
       console.error('Error:', error);
     });
