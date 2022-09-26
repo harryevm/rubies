@@ -119,8 +119,7 @@
           {% for variant in product.variants %}
           {% if variant.available %}
           <option data-title="{{ variant.title }}" data-img="{{variant.image|img_url:"master"}}"value="{{variant.id}}">{{ variant.title }}</option>
-          {% else %}
-          <option value="{{variant.id}}" disabled="disabled">{{ variant.title }} - sold out!</option>
+         
           {% endif %}
           {% endfor %}
           </select>
