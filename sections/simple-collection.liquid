@@ -86,9 +86,7 @@ $('#collection-{{section.id}}').slick({
 }
 
 var swatchVal,swatchVal2;
-$('.simple-collection .product-container .box').each(function(){
-  $(this).find('.product-swatches__li').click();
-});
+
 $('.box.product .product-swatches__li').click(function(){
     swatchVal = $(this).find('.product-swatches__label').text();
 });
@@ -96,8 +94,8 @@ $('.box.product select[id*=ProductSelect-]').change(function(){
     swatchVal2 = $(this).val();
 });
 $('.simple-collection .box.product input.btn.btn-primary').click(function(){
-  // swatchVal = $(this).parents('.box.product').find('.product-swatches__li a.product-swatches__link--selected .product-swatches__label').text();
-  // swatchVal2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val();
+  swatchVal = $(this).parents('.box.product').find('.product-swatches__li a.product-swatches__link--selected .product-swatches__label').text();
+  swatchVal2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val();
 
   $(this).parents('.box.product').find('#variant-select option').each(function(){
         console.log($(this).attr('data-title')+"=="+swatchVal+" / "+swatchVal2);
