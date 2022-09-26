@@ -124,7 +124,7 @@ test2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val()
 
       newDiv.appendChild(newContent);
 
-      const currentDiv = this;
+      const currentDiv = this.parentElement;
       document.body.insertBefore(newDiv, currentDiv);
           
     })
