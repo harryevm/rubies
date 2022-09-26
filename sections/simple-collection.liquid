@@ -99,7 +99,7 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
   
   console.log(test,test2+'4444444')
   $(this).parents('.box.product').find('#variant-select option').each(function(){
-    alert();
+    alert($(this).attr('data-title')+"=="+test+" / "+test2);
         if($(this).attr('data-title')==test+" / "+test2 || $(this).attr('data-title')==test2+" / "+test){ 
              $(this).attr("selected","selected");  
           alert();
