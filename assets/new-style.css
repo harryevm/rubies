@@ -196,6 +196,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
   div.featured-text .content { padding: 0 10%; }
   .slide__item-content.justify-center .inner-wrapper .content-contain { width: 100%; max-width: unset; }
   .gallery-section .contain-site-width .grid__item figcaption.below { width: 90%; }
+  .slide__item-content.justify-center .inner-wrapper .content-contain{width: 80%;}
 }
 @media(max-width:375px){
   header.site-header .layout-horizontal { top: -55px;}
