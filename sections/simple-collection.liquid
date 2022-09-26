@@ -98,13 +98,11 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
   var retur;
   $(this).parents('.box.product').find('#variant-select option').each(function(){
         if($(this).attr('data-title')==swatchVal+" / "+swatchVal2 || $(this).attr('data-title')==swatchVal2+" / "+swatchVal){ 
+          console.log($(this).attr('data-title')+"=="+swatchVal+" / "+swatchVal2);
              $(this).attr("selected","selected");  
-          retur = true;
-          return retur;
+    
         }else{
-          alert('Product Out of stock');
-          retur = false;
-          return retur;
+          console.log($(this).attr('data-title')+"=="+swatchVal+" / "+swatchVal2);
         }
     });
    var oriValue = $(this).parents('.box.product').find('#variant-select').val();
