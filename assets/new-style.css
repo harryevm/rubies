@@ -102,7 +102,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
   .gallery-box-wr figcaption.below div p { font-size: 14px; line-height: 20px; }
 }
 @media(max-width:900px){
-   .slideshow-carousel.flickity-enabled .flickity-viewport { max-height: 500px; }
+   .slideshow-carousel.flickity-enabled .flickity-viewport { max-height: 500px; min-height: 500px; }
     .slideshow-carousel.flickity-enabled .flickity-viewport .slide__item-image, .slide__item-image-contain.desktop, .slide__item-image-contain.mobile { height: 100% !important; }
     .section-standard { padding: 0; }
 
