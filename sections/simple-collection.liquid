@@ -92,8 +92,9 @@ $('.product-swatches__li').click(function(){
 $('select[id*=ProductSelect-]').change(function(){
     test2 = $(this).val();
 });
-$('.simple-collection input.btn.btn-primary').click(function(){
-
+// $('.simple-collection input.btn.btn-primary').click(function(){
+function valget($this){
+  $this.val();
   $("#variant-select option").each(function(){
         if($(this).attr('data-title')==test+" / "+test2 || $(this).attr('data-title')==test2+" / "+test){ 
              $(this).attr("selected","selected");  
@@ -121,6 +122,7 @@ $('.simple-collection input.btn.btn-primary').click(function(){
   //   console.error('Error:', error);
   // });
 
-});
+// });
+  }
   
 </script>
