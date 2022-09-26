@@ -135,6 +135,7 @@
                 {{ option.name | escape }}
               </label>
               <select id="ProductSelect-{{ forloop.index0 }}" data-index="option{{ forloop.index }}">
+                {{ product.variants[forloop.index0].available }}
                 {%- for value in option.values -%}
                   <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>
                     {{ value | escape }}
@@ -148,7 +149,7 @@
 
 
           
-          
+          {% comment %}
         {% unless sold_out %}      
           {% unless product.has_only_default_variant %}
             {% for option in product.options_with_values %}
@@ -167,7 +168,7 @@
                 {% endif %}
             {% endfor %}
           {% endunless %}      
-        {% endunless %}
+        {% endunless %} {% endcomment %}
         </span>
       </div>
     </a>
