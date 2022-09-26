@@ -93,10 +93,9 @@ $('.box.product select[id*=ProductSelect-]').change(function(){
     test2 = $(this).val();
 });
 $('.simple-collection .box.product input.btn.btn-primary').click(function(){
-test = $(this).parents('.box.product').find('.product-swatches__li a.product-swatches__link--selected .product-swatches__label').text();
-test2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val();
-  
-  console.log(test,test2+'4444444')
+  test = $(this).parents('.box.product').find('.product-swatches__li a.product-swatches__link--selected .product-swatches__label').text();
+  test2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val();
+
   $(this).parents('.box.product').find('#variant-select option').each(function(){
         if($(this).attr('data-title')==test+" / "+test2 || $(this).attr('data-title')==test2+" / "+test){ 
              $(this).attr("selected","selected");  
@@ -118,6 +117,9 @@ test2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val()
       body: JSON.stringify(formData)
     })
     .then(()=>{
+      setTimeout(() => {
+        this.setAttribute('Added');
+      }, "1000")
       const para = document.createElement("p");
     const node = document.createTextNode("This is new.");
     para.appendChild(node);
