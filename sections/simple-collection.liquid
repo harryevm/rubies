@@ -99,6 +99,9 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
   $(this).parents('.box.product').find('#variant-select option').each(function(){
         if($(this).attr('data-title')==swatchVal+" / "+swatchVal2 || $(this).attr('data-title')==swatchVal2+" / "+swatchVal){ 
              $(this).attr("selected","selected");  
+        }else{
+          alert('Product Out of stock');
+          return false;
         }
     });
    var oriValue = $(this).parents('.box.product').find('#variant-select').val();
