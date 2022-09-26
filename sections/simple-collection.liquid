@@ -102,9 +102,11 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
         const lookupValue = swatchVal2;
         const testString1 = $(this).attr('data-title');
         if(testString1.toLowerCase().indexOf(lookupValue) === -1){
-        if($(this).attr('data-title')==swatchVal+" / "+swatchVal2 || $(this).attr('data-title')==swatchVal2+" / "+swatchVal){ 
-             $(this).attr("selected","selected");  
-        }
+          if($(this).attr('data-title')==swatchVal+" / "+swatchVal2 || $(this).attr('data-title')==swatchVal2+" / "+swatchVal){ 
+               $(this).attr("selected","selected");  
+          }else{
+            console.log('test');
+          }
         }
 
     });
