@@ -132,11 +132,11 @@
          {% assign values = values | append: ',' | append: value %}
          {% assign values = values | split: ',' %} 
            {% if is_color %}
-            {{ value }}
+            {{ value }}ds
            {% endif %}
            {% if is_color %}  
            {% else %}
-             {{ value }}
+             {{ value }}ds
            {% endif %}
          {% endunless %}
      {% endif %}
