@@ -101,6 +101,8 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
         console.log($(this).attr('data-title')+"=="+swatchVal+" / "+swatchVal2);
         if($(this).attr('data-title')==swatchVal+" / "+swatchVal2 || $(this).attr('data-title')==swatchVal2+" / "+swatchVal){ 
              $(this).attr("selected","selected");  
+        }else{
+          $(this).attr("disabled","disabled");  
         }
     });
    var oriValue = $(this).parents('.box.product').find('#variant-select').val();
