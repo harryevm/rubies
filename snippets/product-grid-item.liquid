@@ -115,7 +115,7 @@
           </span>
         {%- endif -%}
         <span class="collection-size-swatch">
-        <select id="variant-select" name="id">
+        <select id="variant-select" name="id" style="visibility: hidden; position: absolute; ">
           {% for variant in product.variants %}
           {% if variant.available %}
           <option data-title="{{ variant.title }}" data-img="{{variant.image|img_url:"master"}}"value="{{variant.id}}">{{ variant.title }}</option>
