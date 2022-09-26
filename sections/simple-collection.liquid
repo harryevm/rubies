@@ -101,6 +101,7 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
   $(this).parents('.box.product').find('#variant-select').each(function(){
         if($(this).attr('data-title')==test+" / "+test2 || $(this).attr('data-title')==test2+" / "+test){ 
              $(this).attr("selected","selected");  
+          alert();
         }
     });
    console.log($(this).parents('.box.product').find('#variant-select').val());
