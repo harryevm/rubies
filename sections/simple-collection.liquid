@@ -84,18 +84,19 @@ $('#collection-{{section.id}}').slick({
   autoplaySpeed: 2000,
 });
 }
-
-$('.simple-collection .box.product input.btn.btn-primary').click(function(){
-
-   var test,test2;
-    $(this).parents('.box.product').find('.product-swatches__li').click(function(){
+  
+ var test,test2;
+    $('.box.product .product-swatches__li').click(function(){
         test = $(this).find('.product-swatches__label').text();
         console.log(test+'dgfgfdgfgdfg')
     });
-    $(this).parents('.box.product').find('select[id*=ProductSelect-]').change(function(){
+    $('.box.product select[id*=ProductSelect-]').change(function(){
         test2 = $(this).val();
       console.log(test2+'2222222222')
     });
+$('.simple-collection .box.product input.btn.btn-primary').click(function(){
+
+  
   console.log(test,test2+'4444444')
   $(this).parents('.box.product').find('#variant-select').each(function(){
         if($(this).attr('data-title')==test+" / "+test2 || $(this).attr('data-title')==test2+" / "+test){ 
