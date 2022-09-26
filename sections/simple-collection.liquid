@@ -118,7 +118,7 @@ test2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val()
       body: JSON.stringify(formData)
     })
     .then(response => {
-      console.log(response);
+      this..innerHTML = "New text!";
       return response.json();
     })
     .catch((error) => {
