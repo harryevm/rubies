@@ -105,7 +105,7 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
           if($(this).attr('data-title')==swatchVal+" / "+swatchVal2 || $(this).attr('data-title')==swatchVal2+" / "+swatchVal){ 
                $(this).attr("selected","selected");  
           }else{
-            console.log('test');
+           $(this).attr("disabled","disabled");  
           }
         }
 
