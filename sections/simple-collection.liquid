@@ -118,15 +118,10 @@ test2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val()
       body: JSON.stringify(formData)
     })
     .then(()=>{
-      const newDiv = document.createElement("div");
-
-      const newContent = document.createTextNode("Hi there and greetings!");
-
-      newDiv.appendChild(newContent);
-
-      const currentDiv = this.parentElement;
-      document.body.insertBefore(newDiv, currentDiv);
-          
+      const para = document.createElement("p");
+    const node = document.createTextNode("This is new.");
+    para.appendChild(node);
+      this.parentElement.appendChild(para)
     })
     .catch((error) => {
       console.error('Error:', error);
