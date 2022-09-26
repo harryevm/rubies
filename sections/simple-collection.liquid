@@ -120,9 +120,10 @@ test2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val()
     .then(()=>{
       this.setAttribute('value','Added');
       function myGreeting() {
+        alert();
         $(this).attr('value','Add To Cart')
       }
-       setTimeout(myGreeting, 5000);
+       setTimeout(myGreeting, 1000);
     })
     .catch((error) => {
       console.error('Error:', error);
