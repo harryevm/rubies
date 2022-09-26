@@ -88,6 +88,7 @@ $('#collection-{{section.id}}').slick({
 var swatchVal,swatchVal2;
 $('.box.product .product-swatches__li').click(function(){
     swatchVal = $(this).find('.product-swatches__label').text();
+    $(this).parents('.box.product').find('select[id*=ProductSelect-]').load( "{{canonical_url}} select[id*=ProductSelect-]" );
 });
 $('.box.product select[id*=ProductSelect-]').change(function(){
     swatchVal2 = $(this).val();
