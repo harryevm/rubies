@@ -138,7 +138,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
   header.util .left-wrapper ul.text-links li.search-wrap{bottom: -20px; right: 25px;}
   header.util .left-wrapper ul.text-links li.mobile-menu,header.util a#CartButton{bottom: -18px;}
   header.util svg { height: 14px; width: 30px; }
-.slideshow-carousel.flickity-enabled { height: 70vh; }
+.slideshow-carousel.flickity-enabled { height: 100%; }
 /*  .slide__item-image-contain.mobile .mob-img-updated { object-fit: contain; background: #d1f550; object-position: 0 30px; } */
   .slide__item img.desktop-head { display: none; }
   .slide__item img.mobile-head { display: block !important; }
