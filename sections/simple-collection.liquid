@@ -118,8 +118,8 @@ test2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val()
       body: JSON.stringify(formData)
     })
     .then(response => {
-      
       return response.json();
+      alert();
     })
     .catch((error) => {
       console.error('Error:', error);
