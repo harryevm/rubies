@@ -28,7 +28,7 @@
                   <div class="inner-wrapper">
                     {% if block.settings.title != blank %}
                       <div class="content-contain">
-                        <h2>{{ block.settings.title | escape }}</h2>
+                        <img src="{{ block.settings.title | img_url:'' }}" />
                       </div>
                     {% endif %}
                     {% if block.settings.text != blank %}
