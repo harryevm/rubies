@@ -135,8 +135,9 @@
                 {{ option.name | escape }}
               </label>
               <select id="ProductSelect-{{ forloop.index0 }}" data-index="option{{ forloop.index }}">
-                {{ product.variants[forloop.index0].available }}
+               
                 {%- for value in option.values -%}
+                   {{ product.variants[forloop.index0].available }}
                   <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>
                     {{ value | escape }}
                   </option>
