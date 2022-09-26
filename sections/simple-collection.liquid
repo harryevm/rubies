@@ -118,12 +118,15 @@ test2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val()
       body: JSON.stringify(formData)
     })
     .then(()=>{
-      this.setAttribute('value','Added');
-      function myGreeting() {
-        alert();
-        $(this).attr('value','Add To Cart')
-      }
-       setTimeout(myGreeting, 1000);
+      const newDiv = document.createElement("div");
+
+      const newContent = document.createTextNode("Hi there and greetings!");
+
+      newDiv.appendChild(newContent);
+
+      const currentDiv = this;
+      document.body.insertBefore(newDiv, currentDiv);
+          
     })
     .catch((error) => {
       console.error('Error:', error);
