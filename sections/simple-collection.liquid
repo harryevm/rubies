@@ -121,7 +121,7 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
       },
       body: JSON.stringify(formData)
     })
-    .then(()=>{
+    .then((response )=>{
       console.log(response);
       setTimeout(() => {
         this.setAttribute('value','Add To Cart');
