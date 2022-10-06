@@ -120,9 +120,6 @@
         
       </div>
     </a>
-    {%- if settings.collection_swatches -%}
-      {% include 'product-grid-item-swatches' %}
-    {%- endif -%}
     <span class="collection-size-swatch">
         <select id="variant-select" name="id" style="visibility: hidden; position: absolute; ">
           <option value="">--Select--</option>
@@ -181,7 +178,9 @@
           {% endunless %}      
         {% endunless %} {% endcomment %}
         </span>
-    
+    {%- if settings.collection_swatches -%}
+      {% include 'product-grid-item-swatches' %}
+    {%- endif -%}
         <figcaption>
           <div class="product-title">
             <a href="{{ product.url | within: collection }}" class="title">{{ product.title }}</a>
