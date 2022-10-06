@@ -81,7 +81,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
 }
 select#variant-select { visibility: hidden; position: absolute; }
 
-.box.product select[id*=ProductSelect-] { width: 100%; }
+.box.product select[id*=ProductSelect-] { width: 100%; height: 45px; padding: 0 10px; border-radius: 5px; }
 
 div.gallery .box figcaption.below h3 { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; line-clamp: 1; -webkit-box-orient: vertical;  }
 div.gallery .box figcaption.below p {
