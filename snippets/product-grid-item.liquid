@@ -114,7 +114,10 @@
             {%- endif -%}
           </span>
         {%- endif -%}
-        <span class="collection-size-swatch">
+        
+      </div>
+    </a>
+    <span class="collection-size-swatch">
         <select id="variant-select" name="id" style="visibility: hidden; position: absolute; ">
           {% for variant in product.variants %}
           {% if variant.available %}
@@ -170,9 +173,6 @@
           {% endunless %}      
         {% endunless %} {% endcomment %}
         </span>
-      </div>
-    </a>
-
     {%- if settings.collection_swatches -%}
       {% include 'product-grid-item-swatches' %}
     {%- endif -%}
