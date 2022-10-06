@@ -2566,7 +2566,7 @@
               "button_label": "Shop Shaping Wear",
               "button_link": "#",
               "vertical_alignment": "align-center",
-              "horizontal_alignment": "justify-start",
+              "horizontal_alignment": "justify-center",
               "color_text": "#ffffff",
               "color_accent": "#fe3d05",
               "color_overlay": "#040f21",
