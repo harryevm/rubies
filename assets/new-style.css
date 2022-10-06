@@ -44,7 +44,7 @@ header.util a#CartButton:hover, header.util a#CartButton:focus { background: tra
 .btn-primary:hover { background-color: transparent; color: #fe3d05 !important; transition: all 0.35s ease-in; }
 .gallery-box-wr figcaption.below h3 { font-size: 22px; line-height: 30px; font-weight: 700; letter-spacing: -1px; margin: 20px 0 10px !important; }
 h1, h2, h3 { font-weight: 600 !important; } 
-.simple-collection ul.product-swatches { position: absolute; margin: 0 !important; }
+.simple-collection ul.product-swatches { position: absolute; margin: 3px 0 0 !important; }
 .simple-collection figcaption { margin-top: 50px; }
 .simple-collection span.price { display: block; margin: 10px 0; font-size: 20px !important; line-height: 30px; font-weight: 700 !important; }
 header h4 { font-weight: 700 !important; font-size: 32px !important; line-height: 40px; margin-bottom: 30px !important; }
