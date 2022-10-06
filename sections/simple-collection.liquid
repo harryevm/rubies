@@ -91,6 +91,7 @@ $('.box.product .product-swatches__li').click(function(){
 });
 $('.box.product select[id*=ProductSelect-]').change(function(){
     swatchVal2 = $(this).val();
+    $(this).parents('.box.product').find('.simple-collection input.btn.btn-primary').removeAttr('disabled');
 });
 $('.simple-collection .box.product input.btn.btn-primary').click(function(){
   swatchVal = $(this).parents('.box.product').find('.product-swatches__li a.product-swatches__link--selected .product-swatches__label').text();
