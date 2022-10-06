@@ -103,7 +103,8 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
     });
    var oriValue = $(this).parents('.box.product').find('#variant-select').val();
  if(oriValue == ''){
-   $(this).prepend("<b>Prepended text</b>. ");
+  
+   $("<span>Hello world!</span>").insertBefore(this);
   const element =  $(this).parents('.box.product').find('select[id*=ProductSelect-]').css('border-color','#ff0000');
 
  }else{
