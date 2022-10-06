@@ -82,6 +82,19 @@ div#insta-feed { padding: 20px 0 50px !important; }
 select#variant-select { visibility: hidden; position: absolute; }
 span.collection-size-swatch { width: 65%; margin-bottom: 10px; }
 .box.product select[id*=ProductSelect-] { width: 100%; }
+
+div.gallery .box figcaption.below h3 { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; line-clamp: 1; -webkit-box-orient: vertical;  }
+div.gallery .box figcaption.below p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    min-height: 80px;
+}
+
+
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
