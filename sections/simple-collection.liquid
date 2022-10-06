@@ -103,7 +103,12 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
     });
    var oriValue = $(this).parents('.box.product').find('#variant-select').val();
  if(oriValue == ''){
-   alert('select-size');
+   const para = document.createElement("p");
+  const node = document.createTextNode("This is new.");
+  para.appendChild(node);
+  const element = document.getElementsByClassName("collection-size-swatch");
+  element.appendChild(para);
+   
  }else{
   let formData = {
    'items': [{
