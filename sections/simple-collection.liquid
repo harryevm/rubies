@@ -102,7 +102,9 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
         }
     });
    var oriValue = $(this).parents('.box.product').find('#variant-select').val();
- alert(oriValue);
+ if(oriValue == ''){
+   alert('select-size');
+ }else{
   let formData = {
    'items': [{
     'id': oriValue,
@@ -126,6 +128,7 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
     .catch((error) => {
       console.error('Error:', error);
     });
+ }
 
 });
   
