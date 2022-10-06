@@ -126,7 +126,7 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
         this.setAttribute('value','Add To Cart');
       }, "3000")
       this.setAttribute('value','Added');
-      this.previousSibling.style.display = "none";
+      this.previousSibling.previousSibling.style.display = "none";
       jQuery.getJSON('/cart.js', function(cart) { jQuery("#CartCount").text(cart.item_count); });
     })
     .catch((error) => {
