@@ -97,7 +97,7 @@ div.gallery .box figcaption.below p {
 span.error-size { display: block; margin: 10px 0 0; color: #ff0000; font-weight: 600; letter-spacing: 1px; text-align: center; }
 .product_card__image-wrapper {  max-height: 325px; }
 span.label.sale.label--top-left { top: 0; position: absolute; left: 0; }
-.box.product select[id*=ProductSelect-] option:first-child { font-size: 0 !important; display: none; }
+.box.product select[id*=ProductSelect-] option:first-child { font-size: 0 !important;  }
 
 
 @media(min-width:700px){
