@@ -93,7 +93,7 @@ div.gallery .box figcaption.below p {
     -webkit-box-orient: vertical;
     min-height: 80px;
 }
-
+.simple-collection input.btn.btn-primary[disabled] { background-color: #ccc; border-color: #ccc; }
 
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
