@@ -103,11 +103,9 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
     });
    var oriValue = $(this).parents('.box.product').find('#variant-select').val();
  if(oriValue == ''){
-   const para = document.createElement("p");
-  const node = document.createTextNode("This is new.");
- 
+
   const element =  $(this).parents('.box.product').find('.collection-size-swatch');
-  element.prepend(node);
+  element.prepend($('<div> new div </div>'));
    
  }else{
   let formData = {
