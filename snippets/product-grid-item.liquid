@@ -136,7 +136,7 @@
         {%- unless product.has_only_default_variant -%}
           {%- for option in product.options_with_values -%}
         
-              {% if option.name == 'Youth Size' %}
+              {% if option.name == 'Youth Size' or option.name == 'Size' %}
               <label for="ProductSelect-option-{{ forloop.index0 }}">
                 {{ option.name | escape }}
               </label>
