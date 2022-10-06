@@ -49,7 +49,7 @@ h1, h2, h3 { font-weight: 600 !important; }
 .simple-collection span.price { display: block; margin: 10px 0; font-size: 20px !important; line-height: 30px; font-weight: 700 !important; }
 header h4 { font-weight: 700 !important; font-size: 32px !important; line-height: 40px; margin-bottom: 30px !important; }
 
-span.collection-size-swatch { position: absolute; bottom: 0; display: flex; align-items: center; flex-wrap: wrap; }
+span.collection-size-swatch {display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
 .collection-size-swatch .size-values { margin: 0 5px 5px 0; background-color: #fff; min-width: 32px; height: 32px; border: 1px solid #cccccc91; color: #040f21; font-size: 14px; line-height: 30px; padding: 0 5px; }
 .simple-collection input.btn.btn-primary { width: 100%; }
 .section-standard .feature-row__item.feature-row__text { padding: 0 80px; }
@@ -80,7 +80,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
     min-height: 45px;
 }
 select#variant-select { visibility: hidden; position: absolute; }
-span.collection-size-swatch { width: 65%; margin-bottom: 10px; }
+
 .box.product select[id*=ProductSelect-] { width: 100%; }
 
 div.gallery .box figcaption.below h3 { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; line-clamp: 1; -webkit-box-orient: vertical;  }
