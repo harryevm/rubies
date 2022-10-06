@@ -14,6 +14,7 @@
       {%- assign product_limit = section.settings.product_count_range -%}
       {% for product in collection.products limit: product_limit  %}
         {% include 'product-grid-item' %}
+         {% include 'product-form' %}
       {% else %}
         {% for i in (1..product_limit) %}
           {% include 'placeholder-product-grid-item' %}
