@@ -101,6 +101,27 @@ span.label.sale.label--top-left { top: 0; position: absolute; left: 0; }
 .box.product select[id*=ProductSelect-] option:first-child { font-size: 0 !important;  }
 .featured-collection figcaption span.from, .simple-collection figcaption span.from, .collection figcaption span.from { font-family: Poppins,sans-serif; color: #040f21; font-size: 16px; line-height: 1.2em; }
 
+/* collection-page */
+.label.sold-out{ position: absolute; top: 6px; right: 6px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
