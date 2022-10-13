@@ -110,7 +110,7 @@ span.label.sale.label--top-left { top: 0; position: absolute; left: 0; }
 header.collection-header>.container { border: none; text-align: left; margin-bottom: 30px; }
 
 header.content-util nav.breadcrumb { text-align: left;  text-transform: capitalize; font-weight: 500; }
-
+header.collection-header h1 { font-weight: 800!important; }
 
 
 
@@ -206,7 +206,7 @@ header.content-util nav.breadcrumb { text-align: left;  text-transform: capitali
   .template-collection section.collection .collection-container { padding: 0; }
   .template-collection .products.products-grid { display: flex; flex-wrap: wrap; justify-content: space-between; margin: 0; }
   .template-collection .products.products-grid >.box.product { padding: 0; width: 49%; }
-  header.collection-header h1 { font-size: 18px; font-weight: 800 !important; }
+  
   
 }
 @media(max-width:650px){
@@ -248,6 +248,7 @@ header.content-util nav.breadcrumb { text-align: left;  text-transform: capitali
   .template-collection .collection figcaption .product-title a, .discount_text, .jdgm-prev-badge__text { font-size: 14px; line-height: 20px; }
   .template-collection .collection figcaption span.price { font-size: 18px !important; line-height: 25px; margin-top: 5px; }
   .template-collection .label.sold-out { font-size: 14px; }
+  header.collection-header h1 { font-size: 18px; }
 }
 @media(max-width:600px){
   img#dancer1{height: 250px !important; left: 70% !important; top: -14px !important;}
