@@ -104,7 +104,7 @@ $('.simple-collection .box.product input.btn.btn-primary').click(function(){
    var oriValue = $(this).parents('.box.product').find('#variant-select').val();
  if(oriValue == ''){
   
-   $("<span class='error-size'>Please select your size</span>").insertBefore(this);
+   $("<span class='error-size'>Please select your size</span>").insertAfter(this);
 
  }else{
   let formData = {
