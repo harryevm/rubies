@@ -3,6 +3,10 @@
     "main": {
       "type": "collection-template",
       "settings": {
+        "products_per_page_range": 12,
+        "image_placement": "default",
+        "sort_enable": false,
+        "layout_enable": false
       }
     }
   },
