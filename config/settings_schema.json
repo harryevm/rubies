@@ -275,6 +275,11 @@
     "name": "Product grid",
     "settings": [
       {
+        "type": "text",
+        "id": "product_discountext",
+        "label": "Discount Text"
+      },
+      {
         "type": "header",
         "content": "Product images"
       },
