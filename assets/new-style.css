@@ -104,7 +104,7 @@ span.label.sale.label--top-left { top: 0; position: absolute; left: 0; }
 
 /* collection-page */
 .label.sold-out{ position: absolute; top: 6px; right: 6px; }
-
+.jdgm-widget.jdgm-widget { display: block !important; }
 
 
 
