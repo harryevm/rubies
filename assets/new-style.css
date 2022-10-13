@@ -147,8 +147,8 @@ span.label.sale.label--top-left { top: 0; position: absolute; left: 0; }
   .slide__item-content h2 { font-size: 40px; line-height: 50px; }
 }
 @media(max-width:900px){
-   .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 500px; }
-    .slideshow-carousel.flickity-enabled .flickity-viewport .slide__item-image, .slide__item-image-contain.desktop, .slide__item-image-contain.mobile { height: 100% !important; }
+/*    .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 500px; }
+    .slideshow-carousel.flickity-enabled .flickity-viewport .slide__item-image, .slide__item-image-contain.desktop, .slide__item-image-contain.mobile { height: 100% !important; } */
     .section-standard { padding: 0; }
 
     footer.site-footer .grid { flex-wrap: wrap; }
