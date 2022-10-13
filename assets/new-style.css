@@ -112,7 +112,7 @@ header.collection-header>.container { border: none; text-align: left; margin-bot
 header.content-util nav.breadcrumb { text-align: left;  text-transform: capitalize; font-weight: 500; }
 header.collection-header h1 { font-weight: 800!important; }
 div#shopify-section-header { border-bottom: 1px solid #ccc; }
-
+header.content-util ul.social-icons {  display: none; }
 
 
 
