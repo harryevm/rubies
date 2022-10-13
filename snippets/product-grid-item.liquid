@@ -213,8 +213,9 @@
             <input type="hidden" name="Color" value="black" />
             <input type="hidden" name="Youth Size" value="8" />
             <input type="hidden" name="quantity" value="1" />
-            
+            {% unless template contains 'collection' %}
             <input type="submit" value="Add To Cart" class="btn btn-primary"  /> 
+            {% endunless %}
           </form>
           
         </figcaption>
