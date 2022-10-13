@@ -206,19 +206,23 @@
             <span class="money">{{ product.price | money_with_currency  }}</span>
           {% endif %}
           </span>
+          {% if template contains 'collection' %}
+          <div class="discount_text">{{ settings.product_discountext }}</div>
+          {% endif %}
           {% comment %}Start automatically added Judge.me widget{% endcomment %}
           {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
         {% comment %}End automatically added Judge.me widget{% endcomment %}
+          {% unless template contains 'collection' %}
           <form method="post" action="/cart/add">
             <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
             <input type="hidden" name="Color" value="black" />
             <input type="hidden" name="Youth Size" value="8" />
             <input type="hidden" name="quantity" value="1" />
-            {% unless template contains 'collection' %}
+            
             <input type="submit" value="Add To Cart" class="btn btn-primary"  /> 
-            {% endunless %}
+            
           </form>
-          
+          {% endunless %}
         </figcaption>
     
     
