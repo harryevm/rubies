@@ -114,6 +114,7 @@ header.collection-header h1 { font-weight: 800!important; }
 div#shopify-section-header { border-bottom: 1px solid #ccc; }
 header.content-util ul.social-icons {  display: none; }
 .template-collection .products.products-grid>.box.product>figure { box-shadow: 0 0 10px #0000001c; }
+.template-collection .products.products-grid>.box.product ul.product-swatches { padding: 0 10px; }
 .template-collection .products.products-grid>.box.product figcaption { padding: 0 10px 15px; }
 
 
