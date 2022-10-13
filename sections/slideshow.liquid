@@ -175,12 +175,12 @@
               }
               #block-{{ block.id }} a:hover,
               #block-{{ block.id }} a:focus {
-                color: {{ block.settings.color_text }};
+                color: {{ block.settings.color_text_btn }};
               }
               #block-{{ block.id }} a.button {
                 background-color: {{ block.settings.color_accent }};
                 border-color: {{ block.settings.color_accent }};
-                color: {{ block.settings.color_text }};
+                color: {{ block.settings.color_text_btn }};
               }
               #block-{{ block.id }} a.button:hover,
               #block-{{ block.id }} a.button:focus {
@@ -314,6 +314,12 @@
           "type": "color",
           "id": "color_text",
           "label": "Text",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "color_text_btn",
+          "label": "Button Text Color",
           "default": "#000000"
         },
         {
