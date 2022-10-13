@@ -197,6 +197,7 @@ span.label.sale.label--top-left { top: 0; position: absolute; left: 0; }
   .slide__item-content.align-center .inner-wrapper { text-align: left;}
   .slide__item-content.justify-center .inner-wrapper .content-contain { max-width: inherit; width: 50%; margin: 0 0 0; }
   .slide__item-content .outer-wrapper { display: flex; align-items: end; }
+  .slide__item-content.justify-start .inner-wrapper .content-contain { max-width: 100%; text-align: center; }
 }
 @media(max-width:650px){
   footer.site-footer .grid .box { width: 100% !important; padding: 0; margin: 0 0 20px; border-bottom: 1px solid #ffffff2b; padding-bottom: 5px; }
