@@ -1965,7 +1965,8 @@
               "button_link": "#",
               "vertical_alignment": "align-center",
               "horizontal_alignment": "justify-start",
-              "color_text": "#ffffff",
+              "color_text": "#fb00ff",
+              "color_text_btn": "#ffffff",
               "color_accent": "#1a6cfc",
               "color_overlay": "#000000",
               "color_overlay_alpha_range": 0
@@ -2566,6 +2567,7 @@
               "vertical_alignment": "align-center",
               "horizontal_alignment": "justify-start",
               "color_text": "#fb00ff",
+              "color_text_btn": "#000000",
               "color_accent": "#1a6cfc",
               "color_overlay": "#040f21",
               "color_overlay_alpha_range": 0
