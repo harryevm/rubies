@@ -2560,13 +2560,13 @@
               "image": "shopify:\/\/shop_images\/RUBIES-home-page-banner-02-17-2020-no-text.png",
               "mobile_image": "shopify:\/\/shop_images\/RUBIES-home-page-banner-mobile-02-17-2020-no-text.png",
               "link": "",
-              "text": "<p>Form-fitting clothing for active trans girls and non-binary kids<\/p>",
+              "text": "<p><strong>Form-fitting clothing for trans girls.<\/strong><\/p><p><\/p><p>We want every active trans girl to be as confident and comfortable in her clothes as her friends.<\/p>",
               "button_label": "Shop Shaping Wear",
               "button_link": "#",
               "vertical_alignment": "align-center",
               "horizontal_alignment": "justify-start",
-              "color_text": "#ffffff",
-              "color_accent": "#fe3d05",
+              "color_text": "#fb00ff",
+              "color_accent": "#1a6cfc",
               "color_overlay": "#040f21",
               "color_overlay_alpha_range": 0
             }
