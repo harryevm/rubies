@@ -11,9 +11,9 @@
     {%- if section.settings.variant_style == 'swatches' and color_options == option_name -%}
     <span class="single-option-radio__label--value label-extra">{{ option.selected_value }}</span>
     {%- endif -%}
-    {%- if section.settings.size_guide_page != blank and size_options == option_name -%}
+    {% comment %}{%- if section.settings.size_guide_page != blank and size_options == option_name -%}
     <span class="label-extra"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">{{ pages[section.settings.size_guide_page].title }}</a></span>
-    {%- endif -%}
+    {%- endif -%}{% endcomment %}
   </label>
   <fieldset class="single-option-radio"
     name="{{ option.name }}"
