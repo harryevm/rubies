@@ -20,11 +20,11 @@
 
   {% elsif template contains 'collection' and collection.handle %}
 
-    <span aria-hidden="true">&rsaquo;</span>
+    <span aria-hidden="true">/</span>
     {% if current_tags %}
       {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
       {{ collection.title | link_to: url }}
-      <span aria-hidden="true">&rsaquo;</span>
+      <span aria-hidden="true">/</span>
       <span>{% comment ls-rpl %}{{ current_tags | join: " + " | replace: "_", " " }}{% endcomment %}{%- capture LS_TAGS -%}{%- render "ls-tags", resource: nil, tags: current_tags -%}{%- endcapture -%}{%- assign LS_TAGS = LS_TAGS | split: "," -%}{{ LS_TAGS | join: " + " | replace: "_", " " }}{% comment /ls-rpl %}{% endcomment %}</span>
     {% else %}
       <span>{{ collection.title }}</span>
