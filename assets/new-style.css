@@ -201,7 +201,7 @@ div#shopify-section-header { border-bottom: 1px solid #ccc; }
   .slide__item-content.justify-start .inner-wrapper .content-contain,.slide__item-content.align-center .inner-wrapper { max-width: 100%; text-align: center; }
 
   /* Collection */
-  .template-collection section.collection { padding: 0; }
+  .template-collection section.collection { padding-bottom: 40px; }
   .template-collection section.collection .grid { margin: 0; }
   .template-collection section.collection .collection-container { padding: 0; }
   .template-collection .products.products-grid { display: flex; flex-wrap: wrap; justify-content: space-between; margin: 0; }
