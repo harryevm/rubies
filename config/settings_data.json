@@ -2553,14 +2553,15 @@
       },
       "1664173457268d2b5f": {
         "type": "updated-slideshow",
-        "disabled": true,
         "blocks": {
           "1664173457268d2b5f-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/RUBIES-home-page-banner-02-17-2020-no-text.png",
-              "mobile_image": "shopify:\/\/shop_images\/RUBIES-home-page-banner-mobile-02-17-2020-no-text.png",
+              "image": "shopify:\/\/shop_images\/Group_340.png",
+              "mobile_image": "shopify:\/\/shop_images\/Group_340.png",
               "link": "",
+              "title": "shopify:\/\/shop_images\/heading-text.png",
+              "mtitle": "shopify:\/\/shop_images\/Group_336.png",
               "text": "<p><strong>Form-fitting clothing for trans girls.<\/strong><\/p><p><\/p><p>We want every active trans girl to be as confident and comfortable in her clothes as her friends.<\/p>",
               "button_label": "Shop Shaping Wear",
               "button_link": "#",
