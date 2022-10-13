@@ -245,6 +245,7 @@ span.label.sale.label--top-left { top: 0; position: absolute; left: 0; }
 
   .template-collection .collection figcaption .product-title a, .discount_text, .jdgm-prev-badge__text { font-size: 14px; line-height: 20px; }
   .template-collection .collection figcaption span.price { font-size: 18px !important; line-height: 25px; margin-top: 5px; }
+  .template-collection .label.sold-out { font-size: 14px; }
 }
 @media(max-width:600px){
   img#dancer1{height: 250px !important; left: 70% !important; top: -14px !important;}
