@@ -34,8 +34,8 @@ header.util a#CartButton:hover, header.util a#CartButton:focus { background: tra
     margin-top: 10px;
     text-transform: capitalize !important;
     text-decoration: none;
-    background-color: #fe3d05;
-    border:1px solid #fe3d05;
+    background-color: #1A6CFC ;
+    border:1px solid #1A6CFC ;
     color: #ffffff !important;
     display: inline-block !important;
     border-radius: 4px;
