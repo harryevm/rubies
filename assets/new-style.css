@@ -41,7 +41,7 @@ header.util a#CartButton:hover, header.util a#CartButton:focus { background: tra
     border-radius: 4px;
     transition: all 0.35s ease-out;
 }
-.btn-primary:hover { background-color: transparent; color: #fe3d05 !important; transition: all 0.35s ease-in; }
+.btn-primary:hover { background-color: transparent; color: #1A6CFC !important; transition: all 0.35s ease-in; }
 .gallery-box-wr figcaption.below h3 { font-size: 22px; line-height: 30px; font-weight: 700; letter-spacing: -1px; margin: 20px 0 10px !important; }
 h1, h2, h3 { font-weight: 600 !important; } 
 .simple-collection ul.product-swatches, .collection .product-swatches { margin: 0!important; position: absolute; }
