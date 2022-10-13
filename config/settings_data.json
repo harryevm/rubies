@@ -1750,6 +1750,7 @@
     "favicon": "shopify:\/\/shop_images\/favicon.jpg",
     "newsletter_discount_code": "",
     "newsletter_redirect_link": "",
+    "product_discountext": "Buy 2+ save 5%, 3+ save 10%",
     "collections_product_ratio": "100%",
     "collection_product_auto_crop": true,
     "variant_rollover": true,
