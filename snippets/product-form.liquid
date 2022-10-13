@@ -55,7 +55,9 @@
                 {% endfor %}
               </select>
             </div>
-            
+            {%- if section.settings.size_guide_page != blank and size_options contains option_name -%}
+                <span class="label-extra"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">{{ pages[section.settings.size_guide_page].title }}</a></span>
+                {%- endif -%}
           {% endfor %}
           {% if section.settings.product_quantity_enable %}
             {% include 'quantity-selector' %}
