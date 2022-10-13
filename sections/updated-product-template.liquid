@@ -1,4 +1,6 @@
+
 {% form 'product', product %}
+  {%- for block in section.blocks -%}
   <div class="product-title">
     <h1 itemprop="name">
       {% unless section_onboarding %}
@@ -138,7 +140,9 @@
       {% endif %}
     </div>
   </div>
+  {%- endfor -%}
 {% endform %}
+  
 {% schema %}
   {
   "name": "Product information",
