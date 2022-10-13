@@ -44,9 +44,7 @@
             <div class="selector-wrapper">
               <label for="SingleOptionSelector-{{ forloop.index0 }}">
                 {{ option.name }}
-                {%- if section.settings.size_guide_page != blank and size_options contains option_name -%}
-                <span class="label-extra"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">{{ pages[section.settings.size_guide_page].title }}</a></span>
-                {%- endif -%}
+                
               </label>
 
               <select class="single-option-selector single-option-selector-{{ section.id }}" id="SingleOptionSelector-{{ section.id }}-{{ forloop.index0 }}" data-name="{{ option.name }}" data-index="option{{ forloop.index }}">
@@ -57,6 +55,9 @@
                 {% endfor %}
               </select>
             </div>
+            {%- if section.settings.size_guide_page != blank and size_options contains option_name -%}
+                <span class="label-extra"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">{{ pages[section.settings.size_guide_page].title }}</a></span>
+                {%- endif -%}
           {% endfor %}
           {% if section.settings.product_quantity_enable %}
             {% include 'quantity-selector' %}
