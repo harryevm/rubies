@@ -120,6 +120,7 @@
         
       </div>
     </a>
+    {% unless template contains 'collection' %}
     <span class="collection-size-swatch">
         <select id="variant-select" name="id" style="visibility: hidden; position: absolute; ">
           <option value="">--Select--</option>
@@ -177,7 +178,7 @@
             {% endfor %}
           {% endunless %}      
         {% endunless %} {% endcomment %}
-        </span>
+        </span>{% endunless %}
     {%- if settings.collection_swatches -%}
       {% include 'product-grid-item-swatches' %}
     {%- endif -%}
