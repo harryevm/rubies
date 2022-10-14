@@ -9,6 +9,7 @@ function addToCartAjax(){
       swatchVal2 = $(this).val();
       $('span.error-size').remove();
   });
+  $('.simple-collection .box.product input.btn.btn-primary').click();
   $('.simple-collection .box.product input.btn.btn-primary').click(function(){
     swatchVal = $(this).parents('.box.product').find('.product-swatches__li a.product-swatches__link--selected .product-swatches__label').text();
     swatchVal2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val();
