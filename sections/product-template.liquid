@@ -152,6 +152,18 @@
                     <div class="tab__content">{{ pages[section.settings.tabs_global_page_3].content }}</div>
                   </div>
                 {%- endif -%}
+                {% for block in blocks %}
+                <div class="tab tab--global-1">
+                  <div class="tab__title" tabindex="0">{{ block.settings.heading }}</div>
+                  <div class="tab__content">
+                    {% if block.settings.page %}
+                      {{ pages[block.settings.page].content }}
+                    {% else %}
+                      {{ block.settings.content }}
+                    {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
               </div>
             {%- else -%}
               {%- comment -%}
