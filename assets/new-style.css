@@ -69,7 +69,7 @@ footer.site-footer .box.trust-badge { padding: 0; margin-bottom: 30px; }
 footer.site-footer .box.payment-types { text-align: right; }
 
 /* body .jdgm-prev-badge[data-average-rating="0.00"], */
-body .jdgm-preview-badge[data-template=index] { display: block !important; } 
+body .jdgm-preview-badge[data-template=index] { display: block!important; min-height: 30px; }
 div#insta-feed { padding: 20px 0 50px !important; }
 
 .simple-collection-section .product-title>a.title {
