@@ -1987,6 +1987,19 @@
       },
       "product-template": {
         "type": "product-template",
+        "blocks": {
+          "5faab193-44b1-4ed6-90fc-022a02e5261b": {
+            "type": "collapsible_tab",
+            "settings": {
+              "heading": "Collapsible row",
+              "content": "<p>dsf<\/p>",
+              "page": ""
+            }
+          }
+        },
+        "block_order": [
+          "5faab193-44b1-4ed6-90fc-022a02e5261b"
+        ],
         "settings": {
           "show_vendors": true,
           "variant_style": "swatches",
@@ -2007,7 +2020,7 @@
           "tabs_enable": true,
           "tabs_auto_headings": "h4",
           "tabs_title": "Why You 'll Love it",
-          "tabs_global_page_1": "",
+          "tabs_global_page_1": "about",
           "tabs_global_page_2": "",
           "tabs_global_page_3": "",
           "show_product_jump": false,
