@@ -1991,14 +1991,41 @@
           "5faab193-44b1-4ed6-90fc-022a02e5261b": {
             "type": "collapsible_tab",
             "settings": {
-              "heading": "Collapsible row",
-              "content": "<p>dsf<\/p>",
+              "heading": "60 day risk free returns",
+              "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.<\/p>",
+              "page": ""
+            }
+          },
+          "92a4cb15-279e-4482-9ce0-3af64ad4a418": {
+            "type": "collapsible_tab",
+            "settings": {
+              "heading": "Fabric and care",
+              "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.<\/p>",
+              "page": ""
+            }
+          },
+          "e18221c4-a59a-47a2-8da4-d459e412f9fc": {
+            "type": "collapsible_tab",
+            "settings": {
+              "heading": "Is RUBIES just for kids?",
+              "content": "",
+              "page": "about"
+            }
+          },
+          "77e4cc35-566e-4e15-bd68-71d744ec057e": {
+            "type": "collapsible_tab",
+            "settings": {
+              "heading": "What our customers say",
+              "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.<\/p>",
               "page": ""
             }
           }
         },
         "block_order": [
-          "5faab193-44b1-4ed6-90fc-022a02e5261b"
+          "5faab193-44b1-4ed6-90fc-022a02e5261b",
+          "92a4cb15-279e-4482-9ce0-3af64ad4a418",
+          "e18221c4-a59a-47a2-8da4-d459e412f9fc",
+          "77e4cc35-566e-4e15-bd68-71d744ec057e"
         ],
         "settings": {
           "show_vendors": true,
