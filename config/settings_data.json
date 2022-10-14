@@ -1987,6 +1987,19 @@
       },
       "product-template": {
         "type": "product-template",
+        "blocks": {
+          "5faab193-44b1-4ed6-90fc-022a02e5261b": {
+            "type": "collapsible_tab",
+            "settings": {
+              "heading": "Collapsible row",
+              "content": "",
+              "page": ""
+            }
+          }
+        },
+        "block_order": [
+          "5faab193-44b1-4ed6-90fc-022a02e5261b"
+        ],
         "settings": {
           "show_vendors": true,
           "variant_style": "swatches",
