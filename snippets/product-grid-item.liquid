@@ -120,7 +120,7 @@
         
       </div>
     </a>
-    {% unless template contains 'collection' %}
+    {% unless template contains 'collection' or template contains 'product' %}
     <span class="collection-size-swatch">
         <select id="variant-select" name="id" style="visibility: hidden; position: absolute; ">
           <option value="">--Select--</option>
@@ -212,7 +212,7 @@
           {% comment %}Start automatically added Judge.me widget{% endcomment %}
           {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
         {% comment %}End automatically added Judge.me widget{% endcomment %}
-          {% unless template contains 'collection' %}
+          {% unless template contains 'collection' or template contains 'product' %}
           <form method="post" action="/cart/add">
             <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
             <input type="hidden" name="Color" value="black" />
