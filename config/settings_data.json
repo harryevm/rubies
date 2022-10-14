@@ -1992,7 +1992,7 @@
             "type": "collapsible_tab",
             "settings": {
               "heading": "Collapsible row",
-              "content": "",
+              "content": "<p>dsf<\/p>",
               "page": ""
             }
           }
