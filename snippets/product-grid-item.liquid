@@ -143,7 +143,7 @@
                 {{ option.name | escape }}
               </label>{% endcomment %}
               <select id="ProductSelect-{{ forloop.index0 }}" data-index="option{{ forloop.index }}">
-                 <option value="" selected="selected">{{ option.name | escape }}</option>
+                 <option value="" selected="selected">{% comment %}{{ option.name | escape }}{% endcomment %}Select Size...</option>
                 {%- for value in option.values -%}
                   {% comment %}{% if option.selected_value == value %} selected="selected"{% endif %} {% endcomment %}
                   <option value="{{ value | escape }}" {% unless product.variants[forloop.index0].available == true %}disabled{% endunless %}>
