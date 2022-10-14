@@ -496,3 +496,58 @@
   ]
 }
 {% endschema %}
+<script>
+
+
+var swatchVal,swatchVal2;
+$('.box.product .product-swatches__li').click(function(){
+    swatchVal = $(this).find('.product-swatches__label').text();
+});
+$('.box.product select[id*=ProductSelect-]').change(function(){
+    swatchVal2 = $(this).val();
+    $('span.error-size').remove();
+});
+$('.simple-collection .box.product input.btn.btn-primary').click(function(){
+  swatchVal = $(this).parents('.box.product').find('.product-swatches__li a.product-swatches__link--selected .product-swatches__label').text();
+  swatchVal2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val();
+console.log(swatchVal+"  ++ "+swatchVal2)
+  $(this).parents('.box.product').find('#variant-select option').each(function(){
+        if($(this).attr('data-title')==swatchVal+" / "+swatchVal2 || $(this).attr('data-title')==swatchVal2+" / "+swatchVal || $(this).attr('data-title')==swatchVal2){ 
+             $(this).attr("selected","selected");  
+        }
+    });
+   var oriValue = $(this).parents('.box.product').find('#variant-select').val();
+  
+ if(oriValue == '' ){
+  
+   $("<span class='error-size'>Please select your size</span>").insertAfter(this);
+
+ }else{
+  let formData = {
+   'items': [{
+    'id': oriValue,
+    'quantity':1
+    }]
+  };
+    fetch(window.Shopify.routes.root + 'cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(()=>{
+      setTimeout(() => {
+        this.setAttribute('value','Add To Cart');
+      }, "3000")
+      this.setAttribute('value','Added');
+      this.previousSibling.previousSibling.style.display = "none";
+      jQuery.getJSON('/cart.js', function(cart) { jQuery("#CartCount").text(cart.item_count); });
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+ }
+
+});
+</script>
