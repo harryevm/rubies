@@ -38,7 +38,7 @@
   {% endcomment -%}
   <figure class="product-grid-item--{{ settings.collections_text_alignment }}">
     
-    <a id="{{ wrapper_id }}" href="{% unless template contains 'collection' or template contains 'product' %}{{ product.url }}{% else %}{{ product.url }}{% endunless %}" class="product_card">
+    <a id="{{ wrapper_id }}" href="{% unless template contains 'collection' or template contains 'product' %}javascript:;{% else %}{{ product.url }}{% endunless %}" class="product_card">
       {%- assign image = product.featured_image -%}
       <div class="product_card__image-wrapper" data-bgset="{% include 'bgset', image: image %}">
         {% assign image_widths = '295,394,590,700,800,1000,1200,1500,1800,2000,2400' %}
@@ -120,7 +120,7 @@
         
       </div>
     </a>
-    {% unless template contains 'collection' or template contains 'product' %}
+    {% unless template contains 'collection' %}
     <span class="collection-size-swatch">
         <select id="variant-select" name="id" style="visibility: hidden; position: absolute; ">
           <option value="">--Select--</option>
@@ -212,7 +212,7 @@
           {% comment %}Start automatically added Judge.me widget{% endcomment %}
           {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
         {% comment %}End automatically added Judge.me widget{% endcomment %}
-          {% unless template contains 'collection' or template contains 'product' %}
+          {% unless template contains 'collection' %}
           <form method="post" action="/cart/add">
             <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
             <input type="hidden" name="Color" value="black" />
