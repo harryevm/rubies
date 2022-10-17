@@ -45,7 +45,7 @@
 
       </header>
 <!--   Product title on Mobile     -->
-  <div class="product-title-Mobile">
+  <div class="product-title-M">
     <h1 itemprop="name">
       {% unless section_onboarding %}
         {{ product.title }}
@@ -53,6 +53,9 @@
         {{ 'homepage.onboarding.product_title' | t }}
       {% endunless %}
     </h1>
+  </div>
+  <div class="Review-on-mobile">
+    {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
   </div>
 <!--   Product title on Mobile     -->
       <div class="grid">
