@@ -1,5 +1,5 @@
 {% form 'product', product %}
-  <div class="product-title">
+  <div class="product-title Product-title-desktop">
     <h1 itemprop="name">
       {% unless section_onboarding %}
         {{ product.title }}
@@ -9,11 +9,13 @@
     </h1>
   </div>
 {% comment %}Start automatically added Judge.me widget{% endcomment %}
+  <div class="review-on-desktop">
   {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+  </div>
 {% comment %}End automatically added Judge.me widget{% endcomment %}
 
 
-  <div class="selection-wrapper price product-single__price-{{ section.id }}">
+  <div class="selection-wrapper price product-single__price-{{ section.id }} price-on-desktop">
     {% unless section_onboarding %}
       <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ current_variant.price | money_without_currency | remove: ',' }}">{{ current_variant.price | money }} {% if cart.currency.symbol == "$" %} {{ cart.currency.iso_code }}{%- endif -%}</span>
     {% else %}
