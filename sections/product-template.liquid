@@ -45,6 +45,16 @@
 
       </header>
 <!--   Product title on Mobile     -->
+<style>
+  
+  @media only screen and (max-width: 767px) {
+    
+  }
+</style>
+ <div class="Review-on-mobile">
+    {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+  </div>
+  
   <div class="product-title-Mobile">
     <h1 itemprop="name">
       {% unless section_onboarding %}
@@ -54,9 +64,7 @@
       {% endunless %}
     </h1>
   </div>
-  <div class="Review-on-mobile">
-    {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
-  </div>
+ 
   <div class="price-On-Mobile">
      <div class="selection-wrapper price product-single__price-{{ section.id }}">
     {% unless section_onboarding %}
