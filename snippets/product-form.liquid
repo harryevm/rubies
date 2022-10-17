@@ -45,8 +45,7 @@
             {%- assign size_options = 'products.product.size_option' | t -%}
             <div class="selector-wrapper">
               <label for="SingleOptionSelector-{{ forloop.index0 }}">
-                {{ option.name }}
-                
+                {{ option.name }}  
               </label>
 
               <select class="single-option-selector single-option-selector-{{ section.id }}" id="SingleOptionSelector-{{ section.id }}-{{ forloop.index0 }}" data-name="{{ option.name }}" data-index="option{{ forloop.index }}">
