@@ -2029,7 +2029,7 @@
         ],
         "settings": {
           "show_vendors": true,
-          "variant_style": "dropdowns",
+          "variant_style": "swatches",
           "variant_swatch_images": true,
           "variant_swatch_shape": "circle",
           "variant_swatch_soldout": true,
