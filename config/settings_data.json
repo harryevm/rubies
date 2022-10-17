@@ -2642,6 +2642,14 @@
       "16629848551f1ad81a",
       "1663737217fb136d00",
       "1663735858989f6aa1"
-    ]
+    ],
+    "blocks": {
+      "14060646107696862457": {
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   }
 }
