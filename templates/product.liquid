@@ -2,13 +2,13 @@
 {% comment %}
   The contents of the product.liquid template can be found in /sections/product-template.liquid
 {% endcomment %}
-
+<div class="page">
 {% section 'product-template' %}
-<div class="page-width">
 {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
-</div>
 {% section 'product-recommendations' %}
 <!--Start Stamped.io Auto Installation--><div id="stamped-main-widget" class="stamped-main-widget" data-widget-style="standard" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{% comment ls-rpl %}{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: product.featured_image, img_url: "large" -%}{%- endcapture -%}{{ LS_IMG_URL | replace: '?', '%3F' | replace: '&','%26'}}{% comment /ls-rpl %}{% endcomment %}" data-description="{{ product.description | escape }}" data-product-sku="{{product.handle}}" data-product-type="{{product.type}}">{{ product.metafields.stamped.reviews }}</div><!--End Stamped.io Auto Installation-->
+
+</div>
 <script type="text/javascript">
   var _learnq = _learnq || [];
 
