@@ -44,7 +44,17 @@
         </div>
 
       </header>
-
+<!--   Product title on Mobile     -->
+  <div class="product-title-Mobile">
+    <h1 itemprop="name">
+      {% unless section_onboarding %}
+        {{ product.title }}
+      {% else %}
+        {{ 'homepage.onboarding.product_title' | t }}
+      {% endunless %}
+    </h1>
+  </div>
+<!--   Product title on Mobile     -->
       <div class="grid">
         <div class="product-images thumbnails-placement-{{ section.settings.thumbnails_placement }}">
           <div class="images-container">
