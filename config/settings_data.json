@@ -2020,7 +2020,7 @@
             "settings": {
               "heading": "What our customers say",
               "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.<\/p>",
-              "htmlcontent": "",
+              "htmlcontent": "{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}",
               "page": ""
             }
           }
