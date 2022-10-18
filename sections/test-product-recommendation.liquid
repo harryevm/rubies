@@ -1,4 +1,4 @@
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
 {% assign limit = section.settings.product_recommendations_limit %}
 <style>
   .product-recommendations .product-container {
@@ -14,7 +14,9 @@
             <h4>{{ section.settings.product_recommendations_heading | escape }}</h4>
           {% endif %}
         </header>
-        <div class="product-container--{{ limit }}">    
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="product-container--{{ limit }} swiper-slide">    
           {%- if recommendations.performed -%}
             {%- for product in recommendations.products -%}
               {% include 'product-grid-item' %}
@@ -25,9 +27,40 @@
             {%- endfor -%}
           {%- endif -%}         
         </div>
+      </div>
+    </div>
      
   </div> 
 {%- endif -%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+<script>
+  // Swiper Configuration
+var swiper = new Swiper(".swiper-container", {
+  slidesPerView: 4,
+  spaceBetween: 10,
+  
+  freeMode: true,
+  grabCursor: true,
+  loop: true,
+ 
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  breakpoints: {
+    500: {
+      slidesPerView: 1
+    },
+    700: {
+      slidesPerView: 1.5
+    }
+  }
+});
+</script>
 {% schema %}
   {
     "name": "Product recommendations",
