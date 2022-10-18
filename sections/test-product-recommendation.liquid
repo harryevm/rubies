@@ -19,11 +19,6 @@
             {%- for product in recommendations.products -%}      
               {% include 'product-grid-item' %}          
             {%- endfor -%}
-          {%- else -%}
-            {%- for i in (1..limit) -%}
-              {% include 'placeholder-product-grid-item' %}
-            {%- endfor -%}
-           
           {%- endif -%}         
         </div>
   </div> 
