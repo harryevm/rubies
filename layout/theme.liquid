@@ -219,3 +219,66 @@ $(document).ready(function() {
   }    
 });
 </script>
+  <script>
+      (function () {
+        var jquery = null;
+        if (window.jQuery) {
+          jquery = window.jQuery;
+        } else if (window.Checkout && window.Checkout.$) {
+          jquery = window.Checkout.$;
+        }
+        
+        jquery(document).on("click", 'button.applied-reduction-code__clear-button', function(event) {
+          var deletenum = 'storedDiscount';
+          localStorage.removeItem(deletenum);
+          var url = window.location.href;  console.log(url);
+          var return_url = removeURLParameter(url, 'discount');
+          window.location.href = return_url;
+        });
+        
+        jquery(document).on("click", 'button.field__input-btn', function(event) {
+          var value = jquery('#checkout_reduction_code').val();
+          updateQueryStringParam('discount', value);
+        });
+        
+      })();
+      
+      function removeURLParameter(url, parameter) {
+        //prefer to use l.search if you have a location/link object
+        var urlparts= url.split('?');   
+        if (urlparts.length>=2) {
+          var prefix= encodeURIComponent(parameter)+'=';
+          var pars= urlparts[1].split(/[&;]/g);
+          //reverse iteration as may be destructive
+          for (var i= pars.length; i-- > 0;) {    
+            //idiom for string.startsWith
+            if (pars[i].lastIndexOf(prefix, 0) !== -1) {  
+              pars.splice(i, 1);
+            }
+          }
+          url= urlparts[0]+'?'+pars.join('&');
+          return url;
+        } else {
+          return url;
+        }
+      }   
+      
+      // Explicitly save/update a url parameter using HTML5's replaceState().
+      function updateQueryStringParam(key, value) {
+        baseUrl = [location.protocol, '//', location.host, location.pathname].join('');
+        urlQueryString = document.location.search;
+        var newParam = key + '=' + value,
+            params = '?' + newParam;
+        // If the "search" string exists, then build params from it
+        if (urlQueryString) {
+          keyRegex = new RegExp('([\?&])' + key + '[^&]*');
+          // If param exists already, update it
+          if (urlQueryString.match(keyRegex) !== null) {
+            params = urlQueryString.replace(keyRegex, "$1" + newParam);
+          } else { // Otherwise, add it to end of query string
+            params = urlQueryString + '&' + newParam;
+          }
+        }
+        window.history.replaceState({}, "", baseUrl + params);
+      }
+    </script>
