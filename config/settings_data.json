@@ -2193,7 +2193,7 @@
           "ajax_cart": true,
           "terms_and_conditions": false,
           "terms_and_conditions_text": "<p>I agree with the terms and conditions.<\/p>",
-          "extra_featured_products": "",
+          "extra_featured_products": "bikini-tops-and-bottoms",
           "variant_rollover": true
         }
       },
@@ -2635,11 +2635,6 @@
           "product_recommendations_heading": "You may also like",
           "product_recommendations_limit": "4"
         }
-      },
-      "f5431994-4a6f-4ced-9aab-8bdae73d4f97": {
-        "type": "test-swiper-slider",
-        "settings": {
-        }
       }
     },
     "content_for_index": [
@@ -2654,8 +2649,7 @@
       "1662976991610d8e6e",
       "16629848551f1ad81a",
       "1663737217fb136d00",
-      "1663735858989f6aa1",
-      "f5431994-4a6f-4ced-9aab-8bdae73d4f97"
+      "1663735858989f6aa1"
     ],
     "blocks": {
       "14060646107696862457": {
