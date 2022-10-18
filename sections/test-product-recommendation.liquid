@@ -6,7 +6,7 @@
             <h4>{{ section.settings.product_recommendations_heading | escape }}</h4>
           {% endif %}
         </header>
-        <div class="product-container product-container--{{ limit }}">    
+        <div class="product-container--{{ limit }}">    
           {%- if recommendations.performed -%}
             {%- for product in recommendations.products -%}
               {% include 'product-grid-item' %}
