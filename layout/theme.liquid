@@ -191,3 +191,51 @@
 	<script>
 		new SezzleCheckoutButton({}).init();
 	</script>
+
+<script type="text/javascript">
+/*
+@require
+Jquery: https://jquery.com/
+jquery-cookie: https://github.com/carhartl/jquery-cookie
+
+Allows you to set a discount code via a URL and pass into shopify checkout
+
+https://myshopifystore.com?coupon=MYCOUPONCODE
+can append ?coupon=MYCOUPONCODE to any URL
+
+*/
+
+// Get paramaters from the URL
+function getParameterByName(name, url) {
+  if (!url) {
+    url = window.location.href;
+  }
+
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+// This must be added to your checkout form 
+// <input class="js-form-discount" type="hidden" name="discount" value="RESELLERDISCOUNTCODE" >
+$discountInput = $("input.js-form-discount");
+// set cookie with passed in coupon code to any URL
+$coupon = getParameterByName('coupon');
+if($coupon){
+  // set a cookie with the coupon code
+  // Valid for 7 days : can adjust { expires: 7 } to whatever you want
+  // single / is a session cookie
+  $.cookie('discountCode', $coupon, { expires: 7 });
+}
+// Get cookie discount code value and set form value
+$discountCode = $.cookie('discountCode');
+
+if($discountCode){
+  if ($discountInput.length > 0) { 
+    // if cookie is set and discount input field is on page set its value to cookie val 
+    $discountInput.val( $discountCode );
+  }
+}
+</script>
