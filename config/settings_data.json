@@ -1812,7 +1812,7 @@
             "type": "announcement-bar",
             "settings": {
               "show_announcement_bar": true,
-              "title": "CONTRIBUTE TO OUR GOFUNDME TO DONATE CLOTHING TO FAMILIES IN NEED",
+              "title": "Summer Solstice Sale - 10% Off All Products - Use Code Summer10",
               "link": "https:\/\/www.gofundme.com\/f\/nz7aec-help-me-send-form-fitting-swimwear-to-trans-girls",
               "color_background": "#ffebff",
               "color_text": "#040f21",
@@ -2052,12 +2052,12 @@
           "tabs_enable": true,
           "tabs_auto_headings": "h4",
           "tabs_title": "Why You 'll Love it",
+          "tabs_global_page_4_title": "What our customer says",
           "tabs_global_page_1": "",
           "tabs_global_page_2": "",
           "tabs_global_page_3": "",
           "show_product_jump": false,
-          "show_share_buttons": true,
-          "tabs_global_page_4_title": "What our customer says"
+          "show_share_buttons": true
         }
       },
       "collection-template": {
