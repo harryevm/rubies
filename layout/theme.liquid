@@ -150,37 +150,6 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-<script>
-      mobileOnlySlider(".pro_rec_slider", true, false, 767);
-
-function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
-	var slider = $($slidername);
-	var settings = {
-		mobileFirst: true,
-		dots: false,
-		arrows:true,
-        prevArrow: '<button class="slide-arrow prev-arrow PS-fam-slider-prev"><img src="https://cdn.shopify.com/s/files/1/0553/1608/6844/files/left.png?v=1641875839"></button>',
-        nextArrow: '<button class="slide-arrow next-arrow PS-fam-slider-next"><img src="https://cdn.shopify.com/s/files/1/0553/1608/6844/files/right.png?v=1641875852"></button>',
-            responsive: [
-			{
-				breakpoint: $breakpoint,
-				settings: "unslick"
-			}
-		]
-	};
-
-	slider.slick(settings);
-
-	$(window).on("resize", function () {
-		if ($(window).width() > $breakpoint) {
-			return;
-		}
-		if (!slider.hasClass("slick-initialized")) {
-			return slider.slick(settings);
-		}
-	});
-}  
-</script>
   </head>
 
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" data-template-directory="{{ template.directory }}" data-template="{{ template.name }}" >
@@ -201,6 +170,17 @@ function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
   <!-- District v3.5.2 -->
 {% include 'spurit_po2_theme_snippet' %}
 
+
+  
+
+
+
+
+
+
+
+  
+  
 {% render 'preorder-now' %}
 
 </body>
@@ -211,4 +191,3 @@ function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
 	<script>
 		new SezzleCheckoutButton({}).init();
 	</script>
- 
