@@ -296,6 +296,7 @@
                     <div class="tab__content">{{ pages[section.settings.tabs_global_page_3].content }}</div>
                   </div>
                 {%- endif -%}
+              {% comment %}
                 {% for block in section.blocks %}
                 <div class="tab tab--global-1">
                   <div class="tab__title" tabindex="0">{{ block.settings.heading }}</div>
@@ -308,6 +309,7 @@
                     </div>
                 </div>
                 {% endfor %}
+              {% endcomment %}
               </div>
             {%- else -%}
               {%- comment -%}
