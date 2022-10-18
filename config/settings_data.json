@@ -2017,6 +2017,7 @@
           },
           "77e4cc35-566e-4e15-bd68-71d744ec057e": {
             "type": "collapsible_tab",
+            "disabled": true,
             "settings": {
               "heading": "What our customers say",
               "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.<\/p>",
