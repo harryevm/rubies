@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+{% comment %} <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> {% endcomment %}
 <div data-section-type="product-recommendations" class="test-wrapper responsive ">
   {%- if recommendations.performed -%}
 {%- for product in recommendations.products -%}
@@ -9,7 +9,7 @@
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script>
@@ -48,7 +48,7 @@
     // instead of a settings object
   ]
 }); 
-</script>
+</script> -->
 {% schema %}
   {
     "name": "Section name",
