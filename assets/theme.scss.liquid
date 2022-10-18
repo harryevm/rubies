@@ -5741,23 +5741,28 @@ $gutter: em(30px);
     }
     .tab__title {
     border-bottom: 1px solid mix($primaryTitleColor, $contentBoxBackgroundColor, 10%);
+    position:relative;
     &:hover,
     &:focus {
     outline: 0;
     color: $primaryAccentColor;
     }
     &:after {
-    content: '';
-    margin-left: 6px;
-    opacity: 0.4;
+        content: "";
+    margin-left: 16px;
+    opacity: 1;
     display: inline-block;
-    height: 5px;
-    width: 8px;
-    position: relative;
-    top: -1px;
-    background-position: center;
+    height: 19px;
+    width: 17px;
+    position: absolute;
+    top: 9px;
+    background-color: transparent;
     background-repeat: no-repeat;
-    background-image: url('{{ "ico-footer-dropdown.svg" | asset_url }}');
+      background-image: url('{{ "ico-footer-dropdown.svg" | asset_url }}');
+/*     background-image: url(https://e7.pngegg.com/pngimages/744/634/png-clipart-arrow-computer-icons-arrow-angle-arrow-thumbnail.png); */
+    background-size: cover;
+    right: 0;
+    
 
     .tab--active & {
     @include transform(scaleY(-1));
