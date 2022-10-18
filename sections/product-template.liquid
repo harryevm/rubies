@@ -306,6 +306,11 @@
                     {% else %}
                       {{ block.settings.content }}
                     {% endif %}
+                  {% if block.settings.htmlcontent != blank %}
+                  <div class="tab-html-content">
+                    {{ block.settings.htmlcontent }}
+                  </div>
+                    {% endif %}
                     </div>
                 </div>
                 {% endfor %}
@@ -668,6 +673,11 @@
           "type": "richtext",
           "id": "content",
           "label": "Content"
+        },
+        {
+          "type":"html",
+          "id":"htmlcontent",
+          "label":"HTML Content"
         },
         {
           "type": "page",
