@@ -2011,7 +2011,7 @@
             "settings": {
               "heading": "Is RUBIES just for kids?",
               "content": "",
-              "htmlcontent": "{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}",
+              "htmlcontent": "",
               "page": "about"
             }
           },
@@ -2055,7 +2055,8 @@
           "tabs_global_page_2": "",
           "tabs_global_page_3": "",
           "show_product_jump": false,
-          "show_share_buttons": true
+          "show_share_buttons": true,
+          "tabs_global_page_4_title": ""
         }
       },
       "collection-template": {
