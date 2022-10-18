@@ -1,8 +1,10 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <div class="test-wrapper responsive">
+  {%- if recommendations.performed -%}
 {%- for product in recommendations.products -%}
     {% include 'product-grid-item' %}
 {%- endfor -%}
+    {% endif %}
 </div>
 
 
