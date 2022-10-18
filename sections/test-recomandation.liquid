@@ -1,5 +1,5 @@
 {% comment %} <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> {% endcomment %}
-<div data-section-type="product-recommendations" class="test-wrapper responsive ">
+<div data-section-type="product-recommendations" class="simple-collection product-recommendations">
   {%- if recommendations.performed -%}
 {%- for product in recommendations.products -%}
     {% include 'product-grid-item' %}
