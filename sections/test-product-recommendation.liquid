@@ -14,8 +14,9 @@
             <h4>{{ section.settings.product_recommendations_heading | escape }}</h4>
           {% endif %}
         </header>
-        <div class="product-container--{{ limit }} responsive">    
+        <div class="product-container--{{ limit }} ">    
           {%- if recommendations.performed -%}
+            <div class="slide-wrap responsive">
             {%- for product in recommendations.products -%}      
               {% include 'product-grid-item' %}          
             {%- endfor -%}
@@ -23,6 +24,7 @@
             {%- for i in (1..limit) -%}
               {% include 'placeholder-product-grid-item' %}
             {%- endfor -%}
+            </div>
           {%- endif -%}         
         </div>
   </div> 
