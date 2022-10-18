@@ -8,7 +8,7 @@
             <h4>{{ section.settings.product_recommendations_heading | escape }}</h4>
           {% endif %}
         </header>
-        <div class="product-container product-container--{{ limit }} pro_rec_slider">
+        <div class="product-container product-container--{{ limit }}">
     
           {%- if recommendations.performed -%}
             {%- for product in recommendations.products -%}
