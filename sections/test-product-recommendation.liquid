@@ -16,10 +16,12 @@
         </header>
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="product-container--{{ limit }} swiper-slide">    
+        <div class="product-container--{{ limit }}">    
           {%- if recommendations.performed -%}
             {%- for product in recommendations.products -%}
+              <div class="swiper-slide">
               {% include 'product-grid-item' %}
+              </div>
             {%- endfor -%}
           {%- else -%}
             {%- for i in (1..limit) -%}
