@@ -1,7 +1,9 @@
-<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
- <div style="width:100%;">
- <div class="swiper-container">
-      <div class="swiper-wrapper">
+
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+
+ <div class="test-wrapper">
+      <div class="swiper-wrapper responsive">
         <div class="swiper-slide">
          <h1>test 1</h1>
         </div>
@@ -25,33 +27,39 @@
         </div>
       </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
-  // Swiper Configuration
-var swiper = new Swiper(".swiper-container", {
-  slidesPerView: 4,
-  spaceBetween: 10,
-  
-  freeMode: true,
-  grabCursor: true,
-  loop: true,
- 
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
-  breakpoints: {
-    500: {
-      slidesPerView: 1
+  $('.responsive').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
     },
-    700: {
-      slidesPerView: 1.5
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
     }
-  }
+  ]
 });
 </script>
 {% schema %}
