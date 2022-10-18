@@ -1,4 +1,4 @@
-{% comment %} <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>			 {% endcomment %}
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>			
 {% assign limit = section.settings.product_recommendations_limit %}
 {%- if section.settings.show_product_recommendations -%}    
   <div class="simple-collection product-recommendations" data-product-id="{{ product.id }}" data-limit="{{ limit }}" data-section-id="{{ section.id }}" data-section-type="product-recommendations">
@@ -8,7 +8,7 @@
             <h4>{{ section.settings.product_recommendations_heading | escape }}</h4>
           {% endif %}
         </header>
-        <div class="product-container product-container--{{ limit }}">
+        <div class="product-container product-container--{{ limit }} pro_rec_slider">
     
           {%- if recommendations.performed -%}
             {%- for product in recommendations.products -%}
@@ -25,7 +25,7 @@
   </div> 
 {%- endif -%}
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
   mobileOnlySlider(".pro_rec_slider", true, false, 767);
@@ -56,7 +56,7 @@ function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
 		}
 	});
 }   
-</script> -->
+</script>
 {% schema %}
   {
     "name": "Product recommendations",
