@@ -8,8 +8,8 @@
             <h4>{{ section.settings.product_recommendations_heading | escape }}</h4>
           {% endif %}
         </header>
-        <div class="product-container ">
-    <div class="product-container--{{ limit }} pro_rec_slider">
+        <div class="product-container product-container--{{ limit }} pro_rec_slider">
+    
           {%- if recommendations.performed -%}
             {%- for product in recommendations.products -%}
               {% include 'product-grid-item' %}
@@ -19,7 +19,7 @@
               {% include 'placeholder-product-grid-item' %}
             {%- endfor -%}
           {%- endif -%}
-    </div>    
+          
         </div>
       </div>
   </div> 
