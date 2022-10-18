@@ -23,13 +23,56 @@
         </div>
       </div>
   </div> 
-{%- endif -%}				
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{%- endif -%}
+<style>
+  .test-wrapper{
+    width:100%;
+    display:flex;
+  }
+  .test-wrapper h1{
+    width:25%;
+  }
+  </style>
+<div class="test-wrapper">
+  <h1>Test 1</h1>
+  <h1>Test 2</h1>
+  <h1>Test 3</h1>
+  <h1>Test 4</h1>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
 
   $( document ).ready(function() {
+ mobileOnlySlider(".pro_rec_slider", true, false, 767);
 
+function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
+	var slider = $($slidername);
+	var settings = {
+		mobileFirst: true,
+		dots: false,
+		arrows:true,
+        prevArrow: '<button class="slide-arrow prev-arrow PS-fam-slider-prev"><img src="https://cdn.shopify.com/s/files/1/0553/1608/6844/files/left.png?v=1641875839"></button>',
+        nextArrow: '<button class="slide-arrow next-arrow PS-fam-slider-next"><img src="https://cdn.shopify.com/s/files/1/0553/1608/6844/files/right.png?v=1641875852"></button>',
+            responsive: [
+			{
+				breakpoint: $breakpoint,
+				settings: "unslick"
+			}
+		]
+	};
+
+	slider.slick(settings);
+
+	$(window).on("resize", function () {
+		if ($(window).width() > $breakpoint) {
+			return;
+		}
+		if (!slider.hasClass("slick-initialized")) {
+			return slider.slick(settings);
+		}
+	});
+} 
  
 });
 </script>
