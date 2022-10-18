@@ -307,13 +307,21 @@
                       {{ block.settings.content }}
                     {% endif %}
                   {% if block.settings.htmlcontent != blank %}
-                    <div class="tab-html-content">
-                      {{ block.settings.htmlcontent }}
-                    </div>
-                  {% endif %}
+                  <div class="tab-html-content">
+                    {{ block.settings.htmlcontent }}
+                  </div>
+                    {% endif %}
                     </div>
                 </div>
-                {% endfor %}             
+                {% endfor %}
+              {%- if section.settings.tabs_global_page_4_title != blank -%}
+                  <div class="tab tab--global-1">
+                    <div class="tab__title" tabindex="0">{{ section.settings.tabs_global_page_4_title }}</div>
+                      <div class="tab__content">
+                        {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
+                      </div>
+                    </div>             
+                {%- endif -%}
            
               </div>
             {%- else -%}
@@ -635,8 +643,6 @@
       "id": "tabs_global_page_3",
       "label": "Tab content 3"
     },
-    
-    
     {
       "type": "header",
       "content": "Additional options"
