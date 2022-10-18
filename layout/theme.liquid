@@ -216,11 +216,8 @@ $(document).ready(function() {
       $('input[name="discount"]').val(localStorage.getItem('storedDiscount')); 
       $('.discount_apply_code').html('<div>Discount <strong>'+discountStored+'</strong> applied on checkout page. <a href="javascript:void(0);" class="clear-discount">X</a></div>');
     }
-  }    
-});
-</script>
-  <script>
-      (function () {
+  }
+  (function () {
         var jquery = null;
         if (window.jQuery) {
           jquery = window.jQuery;
@@ -281,4 +278,6 @@ $(document).ready(function() {
         }
         window.history.replaceState({}, "", baseUrl + params);
       }
-    </script>
+});
+</script>
+
