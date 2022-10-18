@@ -6,32 +6,3 @@
 {% section 'cart-template' %}
 
 <script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=450361b5-981b-4e6f-9164-d70d9effc17f"></script>{% include 'upsellio_embed' %}
-<script src="https://gist.github.com/kartick14/29ad023340267e9b063c70b4e191160d.js"></script>
-<script type="text/javascript">
-$(document).ready(function() { 
-  $('.discount_code_btn').click(function(){ 
-    var discountStored = $('input[name="discount_code"]').val();   
-    $('input[name="discount"]').val(discountStored); 
-    $('.discount_apply_code').html('<div>Discount code <strong>'+discountStored+'</strong> applied on checkout page. <a href="javascript:void(0);" class="clear-discount">X</a></div>');
-    localStorage.setItem('storedDiscount', discountStored); 
-    $('input[name="discount_code"]').val('');
-  });
-  
-  $(document).on("click", 'a.clear-discount', function(event) { 
-    var discountStored = '';
-    $('input[name="discount"]').val(discountStored); 
-    $('.discount_apply_code').html('');
-    var deletenum = 'storedDiscount';
-  localStorage.removeItem(deletenum);
-  });
-  
-  if (localStorage.getItem('storedDiscount')){ 
-    var discountStored = localStorage.getItem('storedDiscount'); 
-    if(discountStored != '' && discountStored != 'undefined'){
-      $('input[name="discount"]').val(localStorage.getItem('storedDiscount')); 
-      $('.discount_apply_code').html('<div>Discount <strong>'+discountStored+'</strong> applied on checkout page. <a href="javascript:void(0);" class="clear-discount">X</a></div>');
-    }
-  }
- 
-});
-</script>
