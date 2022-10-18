@@ -14,7 +14,7 @@
             <h4>{{ section.settings.product_recommendations_heading | escape }}</h4>
           {% endif %}
         </header>
-        <div class="slide-wrap responsive">    {% comment %}product-container--{{ limit }}{% endcomment %}
+        <div class="slide-wrap test">    {% comment %}product-container--{{ limit }}{% endcomment %}
           {%- if recommendations.performed -%}         
             {%- for product in recommendations.products -%}      
               {% include 'product-grid-item' %}          
@@ -32,7 +32,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
-  $('.responsive').slick({
+  $('.test').slick({
   dots: true,
   infinite: false,
   speed: 300,
