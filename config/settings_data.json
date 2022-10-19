@@ -1757,7 +1757,7 @@
     "collection_swatches": true,
     "collection_swatches_images": true,
     "collection_swatches_shape": "circle",
-    "collections_product_columns": "1",
+    "collections_product_columns": "2",
     "show_vendors": false,
     "collections_text_alignment": "left",
     "collections_badge_placement": "top-left",
