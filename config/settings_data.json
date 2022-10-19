@@ -1757,7 +1757,7 @@
     "collection_swatches": true,
     "collection_swatches_images": true,
     "collection_swatches_shape": "circle",
-    "collections_product_columns": "2",
+    "collections_product_columns": "1",
     "show_vendors": false,
     "collections_text_alignment": "left",
     "collections_badge_placement": "top-left",
@@ -2202,8 +2202,7 @@
           "extra_featured_products": "bikini-tops-and-bottoms",
           "variant_rollover": true,
           "title": "Cart collection",
-          "collection": "bikini-tops-and-bottoms",
-          "product_count_range": 6
+          "collection": "bikini-tops-and-bottoms"
         }
       },
       "collection-list-template": {
