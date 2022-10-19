@@ -405,7 +405,28 @@
       "id": "variant_rollover",
       "label": "Show variant image on rollover",
       "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Cart collection "
+    },
+    {
+      "id": "collection",
+      "type": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "product_count_range",
+      "label": "Number of products",
+      "min": 2,
+      "max": 12,
+      "step": 2,
+      "default": 6
     }
+    
   ]
 }
 {% endschema %}
