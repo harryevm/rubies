@@ -2203,9 +2203,7 @@
           "variant_rollover": true,
           "title": "Cart collection",
           "collection": "bikini-tops-and-bottoms",
-          "cart_product_count_range": 4,
-          "cart_tabs_title": "test",
-          "cart_tabs_content": "<p>testetaetaetae<\/p>"
+          "cart_product_count_range": 4
         }
       },
       "collection-list-template": {
