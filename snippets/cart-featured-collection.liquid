@@ -49,10 +49,14 @@
     height: 15px;
    margin: -1px;
 }
-   .cart-featured-collection-wrapper ul.product-swatches.product-swatches--circle > li>  a{
+    ul.product-swatches.product-swatches--circle > li>  a{
      width:16px;
      height:16px;
    }
+ .cart-featured-collection-wrapper span.collection-size-swatch,
+  .cart-featured-collection-wrapper ul.product-swatches.product-swatches--circle {
+    display: none;
+}
 
   </style>
 <div class="simple-collection layout-{{ section.settings.cart_product_count_range }}" data-section-id="{{ section.id }}" data-section-type="simple-collection-section">
