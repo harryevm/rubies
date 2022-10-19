@@ -211,7 +211,11 @@ header.content-util ul.social-icons {  display: none; }
   .template-collection section.collection .collection-container { padding: 0; }
   .template-collection .products.products-grid { display: flex; flex-wrap: wrap; justify-content: space-between; margin: 0; }
   .template-collection .products.products-grid >.box.product { padding: 0; width: 49%; }
-  
+
+  .content-box .outer-wrapper .inner-wrapper .content-contain h2 {
+    font-size: 24px !important;
+    line-height: 1.4;
+}
   
 }
 @media(max-width:650px){
