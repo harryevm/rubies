@@ -166,6 +166,12 @@ header.content-util ul.social-icons {  display: none; }
   header.site-header.minimal nav.nav-bar ul.site-nav>li>a { padding: 4px; }
   header.site-header .layout-horizontal .logo-contain { flex-basis: 180px; }
 }
+@media(max-width:767px){
+.slide__item-image-contain.mobile .content-contain h2 {
+    font-size: 24px !important;
+    line-height: 1.4;
+}
+}
 @media(max-width:700px){
     header.util .left-wrapper ul.text-links li.search-wrap { display: block; position: absolute; bottom: -50px; right: 35px; }
     header.util a#CartButton { border: none; position: absolute; bottom: -47px; right: 0; }
@@ -255,6 +261,7 @@ header.content-util ul.social-icons {  display: none; }
   .template-collection .label.sold-out { font-size: 14px; }
   header.collection-header h1 { font-size: 18px; }
 }
+
 @media(max-width:600px){
   img#dancer1{height: 250px !important; left: 70% !important; top: -14px !important;}
   
@@ -278,9 +285,4 @@ header.content-util ul.social-icons {  display: none; }
   div.collection-list .box a figure>img.card__image{height: 50px;}
   div.collection-list .box figcaption.below a { padding: 0; }
   img#dancer1 { height: 190px!important; left: 65%!important; top: -3px !important; }
-}
-
-.slide__item-image-contain.mobile .content-contain h2 {
-    font-size: 24px !important;
-    line-height: 1.4;
 }
