@@ -279,3 +279,8 @@ header.content-util ul.social-icons {  display: none; }
   div.collection-list .box figcaption.below a { padding: 0; }
   img#dancer1 { height: 190px!important; left: 65%!important; top: -3px !important; }
 }
+
+.slide__item-image-contain.mobile .content-contain h2 {
+    font-size: 24px !important;
+    line-height: 1.4;
+}
