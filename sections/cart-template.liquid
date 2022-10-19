@@ -117,7 +117,9 @@ justify-content: right;
                           </div>
                         </div>
                       </span>
-                      <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="remove" data-cart-item-remove>{{ 'cart.general.remove' | t }}</a>
+                      <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="remove" data-cart-item-remove>
+                  <img src="https://cdn.shopify.com/s/files/1/0661/1822/2064/files/delete.png?v=1666160123">
+                </a>{% comment%}{{ 'cart.general.remove' | t }}{% endcomment %}
                     </div>
                  </div>
                     {%- comment -%}
