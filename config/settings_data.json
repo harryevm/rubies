@@ -2200,7 +2200,10 @@
           "terms_and_conditions": false,
           "terms_and_conditions_text": "<p>I agree with the terms and conditions.<\/p>",
           "extra_featured_products": "bikini-tops-and-bottoms",
-          "variant_rollover": true
+          "variant_rollover": true,
+          "title": "Cart collection",
+          "collection": "bikini-tops-and-bottoms",
+          "product_count_range": 6
         }
       },
       "collection-list-template": {
