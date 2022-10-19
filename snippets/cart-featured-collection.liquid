@@ -1,0 +1,38 @@
+{% comment %}
+{% include 'spurit_po2_section_snippet', product: null, products: collections[section.settings.collection].products %}
+{% endcomment %}
+<div class="featured-collection layout-{{ section.settings.product_count_range }}" data-section-id="{{ section.id }}" data-section-type="featured-collection-section">
+  <div class="wrapper">
+    <div class="grid">
+
+      {%- assign collection = collections[section.settings.collection] -%}
+      {%- assign product_limit = section.settings.product_count_range -%}
+
+      <div class="box header">
+        <div class="image-table">
+          <div class="details">
+            {% if section.settings.title != blank %}
+              <h4>{{ section.settings.title | escape }}</h4>
+            {% endif %}
+            {% if section.settings.text != blank %}
+              <p>{{ section.settings.text | escape }}</p>
+            {% endif %}
+            {% if section.settings.button_link != blank and section.settings.button_label != blank %}
+              <a href="{{ section.settings.button_link }}" class="button outline">{{ section.settings.button_label | escape }}</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      {% for product in collection.products limit: product_limit  %}
+        {% include 'product-grid-item' %}
+      {% else %}
+        {% for i in (1..product_limit) %}
+          {% include 'placeholder-product-grid-item' %}
+        {% endfor %}
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
