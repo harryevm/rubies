@@ -42,7 +42,7 @@
 
               {%- for item in cart.items -%}
                 <div class="cart-item" data-cart-item="{{ item.key }}" data-csapp_line_index>
-                  <div class="grid">
+                <div class="grid">
                 <div class="td cart-item-product-image">
                     {%- comment -%}
                         Cart item - image
@@ -68,7 +68,7 @@
                         </a>
                       </div>
                 </div>
-                    <div class="td cart-item-product">
+                <div class="td cart-item-product">
                   
                       {%- comment -%}
                         Cart item - title
@@ -111,7 +111,7 @@
                       </span>
                       <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="remove" data-cart-item-remove>{{ 'cart.general.remove' | t }}</a>
                     </div>
-                    </div>
+                 </div>
                     {%- comment -%}
                       Cart item - price
                     {%- endcomment -%}
@@ -144,9 +144,9 @@
                       {%- endif -%}
                     </div>
                   </div>
-                </div>
-              {%- endfor -%}
-            </div>
+          </div>
+      {%- endfor -%}
+</div>
 
 <div class="discountcodefield"> 
   <label for="discount">Discount Code:</label> 
