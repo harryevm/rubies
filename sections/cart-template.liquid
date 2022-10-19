@@ -44,6 +44,35 @@
         font: normal normal bold 18px/12px Poppins;
         color: #040F21;
     }
+/*  Cart page collection css start  */
+   .slide-dots{
+      width:100%;
+  text-align: center;
+  }
+    .slide-dots li{
+    display: inline-block;
+    margin: 0 8px;
+  }
+     .slide-dots li button{
+    position: relative;
+    text-indent: -9999px;
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50px;
+   }
+     .slide-dots li button:before{
+        content: '';
+        font-size: 20px;
+        text-indent: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+  ul.slide-dots li.slick-active button {
+    background: black;
+}
+/*  cart page colection css end  */
 /*  Acordian  */
   #accordion-1{
   position: relative;
@@ -175,33 +204,7 @@
     margin-left: 6px;
 }
 /*    cart collection      */
-    .slide-dots{
-      width:100%;
-  text-align: center;
-  }
-    .slide-dots li{
-    display: inline-block;
-    margin: 0 8px;
-  }
-     .slide-dots li button{
-    position: relative;
-    text-indent: -9999px;
-    width: 12px;
-    height: 12px;
-    border: none;
-    border-radius: 50px;
-   }
-     .slide-dots li button:before{
-        content: '';
-        font-size: 20px;
-        text-indent: 0px;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-  ul.slide-dots li.slick-active button {
-    background: black;
-}
+   
  .cart-featured-collection-wrapper .box.product select[id*=ProductSelect-] {
     width: 95%;
     height: 27px;
