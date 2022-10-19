@@ -42,8 +42,8 @@
 
               {%- for item in cart.items -%}
                 <div class="cart-item" data-cart-item="{{ item.key }}" data-csapp_line_index>
-                <div class="grid">
-                <div class="td cart-item-product-image">
+                <div class="grid custom-cart-items">
+                <div class="td cart-item-product-image custom-cart-product-image">
                     {%- comment -%}
                         Cart item - image
                       {%- endcomment -%}
@@ -68,7 +68,7 @@
                         </a>
                       </div>
                 </div>
-                <div class="td cart-item-product">
+                <div class="td cart-item-product custom-cart-product-title">
                   
                       {%- comment -%}
                         Cart item - title
@@ -136,7 +136,7 @@
                     {%- comment -%}
                       Cart item - total
                     {%- endcomment -%}
-                    <div class="td cart-item-total" data-mobile-label="{{ 'cart.label.total' | t }}">
+                    <div class="td cart-item-total custom-cart-product-total" data-mobile-label="{{ 'cart.label.total' | t }}">
                       <div class="mobile-label">{{ 'cart.label.total' | t }}</div> 
                       <p><span class="money" data-cart-item-line-price data-csapp_discount_summery data-csapp_line_price>{{ item.final_line_price | money }}</span></p>
                       {%- if item.original_line_price > item.final_line_price -%}
