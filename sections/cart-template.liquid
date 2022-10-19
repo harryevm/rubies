@@ -84,6 +84,22 @@
                           {%- endfor -%}
                         {%- endunless -%}
                       </div>
+                    <div class="cart-item-quantity">
+                      <span>
+                        <div class="quantity-select">
+                          <div class="button-wrapper">
+                            <button type="button" class="adjust adjust-minus" data-cart-item-quantity-minus>-</button>
+                          </div>
+                          <div class="input-wrapper">
+                            <input type="text" class="quantity" data-cart-item-quantity min="0" pattern="[0-9]*" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" >
+                          </div>
+                          <div class="button-wrapper">
+                            <button type="button" class="adjust adjust-plus" data-cart-item-quantity-plus>+</button>
+                          </div>
+                        </div>
+                      </span>
+                      <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="remove" data-cart-item-remove>{{ 'cart.general.remove' | t }}</a>
+                    </div>
                     </div>
                     {%- comment -%}
                       Cart item - price
@@ -104,25 +120,8 @@
                       {% endif %}
                     </div>
                 {% endcomment %}
-                    {%- comment -%}
-                      Cart item - quanity
-                    {%- endcomment -%}
-                    <div class="td cart-item-quantity">
-                      <span>
-                        <div class="quantity-select">
-                          <div class="button-wrapper">
-                            <button type="button" class="adjust adjust-minus" data-cart-item-quantity-minus>-</button>
-                          </div>
-                          <div class="input-wrapper">
-                            <input type="text" class="quantity" data-cart-item-quantity min="0" pattern="[0-9]*" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" >
-                          </div>
-                          <div class="button-wrapper">
-                            <button type="button" class="adjust adjust-plus" data-cart-item-quantity-plus>+</button>
-                          </div>
-                        </div>
-                      </span>
-                      <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="remove" data-cart-item-remove>{{ 'cart.general.remove' | t }}</a>
-                    </div>
+ 
+                
                     {%- comment -%}
                       Cart item - total
                     {%- endcomment -%}
