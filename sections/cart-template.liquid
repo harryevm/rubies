@@ -319,7 +319,23 @@
     {% include "cart-featured-collection" %}    
 </div>
 <div class="Test">
-    
+   <div id="accordion-1">
+    <div class="head">
+      <h2>{{ section.settings.tab_title }}</h2>
+      <i class="fas fa-angle-down arrow"></i>
+    </div>
+    <div class="content">
+      <p>{{ section.settings.tab_content }}</p>
+    </div>
+  </div>
+        <script>
+    $('.head').click(function(){
+  $(this).toggleClass('active');
+  $(this).parent().find('.arrow').toggleClass('arrow-animate');
+  $(this).parent().find('.content').slideToggle(280);
+});
+        
+        </script>
 </div>
         
             <div class="grid">
@@ -494,12 +510,12 @@
     },
     {
       "type":"text",
-      "id":"cart_tabs_title",
+      "id":"tab_title",
       "label":"Tab Title"
     },
      {
       "type":"richtext",
-      "id":"cart_tabs_content",
+      "id":"tab_content",
       "label":"Tab Content"
     }
     
