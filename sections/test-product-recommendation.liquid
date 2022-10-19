@@ -1,4 +1,4 @@
-{% assign limit = section.settings.product_recommendations_limit %}
+
 <style>
   .product-recommendations .product-container {
     width: 100%;
@@ -7,20 +7,16 @@
 }
   </style>
 {%- if section.settings.show_product_recommendations -%}    
-  <div class="product-recommendations" data-product-id="{{ product.id }}" data-limit="{{ limit }}" data-section-id="{{ section.id }}" data-section-type="product-recommendations">
+  <div class="product-recommendations" data-product-id="{{ product.id }}" data-section-id="{{ section.id }}" data-section-type="product-recommendations">
         <header>
           {% if section.settings.product_recommendations_heading != blank %}
             <h4>{{ section.settings.product_recommendations_heading | escape }}</h4>
           {% endif %}
         </header>
-        <div class="product-container--{{ limit }}">    
+        <div class="product-container">    
           {%- if recommendations.performed -%}
             {%- for product in recommendations.products -%}      
               {% include 'product-grid-item' %}          
-            {%- endfor -%}
-          {%- else -%}
-            {%- for i in (1..limit) -%}
-              {% include 'placeholder-product-grid-item' %}
             {%- endfor -%}
           {%- endif -%}         
         </div>
