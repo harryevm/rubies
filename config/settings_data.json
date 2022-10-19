@@ -1757,7 +1757,7 @@
     "collection_swatches": true,
     "collection_swatches_images": true,
     "collection_swatches_shape": "circle",
-    "collections_product_columns": "2",
+    "collections_product_columns": "1",
     "show_vendors": false,
     "collections_text_alignment": "left",
     "collections_badge_placement": "top-left",
@@ -2632,14 +2632,6 @@
           "autoplay_speed_range": 5,
           "show_dots": true,
           "show_arrows": false
-        }
-      },
-      "test-product-recommendation": {
-        "type": "test-product-recommendation",
-        "settings": {
-          "show_product_recommendations": true,
-          "product_recommendations_heading": "You may also like",
-          "product_recommendations_limit": "4"
         }
       }
     },
