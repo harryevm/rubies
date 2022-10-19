@@ -166,12 +166,6 @@ header.content-util ul.social-icons {  display: none; }
   header.site-header.minimal nav.nav-bar ul.site-nav>li>a { padding: 4px; }
   header.site-header .layout-horizontal .logo-contain { flex-basis: 180px; }
 }
-@media(max-width:767px){
-.slide__item-image-contain.mobile .content-contain h2 {
-    font-size: 24px !important;
-    line-height: 1.4;
-}
-}
 @media(max-width:700px){
     header.util .left-wrapper ul.text-links li.search-wrap { display: block; position: absolute; bottom: -50px; right: 35px; }
     header.util a#CartButton { border: none; position: absolute; bottom: -47px; right: 0; }
@@ -278,6 +272,10 @@ header.content-util ul.social-icons {  display: none; }
   .slide__item-content h2 { font-size: 16px !important; line-height: 20px; }
   .slide__item-content p { font-size: 13px; line-height: 18px; }
   .slide__item-content a.button { padding: 10px 15px; }
+  .slide__item-image-contain.mobile .content-contain h2 {
+    font-size: 24px !important;
+    line-height: 1.4;
+}
 }
 @media(max-width:375px){
   header.site-header .layout-horizontal { top: -55px;}
