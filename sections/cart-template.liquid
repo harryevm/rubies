@@ -35,8 +35,8 @@
               {%- for item in cart.items -%}
                 <div class="cart-item" data-cart-item="{{ item.key }}" data-csapp_line_index>
                   <div class="grid">
-                    <div class="td cart-item-product">
-                      {%- comment -%}
+                <div class="td cart-item-product">
+                    {%- comment -%}
                         Cart item - image
                       {%- endcomment -%}
                       <div class="cart-item-image">
@@ -59,6 +59,9 @@
                           </noscript>
                         </a>
                       </div>
+                </div>
+                    <div class="td cart-item-product">
+                  
                       {%- comment -%}
                         Cart item - title
                       {%- endcomment -%}
