@@ -1,13 +1,16 @@
 <style>
   .slide-dots{
   text-align: center;
-  li{
+  }
+  .slide-dots li{
     display: inline-block;
     margin: 0 15px;
-    button{
+  }
+   .slide-dots li button{
       position: relative;
       text-indent: -9999px;
-      &:before{
+   }
+      .slide-dots li button:before{
         content: '☆';
         font-size: 20px;
         text-indent: 0px;
@@ -15,14 +18,8 @@
         top: 0;
         left: 0;
       }
-    }
-    &.slick-active{
-      button:before{
-        content: '★';
-      }
-    }
-  }
-}
+   
+
   </style>
 <div class="simple-collection layout-{{ section.settings.cart_product_count_range }}" data-section-id="{{ section.id }}" data-section-type="simple-collection-section">
   <div class="wrapper">
