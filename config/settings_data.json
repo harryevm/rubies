@@ -2204,8 +2204,8 @@
           "title": "Cart collection",
           "collection": "bikini-tops-and-bottoms",
           "cart_product_count_range": 4,
-          "tab_title": "test",
-          "tab_content": "<p>accorsidsn<\/p><p><\/p>"
+          "tab_title": "",
+          "tab_content": ""
         }
       },
       "collection-list-template": {
