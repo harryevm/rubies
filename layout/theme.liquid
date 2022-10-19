@@ -3,47 +3,7 @@
 <!--[if IE 9 ]>{% comment ls-rpl %}<html class="ie9 no-js">{% endcomment %}<html class="ie9 no-js" lang="{%- render "ls-language" -%}" dir="{%- render "ls-language-direction" -%}">{% comment /ls-rpl %}{% endcomment %} <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> {% comment ls-rpl %}<html class="no-js" lang="{{ shop.locale }}">{% endcomment %}<html class="no-js" lang="{%- render "ls-language" -%}" dir="{%- render "ls-language-direction" -%}">{% comment /ls-rpl %}{% endcomment %} <!--<![endif]-->
 <head>
-   <script>
-$( document ).ready(function() {
-
-
-  $('.pro_rec_slider').slick({
-  dots: true,
-  infinite: true,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  arrows: false,
-  speed: 300,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
-});
-  });
-</script>  
+  
 {%- render "ls-head" -%}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -169,7 +129,45 @@ $( document ).ready(function() {
   {% endif %}
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
-
+ <script>
+$( document ).ready(function() {
+  $('.pro_rec_slider').slick({
+  dots: true,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+  });
+</script>  
   {% include 'judgeme_core' %}
   <!-- Hotjar Tracking Code for RUBYSHINES.COM -->
   <script>
