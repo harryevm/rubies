@@ -318,6 +318,12 @@
 <div class="cart-featured-collection-wrapper">
     {% include "cart-featured-collection" %}    
 </div>
+<div class="">
+    <div class="tab tab--global-1">
+         <div class="tab__title" tabindex="0">{{ section.settings.cart_tabs_title }}</div>
+          <div class="tab__content">{{ section.settings.cart_tabs_content }}</div>
+    </div>
+</div>
         
             <div class="grid">
                 <div class="cart-notes">
@@ -488,6 +494,16 @@
       "max": 20,
       "step": 4,
       "default": 4
+    },
+    {
+      "type":"text",
+      "id":"cart_tabs_title",
+      "label":"Tab Title"
+    },
+     {
+      "type":"richtext",
+      "id":"cart_tabs_content",
+      "label":"Tab Content"
     }
     
   ]
