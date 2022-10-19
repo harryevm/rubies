@@ -255,10 +255,8 @@ header.content-util ul.social-icons {  display: none; }
   .template-collection .label.sold-out { font-size: 14px; }
   header.collection-header h1 { font-size: 18px; }
 }
-
 @media(max-width:600px){
-  img#dancer1{height: 250px !important; left: 70% !important; top: -14px !important;}
-  
+  img#dancer1{height: 250px !important; left: 70% !important; top: -14px !important;}  
 }
 @media(max-width:480px){
 /*   .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 50vh; } */
@@ -272,10 +270,6 @@ header.content-util ul.social-icons {  display: none; }
   .slide__item-content h2 { font-size: 16px !important; line-height: 20px; }
   .slide__item-content p { font-size: 13px; line-height: 18px; }
   .slide__item-content a.button { padding: 10px 15px; }
-  .slide__item-image-contain.mobile .content-contain h2 {
-    font-size: 24px !important;
-    line-height: 1.4;
-}
 }
 @media(max-width:375px){
   header.site-header .layout-horizontal { top: -55px;}
