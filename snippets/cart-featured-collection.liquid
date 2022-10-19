@@ -9,7 +9,7 @@
         <a href="{{ section.settings.button_link }}" class="button outline">{{ section.settings.button_label | escape }}</a>
       {% endif %}
     </header>
-    <div class="product-container owl-carousel" id="Cart-collection">
+    <div class="product-container owl-carousel" id="collection-{{ section.id }}">
       {%- assign collection = collections[section.settings.collection] -%}
       {%- assign product_limit = section.settings.cart_product_count_range -%}
       {% for product in collection.products limit: product_limit  %}
@@ -81,11 +81,12 @@ console.log(swatchVal+"  ++ "+swatchVal2)
 });
   
   if ($(window).width() <= 650) {
-$('#Cart-collection').slick({
+$('#collection-{{section.id}}').slick({
   arrows: false,
   autoplay: true,
   autoplaySpeed: 2000,
-  slidesToShow: 2,
+   slidesToShow: 2,
   slidesToScroll: 1
+});
 }
 </script>
