@@ -213,7 +213,7 @@ justify-content: right;
                   </ul>
                 {%- endif -%}
                 <p class="subtotal">
-                  <span class="label">{{ 'cart.general.subtotal' | t }} ({{ cart.item_count }})</span>
+                  <span class="label">{{ 'cart.general.subtotal' | t }} ({{ cart.item_count }} Item)</span>
                   <span class="price money" data-cart-subtotal><span class="csapps-cart-original-total">{{ cart.total_price | money }}</span> {% if cart.currency.symbol == "$" %} {{ cart.currency.iso_code }}{%- endif -%}</span>
                 </p>
                 {% unless shop.enabled_currencies.size > 1 %}
