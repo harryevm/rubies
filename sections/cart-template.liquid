@@ -15,7 +15,7 @@
         <div class="cart-list">
           <form action="/cart" method="post" novalidate class="cart-form">
             <div class="cart-items" data-csapp_line_wrapper>
-<!--               <div class="label-row">
+              <div class="label-row">
                 <div class="grid">
                   <div class="td cart-item-product">
                     {{ 'cart.label.product' | t }}
@@ -30,7 +30,7 @@
                     {{ 'cart.label.total' | t }}
                   </div>
                 </div>
-              </div> -->
+              </div>
 
               {%- for item in cart.items -%}
                 <div class="cart-item" data-cart-item="{{ item.key }}" data-csapp_line_index>
