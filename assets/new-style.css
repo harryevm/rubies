@@ -183,6 +183,10 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
 
 
 
+/* About us */
+.about-page-wr { display: flex; justify-content: space-between; align-items: center; }
+
+
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
