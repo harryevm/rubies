@@ -174,7 +174,12 @@
 
   
 {% render 'preorder-now' %}
-
+<script>
+  setTimeout(function(){
+  $('.pro_rec_slider').slick();
+  alert();
+  },2000);
+</script>
 </body>
 </html>
 {%- endcapture -%}{%- render "ls-output", input: LS_INPUT -%}
