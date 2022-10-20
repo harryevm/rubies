@@ -388,6 +388,9 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
 }
 @media(max-width:600px){
   img#dancer1{height: 250px !important; left: 70% !important; top: -14px !important;}  
+
+
+  .product-title-with-review .product-title h1 { font-size: 20px; line-height: 30px; }
 }
 @media(max-width:480px){
 /*   .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 50vh; } */
