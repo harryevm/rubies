@@ -45,40 +45,6 @@
 
       </header>
 
- <div class="Review-on-mobile">
-    {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
-  </div>
-  
-  <div class="product-title-Mobile">
-    <h1 itemprop="name">
-      {% unless section_onboarding %}
-        {{ product.title }}
-      {% else %}
-        {{ 'homepage.onboarding.product_title' | t }}
-      {% endunless %}
-    </h1>
-  </div>
- 
-  <div class="price-On-Mobile">
-     <div class="selection-wrapper price product-single__price-{{ section.id }}">
-    {% unless section_onboarding %}
-      <span class="money dgfgfdf" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ current_variant.price | money_without_currency | remove: ',' }}">{{ current_variant.price | money }} &nbsp;{% if cart.currency.symbol == "$" %}  {{ cart.currency.iso_code }}{%- endif -%}</span>
-    {% else %}
-      <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ 1999 | money_without_currency | remove: ',' }}">{{ 1999 | money }}</span>
-    {% endunless %}
-    
-    {% if current_variant.compare_at_price > current_variant.price %}
-      <p id="ComparePrice-{{ section.id }}" data-ComparePrice style="display:inline-block;">
-        <span class="compareprice__label">{{ 'products.product.compare_at' | t }} </span><span class="money">{{ current_variant.compare_at_price | money }}</span>
-      </p>
-    {% else %}
-      <p id="ComparePrice-{{ section.id }}" data-ComparePrice style="display:none;">
-        <span class="compareprice__label">{{ 'products.product.compare_at' | t }} </span><span class="money">{{ current_variant.compare_at_price | money }}</span>
-      </p>
-    {% endif %}
-  </div>
-  </div>
-<!--   Product title on Mobile     -->
       <div class="grid">
         <div class="product-images thumbnails-placement-{{ section.settings.thumbnails_placement }}">
           <div class="images-container">
@@ -186,7 +152,6 @@
                     <div class="tab__content">{{ pages[section.settings.tabs_global_page_3].content }}</div>
                   </div>
                 {%- endif -%}
-             
                 {% for block in section.blocks %}
                 <div class="tab tab--global-1">
                   <div class="tab__title" tabindex="0">{{ block.settings.heading }}</div>
@@ -196,23 +161,9 @@
                     {% else %}
                       {{ block.settings.content }}
                     {% endif %}
-                  {% if block.settings.htmlcontent != blank %}
-                  <div class="tab-html-content">
-                    {{ block.settings.htmlcontent }}
-                  </div>
-                    {% endif %}
                     </div>
                 </div>
                 {% endfor %}
-              {%- if section.settings.tabs_global_page_4_title != blank -%}
-                  <div class="tab tab--global-1">
-                    <div class="tab__title" tabindex="0">{{ section.settings.tabs_global_page_4_title }}</div>
-                      <div class="tab__content">
-                        {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
-                      </div>
-                    </div>             
-                {%- endif -%}
-           
               </div>
             {%- else -%}
               {%- comment -%}
@@ -519,11 +470,6 @@
       "default": "Description"
     },
     {
-        "type":"text",
-        "id":"tabs_global_page_4_title",
-        "label":"Review Tab Title"
-    },
-    {
       "type": "page",
       "id": "tabs_global_page_1",
       "label": "Tab content 1"
@@ -559,7 +505,6 @@
       "label": "Show social sharing buttons",
       "default": true
     }
-      
   ],
   "blocks":[
     {
@@ -577,11 +522,6 @@
           "type": "richtext",
           "id": "content",
           "label": "Content"
-        },
-        {
-          "type":"html",
-          "id":"htmlcontent",
-          "label":"HTML Content"
         },
         {
           "type": "page",
