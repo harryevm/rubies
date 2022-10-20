@@ -4,7 +4,7 @@
 {%- assign current_option = 'option' | append: option.position -%}
 {%- assign all_options = 'option1, option2, option3' | remove: current_option | split: ', ' -%}
 
-<div class="radio-wrapper js product-form__item" data-option-index="{{ option.position }}" data-other-options='{{ other_options | json }}'>
+<div class="{% if option_name == 'size' or option_name == 'youth-size' %}size-drop-box{% endif %} radio-wrapper js product-form__item" data-option-index="{{ option.position }}" data-other-options='{{ other_options | json }}'>
   <label class="single-option-radio__label"
     for="SingleOptionRadioSelector-option-{{ forloop.index0 }}">
     {{ option.name }}
