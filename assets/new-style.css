@@ -224,6 +224,8 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
   header.site-header .layout-horizontal .logo-contain { flex-basis: 180px; }
 
   .single-product .grid { position: relative; }
+  .single-product .grid aside.product-aside, .single-product .grid .product-images { margin: 0; padding: 0; }
+  aside.product-aside .purchase-box { max-width: unset; width: 92%; }
   
 }
 @media(max-width:700px){
