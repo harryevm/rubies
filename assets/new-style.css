@@ -250,7 +250,7 @@ span.jdgm-prev-badge__stars span:before { color: black; }
       height: 48px;
     transform: rotate(270deg);
   }
-  .product-thumb--slider .flickity-slider > div{
+  .product-thumb--slider .flickity-slider > div{ 
     width: 50px;
     height: 50px;
     border: 1px solid #040f2159;
