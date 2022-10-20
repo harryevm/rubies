@@ -1,4 +1,5 @@
 {% form 'product', product %}
+<div class="product-title-with-review"
 {% comment %}Start automatically added Judge.me widget{% endcomment %}
   {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
 {% comment %}End automatically added Judge.me widget{% endcomment %}
@@ -29,7 +30,9 @@
       </p>
     {% endif %}
   </div>
-
+</div>
+  <div class="discount_text">{{ settings.product_discountext }}</div>
+  
   {% unless product.has_only_default_variant %}
     {%- comment -%}
       Dropdown colleciton of variant options
