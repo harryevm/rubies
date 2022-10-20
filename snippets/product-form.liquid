@@ -43,7 +43,7 @@
           {% for option in product.options_with_values %}
             {%- assign option_name = option.name | downcase -%}
             {%- assign size_options = 'products.product.size_option' | t -%}
-            {{ size_options }}
+           
             <div class="selector-wrapper">
               <label for="SingleOptionSelector-{{ forloop.index0 }}">
                 {{ option.name }}
