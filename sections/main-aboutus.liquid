@@ -1,7 +1,54 @@
+<section class="about-page-wrapper">
+  {% include 'breadcrumb' %}
+  <div class="banner-wr"></div>
+  <div class="wrapper">
+    <div class="about-page-info">
+      <div class="about-page-wr">
+        <div class="about-img">
+          <img src="{{ block.settings.image | img_url:'' }}" alt="" />
+        </div>
+        <div class="about-content">
+          <h2>{{ block.settings.heading }}</h2>
+          <div>{{ block.settings.content }}</div>
+          <a href="{{ block.settings.url }}" class="btn btn-primary">{{ block.settings.label }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% schema %}
   {
     "name": "Section name",
-    "settings": []
+    "settings": [],
+    "blocks":[
+      {
+        "type": "about",
+        "name": "About Us",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "default": "Heading",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type":"url",
+            "id":"url",
+            "label":"Link"
+          },
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Label"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
 
