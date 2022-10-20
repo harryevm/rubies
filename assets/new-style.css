@@ -413,6 +413,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
 
   .single-product .grid .product-images { margin-top: 130px; }
   .product-thumb--slider { top: 35%; left: -100px; width: 250px!important;}
+  .purchase-box .selection-wrapper.price { margin: 0; padding-bottom: 0; }
 }
 @media(max-width:375px){
   header.site-header .layout-horizontal { top: -55px;}
