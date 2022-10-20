@@ -383,6 +383,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
   .template-collection .collection figcaption span.price { font-size: 18px !important; line-height: 25px; margin-top: 5px; }
   .template-collection .label.sold-out { font-size: 14px; }
   header.collection-header h1 { font-size: 18px; }
+  .purchase-box .selection-wrapper.variant { border: none; margin-bottom: 0; }
 }
 @media(max-width:600px){
   img#dancer1{height: 250px !important; left: 70% !important; top: -14px !important;}  
