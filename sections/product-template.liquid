@@ -44,199 +44,7 @@
         </div>
 
       </header>
-<!--   Product title on Mobile     -->
-<style>
 
-
-  nav.breadcrumb a{
-    font: normal normal medium 12px/14px Poppins;
-    color: #040F21;
-  }
-.product-template .single-product .wrapper nav.breadcrumb > span {
-    font: normal normal normal 12px/14px Poppins !important;
-    text-transform: capitalize !important;
-    color: #040F21;
-}
-    .price.product-single__price-product-template {
-    margin-top: 10px;
-}
-  .Review-on-mobile,
-  .product-title-Mobile,
-  .price-On-Mobile{
-    display:none;
-  }
-  span.jdgm-prev-badge__stars span:before {
-    color: black;
-}
-  .thumbnails {
-    overflow: hidden !important;
-}
-  /*  Product varient label    */
-    .selection-wrapper .product-form__item label,
-  .selector-wrapper.quantity.quantity-product-template label {
-    font: normal normal 600 16px/18px Poppins;
-    color: #040F21;
-    text-transform: capitalize;
-}
-  .quantity {
-    margin-top: 15px;
-}
-  .quantity-select .button-wrapper button.adjust.adjust-minus,
-    .quantity-select .button-wrapper button.adjust.adjust-plus {
-      border: none;
-      font-size: 24px !important;
-    }
-    .quantity-select .input-wrapper > input {
-      border: none;
-    }
-    .quantity-select .input-wrapper > input {
-      border: none;
-      font-size:18px;
-    }
-  a.product-size-guide-product-template {
-    font: normal normal normal 16px/18px Poppins;
-    letter-spacing: 0px;
-    color: #040F21;
-    text-transform: uppercase;
-}
-/* Review  css start */
-  .jdgm-widget-actions-wrapper a {
-    background: white !important;
-    color: black;
-    font: normal normal normal 14px/18px Poppins !important;
-    letter-spacing: 0px;
-    color: #1A6DFC !important;
-    border: 1px solid #1A6DFC !important;
-    
-}
-/*   Review css end */
-/*  Product varient label    */
-  .tab__title {
-    font: normal normal 600 16px/32px Poppins;
-    letter-spacing: 0px;
-    color: #040F21;
-    text-transform: capitalize;
-}
-  .form-vertical.product-form > form .discount_text {
-    font: normal normal 300 16px/18px Poppins;
-    letter-spacing: 0px;
-    color: #040F21;
-}
-  .tab__content {
-    font: normal normal 300 14px/22px Poppins;
-    letter-spacing: 0px;
-    color: #040F21;
-}
-
-
-
-  @media only screen and (max-width: 767px) {
-/*   Product Information Mobile */
-  .Review-on-mobile,
-  .product-title-Mobile,
-  .price-On-Mobile{
-    display:block;
-  }
-  .Product-title-desktop,
-  .review-on-desktop,
-  .price-on-desktop{
-      display:none;
-  }
-  .product-title-Mobile {
-    margin-top: 10px;
-  }
-    .Review-on-mobile .jdgm-widget .jdgm-prev-badge .jdgm-prev-badge__stars {
-    padding-right: 10px;
-  }
-  .product-title-Mobile h1 {
-    font: normal normal bold 16px/20px Poppins;
-    color: #040F21;
-  }
-  .price-On-Mobile.price.product-single__price-product-template {
-    font: normal normal bold 16px/12px Poppins;
-    color: #040F21;
-  }
-    
-
-/*   Product slider thumbniles  Mobile */
-   .product-thumb--slider .flickity-prev-next-button{
-      display:block!important;
-    }
-    .product-images.thumbnails-placement-side--left .images-container {
-        position: relative;
-    }
-   .product-thumb--slider {
-    position: absolute;
-    top: 130px;
-    transform: rotate(90deg);
-    left: -98px;
-    width: 300px !important;
-    height: 55px !important;
-    padding-top: 2px;
-}
-    .product-thumb--slider .flickity-slider > div > a > img {
-        width: 48px;
-        height: 48px;
-      transform: rotate(270deg);
-    }
-    .product-thumb--slider .flickity-slider > div{
-      width: 50px;
-      height: 50px;
-      border: 1px solid #040f2159;
-    }
-    .product-images.thumbnails-placement-side--left .images-container>*{
-      padding-left:0px;
-    }
-    .quantity-select{
-      max-width: 100%;
-    }
-    .quantity-select .button-wrapper button.adjust.adjust-minus,
-    .quantity-select .button-wrapper button.adjust.adjust-plus {
-      border: none;
-      font-size: 24px !important;
-    }
-    .quantity-select .input-wrapper > input {
-      border: none;
-    }
-    .price-On-Mobile .selection-wrapper.price span {
-    font-weight: 600;
-    } 
-  }
-</style>
- <div class="Review-on-mobile">
-    {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
-  </div>
-  
-  <div class="product-title-Mobile">
-    <h1 itemprop="name">
-      {% unless section_onboarding %}
-        {{ product.title }}
-      {% else %}
-        {{ 'homepage.onboarding.product_title' | t }}
-      {% endunless %}
-    </h1>
-  </div>
- 
-  <div class="price-On-Mobile">
-     <div class="selection-wrapper price product-single__price-{{ section.id }}">
-    {% unless section_onboarding %}
-      <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ current_variant.price | money_without_currency | remove: ',' }}">{{ current_variant.price | money }} {% if cart.currency.symbol == "$" %} {{ cart.currency.iso_code }}{%- endif -%}</span>
-    {% else %}
-      <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ 1999 | money_without_currency | remove: ',' }}">{{ 1999 | money }}</span>
-    {% endunless %}
-    
-    {% if current_variant.compare_at_price > current_variant.price %}
-      <p id="ComparePrice-{{ section.id }}" data-ComparePrice style="display:inline-block;">
-        <span class="compareprice__label">{{ 'products.product.compare_at' | t }} </span><span class="money">{{ current_variant.compare_at_price | money }}</span>
-      </p>
-    {% else %}
-      <p id="ComparePrice-{{ section.id }}" data-ComparePrice style="display:none;">
-        <span class="compareprice__label">{{ 'products.product.compare_at' | t }} </span><span class="money">{{ current_variant.compare_at_price | money }}</span>
-      </p>
-    {% endif %}
-  </div>
-  </div>
-<!--   Product title on Mobile     -->
       <div class="grid">
         <div class="product-images thumbnails-placement-{{ section.settings.thumbnails_placement }}">
           <div class="images-container">
@@ -344,7 +152,6 @@
                     <div class="tab__content">{{ pages[section.settings.tabs_global_page_3].content }}</div>
                   </div>
                 {%- endif -%}
-             
                 {% for block in section.blocks %}
                 <div class="tab tab--global-1">
                   <div class="tab__title" tabindex="0">{{ block.settings.heading }}</div>
@@ -354,23 +161,9 @@
                     {% else %}
                       {{ block.settings.content }}
                     {% endif %}
-                  {% if block.settings.htmlcontent != blank %}
-                  <div class="tab-html-content">
-                    {{ block.settings.htmlcontent }}
-                  </div>
-                    {% endif %}
                     </div>
                 </div>
                 {% endfor %}
-              {%- if section.settings.tabs_global_page_4_title != blank -%}
-                  <div class="tab tab--global-1">
-                    <div class="tab__title" tabindex="0">{{ section.settings.tabs_global_page_4_title }}</div>
-                      <div class="tab__content">
-                        {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
-                      </div>
-                    </div>             
-                {%- endif -%}
-           
               </div>
             {%- else -%}
               {%- comment -%}
@@ -677,11 +470,6 @@
       "default": "Description"
     },
     {
-        "type":"text",
-        "id":"tabs_global_page_4_title",
-        "label":"Review Tab Title"
-    },
-    {
       "type": "page",
       "id": "tabs_global_page_1",
       "label": "Tab content 1"
@@ -717,7 +505,6 @@
       "label": "Show social sharing buttons",
       "default": true
     }
-      
   ],
   "blocks":[
     {
@@ -735,11 +522,6 @@
           "type": "richtext",
           "id": "content",
           "label": "Content"
-        },
-        {
-          "type":"html",
-          "id":"htmlcontent",
-          "label":"HTML Content"
         },
         {
           "type": "page",
