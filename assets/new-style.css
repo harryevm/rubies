@@ -232,6 +232,11 @@ span.jdgm-prev-badge__stars span:before { color: black; }
   /*   Product slider thumbniles  Mobile */
  header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { color: #000; font-size: 16px; line-height: 25px; }
   header.content-util nav.breadcrumb span { color: #040F21; }
+  .product-title-with-review .product-title { margin: 10px 0; }
+  
+
+
+  
   .product-thumb--slider .flickity-prev-next-button{
     display:block!important;
   }
