@@ -4,9 +4,11 @@
   {% include 'breadcrumb' %}
     </div>
   {% endif %}
+  {% if section.settings.banner_img %}
   <div class="banner-wr">
     <img src="{{ section.settings.banner_img | img_url:'' }}" alt="" />
   </div>
+  {% endif %}
   <div class="wrapper">
     <div class="about-page-info">
       {% for block in section.blocks %}
