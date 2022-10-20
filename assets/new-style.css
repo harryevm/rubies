@@ -184,7 +184,9 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
 
 
 /* About us */
-.about-page-wrapper .banner-wr { margin: 20px 0 50px; }
+.about-page-wrapper .banner-wr { margin: 0 0 50px; }
+section.about-page-wrapper nav.breadcrumb { margin-bottom: 30px; }
+.banner-wr > img { width: 100%; }
 .about-page-wr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; }
 .about-page-wr > * { width: 48%; }
 .about-img > img { width: 100%; }
