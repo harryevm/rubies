@@ -19,7 +19,9 @@
         <div class="about-content">
           <h2>{{ block.settings.heading }}</h2>
           <div>{{ block.settings.content }}</div>
+          {% if block.settings.url != blank and block.settings.label != blank %}
           <a href="{{ block.settings.url }}" class="btn btn-primary">{{ block.settings.label }}</a>
+           {% endif %}
         </div>
       </div>
       {% endfor %}
