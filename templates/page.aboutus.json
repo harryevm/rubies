@@ -2,7 +2,62 @@
   "sections": {
     "main": {
       "type": "main-aboutus",
+      "blocks": {
+        "6b661f04-1aac-4a71-af16-37564a7cca1a": {
+          "type": "about",
+          "settings": {
+            "heading": "About RUBIES",
+            "content": "<p>RUBIES was conceived when Jamie and his 11 year-old daughter Ruby, were packing for their first adventure in Central America. Jamie felt nervous: what should Ruby wear to the beach in a country that may not be ready for a girl like her? With that came a bigger question: how could he help girls like Ruby enjoy the same activities as their friends – with the same level of comfort and confidence, and no matter where they went?<\/p>",
+            "url": "",
+            "label": ""
+          }
+        },
+        "543363b7-5a63-45ed-9848-7cce4913bf8e": {
+          "type": "about",
+          "settings": {
+            "heading": "Meet Our Founder",
+            "content": "<p>The question practically answered itself: form-fitting clothing for trans girls. Each pair of RUBIES bikini bottoms and underwear features a soft compression that provides worry-free comfort and helps keep everything in place. It’s designed for the beach, the gym, the pool, or the dance lessons – without the slightest compromise in style.<\/p>",
+            "url": "",
+            "label": ""
+          }
+        },
+        "3367fc14-9b70-47e7-a517-af0c69c73711": {
+          "type": "about",
+          "settings": {
+            "heading": "Innovative Products",
+            "content": "<p>The question practically answered itself: form-fitting clothing for trans girls. Each pair of RUBIES bikini bottoms and underwear features a soft compression that provides worry-free comfort and helps keep everything in place. It’s designed for the beach, the gym, the pool, or the dance lessons – without the slightest compromise in style.<\/p>",
+            "url": "#",
+            "label": "Shop Now"
+          }
+        },
+        "8418010d-1891-4a5f-96f6-b6911ea4d585": {
+          "type": "about",
+          "settings": {
+            "heading": "The RUBIES Community",
+            "content": "<p>The question practically answered itself: form-fitting clothing for trans girls. Each pair of RUBIES bikini bottoms and underwear features a soft compression that provides worry-free comfort and helps keep everything in place. It’s designed for the beach, the gym, the pool, or the dance lessons – without the slightest compromise in style.<\/p>",
+            "url": "",
+            "label": ""
+          }
+        },
+        "0c8ae94c-67bb-4c6b-93be-8394d0613a9a": {
+          "type": "about",
+          "settings": {
+            "heading": "Sustainability",
+            "content": "<p>The question practically answered itself: form-fitting clothing for trans girls. Each pair of RUBIES bikini bottoms and underwear features a soft compression that provides worry-free comfort and helps keep everything in place. It’s designed for the beach, the gym, the pool, or the dance lessons – without the slightest compromise in style.<\/p>",
+            "url": "",
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "6b661f04-1aac-4a71-af16-37564a7cca1a",
+        "543363b7-5a63-45ed-9848-7cce4913bf8e",
+        "3367fc14-9b70-47e7-a517-af0c69c73711",
+        "8418010d-1891-4a5f-96f6-b6911ea4d585",
+        "0c8ae94c-67bb-4c6b-93be-8394d0613a9a"
+      ],
       "settings": {
+        "show_breadcrumb": true
       }
     }
   },
