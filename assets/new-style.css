@@ -412,6 +412,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
   .slide__item-content a.button { padding: 10px 15px; }
 
   .single-product .grid .product-images { margin-top: 130px; }
+  .product-thumb--slider { top: 35%; left: -100px; width: 250px!important;}
 }
 @media(max-width:375px){
   header.site-header .layout-horizontal { top: -55px;}
