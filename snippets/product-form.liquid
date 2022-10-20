@@ -1,7 +1,8 @@
-
 {% form 'product', product %}
-  <div class="discount_text">{{ settings.product_discountext }}</div>
-  <div class="product-title Product-title-desktop">
+{% comment %}Start automatically added Judge.me widget{% endcomment %}
+  {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+{% comment %}End automatically added Judge.me widget{% endcomment %}
+  <div class="product-title">
     <h1 itemprop="name">
       {% unless section_onboarding %}
         {{ product.title }}
@@ -10,14 +11,8 @@
       {% endunless %}
     </h1>
   </div>
-{% comment %}Start automatically added Judge.me widget{% endcomment %}
-  <div class="review-on-desktop">
-  {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
-  </div>
-{% comment %}End automatically added Judge.me widget{% endcomment %}
 
-
-  <div class="selection-wrapper price product-single__price-{{ section.id }} price-on-desktop">
+  <div class="selection-wrapper price product-single__price-{{ section.id }}">
     {% unless section_onboarding %}
       <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ current_variant.price | money_without_currency | remove: ',' }}">{{ current_variant.price | money }} {% if cart.currency.symbol == "$" %} {{ cart.currency.iso_code }}{%- endif -%}</span>
     {% else %}
@@ -47,7 +42,8 @@
             {%- assign size_options = 'products.product.size_option' | t -%}
             <div class="selector-wrapper">
               <label for="SingleOptionSelector-{{ forloop.index0 }}">
-                {{ option.name }}  
+                {{ option.name }}
+                
               </label>
 
               <select class="single-option-selector single-option-selector-{{ section.id }}" id="SingleOptionSelector-{{ section.id }}-{{ forloop.index0 }}" data-name="{{ option.name }}" data-index="option{{ forloop.index }}">
