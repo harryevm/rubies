@@ -1,8 +1,13 @@
 <section class="about-page-wrapper">
+  {% if section.settings.show_breadcrumb == 'true'%}
   {% include 'breadcrumb' %}
-  <div class="banner-wr"></div>
+  {% endif %}
+  <div class="banner-wr">
+    <img src="{{ section.settings.banner_img }}" alt="" />
+  </div>
   <div class="wrapper">
     <div class="about-page-info">
+      {% for block in section.blocks %}
       <div class="about-page-wr">
         <div class="about-img">
           <img src="{{ block.settings.image | img_url:'' }}" alt="" />
@@ -13,13 +18,26 @@
           <a href="{{ block.settings.url }}" class="btn btn-primary">{{ block.settings.label }}</a>
         </div>
       </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": [],
+    "name": "About us",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_breadcrumb",
+        "label": "Show Breadcrumb",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "banner_img",
+        "label": "Banner Image"
+      }
+    ],
     "blocks":[
       {
         "type": "about",
