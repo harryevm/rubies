@@ -328,7 +328,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
   .template-product .size-drop-box .swatch-container { display: block; }
   .template-product .size-drop-box label.single-option-radio__label { border-bottom: 1px solid; padding: 10px 20px; margin: 0; position: relative; }
    .template-product .size-drop-box .swatch-container >label { border: none !important; margin: 0; padding: 5px 20px; background: transparent !important; color: #000 !important; border-bottom: 1px solid #000 !important; border-radius: 0 !important; }
-  .template-product .size-drop-box { border: 1px solid #000; padding: 0 0 15px 0; border-radius: 5px; }
+  .template-product .size-drop-box { border: 1px solid #000; padding: 0; border-radius: 5px; }
   .template-product .size-drop-box .swatch-container:last-child>label { border: none!important; padding-bottom: 10px; }
   .template-product .size-drop-box label.single-option-radio__label::after {
       position: absolute;
