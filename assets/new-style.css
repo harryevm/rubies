@@ -223,7 +223,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
   header.site-header.minimal nav.nav-bar ul.site-nav>li>a { padding: 4px; }
   header.site-header .layout-horizontal .logo-contain { flex-basis: 180px; }
 
-  .single-product .grid { position: relative; }
+  .single-product .grid { position: relative; margin: 0; }
   .product-title-with-review { position: absolute; top: 0; left: 0; width: 92%; margin: 0 auto; right: 0; }
   .single-product .grid aside.product-aside, .single-product .grid .product-images { margin: 0; padding: 0; }
   aside.product-aside .purchase-box, .description { max-width: unset; width: 92%; margin: 0 auto; border: none; }
