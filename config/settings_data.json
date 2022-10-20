@@ -2636,6 +2636,17 @@
           "show_dots": true,
           "show_arrows": false
         }
+      },
+      "2913c4c3-8ef0-4e22-aa3c-fb37fba5d221": {
+        "type": "simple-collection",
+        "settings": {
+          "title": "Featured collection",
+          "center_heading": false,
+          "button_label": "",
+          "button_link": "",
+          "collection": "every-girl-deserves-to-shine-campaign",
+          "product_count_range": 4
+        }
       }
     },
     "content_for_index": [
@@ -2650,7 +2661,8 @@
       "1662976991610d8e6e",
       "16629848551f1ad81a",
       "1663737217fb136d00",
-      "1663735858989f6aa1"
+      "1663735858989f6aa1",
+      "2913c4c3-8ef0-4e22-aa3c-fb37fba5d221"
     ],
     "blocks": {
       "14060646107696862457": {
