@@ -186,6 +186,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
 /* About us */
 .about-page-wr { display: flex; justify-content: space-between; align-items: center; }
 .about-page-wr > * { width: 48%; }
+.about-img > img { width: 100%; }
 
 
 @media(min-width:700px){
