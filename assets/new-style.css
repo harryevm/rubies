@@ -395,6 +395,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
   .product-thumb--slider { top: 200px; left: -100px; }
   .form-vertical.product-form>form .discount_text { font-size: 16px; line-height: 25px; }
   
+  
 }
 @media(max-width:480px){
 /*   .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 50vh; } */
