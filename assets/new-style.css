@@ -187,6 +187,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
 .about-page-wr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; }
 .about-page-wr > * { width: 48%; }
 .about-img > img { width: 100%; }
+.about-page-wr:nth-child(even) { flex-direction: row-reverse; }
 
 
 @media(min-width:700px){
