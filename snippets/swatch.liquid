@@ -15,7 +15,7 @@
     <span class="label-extra"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">{{ pages[section.settings.size_guide_page].title }}</a></span>
     {%- endif -%}{% endcomment %}
   </label>
-  <fieldset class="single-option-radio"
+  <fieldset class="single-option-radio {% if option_name == 'size' or option_name == 'youth-size' %}size-drop-box{% endif %}"
     name="{{ option.name }}"
     id="SingleOptionRadioSelector-option-{{ forloop.index0 }}">
       {%- assign option_index = forloop.index -%}
