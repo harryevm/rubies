@@ -291,13 +291,13 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
       position: relative;
   }
  .product-thumb--slider {
-  position: absolute;
-  top: 130px;
-  transform: rotate(90deg);
-  left: -98px;
-  width: 300px !important;
-  height: 55px !important;
-  padding-top: 2px;
+    position: absolute;
+    top: 50%;
+    transform: rotate(90deg);
+    left: -10%;
+    width: 320px!important;
+    height: 50px!important;
+    padding-top: 2px;
 }
   .product-thumb--slider .flickity-slider > div > a > img {
       width: 48px;
