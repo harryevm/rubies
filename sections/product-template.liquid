@@ -158,8 +158,12 @@
                   <div class="tab__content">
                     {% if block.settings.page != blank %}
                       {{ pages[block.settings.page].content }}
-                    {% else %}
+                    {% elsif block.settings.content != blank %}
                       {{ block.settings.content }}
+                    {% else %}
+                      <div class="tab-html-content">
+                        {{ block.settings.htmlcontent }}
+                      </div>
                     {% endif %}
                     </div>
                 </div>
