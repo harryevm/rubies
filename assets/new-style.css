@@ -178,7 +178,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
   .tab__title { text-transform: unset; font-size: 20px; line-height: 30px; color: #040F21; margin-bottom: 10px; }
   .form-vertical.product-form>form .discount_text { font: 300 20px/30px Poppins; letter-spacing: 0px; color: #040f21; margin-bottom: 15px; }
   .tab__content { font-size: 16px; line-height: 25px; color: #040F21; }
-
+  .tab-html-content .jdgm-widget.jdgm-widget { height: auto; }
 
 
 
