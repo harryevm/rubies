@@ -226,7 +226,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
   .single-product .grid { position: relative; }
   .product-title-with-review { position: absolute; top: 0; left: 0; width: 92%; margin: 0 auto; right: 0; }
   .single-product .grid aside.product-aside, .single-product .grid .product-images { margin: 0; padding: 0; }
-  aside.product-aside .purchase-box, .description { max-width: unset; width: 92%; margin: 0 auto; border: navajowhite; }
+  aside.product-aside .purchase-box, .description { max-width: unset; width: 92%; margin: 0 auto; border: none; }
   .purchase-box .selection-wrapper.price { border: none; }
   .single-product .grid .product-images { margin-top: 100px; }
   
