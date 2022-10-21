@@ -561,8 +561,8 @@
   $(document).ready(function() {
     var the_terms = $(".template-product .size-drop-box .single-option-radio .swatch-container:first-child > input");
 
-    the_terms.click(function() {
-        if ($(this).is(":checked")) {
+    
+        if (the_terms).is(":checked")) {
             $(".default-cart-button__button").removeAttr("disabled");
         } else {
             $(".default-cart-button__button").attr("disabled", "disabled");
