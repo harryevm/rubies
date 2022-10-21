@@ -560,15 +560,16 @@
   $('.template-product .size-drop-box .single-option-radio .swatch-container:first-child > input').removeAttr('checked');
 
 
-    var the_terms = $(".template-product .size-drop-box .single-option-radio .swatch-container:first-child > input");
-
     
+
+    $('..default-cart-button__button').click(function(){
+      var the_terms = $(".template-product .size-drop-box .single-option-radio .swatch-container:first-child > input");
         if (the_terms).is(":checked")) {
             $(".default-cart-button__button").removeAttr("test");
         } else {
             $(".default-cart-button__button").attr("test");
         }
- 
+     });
 </script>
 <!--Start Stamped.io Auto Installation--><div id="stamped-main-widget" class="stamped-main-widget" data-widget-style="standard" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{% comment ls-rpl %}{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: product.featured_image, img_url: "large" -%}{%- endcapture -%}{{ LS_IMG_URL | replace: '?', '%3F' | replace: '&','%26'}}{% comment /ls-rpl %}{% endcomment %}" data-description="{{ product.description | escape }}" data-product-sku="{{product.handle}}" data-product-type="{{product.type}}">{{ product.metafields.stamped.reviews }}</div><!--End Stamped.io Auto Installation-->
 <script type="text/javascript">
