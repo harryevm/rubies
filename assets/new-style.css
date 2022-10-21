@@ -181,7 +181,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
   .tab-html-content .jdgm-widget.jdgm-widget { height: auto; }
 .single-option-radio .swatch-container label { padding: 5px 15px 7px; }
 .stickyaddCart { display: none !important; }
-
+.stickyaddCart .default-cart-button__button { margin: 0; }
 
 
 /* About us */
