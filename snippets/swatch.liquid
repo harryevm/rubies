@@ -114,7 +114,7 @@
             </label>
           </div>
         {%- else -%}
-          <div class="swatch-container {% unless option_index == 1 %}{% unless available %}soldout{% endunless %}{% endunless %}" data-variant-swatch-soldout="{{ section.settings.variant_swatch_soldout }}">
+          <div class="sdf swatch-container {% unless option_index == 1 %}{% unless available %}soldout{% endunless %}{% endunless %}" data-variant-swatch-soldout="{{ section.settings.variant_swatch_soldout }}">
             {{ radio }}
             <label
               for="{{ id }}"
