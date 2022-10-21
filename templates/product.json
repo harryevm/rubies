@@ -73,9 +73,18 @@
         "show_product_jump": false,
         "show_share_buttons": true
       }
+    },
+    "recommended": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "You may also like",
+        "product_recommendations_limit": "4"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "recommended"
   ]
 }
