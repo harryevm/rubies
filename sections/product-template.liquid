@@ -551,3 +551,54 @@
 <style>
   .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: none; }
 </style>
+<script>
+  $('.template-product .size-drop-box label.single-option-radio__label').click(function(){
+    $(this).next().slideToggle(500);
+    $(this).parent().toggleClass('active-dropdown');
+  });
+</script>
+<!--Start Stamped.io Auto Installation--><div id="stamped-main-widget" class="stamped-main-widget" data-widget-style="standard" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{% comment ls-rpl %}{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: product.featured_image, img_url: "large" -%}{%- endcapture -%}{{ LS_IMG_URL | replace: '?', '%3F' | replace: '&','%26'}}{% comment /ls-rpl %}{% endcomment %}" data-description="{{ product.description | escape }}" data-product-sku="{{product.handle}}" data-product-type="{{product.type}}">{{ product.metafields.stamped.reviews }}</div><!--End Stamped.io Auto Installation-->
+<script type="text/javascript">
+  var _learnq = _learnq || [];
+
+  var item = {
+    Name: {{ product.title|json }},
+    ProductID: {{ product.id|json }},
+    Categories: {{ product.collections|map:'title'|json }},
+    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+    URL: "{{ shop.secure_url }}{{ product.url }}",
+    Brand: {{ product.vendor|json }},
+    Price: {{ product.price|money|json }},
+    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+  };
+
+  _learnq.push(['track', 'Viewed Product', item]);
+  _learnq.push(['trackViewedItem', {
+    Title: item.Name,
+    ItemId: item.ProductID,
+    Categories: item.Categories,
+    ImageUrl: item.ImageURL,
+    Url: item.URL,
+    Metadata: {
+      Brand: item.Brand,
+      Price: item.Price,
+      CompareAtPrice: item.CompareAtPrice
+    }
+  }]);
+</script>
+
+
+
+
+<script type="text/javascript">
+  var _learnq = _learnq || [];
+  document.getElementById("AddToCart").addEventListener('click',function (){
+    _learnq.push(['track', 'Added to Cart', item]);
+  });
+</script>
+
+
+
+<div class="aiod-bundle-discount-wrap" ></div>
+
+<script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=450361b5-981b-4e6f-9164-d70d9effc17f"></script>{% include 'upsellio_embed' %}
