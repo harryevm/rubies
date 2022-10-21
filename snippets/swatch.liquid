@@ -115,6 +115,21 @@
           </div>
         {%- else -%}
           <div class="sdf swatch-container {% unless option_index == 1 %}{% unless available %}soldout{% endunless %}{% endunless %}" data-variant-swatch-soldout="{{ section.settings.variant_swatch_soldout }}">
+            <input type="radio" {{ checked }}
+            value=""
+            data-index=""
+            data-position="{{ option.position }}"
+            name="{{ option.name }}"
+            class="{{ class }}"
+            id="{{ id }}">
+            <label
+              for="{{ id }}"
+              title="Youth Size">
+              <span class="swatch--text">Youth Size</span>
+              {% include 'icon-ui-soldout' %}
+            </label>
+          </div>
+          <div class="sdf swatch-container {% unless option_index == 1 %}{% unless available %}soldout{% endunless %}{% endunless %}" data-variant-swatch-soldout="{{ section.settings.variant_swatch_soldout }}">
             {{ radio }}
             <label
               for="{{ id }}"
