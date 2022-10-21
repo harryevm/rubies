@@ -92,6 +92,13 @@
 
         {%- capture radio -%}
           <input type="radio" {{ checked }}
+            value=""
+            data-index="option"
+            data-position="{{ option.position }}"
+            name="{{ option.name }}"
+            class="{{ class }}"
+            id="{{ id }}">
+          <input type="radio"
             value="{{ value | escape }}"
             data-index="option{{ option_index }}"
             data-position="{{ option.position }}"
