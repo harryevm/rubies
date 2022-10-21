@@ -91,7 +91,7 @@
         {%- endif -%}
 
         {%- capture radio -%}
-          <input type="radio" 
+          <input type="radio" {{ checked }}
             value="{{ value | escape }}"
             data-index="option{{ option_index }}"
             data-position="{{ option.position }}"
