@@ -142,7 +142,7 @@
         </span>
       </button>
       {% if section.settings.freeshippingtext %}
-        <div class="discount-text-shipping">{{ section.settings.freeshippingtext }}</div>
+        <div class="sd discount-text-shipping">{{ section.settings.freeshippingtext }}</div>
       {% endif %}
       <div class="stickyaddCart">
         <button type="submit" name="add" id="AddToCart-{{ section.id }}"  {% if preorder == true %} data-preorder {% endif %} class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart>
