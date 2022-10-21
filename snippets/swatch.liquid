@@ -88,6 +88,8 @@
 {{ current_variant[current_option] }}
         {%- if current_variant[current_option] == value -%}
           {%- assign checked = 'checked="checked"' -%}
+        {% else %}
+          {%- assign checked = 'checked=""' -%}
         {%- endif -%}
 
         {%- capture radio -%}
