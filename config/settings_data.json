@@ -2041,6 +2041,7 @@
           "product_quantity_enable": true,
           "show_payment_button": false,
           "product_box_padding": false,
+          "freeshippingtext": "60 day risk free returns <span> | <\/span>free shipping over $120",
           "enable_image_slider": true,
           "show_dots": false,
           "show_arrows": true,
