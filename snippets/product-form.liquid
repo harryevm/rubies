@@ -167,3 +167,15 @@
   <div class="aiod-bogo-discount-wrap"></div>
   <div class="aiod-wholesale-discount-topbar"></div>
 </div>
+
+$(window).scroll(function() {
+  var sticky = $('.stickyaddCart'),
+    scroll = $(window).scrollTop();
+   
+  if (scroll >= 150) { 
+    sticky.addClass('fixed'); }
+  else { 
+   sticky.removeClass('fixed');
+
+}
+});
