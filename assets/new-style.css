@@ -180,7 +180,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
   .tab__content { font-size: 16px; line-height: 25px; color: #040F21; }
   .tab-html-content .jdgm-widget.jdgm-widget { height: auto; }
 .single-option-radio .swatch-container label { padding: 5px 15px 7px; }
-.stickyaddCart { display: none !important; }
+
 .stickyaddCart .default-cart-button__button { margin: 0; }
 .stickyaddCart {display: none;position: fixed; left: 0; right: 0; bottom: 0; background-color: #fff; padding: 15px 20px; z-index: 9; }
 
