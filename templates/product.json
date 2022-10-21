@@ -1,0 +1,81 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-template",
+      "blocks": {
+        "5faab193-44b1-4ed6-90fc-022a02e5261b": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "60 day risk free returns",
+            "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.<\/p>",
+            "htmlcontent": "",
+            "page": ""
+          }
+        },
+        "92a4cb15-279e-4482-9ce0-3af64ad4a418": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Fabric and care",
+            "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.<\/p>",
+            "htmlcontent": "",
+            "page": ""
+          }
+        },
+        "e18221c4-a59a-47a2-8da4-d459e412f9fc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Is RUBIES just for kids?",
+            "content": "",
+            "htmlcontent": "",
+            "page": "about"
+          }
+        },
+        "77e4cc35-566e-4e15-bd68-71d744ec057e": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What our customers say",
+            "content": "",
+            "htmlcontent": "{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "5faab193-44b1-4ed6-90fc-022a02e5261b",
+        "92a4cb15-279e-4482-9ce0-3af64ad4a418",
+        "e18221c4-a59a-47a2-8da4-d459e412f9fc",
+        "77e4cc35-566e-4e15-bd68-71d744ec057e"
+      ],
+      "settings": {
+        "show_vendors": true,
+        "variant_style": "swatches",
+        "variant_swatch_images": true,
+        "variant_swatch_shape": "circle",
+        "variant_swatch_soldout": true,
+        "size_guide_page": "size-chart",
+        "product_quantity_enable": true,
+        "show_payment_button": false,
+        "product_box_padding": false,
+        "freeshippingtext": "60 day risk free returns <span> | <\/span>free shipping over $120",
+        "enable_image_slider": true,
+        "show_dots": false,
+        "show_arrows": true,
+        "thumbnails_placement": "side--left",
+        "enable_thumb_slider": true,
+        "product_featured_zoom_enable": true,
+        "product_featured_lightbox_enable": true,
+        "tabs_enable": true,
+        "tabs_auto_headings": "h4",
+        "tabs_title": "Why You 'll Love it",
+        "tabs_global_page_1": "",
+        "tabs_global_page_2": "",
+        "tabs_global_page_3": "",
+        "show_product_jump": false,
+        "show_share_buttons": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
