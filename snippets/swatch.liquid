@@ -116,16 +116,16 @@
         {%- else -%}
           <div class="sdf swatch-container {% unless option_index == 1 %}{% unless available %}soldout{% endunless %}{% endunless %}" data-variant-swatch-soldout="{{ section.settings.variant_swatch_soldout }}">
             <input type="radio" {{ checked }}
-            value=""
-            data-index=""
+            value="{{ value | escape }}"
+            data-index="option{{ option_index }}"
             data-position="{{ option.position }}"
             name="{{ option.name }}"
             class="{{ class }}"
             id="{{ id }}">
             <label
               for="{{ id }}"
-              title="Youth Size">
-              <span class="swatch--text">Youth Size</span>
+              title="{{ value | escape }}">
+              <span class="swatch--text">{{ value | escape }}</span>
               {% include 'icon-ui-soldout' %}
             </label>
           </div>
