@@ -184,6 +184,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
 .stickyaddCart .default-cart-button__button { margin: 0; }
 .stickyaddCart {display: none;position: fixed; left: 0; right: 0; bottom: 0; background-color: #fff; padding: 15px 20px; z-index: 9; }
 .discount-text-shipping { text-align: center; margin-top: 20px; }
+.single-option-radio .swatch-container.soldout svg { width: 20px; right: 8px; left: unset; height: 20px; top: 8px; }
 
 /* About us */
 .about-page-wrapper .banner-wr { margin: 0 0 50px; }
