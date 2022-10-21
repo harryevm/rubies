@@ -1816,7 +1816,7 @@
               "link": "https:\/\/www.gofundme.com\/f\/nz7aec-help-me-send-form-fitting-swimwear-to-trans-girls",
               "color_background": "#ffebff",
               "color_text": "#040f21",
-              "homepage_limit": true,
+              "homepage_limit": false,
               "show_for": "both",
               "bar_size": "default",
               "bar_placement": "top",
