@@ -85,7 +85,7 @@
         {%- endfor -%}
 
         {%- assign checked = '' -%}
-{{ current_variant[current_option] == value }}
+{{ current_variant[current_option]  }}{{  value }}
         {%- if current_variant[current_option] == value -%}
           {%- assign checked = 'checked="checked"' -%}
         {% else %}
