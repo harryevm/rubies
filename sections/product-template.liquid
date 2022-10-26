@@ -153,6 +153,8 @@
                   </div>
                 {%- endif -%}
                 {% for block in section.blocks %}
+                  {% assign tests = shop.metafields.judgeme.all_reviews_count %}
+                  {{ tests }}
                 <div class="tab tab--global-1 {% if shop.metafields.judgeme.all_reviews_count > 1 %}tab--active{% endif %}">
                   <div class="tab__title" tabindex="0">{{ block.settings.heading }}</div>
                   <div class="tab__content " {% if shop.metafields.judgeme.all_reviews_count > 1 %}style="display: block;"{% endif %}>
