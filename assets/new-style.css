@@ -220,7 +220,7 @@ section.about-page-wrapper nav.breadcrumb { margin-bottom: 30px; }
   .purchase-box .selection-wrapper.variant { border: none; margin-bottom: 0; } */
 
 .button-wrapper.default-cart-button { position: relative; }
-span.ttttt { position: absolute; content: ''; background: transparent; top: 0; bottom: 0; left: 0; right: 0; }
+span.extra-overlay { position: absolute; content: ''; background: transparent; top: 0; bottom: 0; left: 0; right: 0; }
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
