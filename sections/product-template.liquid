@@ -155,7 +155,7 @@
                 {% for block in section.blocks %}
                 <div class="tab tab--global-1">
                   <div class="tab__title" tabindex="0">{{ block.settings.heading }}</div>
-                  <div class="tab__content">
+                  <div class="tab__content {{ shop.metafields.judgeme.all_reviews_count }}">
                     {% if block.settings.page != blank %}
                       {{ pages[block.settings.page].content }}
                     {% elsif block.settings.content != blank %}
