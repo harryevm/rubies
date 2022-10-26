@@ -218,7 +218,7 @@ section.about-page-wrapper nav.breadcrumb { margin-bottom: 30px; }
   .template-product .size-drop-box.active-dropdown { border-bottom-color: #000; }
   .template-product .size-drop-box .swatch-container input[type=radio]:checked+label { background-color: #1a6cfc !important; color: #fff !important; margin: 0 -2px; }
   .purchase-box .selection-wrapper.variant { border: none; margin-bottom: 0; } */
-
+span.ttttt { position: absolute; content: ''; background: transparent; top: 0; bottom: 0; left: 0; right: 0; }
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
