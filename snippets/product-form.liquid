@@ -129,7 +129,7 @@
   <div id="CartButtons-{{ section.id }}" class="cart-buttons {% if cart_buttons_margin %}{{ cart_buttons_margin }}{% endif %} {% if section.settings.show_payment_button and current_variant.available %}cart-buttons__enabled{% elsif section_onboarding %}cart-buttons__enabled{% endif %}">
     <div class="button-wrapper default-cart-button">
 
-      <span class="ttttt"></span>
+      <span class="extra-overlay"></span>
       <button type="submit" name="add" id="AddToCart-{{ section.id }}"  {% if preorder == true %} data-preorder {% endif %} class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
         
         <span id="AddToCartText-{{ section.id }}" data-AddToCartText>
