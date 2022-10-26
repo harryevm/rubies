@@ -405,6 +405,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
   .stickyaddCart.fixed { display: block; }
 
   .simple-collection header.centered h4 { margin-bottom: 0 !important; }
+  .simple-collection header.centered { padding: 0; margin: 0 0 10px; }
 }
 @media(max-width:600px){
   img#dancer1{height: 250px !important; left: 70% !important; top: -14px !important;}  
