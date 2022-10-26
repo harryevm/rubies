@@ -562,6 +562,9 @@
 
     $('.single-option-radio .swatch-container').click(function(){
         $('span.extra-overlay').hide();
+    });
+    $('span.extra-overlay').click(function(){
+        $(this).append("<b>Appended text</b>");
     })
 
     
