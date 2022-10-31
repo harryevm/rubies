@@ -5,7 +5,7 @@
       "settings": {
         "show_notes": true,
         "show_vendors": true,
-        "ajax_cart": false,
+        "ajax_cart": true,
         "terms_and_conditions": false,
         "terms_and_conditions_text": "<p>I agree with the terms and conditions.<\/p>",
         "tab_title": "60 day risk free returns",
@@ -16,7 +16,7 @@
       "type": "simple-collection",
       "settings": {
         "title": "Cart collection",
-        "center_heading": true,
+        "center_heading": false,
         "button_label": "",
         "button_link": "",
         "collection": "swimwear",
