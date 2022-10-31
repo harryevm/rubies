@@ -1,5 +1,17 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
+<div class="container">
+{% assign shipping_value = 5000 %}
+{% assign cart_total = cart.total_price %}
+{% assign shipping_value_left = shipping_value | minus: cart_total %}
+</div>
+<p class="shipping-savings-message">
+{% if shipping_value_left > 0 %}
+You are {{ shipping_value_left | money }} away from FREE shipping within the USA!<br>
 
+  {% else %}
+  You've got free shipping within the USA!
+  {% endif %}
+</p>
 <section class="cart" data-section-id="{{ section.id }}" data-ajax-cart="{{ section.settings.ajax_cart }}" data-section-type="cart-template">
   <div class="wrapper">
 
