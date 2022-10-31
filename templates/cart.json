@@ -19,6 +19,7 @@
     },
     "1482079506908": {
       "type": "simple-collection",
+      "disabled": true,
       "settings": {
         "title": "Cart collection",
         "center_heading": false,
