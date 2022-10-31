@@ -20,10 +20,10 @@
     "1482079506908": {
       "type": "simple-collection",
       "settings": {
-        "title": "Featured collection",
-        "center_heading": false,
-        "button_label": "View More",
-        "button_link": "shopify:\/\/collections\/all",
+        "title": "Cart collection",
+        "center_heading": true,
+        "button_label": "",
+        "button_link": "",
         "collection": "swimwear",
         "product_count_range": 4
       }
