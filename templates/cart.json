@@ -5,14 +5,9 @@
       "settings": {
         "show_notes": true,
         "show_vendors": true,
-        "ajax_cart": true,
+        "ajax_cart": false,
         "terms_and_conditions": false,
         "terms_and_conditions_text": "<p>I agree with the terms and conditions.<\/p>",
-        "extra_featured_products": "swimwear",
-        "variant_rollover": false,
-        "title": "",
-        "collection": "swimwear",
-        "cart_product_count_range": 4,
         "tab_title": "60 day risk free returns",
         "tab_content": "<p>60 day risk free returns<\/p>"
       }
