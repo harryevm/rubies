@@ -1,3 +1,4 @@
+{{ 'cart.css' | asset_url | stylesheet_tag }} %}
 {% include 'spurit_po2_section_snippet', product: null, products: collections[section.settings.extra_featured_products].products %}
 <section class="cart" data-section-id="{{ section.id }}" data-ajax-cart="{{ section.settings.ajax_cart }}" data-section-type="cart-template">
   <div class="wrapper">
