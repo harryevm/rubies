@@ -154,7 +154,27 @@
 </div> -->
 
 <div class="cart-featured-collection-wrapper">
-    {% include "cart-featured-collection" %}    
+    {% assign collection_limit = 4 | plus:0 %}
+         <div class="simple-collection layout-{{ collection_limit }}" data-section-id="{{ section.id }}" data-section-type="simple-collection-section">
+          <div class="wrapper">
+            <header{% if section.settings.center_heading %} class="centered"{% endif %}>
+
+               <h4>{{ collections[section.settings.extra_featured_products].title }}</h4>
+     
+            </header>
+            <div class="product-container " id="collection-{{ section.id }}">
+              {%- assign collection = collections[section.settings.extra_featured_products] -%}
+              {%- assign product_limit = section.settings.product_count_range -%}
+              {% for product in collection.products limit: product_limit  %}
+                {% include 'product-grid-item' %}
+              {% else %}
+                {% for i in (1..product_limit) %}
+                  {% include 'placeholder-product-grid-item' %}
+                {% endfor %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
 </div>
 <div class="cart-tab-wrapper">
    <div id="accordion-1">
