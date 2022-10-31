@@ -245,26 +245,7 @@
         <p>{{ 'cart.general.empty' | t }}<br>
         {{ 'cart.general.continue_browsing_html' | t }}</p>
 
-        {% unless section.settings.extra_featured_products == blank %}
-          {% assign collection_limit = 4 | plus:0 %}
-          <div class="simple-collection layout-{{ collection_limit }}">
-            <div class="wrapper">
-              <header>
-                <h4>{{ collections[section.settings.extra_featured_products].title }}</h4>
-                <a href="{{ collections[section.settings.extra_featured_products].url }}" class="button outline">{{ 'collections.general.all_of_collection' | t: collection: collections[section.settings.extra_featured_products].title }}</a>
-              </header>
-              <div class="product-container">
-                {% for product in collections[section.settings.extra_featured_products].products limit:collection_limit %}
-                  {% include 'product-grid-item' %}
-                {% else %}
-                  {% for i in (1..collection_limit) %}
-                    {% include 'placeholder-product-grid-item' %}
-                  {% endfor %}
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-        {% endunless %}
+        
       {% endif %}
 
     </div>
@@ -309,41 +290,6 @@
       "id": "terms_and_conditions_text",
       "label": "Agreement text",
       "default": "<p>I agree with the terms and conditions.</p>"
-    },
-    {
-      "type": "header",
-      "content": "Empty cart"
-    },
-    {
-      "type": "collection",
-      "id": "extra_featured_products",
-      "label": "Empty cart collection"
-    },
-    {
-      "type": "checkbox",
-      "id": "variant_rollover",
-      "label": "Show variant image on rollover",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Heading",
-      "default": "You may also like"
-    },
-    {
-      "id": "collection",
-      "type": "collection",
-      "label": "Collection"
-    },
-    {
-      "type": "range",
-      "id": "cart_product_count_range",
-      "label": "Number of products",
-      "min": 4,
-      "max": 20,
-      "step": 4,
-      "default": 4
     },
     {
       "type":"text",
