@@ -2,26 +2,7 @@
 {% comment %}
   The contents of the cart.liquid template can be found in /sections/cart-template.liquid
 {% endcomment %}
-{% for line_item in cart.items %}
-  <!-- line item info -->
 
-  {% if line_item.original_price > line_item.final_price %}
-    <s>{{ line_item.original_price | money }}</s>
-  {% endif %}
-
-  {{ line_item.final_price | money }})
-{{ line_level_discount_allocations }}ss
-  {% if line_item.line_level_discount_allocations.size > 0 %}
-    Discounts:
-    <ul>
-      {% for discount_allocation in line_item.line_level_discount_allocations %}
-        <li>
-          {{ discount_allocation.discount_application.title }}-{{ discount_allocation.amount | money }}
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-{% endfor %}
 {% section 'cart-template' %}
 
 <script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=450361b5-981b-4e6f-9164-d70d9effc17f"></script>{% include 'upsellio_embed' %}
