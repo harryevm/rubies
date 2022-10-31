@@ -5,34 +5,32 @@
       "settings": {
         "show_notes": true,
         "show_vendors": true,
+        "ajax_cart": true,
+        "terms_and_conditions": false,
+        "terms_and_conditions_text": "<p>I agree with the terms and conditions.<\/p>",
         "extra_featured_products": "",
-        "variant_rollover": true
-      }
-    },
-    "1482079423671": {
-      "type": "featured-collection",
-      "settings": {
-        "text": "Use this text to provide customer with details about the collection",
-        "button_label": "View More",
-        "button_link": "shopify:\/\/collections\/all",
+        "variant_rollover": true,
+        "title": "You may also like",
         "collection": "",
-        "product_count_range": 6
+        "cart_product_count_range": 4,
+        "tab_title": "",
+        "tab_content": ""
       }
     },
     "1482079506908": {
       "type": "simple-collection",
       "settings": {
+        "title": "Featured collection",
         "center_heading": false,
         "button_label": "View More",
         "button_link": "shopify:\/\/collections\/all",
-        "collection": "",
+        "collection": "swimwear",
         "product_count_range": 4
       }
     }
   },
   "order": [
     "main",
-    "1482079423671",
     "1482079506908"
   ]
 }
