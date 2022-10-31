@@ -162,7 +162,7 @@
                <h4>{{ collections[section.settings.extra_featured_products].title }}</h4>
      
             </header>
-            <div class="product-container owl-carousel" id="collection-{{ section.id }}">
+            <div class="product-container " id="collection-{{ section.id }}">
               {%- assign collection = collections[section.settings.extra_featured_products] -%}
               {%- assign product_limit = section.settings.product_count_range -%}
               {% for product in collection.products limit: product_limit  %}
@@ -384,22 +384,3 @@
   ]
 }
 {% endschema %}
-
-<script>
-    $('#collection-{{ section.id }}').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    }
-})
-</script>
