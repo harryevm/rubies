@@ -251,9 +251,9 @@
          <div class="simple-collection layout-{{ collection_limit }}" data-section-id="{{ section.id }}" data-section-type="simple-collection-section">
           <div class="wrapper">
             <header{% if section.settings.center_heading %} class="centered"{% endif %}>
-              {% if section.settings.title != blank %}
-                <h4>{{ section.settings.title | escape }}</h4>
-              {% endif %}
+
+               <h4>{{ collections[section.settings.extra_featured_products].title }}</h4>
+     
             </header>
             <div class="product-container owl-carousel" id="collection-{{ section.id }}">
               {%- assign collection = collections[section.settings.collection] -%}
