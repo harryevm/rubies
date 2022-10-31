@@ -256,7 +256,7 @@
      
             </header>
             <div class="product-container owl-carousel" id="collection-{{ section.id }}">
-              {%- assign collection = collections[section.settings.collection] -%}
+              {%- assign collection = collections[section.settings.extra_featured_products] -%}
               {%- assign product_limit = section.settings.product_count_range -%}
               {% for product in collection.products limit: product_limit  %}
                 {% include 'product-grid-item' %}
