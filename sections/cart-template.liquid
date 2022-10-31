@@ -1,6 +1,6 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 <div class="container">
-{% assign shipping_value = 5000 %}
+{% assign shipping_value = section.settings.free_price | remove: "rain" %}
 {% assign cart_total = cart.total_price %}
 {% assign shipping_value_left = shipping_value | minus: cart_total %}
 </div>

@@ -8,18 +8,12 @@
         "ajax_cart": true,
         "terms_and_conditions": false,
         "terms_and_conditions_text": "<p>I agree with the terms and conditions.<\/p>",
-        "extra_featured_products": "swimwear",
-        "variant_rollover": true,
-        "title": "You may also like",
-        "collection": "swimwear",
-        "cart_product_count_range": 4,
         "tab_title": "60 day risk free returns",
         "tab_content": "<p>60 day risk free returns<\/p>"
       }
     },
     "1482079506908": {
       "type": "simple-collection",
-      "disabled": true,
       "settings": {
         "title": "Cart collection",
         "center_heading": false,
