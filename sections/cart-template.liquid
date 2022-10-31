@@ -1,6 +1,6 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 
-{% include 'spurit_po2_section_snippet', product: null, products: collections[section.settings.extra_featured_products].products %}
+{% include 'spurit_po2_section_snippet', product: null, products: collections[section.settings.collection].products %}
 <section class="cart" data-section-id="{{ section.id }}" data-ajax-cart="{{ section.settings.ajax_cart }}" data-section-type="cart-template">
   <div class="wrapper">
 
@@ -235,7 +235,29 @@
         {% endcomment %}
         <p>{{ 'cart.general.empty' | t }}<br>
         {{ 'cart.general.continue_browsing_html' | t }}</p>
-
+        <div class="simple-collection layout-{{ section.settings.cart_product_count_range }}" data-section-id="{{ section.id }}" data-section-type="simple-collection-section">
+          <div class="wrapper">
+            <header{% if section.settings.center_heading %} class="centered"{% endif %}>
+              {% if section.settings.title != blank %}
+                <h4>{{ section.settings.title | escape }}</h4>
+              {% endif %}
+              {% if section.settings.button_link != blank and section.settings.button_label != blank %}
+                <a href="{{ section.settings.button_link }}" class="button outline">{{ section.settings.button_label | escape }}</a>
+              {% endif %}
+            </header>
+            <div class="product-container owl-carousel" id="collection-{{ section.id }}">
+              {%- assign collection = collections[section.settings.collection] -%}
+              {%- assign product_limit = section.settings.cart_product_count_range -%}
+              {% for product in collection.products limit: product_limit  %}
+                {% include 'product-grid-item' %}
+              {% else %}
+                {% for i in (1..product_limit) %}
+                  {% include 'placeholder-product-grid-item' %}
+                {% endfor %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
         
       {% endif %}
 
