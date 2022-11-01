@@ -6,9 +6,17 @@
       {% else %}
         {% assign autoplay = false %}
       {% endif %}
-      <div class="slideshow-carousel"
+      <div class=""
         data-slide-count="{{ section.blocks.size }}"
-        >
+        data-flickity-options='{
+          "imagesLoaded": true,
+          "lazyLoad": 1,
+          "adaptiveHeight": true,
+          "autoPlay": {{ autoplay }},
+          "wrapAround": true,
+          "prevNextButtons": {{ section.settings.show_arrows }},
+          "pageDots": {{ section.settings.show_dots }}
+        }'>
         {% for block in section.blocks %}
           <div id="block-{{ block.id }}" class="slide__item slide__item-{{ block.type }}" data-slide-index="{{ forloop.index0 }}" {% if block.type == 'video' %}data-video-id="{{ block.settings.video_url.id }}" data-mobile-autoplay="{{ block.settings.mobile_autoplay }}"{% endif %} {{ block.shopify_attributes }}>
             {% comment %}
