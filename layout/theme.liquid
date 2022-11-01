@@ -181,8 +181,8 @@
 
 </body>
 </html>
-{%- endcapture -%}{%- render "ls-output", input: LS_INPUT -%}
-{% comment %}
+{%- endcapture -%}{% comment %}{%- render "ls-output", input: LS_INPUT -%}
+
 	{{ "sezzle-checkout-button.js" | asset_url | script_tag }}
 	<script>
 		new SezzleCheckoutButton({}).init();
