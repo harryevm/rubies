@@ -340,9 +340,12 @@
     $(this).parent().find('.content').slideToggle(280);
   })      
   $('.quantity-select .button-wrapper button').click(function(){
-    alert($('.cart-items >.cart-item').length)
+   
     setTimeout(function(){
     $("div#shipping-savings-message").load("/cart div#shipping-savings-message > p");
+    if($('.cart-items >.cart-item').length < 1){
+      window.location.href = "/cart";
+    }
     },2000);
   });
 </script>
