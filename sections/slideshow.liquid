@@ -193,6 +193,9 @@
               #block-{{ block.id }} a.button:focus {
                 color: {{ block.settings.color_accent }}; border-color: {{ block.settings.color_accent }}; background: transparent;
               }
+              @media(max-width:420px){
+                .noslideshow-wr .slide__item-image { height: 72vh; }
+              }
             </style>
           </div>
         {% endfor %}
