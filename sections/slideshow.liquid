@@ -6,7 +6,7 @@
       {% else %}
         {% assign autoplay = false %}
       {% endif %}
-      <div class=""
+      <div class="{% if section.blocks.size > 1 %}slideshow-carousel{% else %}noslideshow-wr{% endif %}"
         data-slide-count="{{ section.blocks.size }}"
         data-flickity-options='{
           "imagesLoaded": true,
