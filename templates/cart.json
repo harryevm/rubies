@@ -79,8 +79,8 @@
         "6885d289-a451-4eb6-b194-0f26e0bd1393"
       ],
       "settings": {
-        "title": "Collection list",
-        "full_width": false,
+        "title": "",
+        "full_width": true,
         "section_padding": true,
         "gutter": true,
         "columns_range": 3,
