@@ -4,14 +4,7 @@
 {% assign cart_total = cart.total_price %}
 {% assign shipping_value_left = shipping_value | minus: cart_total %}
 </div>
-<p class="shipping-savings-message">
-{% if shipping_value_left > 0 %}
-You are {{ shipping_value_left | money }} away from FREE shipping within the USA!<br>
 
-  {% else %}
-  You've got free shipping within the USA!
-  {% endif %}
-</p>
 <section class="cart" data-section-id="{{ section.id }}" data-ajax-cart="{{ section.settings.ajax_cart }}" data-section-type="cart-template">
   <div class="wrapper">
 
@@ -26,6 +19,13 @@ You are {{ shipping_value_left | money }} away from FREE shipping within the USA
       <header class="cart-header">
         <h1>{{ 'cart.general.title' | t }}</h1>
       </header>
+      <div class="shipping-savings-message">
+        {% if shipping_value_left > 0 %}
+          <p>Spend {{ shipping_value_left | money }} </p>
+        {% else %}
+          <p>You've got free shipping </p>
+        {% endif %}
+        </div>
       {% if cart.item_count > 0 %}
         <div class="cart-list">
           <form action="/cart" method="post" novalidate class="cart-form">
