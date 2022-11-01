@@ -17,6 +17,7 @@
     },
     "1482079506908": {
       "type": "simple-collection",
+      "disabled": true,
       "settings": {
         "title": "Cart collection",
         "center_heading": false,
@@ -25,10 +26,76 @@
         "collection": "swimwear",
         "product_count_range": 4
       }
+    },
+    "f97c5970-47cc-4354-86d2-d8e78b00ece9": {
+      "type": "collection-list-updated",
+      "blocks": {
+        "template--16614299402480__f97c5970-47cc-4354-86d2-d8e78b00ece9-166729784575f870bf-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bikini-tops-and-bottoms",
+            "collection_img": "shopify:\/\/shop_images\/Group_328_2x_1ff25d60-c05b-4fed-b9c0-3962dceed892.png",
+            "collection_title": "Beach & Pool"
+          }
+        },
+        "template--16614299402480__f97c5970-47cc-4354-86d2-d8e78b00ece9-166729784575f870bf-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "every-girl-deserves-to-shine-campaign",
+            "collection_img": "shopify:\/\/shop_images\/Group_329_2x_b47ac7c1-6675-435e-9b31-34533d3386c9.png",
+            "collection_title": "Dance & Gym"
+          }
+        },
+        "c38f3c95-46ab-4755-9a89-c33fdf44c406": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "postcards",
+            "collection_img": "shopify:\/\/shop_images\/Group_330_2x_a08efd72-957b-4d24-9d46-5feefee98308.png",
+            "collection_title": "Everyday Comfort"
+          }
+        },
+        "template--16614299402480__f97c5970-47cc-4354-86d2-d8e78b00ece9-166729784575f870bf-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frontpage",
+            "collection_img": "shopify:\/\/shop_images\/Group_331_2x_5e123233-2b0c-4fcb-809d-1cc68abb3d7e.png",
+            "collection_title": "Pride"
+          }
+        },
+        "6885d289-a451-4eb6-b194-0f26e0bd1393": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bikini-tops-and-bottoms",
+            "collection_img": "shopify:\/\/shop_images\/Group_332_2x_aae5da9d-3295-4b07-9ee1-11435a06d3b8.png",
+            "collection_title": "Bundles"
+          }
+        }
+      },
+      "block_order": [
+        "template--16614299402480__f97c5970-47cc-4354-86d2-d8e78b00ece9-166729784575f870bf-0",
+        "template--16614299402480__f97c5970-47cc-4354-86d2-d8e78b00ece9-166729784575f870bf-1",
+        "c38f3c95-46ab-4755-9a89-c33fdf44c406",
+        "template--16614299402480__f97c5970-47cc-4354-86d2-d8e78b00ece9-166729784575f870bf-2",
+        "6885d289-a451-4eb6-b194-0f26e0bd1393"
+      ],
+      "settings": {
+        "title": "Collection list",
+        "full_width": false,
+        "section_padding": true,
+        "gutter": true,
+        "columns_range": 3,
+        "text_placement": "below",
+        "color_overlay": "#4f4f4f",
+        "color_overlay_hover": "#000000",
+        "color_overlay_text": "#FFFFFF",
+        "color_overlay_alpha_range": 0,
+        "zoom": true
+      }
     }
   },
   "order": [
     "main",
-    "1482079506908"
+    "1482079506908",
+    "f97c5970-47cc-4354-86d2-d8e78b00ece9"
   ]
 }
