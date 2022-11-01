@@ -341,8 +341,9 @@
 {% endschema %}
 <script>
   $('.quantity-select .button-wrapper button').click(function(){
-    
+    setTimeout(function(){
     $("div#shipping-savings-message").load("/cart div#shipping-savings-message > p");
     alert();
+    },2000);
   });
 </script>
