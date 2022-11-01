@@ -247,10 +247,10 @@
       {% else %}
         {% comment %}
           The cart is empty
-        {% endcomment %}
+        
         <p>{{ 'cart.general.empty' | t }}<br>
-        {{ 'cart.general.continue_browsing_html' | t }}</p>
-
+        {{ 'cart.general.continue_browsing_html' | t }}</p>{% endcomment %}
+        <h4>No Items</h4>
       
       {% endif %}
 
