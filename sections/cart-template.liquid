@@ -1,5 +1,9 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
-
+{% if cart.item_count > 0 %}
+  <style>
+  .collection-list-section { display: none; }
+  </style>
+{% endif %}
 <section class="cart" data-section-id="{{ section.id }}" data-ajax-cart="{{ section.settings.ajax_cart }}" data-section-type="cart-template">
   <div class="wrapper">
 
@@ -15,6 +19,7 @@
         <h1>{{ 'cart.general.title' | t }}</h1>
       </header>
       {% if cart.item_count > 0 %}
+        
       <div id="shipping-savings-message">
         {% assign shipping_value = section.settings.free_price | remove: "." %}
         {% assign cart_total = cart.total_price %}
