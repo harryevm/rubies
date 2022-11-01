@@ -19,9 +19,9 @@
       <header class="cart-header">
         <h1>{{ 'cart.general.title' | t }}</h1>
       </header>
-      <div class="shipping-savings-message">
+      <div id="shipping-savings-message">
         {% if shipping_value_left > 0 %}
-          <p>Spend {{ shipping_value_left | money }} </p>
+          <p>Spend {{ shipping_value_left | money }} more for free shipping $8 CAD standard shipping fee</p>
         {% else %}
           <p>You've got free shipping </p>
         {% endif %}
