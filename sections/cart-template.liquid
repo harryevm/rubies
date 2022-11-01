@@ -16,7 +16,9 @@ You are {{ shipping_value_left | money }} away from FREE shipping within the USA
   <div class="wrapper">
 
     <header class="content-util">
+      {% if section.settings.breadcrumbs %}
     {% include 'breadcrumb' %}
+        {% endif %}
     {% include 'social-icons' %}
     </header>
 
