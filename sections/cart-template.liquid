@@ -250,18 +250,17 @@
         
         <p>{{ 'cart.general.empty' | t }}<br>
         {{ 'cart.general.continue_browsing_html' | t }}</p>{% endcomment %}
-        <h4>No Items</h4>
+        <h4 style=" margin-bottom: 50px; ">No Items</h4>
       <div class="cart-tab-wrapper">
-   <div id="accordion-1">
-    <div class="head">
-      <h2>{{ section.settings.tab_title }}</h2>
-    </div>
-    <div class="content">
-      <p>{{ section.settings.tab_content }}</p>
-    </div>
-  </div>
-
-</div>
+         <div id="accordion-1">
+          <div class="head">
+            <h2>{{ section.settings.tab_title }}</h2>
+          </div>
+          <div class="content">
+            <p>{{ section.settings.tab_content }}</p>
+          </div>
+        </div>
+      </div>
       {% endif %}
 
 
