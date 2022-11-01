@@ -19,7 +19,7 @@
         {% assign cart_total = cart.total_price %}
         {% assign shipping_value_left = shipping_value | minus: cart_total %}
         {% if shipping_value_left > 0 %}
-          <p>Spend {{ shipping_value_left | money }} more for free shipping $8 CAD standard shipping fee</p>
+          <p>Spend <b>{{ shipping_value_left | money }}</b> more for free shipping $8 CAD standard shipping fee</p>
         {% else %}
           <p>You've got free shipping </p>
         {% endif %}
