@@ -228,7 +228,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 
 .cart .cart-checkout p.subtotal >span { margin-bottom: 50px; position: relative; }
 .csapp_aiod_coupan { position: absolute; bottom: -60px; }
-
+.cart .cart-checkout input.csapp_aiod_coupan_code { border: 1px solid #ccc; max-width: unset !important; width: 300px !important; margin-right: 20px; padding: 10px; }
 
 
 @media(min-width:700px){
