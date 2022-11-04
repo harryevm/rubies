@@ -447,7 +447,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
   .single-product .grid .product-images { margin: 180px 0 20px; }
   .product-thumb--slider { left: -100px; width: 250px!important; }
   .purchase-box .selection-wrapper.price { margin: 0; padding-bottom: 0; }
-  .cart .cart-checkout input.csapp_aiod_coupan_code { width: 200px !important; }
+  
 }
 @media(max-width:375px){
   header.site-header .layout-horizontal { top: -55px;}
