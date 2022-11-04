@@ -173,7 +173,7 @@ var ignore_csapp_cart_reload = true;
     {% section 'header' %}
 
     <main class="main-content main-content--breadcrumb-{{ settings.show_breadcrumbs }}" role="main">
-      {% capture ICART_FULL_PAGE_LAYOUT %}{{ content_for_layout }}{% endcapture %}{% include 'icart-variables', ICART_FULL_PAGE_LAYOUT: ICART_FULL_PAGE_LAYOUT %}
+     {{ content_for_layout }}
     </main>
 
     {% section 'footer' %}
