@@ -163,7 +163,7 @@ var ignore_csapp_cart_reload = true;
 
   {% include 'cscode_discount' %}
 
-  </head>
+  {% include 'wiser' %}{% include 'wiser_popup' %}</head>
 
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" data-template-directory="{{ template.directory }}" data-template="{{ template.name }}" >
 
