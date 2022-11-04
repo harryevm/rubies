@@ -95,20 +95,14 @@
     "1667559668cd7d6d49": {
       "type": "apps",
       "blocks": {
-        "3f884647-48ef-4d90-8bcc-71dfd4fcd9e5": {
-          "type": "shopify:\/\/apps\/wiser-upsell-recommendations\/blocks\/wiser_browsing\/3f966edc-9a4a-465c-a4df-436d2a39160d",
-          "settings": {
-          }
-        },
-        "f61412e5-8abd-47a3-814b-72a4c0504ab1": {
-          "type": "shopify:\/\/apps\/wiser-upsell-recommendations\/blocks\/wiser_featured\/3f966edc-9a4a-465c-a4df-436d2a39160d",
+        "0f1677e2-ae15-42b6-acec-4a626b3bb765": {
+          "type": "shopify:\/\/apps\/wiser-upsell-recommendations\/blocks\/wiser_related\/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {
           }
         }
       },
       "block_order": [
-        "3f884647-48ef-4d90-8bcc-71dfd4fcd9e5",
-        "f61412e5-8abd-47a3-814b-72a4c0504ab1"
+        "0f1677e2-ae15-42b6-acec-4a626b3bb765"
       ],
       "settings": {
       }
