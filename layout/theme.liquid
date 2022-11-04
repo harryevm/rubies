@@ -167,7 +167,7 @@
     {% section 'header' %}
 
     <main class="main-content main-content--breadcrumb-{{ settings.show_breadcrumbs }}" role="main">
-      {{ content_for_layout }}
+      {% capture ICART_FULL_PAGE_LAYOUT %}{{ content_for_layout }}{% endcapture %}{% include 'icart-variables', ICART_FULL_PAGE_LAYOUT: ICART_FULL_PAGE_LAYOUT %}
     </main>
 
     {% section 'footer' %}
