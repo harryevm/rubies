@@ -5,7 +5,7 @@
       "settings": {
         "show_notes": true,
         "show_vendors": true,
-        "ajax_cart": true,
+        "ajax_cart": false,
         "breadcrumbs": false,
         "terms_and_conditions": false,
         "terms_and_conditions_text": "<p>I agree with the terms and conditions.<\/p>",
@@ -99,10 +99,16 @@
           "type": "shopify:\/\/apps\/wiser-upsell-recommendations\/blocks\/wiser_related\/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {
           }
+        },
+        "3eabcf35-b6f8-49d2-81e8-df792963792f": {
+          "type": "shopify:\/\/apps\/wiser-upsell-recommendations\/blocks\/wiser_newarrivals\/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {
+          }
         }
       },
       "block_order": [
-        "0f1677e2-ae15-42b6-acec-4a626b3bb765"
+        "0f1677e2-ae15-42b6-acec-4a626b3bb765",
+        "3eabcf35-b6f8-49d2-81e8-df792963792f"
       ],
       "settings": {
       }
