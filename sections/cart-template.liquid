@@ -131,7 +131,7 @@
                     {%- comment -%}
                       Cart item - price
                     {%- endcomment -%}
-                {% comment %}
+                
                     <div class="td cart-item-price">
                       <p><span class="money final-price{% if item.original_line_price > item.final_line_price %} final-price-discount{% endif %}" data-cart-item-final-price data-csapp_price>{{ item.final_price | money }}</span></p>
                       {%- if item.original_line_price > item.final_line_price -%}
@@ -145,7 +145,7 @@
                         {% endfor %}
                         </ul>
                       {% endif %}
-                    </div>
+                    </div>{% comment %}
                 {% endcomment %}
  
                 
