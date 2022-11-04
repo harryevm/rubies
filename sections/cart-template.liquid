@@ -247,9 +247,9 @@
                   <input type="submit" name="checkout" class="button  btn btn-primary" value="{{ 'cart.general.checkout' | t }}">
                 </div>
 
-                {% if additional_checkout_buttons %}
+              {% comment %}  {% if additional_checkout_buttons %}
                   	<div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
-                {% endif %}
+                {% endif %} {% endcomment %}
               </div>
             </div>
 
