@@ -229,8 +229,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 .cart .cart-checkout p.subtotal >span { margin-bottom: 50px; position: relative; }
 .csapp_aiod_coupan { position: absolute; bottom: -60px; }
 
-#presets2 .evm-ws-card { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
-#presets2 .evm-ws-card>* { width: 45%; }
+
 
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
