@@ -455,5 +455,5 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
   div.collection-list .box a figure>img.card__image{height: 50px;}
   div.collection-list .box figcaption.below a { padding: 0; }
   img#dancer1 { height: 190px!important; left: 65%!important; top: -3px !important; }
-  .cart .cart-checkout input.csapp_aiod_coupan_code { width: 160px !important; }
+  
 }
