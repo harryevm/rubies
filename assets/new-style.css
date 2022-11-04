@@ -255,6 +255,7 @@ p.shipping-at-checkout { margin: 25px 0 0 !important; }
   .gallery-box-wr figcaption.below h3 { font-size: 18px; line-height: 25px; }
   .btn-primary { padding: 8px 20px !important; font-size: 16px; line-height: 25px; }
   .gallery-box-wr figcaption.below div p { font-size: 14px; line-height: 20px; }
+  .evm-related-product { width: 96%; }
 }
 @media(max-width:1100px){
   .slide__item-content h2 { font-size: 40px; line-height: 50px; }
