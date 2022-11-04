@@ -226,15 +226,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 .simple-collection figure a.pro_url_updated { position: absolute; top: 0; left: 0; right: 0; bottom: 65%; background: transparent; z-index: 99; }
 
 
-.cart .cart-checkout p.subtotal >span { margin-bottom: 50px; position: relative; }
-.csapp_aiod_coupan { position: absolute; bottom: -60px; }
-.cart .cart-checkout input.csapp_aiod_coupan_code { border: 1px solid #000; max-width: unset !important; width: 300px !important; margin-right: 20px; padding: 10px; }
-.csapp_aiod_coupan button.csapp_aiod_coupan_btn { border: 1px solid #000 !important; max-width: unset !important; width: 100px; }
-.csapp_aiod_coupan button.csapp_aiod_coupan_btn>span { justify-content: center; }
-.btn-secondary { padding: 15px 25px!important; line-height: 30px; margin-top: 10px; text-transform: capitalize!important; display: inline-block!important; transition: all .35s ease-out; }
-.csapp-price-wrapper { width: unset; margin: 0; }
-p.csapp_coupan_error.cscode_msg { position: absolute; bottom: -75px; margin: 0; }
-p.shipping-at-checkout { margin: 25px 0 0 !important; }
+
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
