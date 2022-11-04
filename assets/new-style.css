@@ -234,7 +234,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 .btn-secondary { padding: 15px 25px!important; line-height: 30px; margin-top: 10px; text-transform: capitalize!important; display: inline-block!important; transition: all .35s ease-out; }
 .csapp-price-wrapper { width: unset; margin: 0; }
 p.csapp_coupan_error.cscode_msg { position: absolute; bottom: -75px; margin: 0; }
-
+p.shipping-at-checkout { margin: 25px 0 0 !important; }
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
