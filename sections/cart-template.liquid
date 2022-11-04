@@ -211,6 +211,8 @@
                     {%- endfor -%}
                   </ul>
                 {%- endif -%}
+        <div class="aiod-volume-discount-wrap"></div>
+
                 <p class="subtotal">
                   <span class="label">{{ 'cart.general.subtotal' | t }} ({{ cart.item_count }} Items)</span>
                   <span class="price money" data-cart-subtotal><span class="csapps-cart-original-total">{{ cart.total_price | money }}</span> {% if cart.currency.symbol == "$" %} {{ cart.currency.iso_code }}{%- endif -%}</span>
