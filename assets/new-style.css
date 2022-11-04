@@ -226,7 +226,8 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 .simple-collection figure a.pro_url_updated { position: absolute; top: 0; left: 0; right: 0; bottom: 65%; background: transparent; z-index: 99; }
 
 
-.cart .cart-checkout p.subtotal span { margin-bottom: 50px; position: relative; }
+.cart .cart-checkout p.subtotal >span { margin-bottom: 50px; position: relative; }
+.csapp_aiod_coupan { position: absolute; bottom: -60px; }
 
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
