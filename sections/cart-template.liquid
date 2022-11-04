@@ -53,6 +53,9 @@
               </div>
                {% endcomment %}
               {%- for item in cart.items -%}
+                {% for collection in item.collections %}
+<p class="collection-title">{{ collection.title }}</p>
+{% endfor %}
                 <div class="cart-item" data-cart-item="{{ item.key }}" data-csapp_line_index>
                 <div class="grid custom-cart-items">
                 <div class="td cart-item-product-image custom-cart-product-image">
