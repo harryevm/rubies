@@ -38,23 +38,13 @@
             "htmlcontent": "{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}",
             "page": ""
           }
-        },
-        "3de86dc0-65a7-4e8b-8879-6755c5ffb465": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Collapsible row",
-            "content": "",
-            "htmlcontent": "<div data-app=\"eastsideco_sizeGuides\"\n     data-shop=\"{{ shop.permanent_domain }}\"\n     data-tags=\"{{ product.tags | join:',' | escape }}\"\n     data-metafields=\"{{ product.metafields.esc-size-matters.tag }}\"\n     data-popup=\"link\">\n<\/div>",
-            "page": ""
-          }
         }
       },
       "block_order": [
         "5faab193-44b1-4ed6-90fc-022a02e5261b",
         "92a4cb15-279e-4482-9ce0-3af64ad4a418",
         "e18221c4-a59a-47a2-8da4-d459e412f9fc",
-        "77e4cc35-566e-4e15-bd68-71d744ec057e",
-        "3de86dc0-65a7-4e8b-8879-6755c5ffb465"
+        "77e4cc35-566e-4e15-bd68-71d744ec057e"
       ],
       "settings": {
         "show_vendors": true,
