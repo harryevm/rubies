@@ -227,7 +227,10 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 
 .single-option-radio .swatch-container.soldout svg { width: 100%; left: 0; right: 0; top: 0; bottom: 0; height: 100%; stroke: #ccc0; }
 .single-option-radio .swatch-container.soldout svg path { fill: #ccc; }
-.jdgm-histogram.jdgm-temp-hidden { display: none; }
+.template-product  .jdgm-histogram.jdgm-temp-hidden { display: none; }
+
+.template-product  .jdgm-row-rating { position: relative; }
+.template-product  span.jdgm-rev__timestamp { position: absolute; left: 45px; bottom: -50px; color: #000; }
 
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
