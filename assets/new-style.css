@@ -453,6 +453,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
   .box.product select[id*=ProductSelect-] option { font-size: 14px !important; line-height: 14px !important; }
 
   aside.product-aside .purchase-box, .description { width: 100%; }
+  .single-product { padding: 0 10px 40px;}
   
 }
 @media(max-width:375px){
