@@ -38,13 +38,23 @@
             "htmlcontent": "{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}",
             "page": ""
           }
+        },
+        "3de86dc0-65a7-4e8b-8879-6755c5ffb465": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "content": "",
+            "htmlcontent": "<div data-app=\"eastsideco_sizeGuides\"\n     data-shop=\"{{ shop.permanent_domain }}\"\n     data-tags=\"{{ product.tags | join:',' | escape }}\"\n     data-metafields=\"{{ product.metafields.esc-size-matters.tag }}\"\n     data-popup=\"link\">\n<\/div>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "5faab193-44b1-4ed6-90fc-022a02e5261b",
         "92a4cb15-279e-4482-9ce0-3af64ad4a418",
         "e18221c4-a59a-47a2-8da4-d459e412f9fc",
-        "77e4cc35-566e-4e15-bd68-71d744ec057e"
+        "77e4cc35-566e-4e15-bd68-71d744ec057e",
+        "3de86dc0-65a7-4e8b-8879-6755c5ffb465"
       ],
       "settings": {
         "show_vendors": true,
@@ -81,10 +91,35 @@
         "product_recommendations_heading": "You may also like",
         "product_recommendations_limit": "4"
       }
+    },
+    "16678127156b1b6409": {
+      "type": "apps",
+      "blocks": {
+        "43e7faab-63b9-42cc-aad5-26f18d366763": {
+          "type": "shopify:\/\/apps\/wiser-upsell-recommendations\/blocks\/wiser_fbt\/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {
+          }
+        },
+        "861f016a-8cca-4074-b880-5c5d4af1c5fe": {
+          "type": "shopify:\/\/apps\/esc-size-charts-size-guide\/blocks\/app-block\/daa9a1f8-04ef-4369-ae22-966a9c435d5f",
+          "settings": {
+            "widget_type": "link",
+            "force_background": false,
+            "btn_text": "Size Guide"
+          }
+        }
+      },
+      "block_order": [
+        "43e7faab-63b9-42cc-aad5-26f18d366763",
+        "861f016a-8cca-4074-b880-5c5d4af1c5fe"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "recommended"
+    "recommended",
+    "16678127156b1b6409"
   ]
 }
