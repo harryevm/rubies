@@ -74,7 +74,12 @@
       <div class="selection-wrapper variant radio js">
         {% for option in product.options_with_values %}
           {% include 'swatch' %}
-          
+          <div data-app="eastsideco_sizeGuides"
+     data-shop="{{ shop.permanent_domain }}"
+     data-tags="{{ product.tags | join:',' | escape }}"
+     data-metafields="{{ product.metafields.esc-size-matters.tag }}"
+     data-popup="link">
+</div>
           {%- if section.settings.size_guide_page != blank and size_options == option_name  -%}
             <span class="label-extra"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">{{ pages[section.settings.size_guide_page].title }}</a></span>
           {% elsif section.settings.size_guide_page != blank and 'youth-size' == option_name  %}
