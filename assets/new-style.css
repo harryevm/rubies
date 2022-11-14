@@ -251,6 +251,7 @@ h3.csapp_bundle_title { display: none; }
 .aiod-bundle-discount-wrap .csapps-bunlde-wrapper .csapps-bundle-thumb .csapp-thumb-inner { border: none; }
 .csapps-p-detail select { border: 1px solid #000; height: 50px; font-size: 18px; font-weight: 500; border-radius: 0; }
 .aiod-bundle-discount-wrap .csapps-bunlde-wrapper .csapps-bundle-thumb:last-child { margin: 0; }
+.csapps-btn_wrapper button.csapp_btn.csapps-add-to-cart-btn { width: 100%; background-color: transparent; color: #000; font-weight: 600; text-transform: uppercase; font-size: 18px; line-height: 25px; padding: 12px 0; }
 
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
