@@ -448,6 +448,7 @@ h3.csapp_bundle_title { display: none; }
 
   .aiod-bundle-discount-wrap,.csapps-btn_wrapper { padding: 0; }
   .aiod-bundle-discount-wrap .csapps-bunlde-wrapper .csapps-bundle-thumb .csapps-p-title>a { font-size: 16px; line-height: 25px; }
+  .aiod_price_qty_wrpr { bottom: 120px; left: 0; }
   
 }
 @media(max-width:600px){
