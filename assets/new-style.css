@@ -253,6 +253,7 @@ h3.csapp_bundle_title { display: none; }
 .aiod-bundle-discount-wrap .csapps-bunlde-wrapper .csapps-bundle-thumb:last-child { margin: 0; }
 .csapps-btn_wrapper button.csapp_btn.csapps-add-to-cart-btn { width: 100%; background-color: transparent; color: #000; font-weight: 600; text-transform: uppercase; font-size: 18px; line-height: 25px; padding: 12px 0;transition: all 0.35s ease-in-out; }
 .csapps-btn_wrapper button.csapp_btn.csapps-add-to-cart-btn:hover { background-color: #000; color: #fff; transition: all 0.35s ease-in-out; }
+.csapps-btn_wrapper { padding: 0 20px; }
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
