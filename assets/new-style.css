@@ -247,7 +247,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 .aiod-bundle-discount-wrap+div[id^="AddToCartForm-template-"] { display: none; }
 h3.csapp_bundle_title { display: none; }
 .csapps-bunlde-tiers { padding: 0 !important; }
-.csapps-bunlde-tiers .csapp-thumb-inner:after { left: 50%!important; transform: translate(-50%)!important; top: 94%!important; font-size: 45px !important; width: 50px; height: 50px; border: 1px solid #000; background: transparent !important; color: #000 !IMPORTANT; line-height: 55px; }
+.csapps-bunlde-tiers .csapp-thumb-inner:after { left: 50%!important; transform: translate(-50%)!important; top: 100%!important; font-size: 45px !important; width: 50px; height: 50px; border: 1px solid #000; background: transparent !important; color: #000 !IMPORTANT; line-height: 55px; }
 .aiod-bundle-discount-wrap .csapps-bunlde-wrapper .csapps-bundle-thumb .csapp-thumb-inner { border: none; }
 .csapps-p-detail select { border: 1px solid #000; height: 50px; font-size: 18px; font-weight: 500; border-radius: 0; }
 .aiod-bundle-discount-wrap .csapps-bunlde-wrapper .csapps-bundle-thumb:last-child { margin: 0; }
