@@ -232,6 +232,11 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 .template-product  .jdgm-row-rating { position: relative; }
 .template-product  span.jdgm-rev__timestamp { position: absolute; left: 45px; bottom: -50px; color: #000; }
 
+
+
+/****/
+.aiod-bundle-discount-wrap .csapps-bunlde-wrapper { flex-direction: column; }
+
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
