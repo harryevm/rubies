@@ -242,6 +242,8 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 .csapps-p-title { padding-bottom: 35px; }
 .aiod_price_qty_wrpr { position: absolute; top: 70px; left: 18px; }
 .aiod_price_qty_wrpr .csapps-price-qty { display: none; }
+.aiod_price_qty_wrpr .csapps-price span.money { position: relative; padding: 0 40px 0 0; }
+.aiod_price_qty_wrpr .csapps-price span.money::after { position: absolute; content: 'CAD'; right: 0; }
 
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
