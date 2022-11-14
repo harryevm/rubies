@@ -70,10 +70,10 @@
 <div class="aiod-bundle-discount-wrap"></div>
             {% comment %}
               ID addToCartForm is a selector for the ajax cart plugin
-            
+            {% endcomment %}
             <div id="AddToCartForm-{{ section.id }}" data-AddToCartForm class="form-vertical product-form product-form-{{ section.id }}" {% if section.settings.show_payment_button %}data-dynamic-checkout="true"{% endif %} data-section="{{ section.id }}">
               {% include 'product-form' %}
-            </div>{% endcomment %}
+            </div>
           </div>
 
           {% if section.settings.trust_badge %}
