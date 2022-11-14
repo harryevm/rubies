@@ -246,6 +246,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 .aiod_price_qty_wrpr .csapps-price span.money::after { position: absolute; content: 'CAD'; right: 0; }
 .aiod-bundle-discount-wrap+div[id^="AddToCartForm-template-"] { display: none; }
 h3.csapp_bundle_title { display: none; }
+.csapps-bunlde-tiers { padding: 0; }
 
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
