@@ -235,7 +235,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 
 
 /****/
-.aiod-bundle-discount-wrap .csapps-bunlde-wrapper { flex-direction: column; }
+.aiod-bundle-discount-wrap .csapps-bunlde-wrapper { flex-direction: column; background: transparent; }
 .aiod-bundle-discount-wrap .csapps-bunlde-wrapper .csapps-bundle-thumb { max-width: unset; width: 100%; position: relative; padding: 0; margin-bottom: 50px; }
 .aiod-bundle-discount-wrap .csapps-bunlde-wrapper .csapps-bundle-thumb  .csapp-thumb-inner>a.grid_img { display: none; }
 .aiod-bundle-discount-wrap .csapps-bunlde-wrapper .csapps-bundle-thumb .csapps-p-title>a { font-weight: 600; font-size: 20px; line-height: 30px; }
