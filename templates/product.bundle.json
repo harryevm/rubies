@@ -1,51 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "product-template",
-      "blocks": {
-        "5faab193-44b1-4ed6-90fc-022a02e5261b": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "60 day risk free returns{{ product.metafields.custom.product_info1.value }}",
-            "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.{{ product.metafields.custom.product_info1_content | metafield_tag }}<\/p>",
-            "htmlcontent": "",
-            "page": ""
-          }
-        },
-        "92a4cb15-279e-4482-9ce0-3af64ad4a418": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Fabric and care{{ product.metafields.custom.product_info2.value }}",
-            "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.{{ product.metafields.custom.product_info2_content | metafield_tag }}<\/p>",
-            "htmlcontent": "",
-            "page": ""
-          }
-        },
-        "e18221c4-a59a-47a2-8da4-d459e412f9fc": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Is RUBIES just for kids?{{ product.metafields.custom.product_info3.value }}",
-            "content": "<p>{{ product.metafields.custom.product_info3_content | metafield_tag }}<\/p>",
-            "htmlcontent": "",
-            "page": "about"
-          }
-        },
-        "77e4cc35-566e-4e15-bd68-71d744ec057e": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "What our customers say",
-            "content": "",
-            "htmlcontent": "{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "5faab193-44b1-4ed6-90fc-022a02e5261b",
-        "92a4cb15-279e-4482-9ce0-3af64ad4a418",
-        "e18221c4-a59a-47a2-8da4-d459e412f9fc",
-        "77e4cc35-566e-4e15-bd68-71d744ec057e"
-      ],
+      "type": "fastbundle-product-template",
       "settings": {
         "show_vendors": true,
         "variant_style": "swatches",
@@ -56,7 +12,6 @@
         "product_quantity_enable": true,
         "show_payment_button": false,
         "product_box_padding": false,
-        "freeshippingtext": "60 day risk free returns  | free shipping over $120",
         "enable_image_slider": true,
         "show_dots": false,
         "show_arrows": true,
