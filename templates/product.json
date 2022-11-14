@@ -52,7 +52,7 @@
         "variant_swatch_images": true,
         "variant_swatch_shape": "circle",
         "variant_swatch_soldout": true,
-        "size_guide_page": "size-chart",
+        "size_guide_page": "",
         "product_quantity_enable": true,
         "show_payment_button": false,
         "product_box_padding": false,
@@ -87,11 +87,13 @@
       "blocks": {
         "43e7faab-63b9-42cc-aad5-26f18d366763": {
           "type": "shopify:\/\/apps\/wiser-upsell-recommendations\/blocks\/wiser_fbt\/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "disabled": true,
           "settings": {
           }
         },
         "861f016a-8cca-4074-b880-5c5d4af1c5fe": {
           "type": "shopify:\/\/apps\/esc-size-charts-size-guide\/blocks\/app-block\/daa9a1f8-04ef-4369-ae22-966a9c435d5f",
+          "disabled": true,
           "settings": {
             "widget_type": "link",
             "force_background": false,
