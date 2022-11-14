@@ -301,6 +301,9 @@ h3.csapp_bundle_title { display: none; }
   aside.product-aside .purchase-box, .description { max-width: unset; width: 92%; margin: 0 auto; border: none; }
   .purchase-box .selection-wrapper.price { border: none; }
   .single-product .grid .product-images { margin-top: 100px; }
+
+
+  .aiod-bundle-discount-wrap { padding: 0; }
   
 }
 @media(max-width:700px){
