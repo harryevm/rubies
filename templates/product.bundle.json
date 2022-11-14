@@ -2,6 +2,50 @@
   "sections": {
     "main": {
       "type": "bundle-products",
+      "blocks": {
+        "38735000-3763-4a02-ac3d-b9cf6333bdb5": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "60 day risk free returns{{ product.metafields.custom.product_info1.value }}",
+            "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.{{ product.metafields.custom.product_info1_content | metafield_tag }}<\/p>",
+            "htmlcontent": "",
+            "page": ""
+          }
+        },
+        "0c501610-df7b-4ee0-aa23-53f9b2f695c5": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Fabric and care{{ product.metafields.custom.product_info2.value }}",
+            "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.{{ product.metafields.custom.product_info2_content | metafield_tag }}<\/p>",
+            "htmlcontent": "",
+            "page": ""
+          }
+        },
+        "a5fca244-de0a-44e1-b20f-4d0b63ccd1fc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Is RUBIES just for kids?{{ product.metafields.custom.product_info3.value }}",
+            "content": "<p>{{ product.metafields.custom.product_info3_content | metafield_tag }}<\/p>",
+            "htmlcontent": "",
+            "page": ""
+          }
+        },
+        "077111a0-0fee-40bd-961a-425ce4ba31be": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What our customers say",
+            "content": "",
+            "htmlcontent": "{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "38735000-3763-4a02-ac3d-b9cf6333bdb5",
+        "0c501610-df7b-4ee0-aa23-53f9b2f695c5",
+        "a5fca244-de0a-44e1-b20f-4d0b63ccd1fc",
+        "077111a0-0fee-40bd-961a-425ce4ba31be"
+      ],
       "settings": {
         "show_vendors": true,
         "variant_style": "swatches",
