@@ -248,6 +248,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 h3.csapp_bundle_title { display: none; }
 .csapps-bunlde-tiers { padding: 0 !important; }
 .csapps-bunlde-tiers .csapp-thumb-inner:after { left: 50% !important; transform: translate(-50%) !important; top: 94%!important; }
+.aiod-bundle-discount-wrap .csapps-bunlde-wrapper .csapps-bundle-thumb .csapp-thumb-inner { border: none; margin: 20px 0; }
 
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
