@@ -446,7 +446,8 @@ h3.csapp_bundle_title { display: none; }
   .about-page-wr { flex-direction: column !important; }
   .about-page-wr>* { width: 100%; margin-bottom: 10px; }
 
-  .aiod-bundle-discount-wrap { padding: 0; }
+  .aiod-bundle-discount-wrap,.csapps-btn_wrapper { padding: 0; }
+  
 }
 @media(max-width:600px){
   img#dancer1{height: 250px !important; left: 70% !important; top: -14px !important;}  
