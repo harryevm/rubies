@@ -618,5 +618,27 @@
 
 
 
-
+<script>
+  $('select.cs_single_op_selector').each(function(i, select){
+    var $select = $(select);
+    $select.find('option').each(function(j, option){
+        var $option = $(option);
+        // Create a radio:
+        var $radio = $('<input type="radio" />');
+        // Set name and value:
+        $radio.attr('name', $select.attr('name')).attr('value', $option.val());
+        // Set checked if the option was selected
+        if ($option.attr('selected')) $radio.attr('checked', 'checked');
+        // Insert radio before select box:
+        $select.before($radio);
+        // Insert a label:
+        $select.before(
+          $("<label />").attr('for', $select.attr('name')).text($option.text())
+        );
+        // Insert a <br />:
+        $select.before("<br/>");
+    });
+    $select.remove();
+});
+</script>
 <script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=450361b5-981b-4e6f-9164-d70d9effc17f"></script>{% include 'upsellio_embed' %}
