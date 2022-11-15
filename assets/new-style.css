@@ -256,7 +256,7 @@ h3.csapp_bundle_title { display: none; }
 .csapps-btn_wrapper { padding: 0 20px; }
 
 @media(min-width:700px){
-    header.site-header .layout-horizontal { top: -15px; }
+    header.site-header .layout-horizontal { position: fixed; top: 45px; left: 50%; transform: translateX(-50%); }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
     header.util li.search-wrap{position: absolute; right: 20px; bottom: -42px;}
     header.site-header .layout-horizontal nav.nav-bar { padding-right: 10%; }
