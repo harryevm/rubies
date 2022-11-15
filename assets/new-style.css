@@ -257,7 +257,7 @@ h3.csapp_bundle_title { display: none; }
 
 
 .product-swatches__li.showelements { display: none; }
-li.product-swatches__li.moreicons sub { font-size: 12px; }
+li.product-swatches__li.moreicons a { font-size: 12px;text-decoration:none; }
 
 @media(min-width:700px){
     header.site-header .layout-horizontal { top: -15px; }
