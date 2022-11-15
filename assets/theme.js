@@ -4,3 +4,7 @@
   
 
   
+function getProUrl($this){
+    var productUrlWr = $this.attr('href');
+    window.location.href = productUrlWr;
+  }
