@@ -234,6 +234,7 @@
 
 <script>
   function myFunction($this){
-    alert($this.parent().attr('href'))
+    var productUrlWr = $this.parent().attr('href');
+    window.location.href = productUrlWr;
   }
 </script>
