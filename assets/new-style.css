@@ -255,7 +255,7 @@ h3.csapp_bundle_title { display: none; }
 .csapps-btn_wrapper button.csapp_btn.csapps-add-to-cart-btn:hover { background-color: #000; color: #fff; transition: all 0.35s ease-in-out; }
 .csapps-btn_wrapper { padding: 0 20px; }
 
-
+li.product-swatches__li.moreicons a:focus { border: none; }
 .product-swatches__li.showelements { display: none; }
 li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; display: inline-block; vertical-align: bottom; color: #000; }
 
