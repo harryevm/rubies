@@ -37,7 +37,7 @@
     --- absolute top to 50% and transform translateY to -50%
   {% endcomment -%}
   <figure class="product-grid-item--{{ settings.collections_text_alignment }}">
-    
+    <a href="{{ product.url }}"></a>
     <a id="{{ wrapper_id }}" href="{% if template.name == 'index' %}javascript:;{% else %}{{ product.url }}{% endif %}" class="product_card">
       {%- assign image = product.featured_image -%}
       <div class="product_card__image-wrapper" data-bgset="{% include 'bgset', image: image %}">
