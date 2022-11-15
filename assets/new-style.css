@@ -256,7 +256,7 @@ h3.csapp_bundle_title { display: none; }
 .csapps-btn_wrapper { padding: 0 20px; }
 
 @media(min-width:700px){
-    header.site-header .layout-horizontal { position: fixed; top: 45px; left: 50%; transform: translateX(-50%); }
+    header.site-header .layout-horizontal { top: -15px; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
     header.util li.search-wrap{position: absolute; right: 20px; bottom: -42px;}
     header.site-header .layout-horizontal nav.nav-bar { padding-right: 10%; }
@@ -308,6 +308,7 @@ h3.csapp_bundle_title { display: none; }
   
 }
 @media(max-width:700px){
+  header.site-header .layout-horizontal { position: fixed; top: 45px; left: 50%; transform: translateX(-50%); }
     header.util .left-wrapper ul.text-links li.search-wrap { display: block; position: absolute; bottom: -50px; right: 35px; }
     header.util a#CartButton { border: none; position: absolute; bottom: -47px; right: 0; }
     header.util .left-wrapper ul.text-links li.mobile-menu { position: absolute; bottom: -50px; border: none; padding: 0; margin: 0; }
