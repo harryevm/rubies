@@ -84,7 +84,9 @@
             </div>
           </a>
         </li>
-
+        {% if forloop.index >2  %}
+        <li class="product-swatches__li moreicons" >+</li>
+        {% endif %}
       {%- endfor -%}
     </ul>
 
