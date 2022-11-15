@@ -141,7 +141,7 @@
                         <ul class="cart-item-discounts">
                         {% for discount_allocation in item.line_level_discount_allocations %}
                           <li class="cart-item-discount"><span class="cart-item-discount-title">{{ discount_allocation.discount_application.title }}</span><br>
-                          <span class="cart-item-discount-amount">(-<span class="money">{{ discount_allocation.amount | money }}</span>)</span></li>
+                          <span class="cart-item-discount-amount">(-<span class="money">{{ discount_allocation.amount | money_with_currency }}</span>)</span></li>
                         {% endfor %}
                         </ul>
                       {% endif %}
@@ -207,7 +207,7 @@
                     {%- for discount_application in cart.cart_level_discount_applications -%}
                       <li class="cart-discount--applications">
                         <span class="cart-discount--title">{{- discount_application.title -}}</span>
-                        <span class="cart-discount--amount">-<span class="money">{{ discount_application.total_allocated_amount | money }}</span></span>
+                        <span class="cart-discount--amount">-<span class="money">{{ discount_application.total_allocated_amount | money_with_currency }}</span></span>
                       </li>
                     {%- endfor -%}
                   </ul>
