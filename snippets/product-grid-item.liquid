@@ -184,7 +184,7 @@
     {%- endif -%}
         <figcaption>
           <div class="product-title">
-            <a href="{{ product.url | within: collection }}" class="title">{{ product.title }}</a>
+            <a href="{{ product.url | within: collection }}" onclick="getProUrl($(this))" class="title">{{ product.title }}</a>
             {% if settings.show_vendors %}
               <span class="vendor">{{ product.vendor | link_to_vendor }}</span>
             {% endif %}
@@ -235,6 +235,10 @@
 <script>
   function getUrlFunc($this){
     var productUrlWr = $this.parent().attr('href');
+    window.location.href = productUrlWr;
+  }
+  function getProUrl($this){
+    var productUrlWr = $this.attr('href');
     window.location.href = productUrlWr;
   }
 </script>
