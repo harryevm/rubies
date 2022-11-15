@@ -13,7 +13,7 @@
       {%- assign collection = collections[section.settings.collection] -%}
       {%- assign product_limit = section.settings.product_count_range -%}
       {% for product in collection.products limit: product_limit  %}
-        <a href="{{ product.url }}"></a>
+        
         {% include 'product-grid-item' %}
       {% else %}
         {% for i in (1..product_limit) %}
