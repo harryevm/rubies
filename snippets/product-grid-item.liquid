@@ -232,13 +232,3 @@
   {% include 'product-grid-item-auto-ratio' %}
 {%- endif -%}
 
-<script>
-  function getUrlFunc($this){
-    var productUrlWr = $this.parent().attr('href');
-    window.location.href = productUrlWr;
-  }
-  function getProUrl($this){
-    var productUrlWr = $this.attr('href');
-    window.location.href = productUrlWr;
-  }
-</script>
