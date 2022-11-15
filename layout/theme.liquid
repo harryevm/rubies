@@ -188,10 +188,10 @@
 {% render 'preorder-now' %}
 
 <script>
-  const icons = document.querySelectorAll('.product-swatches li.product-swatches__li')
-if (icons.length >= 2) {
-       var firstFour = icons.slice(0, 2)
-       var restElements = icons.slice(2, icons.length)
+  var icons = $('.product-swatches li.product-swatches__li');
+if (icons.length > 2) {
+    //if so get the last 2 elements and add the class
+    icons.slice(-2).addClass("red");
 }
 </script>
 </body>
