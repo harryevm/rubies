@@ -187,6 +187,13 @@
   
 {% render 'preorder-now' %}
 
+<script>
+  const icons = document.querySelectorAll('.product-swatches li.product-swatches__li')
+if (icons.length >= 4) {
+       var firstFour = icons.slice(0, 4)
+       var restElements = icons.slice(4, icons.length)
+}
+</script>
 </body>
 </html>
 {%- endcapture -%}
