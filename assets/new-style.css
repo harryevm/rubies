@@ -492,6 +492,7 @@ h3.csapp_bundle_title { display: none; }
   aside.product-aside .purchase-box, .description { width: 100%; }
   .single-product { padding: 0 10px 40px;}
   .discount-text-shipping { font-size: 12px; line-height: 15px; }
+  header.site-header .layout-horizontal{top: 68px}
   
 }
 @media(max-width:375px){
