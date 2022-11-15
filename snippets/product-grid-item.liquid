@@ -43,7 +43,7 @@
       <div class="product_card__image-wrapper" data-bgset="{% include 'bgset', image: image %}">
         {% assign image_widths = '295,394,590,700,800,1000,1200,1500,1800,2000,2400' %}
         {% include 'theme-rias' %}
-        <a href="{{ product.url }}" class="pro_url"><img onclick="getUrlFunc($(this))" id="{{ img_id }}" class="product_card__image lazyload {% if settings.variant_rollover == true and product.images.size > 1 %}featured{% endif %}"
+        <a href="{{ product.url }}" class="pro_url"><img id="{{ img_id }}" class="product_card__image lazyload {% if settings.variant_rollover == true and product.images.size > 1 %}featured{% endif %}"
           src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
           data-src="{{ image_url_pattern }}"
           data-widths="[{{ image_widths }}]"
@@ -70,7 +70,7 @@
           {%- assign image = product.images[1] -%}
           {%- assign image_widths = '295,394,590,700,800,1000,1200,1500,1800,2000,2400' -%}
           {% include 'theme-rias' %}
-          <a href="{{ product.url }}" class="pro_url"><img onclick="getUrlFunc($(this))"  id="{{ img_id }}" class="product_card__image alt lazyload"
+          <a href="{{ product.url }}" class="pro_url"><img id="{{ img_id }}" class="product_card__image alt lazyload"
             data-src="{{ image_url_pattern }}"
             data-widths="[{{ image_widths }}]"
             data-aspectratio="{{ image.aspect_ratio }}"
@@ -184,7 +184,7 @@
     {%- endif -%}
         <figcaption>
           <div class="product-title">
-            <a href="{{ product.url | within: collection }}" onclick="getProUrl($(this))" class="title">{{ product.title }}</a>
+            <a href="{{ product.url | within: collection }}" class="title">{{ product.title }}</a>
             {% if settings.show_vendors %}
               <span class="vendor">{{ product.vendor | link_to_vendor }}</span>
             {% endif %}
@@ -231,14 +231,3 @@
 {%- if settings.collections_product_ratio == 'auto' and related_products_section != true -%}
   {% include 'product-grid-item-auto-ratio' %}
 {%- endif -%}
-
-<script>
-  function getUrlFunc($this){
-    var productUrlWr = $this.parent().attr('href');
-    window.location.href = productUrlWr;
-  }
-  function getProUrl($this){
-    var productUrlWr = $this.attr('href');
-    window.location.href = productUrlWr;
-  }
-</script>
