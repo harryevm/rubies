@@ -190,8 +190,7 @@
 <script>
   var icons = $('.product-swatches li.product-swatches__li');
 if (icons.length > 2) {
-    //if so get the last 2 elements and add the class
-    icons.slice(-2).addClass("red");
+    $(".product-swatches li.product-swatches__li:lt(2)").hide();
 }
 </script>
 </body>
