@@ -68,7 +68,7 @@
             {{ color_variant_url | within: collection }}
           {%- endif -%}
         {%- endcapture -%}
-        <li class="product-swatches__li">
+        <li class="product-swatches__li" {% if forloop.index >3  %}testttt{% endif %}>
           <a href="javascript:;" 
           {% comment %}<a href="{{ swatch_url | strip }}" {% endcomment %}
             class="product-swatches__link {% if option.selected_value == value %}product-swatches__link--selected{% endif %}"
