@@ -68,7 +68,7 @@
             {{ color_variant_url | within: collection }}
           {%- endif -%}
         {%- endcapture -%}
-        <li class="product-swatches__li{% if forloop.index >2  %} showelements{% endif %}" >
+        <li class="product-swatches__li{% if forloop.index >3  %} showelements{% endif %}" >
           <a href="javascript:;" 
           {% comment %}<a href="{{ swatch_url | strip }}" {% endcomment %}
             class="product-swatches__link {% if option.selected_value == value %}product-swatches__link--selected{% endif %}"
@@ -84,8 +84,8 @@
             </div>
           </a>
         </li>
-        {% if forloop.index == 3  %}
-        <li class="product-swatches__li moreicons" ><a href="{{ product.url }}"><sub>+ More</sub></a></li>
+        {% if forloop.index == 4  %}
+        <li class="product-swatches__li moreicons" ><a href="{{ product.url }}"><sub>+More</sub></a></li>
         {% endif %}
       {%- endfor -%}
     </ul>
