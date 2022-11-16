@@ -98,7 +98,7 @@ div.gallery .box figcaption.below p {
 .simple-collection input.btn.btn-primary[disabled] { background-color: #ccc; border-color: #ccc; }
 span.error-size { display: block; margin: 10px 0 0; color: #ff0000; font-weight: 600; letter-spacing: 1px; text-align: center; }
 .simple-collection .product-container .box span.error-size ~ span.error-size { display: none; }
-.product_card__image-wrapper {  max-height: 325px; }
+.product_card__image-wrapper {  max-height: 325px;overflow:hidden; }
 span.label.sale.label--top-left { top: 0; position: absolute; left: 0; }
 .box.product select[id*=ProductSelect-] option:first-child { font-size: 0 !important;  }
 .featured-collection figcaption span.from, .simple-collection figcaption span.from, .collection figcaption span.from { font-family: Poppins,sans-serif; color: #040f21; font-size: 16px; line-height: 1.2em; }
