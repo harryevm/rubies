@@ -172,6 +172,7 @@
 <script>
   var swatchVal,swatchVal2;
 $('.box.product .product-swatches__li').click(function(){
+    $(this).find('a.product-swatches__link').toggleClass('product-swatches__link--selected');
     swatchVal = $(this).find('.product-swatches__label').text();
 });
 $('.box.product select[id*=ProductSelect-]').change(function(){
