@@ -213,7 +213,7 @@
           {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
         {% comment %}End automatically added Judge.me widget{% endcomment %}
           {% unless template contains 'collection' %}
-          <form method="post" action="#">
+          <form method="post" action="/cart/add">
             <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
             <input type="hidden" name="Color" value="black" />
             <input type="hidden" name="Youth Size" value="8" />
