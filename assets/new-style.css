@@ -70,6 +70,7 @@ footer.site-footer .box.payment-types { text-align: right; }
 
 /* body .jdgm-prev-badge[data-average-rating="0.00"], */
 body .jdgm-preview-badge[data-template=index] { display: block!important; min-height: 30px; }
+.collection figcaption .product-title { min-height: 50px; }
 div#insta-feed { padding: 20px 0 50px !important; }
 
 .simple-collection-section .product-title>a.title {
