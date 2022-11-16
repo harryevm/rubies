@@ -475,7 +475,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
   .discount-text-shipping { font-size: 14px; line-height: 20px; }
 
   ul.social-share { display: flex; justify-content: flex-start; flex-wrap: wrap; }
-  
+  .featured-collection figcaption .product-title, .simple-collection figcaption .product-title, .collection figcaption .product-title { min-height: unset; }
 }
 @media(max-width:480px){
 /*   .slideshow-carousel.flickity-enabled .flickity-viewport { min-height: 50vh; } */
