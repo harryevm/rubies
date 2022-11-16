@@ -313,7 +313,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
   
 }
 @media(max-width:700px){
-  
+  .cs_general_msg.top_msg_main { position: fixed; top: 0; left: 0; right: 0; z-index: 99999; }
     header.util .left-wrapper ul.text-links li.search-wrap { display: block; position: absolute; bottom: -50px; right: 35px; }
     header.util a#CartButton { border: none; position: absolute; bottom: -47px; right: 0; }
     header.util .left-wrapper ul.text-links li.mobile-menu { position: absolute; bottom: -50px; border: none; padding: 0; margin: 0; }
