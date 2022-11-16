@@ -178,7 +178,9 @@ $('.box.product select[id*=ProductSelect-]').change(function(){
     swatchVal2 = $(this).val();
     $('span.error-size').remove();
 });
-  $('.collection .box.product input.btn.btn-primary').click(function(){
+  $('.collection .box.product input.btn.btn-primary').click(function(e){
+    e.preventDefault();
+    alert();
   
   swatchVal = $(this).parents('.box.product').find('.product-swatches__li a.product-swatches__link--selected .product-swatches__label').text();
   swatchVal2 = $(this).parents('.box.product').find('select[id*=ProductSelect-]').val();
