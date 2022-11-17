@@ -43,7 +43,7 @@
       <div class="product_card__image-wrapper" data-bgset="{% include 'bgset', image: image %}">
         {% assign image_widths = '295,394,590,700,800,1000,1200,1500,1800,2000,2400' %}
         {% include 'theme-rias' %}
-        <a href="{{ product.url }}" class="pro_url"><img onclick="getUrlFunc($(this))" id="{{ img_id }}" class="product_card__image lazyload {% if settings.variant_rollover == true and product.images.size > 1 %}featured{% endif %}"
+        <a href="{{ product.url }}" class="pro_url"><img  id="{{ img_id }}" class="product_card__image lazyload {% if settings.variant_rollover == true and product.images.size > 1 %}featured{% endif %}"
           src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
           data-src="{{ image_url_pattern }}"
           data-widths="[{{ image_widths }}]"
@@ -70,7 +70,7 @@
           {%- assign image = product.images[1] -%}
           {%- assign image_widths = '295,394,590,700,800,1000,1200,1500,1800,2000,2400' -%}
           {% include 'theme-rias' %}
-          <a href="{{ product.url }}" class="pro_url"><img onclick="getUrlFunc($(this))"  id="{{ img_id }}" class="product_card__image alt lazyload"
+          <a href="{{ product.url }}" class="pro_url"><img   id="{{ img_id }}" class="product_card__image alt lazyload"
             data-src="{{ image_url_pattern }}"
             data-widths="[{{ image_widths }}]"
             data-aspectratio="{{ image.aspect_ratio }}"
