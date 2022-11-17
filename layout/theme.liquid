@@ -1,7 +1,8 @@
+{% comment %}
 {%- capture LS_INPUT -%}
 {%- endcapture -%}
 {{ LS_INPUT }}
-{% comment %}{%- render "ls-output", input: LS_INPUT -%}
+{%- render "ls-output", input: LS_INPUT -%}
 
 	{{ "sezzle-checkout-button.js" | asset_url | script_tag }}
 	<script>
