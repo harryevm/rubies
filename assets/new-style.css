@@ -353,6 +353,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
   header.util .wrapper>*.middle-wrapper { width: 50%; }
   header.util .wrapper>*.middle-wrapper h1.site-logo.has-image { margin: 0 auto; }
   header.util .left-wrapper ul.text-links li.mobile-menu { position: relative; bottom: 0; }
+  header.util .left-wrapper ul.text-links li.search-wrap { bottom: unset; top: 20px; }
 /*  .slide__item-image-contain.mobile .mob-img-updated { object-fit: contain; background: #d1f550; object-position: 0 30px; } */
   .slide__item img.desktop-head { display: none; }
   .slide__item img.mobile-head { display: block !important; }
