@@ -152,6 +152,7 @@
                     <div class="tab__content">{{ pages[section.settings.tabs_global_page_3].content }}</div>
                   </div>
                 {%- endif -%}{% endcomment %}
+              {% for block in section.blocks %}
                 <div class="set">
                   <a href="#">
                     {{ block.settings.heading }} 
@@ -168,7 +169,7 @@
                       </div>
                     {% endif %}
                   </div>
-                </div>
+                </div>{% endfor %}
                 
               </div>
             {%- else -%}
