@@ -264,8 +264,8 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
   .middle-wrapper { display: none; }
   div#shopify-section-header { top: 39px !important; }
     header.site-header .layout-horizontal { top: -15px; }
-    a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
-    header.util li.search-wrap{position: absolute; right: 20px; bottom: -42px;}
+    a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -50px; right: 0; }
+    header.util li.search-wrap{position: absolute; right: 20px; bottom: -55px;}
     header.site-header .layout-horizontal nav.nav-bar { padding-right: 10%; }
   footer.site-footer h4 { margin-bottom: 30px; }
   
