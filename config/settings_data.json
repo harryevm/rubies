@@ -1784,7 +1784,7 @@
     "social_share_googleplus_enabled": false,
     "social_share_fancy_enabled": false,
     "default_opengraph_image": "",
-    "show_multiple_currencies": false,
+    "show_multiple_currencies": true,
     "currency_format": "money_format",
     "supported_currencies": "USD",
     "default_currency": "USD",
