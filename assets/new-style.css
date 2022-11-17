@@ -262,6 +262,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
 
 @media(min-width:700px){
   .middle-wrapper { display: none; }
+  header.util .wrapper { padding: 0; }
   div#shopify-section-header { top: 39px !important; }
     header.site-header .layout-horizontal { top: 0; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -50px; right: 0; }
