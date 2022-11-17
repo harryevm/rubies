@@ -331,7 +331,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
     .gallery-section .contain-site-width .grid__item { margin-bottom: 50px; }
     .gallery-section .contain-site-width .grid__item figcaption.below { width: 96%; margin: 0 auto; }
     .featured-row.section-standard .contain-site-width .feature-row__item.feature-row__text { text-align: center; padding: 30px 0; width: 96%; }
-   header.site-header.minimal .layout-horizontal .logo-contain { padding: 0; display: block; flex: auto; }
+   header.site-header.minimal .layout-horizontal .logo-contain { padding: 0; display: none; flex: auto; }
 /*  header.site-header .layout-horizontal { top: -60px; z-index: 9999; width: 50%; margin: 0 auto; } */
   header.site-header .layout-horizontal { position: fixed; top: 45px; left: 50%; transform: translateX(-50%);z-index: 9999;width: 50%; margin: 0 auto; }
   header.site-header.minimal { height: 0; }
