@@ -1,3 +1,4 @@
+{% include 'header-util' %}
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
   <div class="site-header-wrapper">
     <header class="site-header {% if section.settings.minimal_padding == "minimal" %}minimal{% endif %} {% if section.settings.header_full_width %}full-width{% endif %}" data-scroll-lock="{{ section.settings.scroll_lock }}" role="banner">
