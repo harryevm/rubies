@@ -516,6 +516,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
   .single-product { padding: 0 10px 40px;}
   .discount-text-shipping { font-size: 12px; line-height: 15px; }
   header.site-header .layout-horizontal{top: 68px}
+  header.util .wrapper { padding: 0; }
   
 }
 @media(max-width:375px){
@@ -524,5 +525,5 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
   div.collection-list .box a figure>img.card__image{height: 50px;}
   div.collection-list .box figcaption.below a { padding: 0; }
   img#dancer1 { height: 190px!important; left: 65%!important; top: -3px !important; }
-  header.util .wrapper { padding: 0; }
+  
 }
