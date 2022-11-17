@@ -50,8 +50,8 @@
           data-aspectratio="{{ image.aspect_ratio }}"
           data-sizes="auto"
           data-expand="600"
-          data-fallback="{% comment ls-rpl %}{{ image | img_url: '295x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '295x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}"
-          alt="{% comment ls-rpl %}{{ product.featured_image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: product.featured_image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+          data-fallback="{{ image | img_url: '295x' }}"
+          alt="{{ product.featured_image.alt | escape }}">
         {% comment %}</a>{% endcomment %}
           <noscript>
           <img class="product_card__image" src="{% comment ls-rpl %}{{ image | img_url: '394x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '394x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}" alt="{% comment ls-rpl %}{{ product.featured_image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: product.featured_image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
@@ -76,7 +76,7 @@
             data-aspectratio="{{ image.aspect_ratio }}"
             data-sizes="auto"
             data-expand="600"
-            alt="{% comment ls-rpl %}{{ product.featured_image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: product.featured_image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+            alt="{{ product.featured_image.alt | escape }}">
           {% comment %}</a>{% endcomment %}
             {%- endif -%}
         {%- if sold_out -%}
@@ -92,7 +92,7 @@
                 data-aspectratio="{{ image.aspect_ratio }}"
                 data-sizes="auto"
                 data-expand="600"
-                alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+                alt="{{ image.alt | escape }}">
             {%- else -%}
 <!--               {{ 'products.product.sold_out' | t }} -->
               <ls-static-674915>COMING SOON</ls-static-674915>
@@ -111,7 +111,7 @@
                 data-aspectratio="{{ image.aspect_ratio }}"
                 data-sizes="auto"
                 data-expand="600"
-                alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+                alt="{{ image.alt | escape }}">
             {%- else -%}
               {{ 'products.product.on_sale' | t }}
             {%- endif -%}
