@@ -6,16 +6,16 @@
         .siblings(".content")
         .slideUp(200);
       $(".set > a i")
-        .removeClass("fa-chevron-bottom")
-        .addClass("fa-chevron-left");
+        .removeClass("fa-chevron-left")
+        .addClass("fa-chevron-down");
     } else {
       $(".set > a i")
         .removeClass("fa-minus")
-        .addClass("fa-chevron-left");
+        .addClass("fa-chevron-down");
       $(this)
         .find("i")
-        .removeClass("fa-chevron-left")
-        .addClass("fa-chevron-bottom");
+        .removeClass("fa-chevron-down")
+        .addClass("fa-chevron-left");
       $(".set > a").removeClass("active");
       $(this).addClass("active");
       $(".content").slideUp(200);
