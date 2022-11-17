@@ -13,7 +13,7 @@ a#CartButton span#CartCount { position: absolute; right: -10px; background: #FC0
 header.util a#CartButton:hover svg path, header.util a#CartButton:focus svg path { fill: #000; }
 header.util a#CartButton:hover, header.util a#CartButton:focus { background: transparent; }
 .search-wrapper { box-shadow: none; }
-
+.jdgm-row-actions { display: none; }
 
 
 
