@@ -193,7 +193,7 @@
                 <div class="set">
                   <a href="javascript:;">
                     {{ block.settings.heading }} 
-                    <i class="fa fa-plus"></i>
+                    <i class="fa fa-chevron-left"></i>
                   </a>
                   <div class="content">
                     {% if block.settings.page != blank %}
@@ -207,7 +207,22 @@
                     {% endif %}
                   </div>
                 </div>{% endfor %}
-                
+                {% for block in section.blocks %}
+                <div class="tab tab--global-1 ">
+                  <div class="tab__title" tabindex="0">{{ block.settings.heading }}</div>
+                  <div class="tab__content ">
+                    {% if block.settings.page != blank %}
+                      {{ pages[block.settings.page].content }}
+                    {% elsif block.settings.content != blank %}
+                      {{ block.settings.content }}
+                    {% else %}
+                      <div class="tab-html-content">
+                        {{ block.settings.htmlcontent }}
+                      </div>
+                    {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
               </div>
             {%- else -%}
               {%- comment -%}
