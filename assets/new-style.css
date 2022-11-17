@@ -350,6 +350,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
 
   header.util .wrapper { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
   header.util .wrapper>* { width: 25%; margin: 0; }
+  header.util .wrapper>*.search-wrapper { width: 100%; }
   header.util .wrapper>*.middle-wrapper { width: 50%; }
   header.util .wrapper>*.middle-wrapper h1.site-logo.has-image { margin: 0 auto; }
   header.util .left-wrapper ul.text-links li.mobile-menu { position: relative; bottom: 0; }
