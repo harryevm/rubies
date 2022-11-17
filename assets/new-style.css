@@ -12,7 +12,7 @@ a#CartButton svg { width: 22px; height: 22px; }
 a#CartButton span#CartCount { position: absolute; right: -10px; background: #FC01FF; width: 20px; height: 20px; border-radius: 50%; top: -5px; text-align: center; font-size: 10px; line-height: 22px; color: #fff; }
 header.util a#CartButton:hover svg path, header.util a#CartButton:focus svg path { fill: #000; }
 header.util a#CartButton:hover, header.util a#CartButton:focus { background: transparent; }
-
+.search-wrapper { box-shadow: none; }
 
 
 
