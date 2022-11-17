@@ -261,6 +261,7 @@ li.product-swatches__li.moreicons a:focus { border: none; }
 li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; display: inline-block; vertical-align: bottom; color: #000; }
 
 @media(min-width:700px){
+  .middle-wrapper { display: none; }
     header.site-header .layout-horizontal { top: -15px; }
     a#CartButton { position: absolute; padding: 0 !important; border: none !important; bottom: -38px; right: 0; }
     header.util li.search-wrap{position: absolute; right: 20px; bottom: -42px;}
