@@ -207,7 +207,22 @@
                     {% endif %}
                   </div>
                 </div>{% endfor %}
-                
+                {% for block in section.blocks %}
+                <div class="tab tab--global-1 ">
+                  <div class="tab__title" tabindex="0">{{ block.settings.heading }}</div>
+                  <div class="tab__content ">
+                    {% if block.settings.page != blank %}
+                      {{ pages[block.settings.page].content }}
+                    {% elsif block.settings.content != blank %}
+                      {{ block.settings.content }}
+                    {% else %}
+                      <div class="tab-html-content">
+                        {{ block.settings.htmlcontent }}
+                      </div>
+                    {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
               </div>
             {%- else -%}
               {%- comment -%}
@@ -655,33 +670,7 @@
     _learnq.push(['track', 'Added to Cart', item]);
   });
 
-  $(document).ready(function() {
-  $(".set > a").on("click", function() {
-    if ($(this).hasClass("active")) {
-      $(this).removeClass("active");
-      $(this)
-        .siblings(".content")
-        .slideUp(200);
-      $(".set > a i")
-        .removeClass("fa-minus")
-        .addClass("fa-plus");
-    } else {
-      $(".set > a i")
-        .removeClass("fa-minus")
-        .addClass("fa-plus");
-      $(this)
-        .find("i")
-        .removeClass("fa-plus")
-        .addClass("fa-minus");
-      $(".set > a").removeClass("active");
-      $(this).addClass("active");
-      $(".content").slideUp(200);
-      $(this)
-        .siblings(".content")
-        .slideDown(200);
-    }
-  });
-});
+
 
 </script>
 
