@@ -349,6 +349,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
 
 
   header.util .wrapper { display: flex; align-items: center; justify-content: center; }
+  header.util .wrapper>* { width: 25%; }
 /*  .slide__item-image-contain.mobile .mob-img-updated { object-fit: contain; background: #d1f550; object-position: 0 30px; } */
   .slide__item img.desktop-head { display: none; }
   .slide__item img.mobile-head { display: block !important; }
