@@ -517,7 +517,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
   .discount-text-shipping { font-size: 12px; line-height: 15px; }
   header.site-header .layout-horizontal{top: 68px}
   header.util .wrapper { padding: 0; }
-  div#shopify-section-header.darkHeader{top: 60px!important;}
+  div#shopify-section-header.darkHeader{top: 58px!important}
   
 }
 @media(max-width:375px){
