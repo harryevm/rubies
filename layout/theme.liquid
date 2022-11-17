@@ -60,7 +60,7 @@
 
   <script>
     window.StyleHatch = window.StyleHatch || {};
-    {% include 'js-language-strings' %}
+
     StyleHatch.currencyFormat = {{ shop.money_format | json }};
     StyleHatch.ajaxCartEnable = {{ settings.ajax_cart_enable }};
     StyleHatch.cartData = {{ cart | json }};
@@ -143,9 +143,7 @@
   <!--[if lte IE 9]><script src="{{ 'lazysizes.min.js' | asset_url }}"></script><![endif]-->
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lte IE 9]><script src="{{ 'vendor.js' | asset_url }}"></script><![endif]-->
-  {% if settings.show_multiple_currencies and shop.enabled_currencies.size == 1 %}
-    {% include 'currencies' %}
-  {% endif %}
+
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
