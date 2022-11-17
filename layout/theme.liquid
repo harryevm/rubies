@@ -1,4 +1,17 @@
-{%- capture LS_INPUT -%}<!doctype html>
+{%- capture LS_INPUT -%}
+{%- endcapture -%}
+{{ LS_INPUT }}
+{% comment %}{%- render "ls-output", input: LS_INPUT -%}
+
+	{{ "sezzle-checkout-button.js" | asset_url | script_tag }}
+	<script>
+		new SezzleCheckoutButton({}).init();
+	</script>
+
+
+
+{% endcomment %}
+<!doctype html>
 <!--[if IE 8]>{% comment ls-rpl %}<html class="no-js lt-ie9" lang="{{ shop.locale }}">{% endcomment %}<html class="no-js lt-ie9" lang="{%- render "ls-language" -%}" dir="{%- render "ls-language-direction" -%}">{% comment /ls-rpl %}{% endcomment %} <![endif]-->
 <!--[if IE 9 ]>{% comment ls-rpl %}<html class="ie9 no-js">{% endcomment %}<html class="ie9 no-js" lang="{%- render "ls-language" -%}" dir="{%- render "ls-language-direction" -%}">{% comment /ls-rpl %}{% endcomment %} <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> {% comment ls-rpl %}<html class="no-js" lang="{{ shop.locale }}">{% endcomment %}<html class="no-js" lang="{%- render "ls-language" -%}" dir="{%- render "ls-language-direction" -%}">{% comment /ls-rpl %}{% endcomment %} <!--<![endif]-->
@@ -187,15 +200,3 @@
 
 </body>
 </html>
-{%- endcapture -%}
-{{ LS_INPUT }}
-{% comment %}{%- render "ls-output", input: LS_INPUT -%}
-
-	{{ "sezzle-checkout-button.js" | asset_url | script_tag }}
-	<script>
-		new SezzleCheckoutButton({}).init();
-	</script>
-
-
-
-{% endcomment %}
