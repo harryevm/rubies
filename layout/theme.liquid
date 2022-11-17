@@ -3,6 +3,7 @@
 <!--[if IE 9 ]>{% comment ls-rpl %}<html class="ie9 no-js">{% endcomment %}<html class="ie9 no-js" lang="{%- render "ls-language" -%}" dir="{%- render "ls-language-direction" -%}">{% comment /ls-rpl %}{% endcomment %} <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> {% comment ls-rpl %}<html class="no-js" lang="{{ shop.locale }}">{% endcomment %}<html class="no-js" lang="{%- render "ls-language" -%}" dir="{%- render "ls-language-direction" -%}">{% comment /ls-rpl %}{% endcomment %} <!--<![endif]-->
 <head>
+  
 {%- render "ls-head" -%}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -27,13 +28,9 @@
 
   {% include 'social-meta-tags' %}
 
-  {% capture h_content %}
   {{ content_for_header }}
-  {% endcapture %}
-  {{ h_content | remove: 'https:\/\/amaicdn.com\/pricing-by-quantity\/js\/clear-cart.js?shop=rubies-active-wear.myshopify.com' }}
-  
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
-
+  {{ 'new-style.css' | asset_url | stylesheet_tag }}
   {% if template contains 'customers' %}
     {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
   {% endif %}
@@ -127,9 +124,7 @@
   <!--[if lte IE 9]><script src="{{ 'lazysizes.min.js' | asset_url }}"></script><![endif]-->
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lte IE 9]><script src="{{ 'vendor.js' | asset_url }}"></script><![endif]-->
-  {% if settings.show_multiple_currencies and shop.enabled_currencies.size == 1 %}
-    {% include 'currencies' %}
-  {% endif %}
+
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
@@ -147,20 +142,36 @@
   </script>
   <script type="application/javascript" async 
  src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=VZEgHe"></script>
-{% include 'upsellio' %}
-{% render 'hucs-honey-app' %}
-{% include 'cscode_discount' %}
-</head>
+
+
+
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="{{ 'custom.js' | asset_url }}"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ <style>
+   {% unless template.name == 'index' %}
+      button.needsclick.kl-teaser-SUUFk4.undefined.kl-private-reset-css-Xuajs1 {display: none;}
+   {% endunless %}
+ </style>	
+  <script>
+    var ignore_csapp_cart_reload = true;
+    var aiod_theme_currency = {{ shop.money_with_currency_format | json }};
+  </script>
+
+  {% include 'cscode_discount' %}
+
+  {% include 'wiser' %}{% include 'wiser_popup' %}</head>
 
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" data-template-directory="{{ template.directory }}" data-template="{{ template.name }}" >
 
   <div id="page">
     {% section 'promos' %}
-    {% include 'header-util' %}
+    
     {% section 'header' %}
 
     <main class="main-content main-content--breadcrumb-{{ settings.show_breadcrumbs }}" role="main">
-      {{ content_for_layout }}
+     {{ content_for_layout }}
     </main>
 
     {% section 'footer' %}
@@ -170,25 +181,21 @@
   <!-- District v3.5.2 -->
 {% include 'spurit_po2_theme_snippet' %}
 
-
-  
-
-
-
-
-
-
-
-  
   
 {% render 'preorder-now' %}
 
 
 </body>
 </html>
-{%- endcapture -%}{%- render "ls-output", input: LS_INPUT -%}
+{%- endcapture -%}
+{{ LS_INPUT }}
+{% comment %}{%- render "ls-output", input: LS_INPUT -%}
 
 	{{ "sezzle-checkout-button.js" | asset_url | script_tag }}
 	<script>
 		new SezzleCheckoutButton({}).init();
 	</script>
+
+
+
+{% endcomment %}
