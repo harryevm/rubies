@@ -1,18 +1,4 @@
-{% comment %}
-{%- capture LS_INPUT -%}
-{%- endcapture -%}
-{{ LS_INPUT }}
-{%- render "ls-output", input: LS_INPUT -%}
-
-	{{ "sezzle-checkout-button.js" | asset_url | script_tag }}
-	<script>
-		new SezzleCheckoutButton({}).init();
-	</script>
-
-
-
-{% endcomment %}
-<!doctype html>
+{%- capture LS_INPUT -%}<!doctype html>
 <!--[if IE 8]>{% comment ls-rpl %}<html class="no-js lt-ie9" lang="{{ shop.locale }}">{% endcomment %}<html class="no-js lt-ie9" lang="{%- render "ls-language" -%}" dir="{%- render "ls-language-direction" -%}">{% comment /ls-rpl %}{% endcomment %} <![endif]-->
 <!--[if IE 9 ]>{% comment ls-rpl %}<html class="ie9 no-js">{% endcomment %}<html class="ie9 no-js" lang="{%- render "ls-language" -%}" dir="{%- render "ls-language-direction" -%}">{% comment /ls-rpl %}{% endcomment %} <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> {% comment ls-rpl %}<html class="no-js" lang="{{ shop.locale }}">{% endcomment %}<html class="no-js" lang="{%- render "ls-language" -%}" dir="{%- render "ls-language-direction" -%}">{% comment /ls-rpl %}{% endcomment %} <!--<![endif]-->
@@ -33,12 +19,7 @@
   {% endif %}
 
   <title>
-    {{ page_title }}{% if current_tags %}{% comment ls-rpl %}{% assign meta_tags = current_tags | join: ', ' %}{% endcomment %}
-      {%- capture LS_TAGS -%}{%- render "ls-tags", resource: nil, tags: current_tags -%}{%- endcapture -%}
-      {%- assign LS_TAGS = LS_TAGS | split: "," -%}{% assign meta_tags = LS_TAGS | join: ', ' %}
-      {% comment /ls-rpl %}{% endcomment %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}
-      {% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}
-      {% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    {{ page_title }}{% if current_tags %}{% comment ls-rpl %}{% assign meta_tags = current_tags | join: ', ' %}{% endcomment %}{%- capture LS_TAGS -%}{%- render "ls-tags", resource: nil, tags: current_tags -%}{%- endcapture -%}{%- assign LS_TAGS = LS_TAGS | split: "," -%}{% assign meta_tags = LS_TAGS | join: ', ' %}{% comment /ls-rpl %}{% endcomment %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
   </title>
 
   {% if page_description %}
@@ -59,27 +40,27 @@
   {{ 'rubies-main-custom.js' | asset_url | script_tag }}
 
   <script>
-    // window.StyleHatch = window.StyleHatch || {};
-
-    // StyleHatch.currencyFormat = {{ shop.money_format | json }};
-    // StyleHatch.ajaxCartEnable = {{ settings.ajax_cart_enable }};
-    // StyleHatch.cartData = {{ cart | json }};
-    // StyleHatch.routes = {
-    //   root_url: '{{ routes.root_url }}',
-    //   account_url: '{{ routes.account_url }}',
-    //   account_login_url: '{{ routes.account_login_url }}',
-    //   account_logout_url: '{{ routes.account_logout_url }}',
-    //   account_recover_url: '{{ routes.account_recover_url }}',
-    //   account_register_url: '{{ routes.account_register_url }}',
-    //   account_addresses_url: '{{ routes.account_addresses_url }}',
-    //   collections_url: '{{ routes.collections_url }}',
-    //   all_products_collection_url: '{{ routes.all_products_collection_url }}',
-    //   search_url: '{{ routes.search_url }}',
-    //   cart_url: '{{ routes.cart_url }}',
-    //   cart_add_url: '{{ routes.cart_add_url }}',
-    //   cart_change_url: '{{ routes.cart_change_url }}',
-    //   cart_clear_url: '{{ routes.cart_clear_url }}'
-    // };
+    window.StyleHatch = window.StyleHatch || {};
+    {% include 'js-language-strings' %}
+    StyleHatch.currencyFormat = {{ shop.money_format | json }};
+    StyleHatch.ajaxCartEnable = {{ settings.ajax_cart_enable }};
+    StyleHatch.cartData = {{ cart | json }};
+    StyleHatch.routes = {
+      root_url: '{{ routes.root_url }}',
+      account_url: '{{ routes.account_url }}',
+      account_login_url: '{{ routes.account_login_url }}',
+      account_logout_url: '{{ routes.account_logout_url }}',
+      account_recover_url: '{{ routes.account_recover_url }}',
+      account_register_url: '{{ routes.account_register_url }}',
+      account_addresses_url: '{{ routes.account_addresses_url }}',
+      collections_url: '{{ routes.collections_url }}',
+      all_products_collection_url: '{{ routes.all_products_collection_url }}',
+      search_url: '{{ routes.search_url }}',
+      cart_url: '{{ routes.cart_url }}',
+      cart_add_url: '{{ routes.cart_add_url }}',
+      cart_change_url: '{{ routes.cart_change_url }}',
+      cart_clear_url: '{{ routes.cart_clear_url }}'
+    };
     // Post defer
     window.addEventListener('DOMContentLoaded', function() {
       (function( $ ) {
@@ -143,7 +124,9 @@
   <!--[if lte IE 9]><script src="{{ 'lazysizes.min.js' | asset_url }}"></script><![endif]-->
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lte IE 9]><script src="{{ 'vendor.js' | asset_url }}"></script><![endif]-->
-
+  {% if settings.show_multiple_currencies and shop.enabled_currencies.size == 1 %}
+    {% include 'currencies' %}
+  {% endif %}
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
@@ -163,7 +146,9 @@
  src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=VZEgHe"></script>
 
 
+{% render 'hucs-honey-app' %}
 
+{% include 'upsellio' %}
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="{{ 'custom.js' | asset_url }}"></script>
@@ -198,7 +183,7 @@
   
 
   <!-- District v3.5.2 -->
-{% comment %}{% include 'spurit_po2_theme_snippet' %}{% endcomment %}
+{% include 'spurit_po2_theme_snippet' %}
 
   
 {% render 'preorder-now' %}
@@ -206,3 +191,15 @@
 
 </body>
 </html>
+{%- endcapture -%}
+{{ LS_INPUT }}
+{% comment %}{%- render "ls-output", input: LS_INPUT -%}
+
+	{{ "sezzle-checkout-button.js" | asset_url | script_tag }}
+	<script>
+		new SezzleCheckoutButton({}).init();
+	</script>
+
+
+
+{% endcomment %}
