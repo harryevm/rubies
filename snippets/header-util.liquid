@@ -32,9 +32,48 @@
       {% endif %}
     </div>
     <div class="middle-wrapper">
-      <div class="site-logo {% if section.settings.logo %}has-image{% endif %}" itemscope itemtype="http://schema.org/Organization">
-        <a href="/"><img src="{{ section.settings.logo | image_url:'' }}" alt="" /></a>
-      </div>
+      <div class="logo-contain">
+            {% if template.name == 'index' %}
+              <h1 class="site-logo {% if section.settings.logo %}has-image{% endif %}" itemscope itemtype="http://schema.org/Organization">
+            {% else %}
+              <div class="site-logo {% if section.settings.logo %}has-image{% endif %}" itemscope itemtype="http://schema.org/Organization">
+            {% endif %}
+              {% if section.settings.logo %}
+                <a href="{{ routes.root_url }}" itemprop="url" class="logo-image">
+                  {%- assign image = section.settings.logo -%}
+                  {%- assign image_default_width = section.settings.logo_max_width -%}
+                  {%- assign image_2x_width = image_default_width | times: 2 -%}
+                  {%- assign image_3x_width = image_default_width | times: 3 -%}
+                  {%- assign image_default = image_default_width | append: 'x' -%}
+                  {%- capture widths -%}{{ image_default_width }},{{ image_2x_width }},{{ image_3x_width }}{%- endcapture -%}
+                  {% assign image_widths = widths %}
+                  {% include 'theme-rias' %}
+
+                  <img id="changing-logo"
+                    data-widths="[{{ image_widths }}]"
+                    data-aspectratio="{{ image.aspect_ratio }}"
+                    data-sizes="auto"
+                    src="{% comment ls-rpl %}{{ image | img_url: image_default }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: image_default -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}"
+                    alt="{% comment ls-rpl %}{{ image.alt | escape | default: shop.name }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape | default: shop.name }}{% comment /ls-rpl %}{% endcomment %}"> 
+                </a>
+               	<script type="text/javascript">
+//                 	document.getElementById("changing-logo").src = "212g";
+
+                    setTimeout(function()
+                      	{ 
+//                   			document.getElementById("changing-logo").src = "https://upload.wikimedia.org/wikipedia/commons/b/b0/Transgender_Pride_flag.svg";
+                    	}, 3000);
+
+              	</script>                                                                       
+              {% else %}
+                <a href="{{ routes.root_url }}" itemprop="url">{{ shop.name }}</a>
+              {% endif %}
+            {% if template.name == 'index' %}
+              </h1>
+            {% else %}
+              </div>
+            {% endif %}
+          </div>
     </div>
     <div class="right-wrapper">
       {% comment %}
