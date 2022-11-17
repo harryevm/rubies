@@ -6,5 +6,6 @@
   
 function getProUrl($this){
     var productUrlWr = $this.attr('href');
-    window.location.href = productUrlWr;
+    setTimeout(function(){document.location.href = productUrlWr;},250);
+
   }
