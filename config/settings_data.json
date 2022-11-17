@@ -1786,7 +1786,7 @@
     "default_opengraph_image": "",
     "show_multiple_currencies": true,
     "currency_format": "money_format",
-    "supported_currencies": "USD",
+    "supported_currencies": "USD GIP",
     "default_currency": "USD",
     "checkout_header_image": "",
     "checkout_logo_image": "shopify:\/\/shop_images\/rubies-logo-shopify_377f7784-2194-4246-804d-89a716a72f8d.png",
