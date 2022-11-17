@@ -29,7 +29,7 @@
   {%- endcomment -%}
   {% capture img_id %}ProductGridImage-{{ section.id }}-{{ collection.id }}-{{ product.id }}{% endcapture %}
   {% capture wrapper_id %}ProductGridImageWrapper-{{ section.id }}-{{ collection.id }}-{{ product.id }}{% endcapture %}
-  {% comment ls-rpl %}{%- assign img_url = product.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: product.featured_image, img_url: '1x1' -%}{%- endcapture -%}{%- assign img_url = LS_IMG_URL | replace: '_1x1.', '_{width}x.' -%}{% comment /ls-rpl %}{% endcomment %}
+  {%- assign img_url = product.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
   {%- comment %}
   	Auto-crop
     - Square
