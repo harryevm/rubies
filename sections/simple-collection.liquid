@@ -146,5 +146,8 @@ $('#collection-{{section.id}}').slick({
     var productUrlWr = $this.parent().attr('href');
     window.location.href = productUrlWr;
   }
-  
+  $('.product_card__image.alt').on('click',function(){
+     var productUrlWr = $(this).parent().attr('href');
+     window.location.href = productUrlWr;
+  });
 </script>
