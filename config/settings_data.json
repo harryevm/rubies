@@ -111,18 +111,6 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "ae889cab-fb6b-46b2-8387-d8a9aeb84619": {
-            "type": "contact",
-            "settings": {
-              "title": "Get in touch",
-              "show_contact": true,
-              "phone": "",
-              "contact_text": "Feel free to use our chat or send email to hello@rubyshines.com",
-              "contact_link": "",
-              "address": "",
-              "show_social": true
-            }
-          },
           "6e3799b7-4ef3-4977-95f4-ee159724ae4f": {
             "type": "menu",
             "settings": {
@@ -137,6 +125,18 @@
               "title": "Policies",
               "text": "",
               "footer_linklist": "footer"
+            }
+          },
+          "ae889cab-fb6b-46b2-8387-d8a9aeb84619": {
+            "type": "contact",
+            "settings": {
+              "title": "Get in touch",
+              "show_contact": true,
+              "phone": "",
+              "contact_text": "Feel free to use our chat or send email to hello@rubyshines.com",
+              "contact_link": "",
+              "address": "",
+              "show_social": true
             }
           },
           "4a397a78-000f-4c3b-837f-c1243c79ca49": {
@@ -453,23 +453,6 @@
               "autohide_delay_range": 11
             }
           },
-          "1591110688544": {
-            "type": "announcement-bar",
-            "disabled": true,
-            "settings": {
-              "show_announcement_bar": true,
-              "title": "FREE SHIPPING TO ANYWHERE IN CANADA AND THE US FOR ORDERS OVER $120 USD",
-              "link": "",
-              "color_background": "#ffebff",
-              "color_text": "#040f21",
-              "homepage_limit": false,
-              "show_for": "both",
-              "bar_size": "default",
-              "bar_placement": "bottom",
-              "autohide": true,
-              "autohide_delay_range": 10
-            }
-          },
           "e628641c-0d11-481b-9aee-da991eece550": {
             "type": "announcement-bar",
             "disabled": true,
@@ -480,6 +463,23 @@
               "color_background": "#ffebff",
               "color_text": "#040f21",
               "homepage_limit": true,
+              "show_for": "both",
+              "bar_size": "default",
+              "bar_placement": "bottom",
+              "autohide": true,
+              "autohide_delay_range": 10
+            }
+          },
+          "1591110688544": {
+            "type": "announcement-bar",
+            "disabled": true,
+            "settings": {
+              "show_announcement_bar": true,
+              "title": "FREE SHIPPING TO ANYWHERE IN CANADA AND THE US FOR ORDERS OVER $120 USD",
+              "link": "",
+              "color_background": "#ffebff",
+              "color_text": "#040f21",
+              "homepage_limit": false,
               "show_for": "both",
               "bar_size": "default",
               "bar_placement": "bottom",
@@ -518,11 +518,11 @@
       "1591114062327": {
         "type": "logo-list",
         "blocks": {
-          "0836be43-ad90-455e-9795-5807f24d8038": {
+          "47bda5f8-fba2-4ee0-bf2b-aa1f7af658e6": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/logo4.png",
-              "link": "https:\/\/www.goodmorningamerica.com\/living\/video\/dad-daughter-create-inclusive-swimwear-trans-girls-77077472"
+              "image": "shopify:\/\/shop_images\/logo1.png",
+              "link": "https:\/\/edition.cnn.com\/2021\/02\/06\/us\/dad-trans-swimwear-daughter-trnd\/index.html"
             }
           },
           "d78a853f-d021-47ea-be04-0ae284dc2282": {
@@ -532,11 +532,18 @@
               "link": "https:\/\/www.todaysparent.com\/family\/style\/rubies-swimwear-line-for-trans-girls\/"
             }
           },
-          "1591114062327-0": {
+          "6c836689-df08-4e92-86e2-717b15dbe96f": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/logo7.png",
-              "link": "https:\/\/www.cbc.ca\/news\/canada\/toronto\/swimwear-bathing-suits-transgender-rubies-1.5493054"
+              "image": "shopify:\/\/shop_images\/logo3.png",
+              "link": "https:\/\/www.thelily.com\/this-dad-started-a-swimwear-line-with-his-transgender-daughter-its-giving-other-families-hope\/"
+            }
+          },
+          "0836be43-ad90-455e-9795-5807f24d8038": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/logo4.png",
+              "link": "https:\/\/www.goodmorningamerica.com\/living\/video\/dad-daughter-create-inclusive-swimwear-trans-girls-77077472"
             }
           },
           "cbee5106-64e5-449f-95a6-3e2692fa0ef2": {
@@ -546,25 +553,18 @@
               "link": "https:\/\/www.today.com\/parents\/dad-designs-swimwear-transgender-girls-daughter-t206361"
             }
           },
-          "47bda5f8-fba2-4ee0-bf2b-aa1f7af658e6": {
-            "type": "logo_image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/logo1.png",
-              "link": "https:\/\/edition.cnn.com\/2021\/02\/06\/us\/dad-trans-swimwear-daughter-trnd\/index.html"
-            }
-          },
-          "6c836689-df08-4e92-86e2-717b15dbe96f": {
-            "type": "logo_image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/logo3.png",
-              "link": "https:\/\/www.thelily.com\/this-dad-started-a-swimwear-line-with-his-transgender-daughter-its-giving-other-families-hope\/"
-            }
-          },
           "6b651466-a83a-4c68-9d18-22aad16bae0a": {
             "type": "logo_image",
             "settings": {
               "image": "shopify:\/\/shop_images\/logo6.png",
               "link": "https:\/\/www.kidspot.com.au\/news\/transgender-girls-share-the-first-time-they-tried-rubies-swimwear\/news-story\/83da1962c76a6d80491c63593fb50a80"
+            }
+          },
+          "1591114062327-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/logo7.png",
+              "link": "https:\/\/www.cbc.ca\/news\/canada\/toronto\/swimwear-bathing-suits-transgender-rubies-1.5493054"
             }
           }
         },
@@ -619,6 +619,16 @@
       "166296728818c2c2ea": {
         "type": "featured-grid",
         "blocks": {
+          "166296728818c2c2ea-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/CONFIDENCE.png",
+              "label": "Shop Beach & Pool",
+              "link": "shopify:\/\/pages\/rubies-friendships-unsubscribe",
+              "title": "Confidence At The Beach",
+              "content": "<p>Ruby knows that every girl can feel comfortable and confident at the beach in their RUBIES bikini bottoms.<\/p>"
+            }
+          },
           "166296728818c2c2ea-3": {
             "type": "image",
             "settings": {
@@ -637,16 +647,6 @@
               "link": "#",
               "title": "Comfortable In Everything",
               "content": "<p>RUBIES underwear let's our kids keep doing the activities they love! They can feel great in their leggings, leotards and dresses.<\/p>"
-            }
-          },
-          "166296728818c2c2ea-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/CONFIDENCE.png",
-              "label": "Shop Beach & Pool",
-              "link": "shopify:\/\/pages\/rubies-friendships-unsubscribe",
-              "title": "Confidence At The Beach",
-              "content": "<p>Ruby knows that every girl can feel comfortable and confident at the beach in their RUBIES bikini bottoms.<\/p>"
             }
           }
         },
@@ -708,20 +708,12 @@
       "16627222910bad4250": {
         "type": "collection-list-updated",
         "blocks": {
-          "a26b1406-718f-4f13-a020-5eb5cd7f7e08": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "frontpage",
-              "collection_img": "shopify:\/\/shop_images\/Group_331_2x_5e123233-2b0c-4fcb-809d-1cc68abb3d7e.png",
-              "collection_title": "Pride"
-            }
-          },
-          "6b62283e-2a40-4810-9bfa-13c2db928163": {
+          "16627222910bad4250-0": {
             "type": "featured_collection",
             "settings": {
               "collection": "bikini-tops-and-bottoms",
-              "collection_img": "shopify:\/\/shop_images\/Group_332_2x_aae5da9d-3295-4b07-9ee1-11435a06d3b8.png",
-              "collection_title": "Bundles"
+              "collection_img": "shopify:\/\/shop_images\/Group_328_2x_1ff25d60-c05b-4fed-b9c0-3962dceed892.png",
+              "collection_title": "Beach & Pool"
             }
           },
           "16627222910bad4250-1": {
@@ -740,12 +732,20 @@
               "collection_title": "Everyday Comfort"
             }
           },
-          "16627222910bad4250-0": {
+          "a26b1406-718f-4f13-a020-5eb5cd7f7e08": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "frontpage",
+              "collection_img": "shopify:\/\/shop_images\/Group_331_2x_5e123233-2b0c-4fcb-809d-1cc68abb3d7e.png",
+              "collection_title": "Pride"
+            }
+          },
+          "6b62283e-2a40-4810-9bfa-13c2db928163": {
             "type": "featured_collection",
             "settings": {
               "collection": "bikini-tops-and-bottoms",
-              "collection_img": "shopify:\/\/shop_images\/Group_328_2x_1ff25d60-c05b-4fed-b9c0-3962dceed892.png",
-              "collection_title": "Beach & Pool"
+              "collection_img": "shopify:\/\/shop_images\/Group_332_2x_aae5da9d-3295-4b07-9ee1-11435a06d3b8.png",
+              "collection_title": "Bundles"
             }
           }
         },
@@ -875,6 +875,15 @@
               "date": "06\/07\/2022"
             }
           },
+          "323b42b6-7f0e-4c9a-b464-510131a9ae99": {
+            "type": "tesimonial",
+            "settings": {
+              "heading": "Almost perfect",
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
+              "name": "Amy Ackert",
+              "date": "06\/07\/2022"
+            }
+          },
           "67105895-5020-4b09-b03c-2e51e2477a0f": {
             "type": "tesimonial",
             "settings": {
@@ -884,7 +893,7 @@
               "date": "06\/07\/2022"
             }
           },
-          "17bc53a0-d46d-4363-b279-fdf7da06544c": {
+          "3f17d2f0-dd2c-4507-a314-d504fc2f669f": {
             "type": "tesimonial",
             "settings": {
               "heading": "Almost perfect",
@@ -902,25 +911,16 @@
               "date": "06\/07\/2022"
             }
           },
+          "17bc53a0-d46d-4363-b279-fdf7da06544c": {
+            "type": "tesimonial",
+            "settings": {
+              "heading": "Almost perfect",
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
+              "name": "Amy Ackert",
+              "date": "06\/07\/2022"
+            }
+          },
           "51153e64-814f-47b1-bda6-49c5c818d5d7": {
-            "type": "tesimonial",
-            "settings": {
-              "heading": "Almost perfect",
-              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
-              "name": "Amy Ackert",
-              "date": "06\/07\/2022"
-            }
-          },
-          "323b42b6-7f0e-4c9a-b464-510131a9ae99": {
-            "type": "tesimonial",
-            "settings": {
-              "heading": "Almost perfect",
-              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
-              "name": "Amy Ackert",
-              "date": "06\/07\/2022"
-            }
-          },
-          "3f17d2f0-dd2c-4507-a314-d504fc2f669f": {
             "type": "tesimonial",
             "settings": {
               "heading": "Almost perfect",
@@ -960,12 +960,6 @@
       "2913c4c3-8ef0-4e22-aa3c-fb37fba5d221"
     ],
     "blocks": {
-      "14952540001915115444": {
-        "type": "shopify:\/\/apps\/upcart-slide-cart-drawer\/blocks\/app-embed\/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "3294164036280357830": {
         "type": "shopify:\/\/apps\/mlv-auto-currency-switcher\/blocks\/mlveda-currencies-head\/92ab730f-097e-4571-b27c-3f449e098ca3",
         "disabled": false,
@@ -981,6 +975,12 @@
       "14060646107696862457": {
         "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
+        "settings": {
+        }
+      },
+      "14952540001915115444": {
+        "type": "shopify:\/\/apps\/upcart-slide-cart-drawer\/blocks\/app-embed\/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
+        "disabled": true,
         "settings": {
         }
       }
