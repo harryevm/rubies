@@ -266,6 +266,7 @@ li.product-swatches__li.moreicons a:focus { border: none; }
 li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; display: inline-block; vertical-align: bottom; color: #000; }
 .accordion-tab.also-bt-mob { display: none; }
 .also-bt-desk { margin-top: 50px; }
+.also-bt-desk p.evm_wiser_heading.ws_ls_lang { font-size: 30px !important; }
 
 
 /******/
