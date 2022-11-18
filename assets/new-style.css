@@ -483,8 +483,8 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
   .product-title-with-review .product-title h1 { font-size: 20px; line-height: 30px; }
   header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { color: #000; font-size: 14px; line-height: 20px; }
   .product-thumb--slider { top: 200px; left: -100px; }
-  .form-vertical.product-form>form .discount_text,.tab__title { font-size: 16px; line-height: 25px; }
-  .tab__content { font-size: 14px; line-height: 20px; }
+  .form-vertical.product-form>form .discount_text,.accordion-tab>a { font-size: 16px; line-height: 25px; }
+  .accordion-content { font-size: 14px; line-height: 20px; }
   .simple-collection.product-recommendations .pro_rec_slider { margin: 0; display: flex; width: 100%; overflow-x: auto; }
   .simple-collection.product-recommendations .pro_rec_slider .box.product { width: 50%; flex: 0 0 75%; }
   .product-thumb--slider { top: 50%; left: -75px; width: 230px !important; margin: 0;transform: translateY(-50%) rotate(90deg);  }
