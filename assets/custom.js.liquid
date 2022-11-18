@@ -1,7 +1,7 @@
   $(document).ready(function() {
   $(".accordion-tab > span").on("click", function() {
-    if ($(this).hasClass("active")) {
-      $(this).removeClass("active");
+    if ($(this).hasClass("testings")) {
+      $(this).removeClass("testings");
       $(this)
         .siblings(".accordion-content")
         .hide(200);
@@ -16,8 +16,8 @@
         .find("i")
         .removeClass("fa-chevron-down")
         .addClass("fa-chevron-left");
-      $(".accordion-tab > span").removeClass("active");
-      $(this).addClass("active");
+      $(".accordion-tab > span").removeClass("testings");
+      $(this).addClass("testings");
       $(".accordion-content").hide(200);
       $(this)
         .siblings(".accordion-content")
