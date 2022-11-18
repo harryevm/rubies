@@ -265,6 +265,22 @@ li.product-swatches__li.moreicons a:focus { border: none; }
 .product-swatches__li.showelements { display: none; }
 li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; display: inline-block; vertical-align: bottom; color: #000; }
 
+
+
+/******/
+#presets2 .ws-card__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500 !important;
+    height: unset;
+}
+
 @media(min-width:701px){
   .middle-wrapper { display: none; }
   header.util .wrapper { padding: 0; }
