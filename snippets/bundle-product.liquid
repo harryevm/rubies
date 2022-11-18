@@ -7,7 +7,7 @@
         <h3>{{ product.url }}</h3>
         <div class="selection-wrapper price product-single__price-{{ section.id }}">
           {% unless section_onboarding %}
-            <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ current_variant.price | money_without_currency | remove: ',' }}">{{ current_variant.price | money }}  &nbsp;{% if cart.currency.symbol == "$" %} {{ cart.currency.iso_code }}{%- endif -%}</span>
+            <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ current_variant.price | money_without_currency | remove: ',' }}">{{ current_variant.price | money }}  </span>
           {% else %}
             <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ 1999 | money_without_currency | remove: ',' }}">{{ 1999 | money }}</span>
           {% endunless %}
