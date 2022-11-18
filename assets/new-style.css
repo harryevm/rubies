@@ -325,6 +325,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
 
     .also-bt-desk { display: none; }
   .accordion-tab.also-bt-mob { display: block; }
+  .accordion-tab.also-bt-mob p.evm_wiser_heading.ws_ls_lang { display: none !important; }
   
   
 }
