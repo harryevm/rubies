@@ -4,7 +4,7 @@
       $(this).removeClass("active");
       $(this)
         .siblings(".accordion-content")
-        .slideUp(200);
+        .hide(200);
       $(".accordion-tab > span i")
         .removeClass("fa-chevron-left")
         .addClass("fa-chevron-down");
@@ -18,18 +18,13 @@
         .addClass("fa-chevron-left");
       $(".accordion-tab > span").removeClass("active");
       $(this).addClass("active");
-      $(".accordion-content").slideUp(200);
+      $(".accordion-content").hide(200);
       $(this)
         .siblings(".accordion-content")
-        .slideDown(200);
+        .show(200);
     }
   });
 
 
 
-    $('.evm-wiser-owl-carousel').trigger('change.owl.carousel', {
-      items: 2,
-      touchDrag: false,
-      pullDrag: false
-    });
 });
