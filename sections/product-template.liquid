@@ -154,7 +154,7 @@
                 {%- endif -%}{% endcomment %}
               {% if section.settings.tabs_enable %}
                 <div class="accordion-tab">
-                  <a href="javascript:;" class="testings">
+                  <a href="javascript:;" class="active">
                     {% if section.settings.tabs_enable %}
                     {{ section.settings.tabs_title }} 
                     {% else %}
@@ -168,12 +168,12 @@
                 </div>
               {% endif %}
               <div class="accordion-tab">
-                  
+                  <a href="javascript:;">
                  
-                     <span> Goes Well With
+                      Goes Well With
                    
                     <i class="fa fa-chevron-down"></i>
-                  </span>
+                  </a>
                   <div class="accordion-content">
                     <div class="related-products-wr">{% include 'wiser_alsobought.liquid' %} </div>
                   </div>
