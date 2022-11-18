@@ -234,6 +234,9 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 .template-product  .jdgm-row-rating { position: relative; }
 .template-product  span.jdgm-rev__timestamp { position: absolute; left: 45px; bottom: -50px; color: #000; }
 
+.accordion-content{
+  display:none;
+}
 
 
 /****/
