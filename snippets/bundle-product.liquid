@@ -44,11 +44,15 @@
   
 </style>
 <script>
+$(document).ready(function(){
+  setTimeout(function(){
   $('.bundle-products').slick({
-  infinite: true,
-  dots: true,
-  arrows: false,
-  slidesToShow: 2,
-  slidesToScroll: 1
+    infinite: true,
+    dots: true,
+    arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 1
+  });
+  },1000);
 });
 </script>
