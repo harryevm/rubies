@@ -152,7 +152,23 @@
                     <div class="tab__content">{{ pages[section.settings.tabs_global_page_3].content }}</div>
                   </div>
                 {%- endif -%}{% endcomment %}
-              
+                <div class="accordion-tab">
+                  <a href="javascript:;">
+                    {{ section.settings.heading }} 
+                    <i class="fa fa-chevron-down"></i>
+                  </a>
+                  <div class="accordion-content">
+                    {% if block.settings.page != blank %}
+                      {{ pages[block.settings.page].content }}
+                    {% elsif block.settings.content != blank %}
+                      {{ block.settings.content }}
+                    {% else %}
+                      <div class="tab-html-content">
+                        {{ block.settings.htmlcontent }}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
               {% for block in section.blocks %}
                 <div class="accordion-tab">
                   <a href="javascript:;">
@@ -437,7 +453,7 @@
     },
     {
       "type": "header",
-      "content": "Description tabs"
+      "content": "Tabs"
     },
     {
       "type": "checkbox",
@@ -446,62 +462,10 @@
       "default": false
     },
     {
-      "type": "select",
-      "id": "tabs_auto_headings",
-      "label": "Description headings to tabs",
-      "options": [
-        {
-          "value": "disabled",
-          "label": "Disabled"
-        },
-        {
-          "value": "h1",
-          "label": "Heading 1"
-        },
-        {
-          "value": "h2",
-          "label": "Heading 2"
-        },
-        {
-          "value": "h3",
-          "label": "Heading 3"
-        },
-        {
-          "value": "h4",
-          "label": "Heading 4"
-        },
-        {
-          "value": "h5",
-          "label": "Heading 5"
-        },
-        {
-          "value": "h6",
-          "label": "Heading 6"
-        }
-      ],
-      "default": "h4",
-      "info": "Automatically create tabs from the headings added to the product description."
-    },
-    {
       "type": "text",
       "id": "tabs_title",
       "label": "Default tab title",
       "default": "Description"
-    },
-    {
-      "type": "page",
-      "id": "tabs_global_page_1",
-      "label": "Tab content 1"
-    },
-    {
-      "type": "page",
-      "id": "tabs_global_page_2",
-      "label": "Tab content 2"
-    },
-    {
-      "type": "page",
-      "id": "tabs_global_page_3",
-      "label": "Tab content 3"
     },
     {
       "type": "header",
