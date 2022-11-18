@@ -2,7 +2,7 @@
   {% for product in collections.bundle-products.products %}
     {% assign current_variant = product.selected_or_first_available_variant %}
     <div class="bundle-wrapper">
-      <div class="bundle-img"></div>
+      <div class="bundle-img">{{ product.featured_image | image_url:'' }}</div>
       <div class="bundle-info">
         <h3>{{ product.url }}</h3>
         <div class="selection-wrapper price product-single__price-{{ section.id }}">
