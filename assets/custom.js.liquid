@@ -1,30 +1,27 @@
   $(document).ready(function() {
-  $(".accordion-tab > span").on("click", function() {
-    if ($(this).hasClass("testings")) {
-      $(this).removeClass("testings");
+  $(".accordion-tab > a").on("click", function() {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
       $(this)
         .siblings(".accordion-content")
-        .hide(200);
-      $(".accordion-tab > span i")
+        .slideUp(200);
+      $(".accordion-tab > a i")
         .removeClass("fa-chevron-left")
         .addClass("fa-chevron-down");
     } else {
-      $(".accordion-tab > span i")
+      $(".accordion-tab > a i")
         .removeClass("fa-minus")
         .addClass("fa-chevron-down");
       $(this)
         .find("i")
         .removeClass("fa-chevron-down")
         .addClass("fa-chevron-left");
-      $(".accordion-tab > span").removeClass("testings");
-      $(this).addClass("testings");
-      $(".accordion-content").hide(200);
+      $(".accordion-tab > a").removeClass("active");
+      $(this).addClass("active");
+      $(".accordion-content").slideUp(200);
       $(this)
         .siblings(".accordion-content")
-        .show(200);
+        .slideDown(200);
     }
   });
-
-
-
 });
