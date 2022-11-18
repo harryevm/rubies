@@ -324,6 +324,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
   .single-product .grid .product-images { margin-top: 100px; }
 
     .also-bt-desk { display: none; }
+  .accordion-tab.also-bt-mob { display: block; }
   
   
 }
