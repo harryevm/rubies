@@ -154,15 +154,15 @@
                 {%- endif -%}{% endcomment %}
               {% if section.settings.tabs_enable %}
                 <div class="accordion-tab">
-                  <a href="javascript:;">
+                  <a href="javascript:;" class="active">
                     {% if section.settings.tabs_enable %}
                     {{ section.settings.tabs_title }} 
                     {% else %}
                       Description
                     {% endif %}
-                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-left"></i>
                   </a>
-                  <div class="accordion-content">
+                  <div class="accordion-content" style="display: block;">
                     {{ product.description }}
                   </div>
                 </div>
