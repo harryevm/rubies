@@ -323,7 +323,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
   .purchase-box .selection-wrapper.price { border: none; }
   .single-product .grid .product-images { margin-top: 100px; }
 
-
+    .also-bt-desk { display: none; }
   
   
 }
