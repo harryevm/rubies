@@ -265,6 +265,7 @@ li.product-swatches__li.moreicons a:focus { border: none; }
 .product-swatches__li.showelements { display: none; }
 li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; display: inline-block; vertical-align: bottom; color: #000; }
 .accordion-tab.also-bt-mob { display: none; }
+.also-bt-desk { margin-top: 50px; }
 
 
 /******/
