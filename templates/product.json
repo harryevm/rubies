@@ -65,11 +65,11 @@
         "product_featured_zoom_enable": true,
         "product_featured_lightbox_enable": true,
         "tabs_enable": true,
-        "tabs_auto_headings": "h4",
         "tabs_title": "Why You 'll Love it",
-        "tabs_global_page_1": "",
-        "tabs_global_page_2": "",
-        "tabs_global_page_3": "",
+        "related_enable": true,
+        "related_title": "Related Products",
+        "bundle_enable": true,
+        "bundle_title": "Bundle",
         "show_product_jump": false,
         "show_share_buttons": true
       }
