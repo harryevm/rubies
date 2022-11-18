@@ -1,7 +1,6 @@
   $(document).ready(function() {
+  setTimeout(function(){
   $(".accordion-tab > a").on("click", function() {
-    setTimeout(function(){
-      alert();
     if ($(this).hasClass("active")) {
       $(this).removeClass("active");
       $(this)
@@ -25,6 +24,6 @@
         .siblings(".accordion-content")
         .slideDown(200);
     }
-  },1000);
-    })
+  });
+   },1000); 
 });
