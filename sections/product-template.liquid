@@ -153,6 +153,9 @@
                     <div class="tab__content">{{ pages[section.settings.tabs_global_page_3].content }}</div>
                   </div>
                 {%- endif -%}{% endcomment %}
+              {% for product in collections.bundle-products.products %}
+  <p>{{ product.title }}</p>
+{% endfor %}
               {% if section.settings.tabs_enable %}
                 <div class="accordion-tab">
                   <a href="javascript:;" class="active">
