@@ -1,29 +1,41 @@
   $(document).ready(function() {
-  setTimeout(function(){
-  $(".accordion-tab > a").on("click", function() {
-    if ($(this).hasClass("active")) {
-      $(this).removeClass("active");
-      $(this)
-        .siblings(".accordion-content")
-        .slideUp(200);
-      $(".accordion-tab > a i")
-        .removeClass("fa-chevron-left")
-        .addClass("fa-chevron-down");
-    } else {
-      $(".accordion-tab > a i")
-        .removeClass("fa-minus")
-        .addClass("fa-chevron-down");
-      $(this)
-        .find("i")
-        .removeClass("fa-chevron-down")
-        .addClass("fa-chevron-left");
-      $(".accordion-tab > a").removeClass("active");
-      $(this).addClass("active");
-      $(".accordion-content").slideUp(200);
-      $(this)
-        .siblings(".accordion-content")
-        .slideDown(200);
-    }
-  });
-   },1000); 
+  // setTimeout(function(){
+  // $(".accordion-tab > a").on("click", function() {
+  //   if ($(this).hasClass("active")) {
+  //     $(this).removeClass("active");
+  //     $(this)
+  //       .siblings(".accordion-content")
+  //       .slideUp(200);
+  //     $(".accordion-tab > a i")
+  //       .removeClass("fa-chevron-left")
+  //       .addClass("fa-chevron-down");
+  //   } else {
+  //     $(".accordion-tab > a i")
+  //       .removeClass("fa-minus")
+  //       .addClass("fa-chevron-down");
+  //     $(this)
+  //       .find("i")
+  //       .removeClass("fa-chevron-down")
+  //       .addClass("fa-chevron-left");
+  //     $(".accordion-tab > a").removeClass("active");
+  //     $(this).addClass("active");
+  //     $(".accordion-content").slideUp(200);
+  //     $(this)
+  //       .siblings(".accordion-content")
+  //       .slideDown(200);
+  //   }
+  // });
+  //  },1000); 
+
+
+    $(".accordion-tab > a").on("click", function() {
+      $(this).siblings(".accordion-content").slideToggle(200);
+      if ($(this).children('i').hasClass("fa-chevron-down")) {
+        $(this).children('i').removeClass("fa-chevron-down");
+        $(this).children('i').addClass("fa-chevron-left");
+      }else{
+        $(this).children('i').removeClass("fa-chevron-left");
+        $(this).children('i').addClass("fa-chevron-down");
+      }
+    })
 });
