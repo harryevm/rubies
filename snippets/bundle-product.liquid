@@ -45,12 +45,21 @@
 </style>
 <script>
 $(document).ready(function(){
-  $('.bundle-products').slick({
-    infinite: true,
-    dots: true,
-    arrows: false,
-    slidesToShow: 2,
-    slidesToScroll: 1
-  });
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:2
+        }
+    }
+})
 });
 </script>
