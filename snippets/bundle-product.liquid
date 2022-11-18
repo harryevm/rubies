@@ -1,7 +1,7 @@
-<div class="bundle-products owl-carousel owl-theme">
+<div class="bundle-products">
   {% for product in collections.bundle-products.products %}
     {% assign current_variant = product.selected_or_first_available_variant %}
-    <div class="bundle-wrapper item">
+    <div class="bundle-wrapper">
       <div class="bundle-img"><img src="{{ product.featured_image | img_url: '' }}" alt="{{product.featured_image.alt}}" /></div>
       <div class="bundle-info">
         <h3>{{ product.title }}</h3>
@@ -44,22 +44,13 @@
   
 </style>
 <script>
-jQuery(document).ready(function($){
-  $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:2
-        }
-    }
-})
+$(document).ready(function(){
+  $('.bundle-products').slick({
+    infinite: true,
+    dots: true,
+    arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 1
+  });
 });
 </script>
