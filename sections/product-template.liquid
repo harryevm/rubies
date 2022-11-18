@@ -163,15 +163,7 @@
                     <i class="fa fa-chevron-down"></i>
                   </a>
                   <div class="accordion-content">
-                    {% if block.settings.page != blank %}
-                      {{ pages[block.settings.page].content }}
-                    {% elsif block.settings.content != blank %}
-                      {{ block.settings.content }}
-                    {% else %}
-                      <div class="tab-html-content">
-                        {{ block.settings.htmlcontent }}
-                      </div>
-                    {% endif %}
+                    {{ product.description }}
                   </div>
                 </div>
               {% endif %}
