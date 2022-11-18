@@ -1,5 +1,6 @@
   $(document).ready(function() {
   $(".accordion-tab > a").on("click", function() {
+    setTimeout(function(){
     if ($(this).hasClass("active")) {
       $(this).removeClass("active");
       $(this)
@@ -24,4 +25,5 @@
         .slideDown(200);
     }
   });
+    },1000)
 });
