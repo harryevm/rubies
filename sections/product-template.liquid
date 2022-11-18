@@ -115,7 +115,7 @@
                 {%- assign auto_heading_end = '</' | append: section.settings.tabs_auto_headings | append: '>' -%}
                 {%- assign desc_tabs = description_first_part | split: auto_heading -%}
                 {%- assign first_tab = true -%}
-                {%- for tab in desc_tabs -%}
+                {%- comment -%}{%- for tab in desc_tabs -%}
                   {%- assign tab_size = tab | strip_html | strip | size -%}
                   {%- unless tab_size == 0 -%}
                     {%- assign tab_parts = tab | split: auto_heading_end -%}
@@ -129,7 +129,7 @@
                       {%- endif -%}
                     </div>
                   {%- endunless -%}
-                {%- endfor -%}
+                {%- endfor -%}{%- endcomment -%}
   
                 {%- comment -%}
                   Add the additional optional pages of tabs
