@@ -267,7 +267,9 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
 .accordion-tab.also-bt-mob { display: none; }
 .also-bt-desk { margin-top: 50px; }
 .also-bt-desk p.evm_wiser_heading.ws_ls_lang { font-size: 30px !important; }
-
+.jdgm-widget-actions-wrapper {
+    display:none;
+}
 
 /******/
 
@@ -390,6 +392,8 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
   .template-collection .products.products-grid { display: flex; flex-wrap: wrap; justify-content: space-between; margin: 0; }
   .template-collection .products.products-grid >.box.product { padding: 0; width: 49%; }
   .content-box .outer-wrapper .inner-wrapper .content-contain h2 {font-size: 24px !important;line-height: 1.4;}
+
+  
 
 
   /* product page */
