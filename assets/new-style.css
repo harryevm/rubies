@@ -233,7 +233,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 .template-product  .jdgm-histogram.jdgm-temp-hidden { display: none; }
 
 .template-product  .jdgm-row-rating { position: relative; }
-.template-product  span.jdgm-rev__timestamp { position: absolute; left: 45px; bottom: -50px; color: #000; }
+.template-product  span.jdgm-rev__timestamp { position: absolute; left: 100px; bottom: -27px; color: #000; }
 
 .accordion-content{
   display:none;
