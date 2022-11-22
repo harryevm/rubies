@@ -491,7 +491,10 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
 }
 @media(max-width:600px){
   img#dancer1{height: 250px !important; left: 70% !important; top: -14px !important;}  
-
+header.collection-header>.container {
+    
+    margin-bottom: 0px;
+}
 
   .product-title-with-review .product-title h1 { font-size: 20px; line-height: 30px; }
   header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { color: #000; font-size: 14px; line-height: 20px; }
