@@ -270,7 +270,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
 .jdgm-widget-actions-wrapper, .jdgm-rev__icon,.jdgm-rev-widg__summary-text{
     display:none!important;
 }
-
+.social-share.sharethis-inline-share-buttons { margin-top: 30px; }
 /******/
 
 
