@@ -36,8 +36,7 @@
     {% comment ls-rpl %}{% assign share_img = product.featured_image | img_url: image_size %}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: product.featured_image, img_url: image_size -%}{%- endcapture -%}{% assign share_img = LS_IMG_URL %}{% comment /ls-rpl %}{% endcomment %}
     {% assign share_title = product.title %}
 {% endcase %}
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="h6qEko23"></script>
+<div class="sharethis-inline-share-buttons"></div>
 <ul class="social-share">
   {% if settings.social_share_custom != blank %}
     <li class="custom">
@@ -46,14 +45,12 @@
   {% endif %}
   {% if settings.social_share_facebook_enabled %}
     <li class="facebook">
-      <div class="fb-share-button" data-href="{{ canonical_url }}" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ canonical_url }}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-      {% comment %}<div class="fb-like" data-href="{{ canonical_url }}" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="true"></div>{% endcomment %}
+      <div class="fb-like" data-href="{{ canonical_url }}" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="true"></div>
     </li>
   {% endif %}
   {% if settings.social_share_twitter_enabled %}
     <li class="twitter">
-      <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size="large" data-url="{{ canonical_url }}" data-text="{{ share_title | strip_html | truncate: 110, '' }}"> Tweet</a>
-     {% comment %} <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ canonical_url }}" data-text="{{ share_title | strip_html | truncate: 110, '' }}"><ls-static-773839>Tweet</ls-static-773839></a>{% endcomment %}
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ canonical_url }}" data-text="{{ share_title | strip_html | truncate: 110, '' }}"><ls-static-773839>Tweet</ls-static-773839></a>
     </li>
   {% endif %}
   {% if settings.social_share_fancy_enabled %}
@@ -76,7 +73,6 @@
 {% comment %}
   Facebook API
 {% endcomment %}
-{% comment %}
 {% if settings.social_share_facebook_enabled %}
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -87,7 +83,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 {% endif %}
-{% endcomment %}
+
 {% comment %}
   Pinterest API
 {% endcomment %}
