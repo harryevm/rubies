@@ -36,7 +36,8 @@
     {% comment ls-rpl %}{% assign share_img = product.featured_image | img_url: image_size %}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: product.featured_image, img_url: image_size -%}{%- endcapture -%}{% assign share_img = LS_IMG_URL %}{% comment /ls-rpl %}{% endcomment %}
     {% assign share_title = product.title %}
 {% endcase %}
-
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="h6qEko23"></script>
 <ul class="social-share">
   {% if settings.social_share_custom != blank %}
     <li class="custom">
@@ -45,6 +46,7 @@
   {% endif %}
   {% if settings.social_share_facebook_enabled %}
     <li class="facebook">
+      <div class="fb-share-button" data-href="{{ canonical_url }}" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ canonical_url }}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
       <div class="fb-like" data-href="{{ canonical_url }}" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="true"></div>
     </li>
   {% endif %}
