@@ -267,7 +267,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
 .accordion-tab.also-bt-mob { display: none; }
 .also-bt-desk { margin-top: 50px; }
 .also-bt-desk p.evm_wiser_heading.ws_ls_lang { font-size: 30px !important; }
-.jdgm-widget-actions-wrapper, .jdgm-rev__icon{
+.jdgm-widget-actions-wrapper, .jdgm-rev__icon,.jdgm-rev-widg__summary-text{
     display:none!important;
 }
 
