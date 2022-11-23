@@ -52,6 +52,7 @@
   {% endif %}
   {% if settings.social_share_twitter_enabled %}
     <li class="twitter">
+      <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-url="{{ canonical_url }}" data-text="{{ share_title | strip_html | truncate: 110, '' }}"> Tweet</a>
       <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ canonical_url }}" data-text="{{ share_title | strip_html | truncate: 110, '' }}"><ls-static-773839>Tweet</ls-static-773839></a>
     </li>
   {% endif %}
