@@ -206,7 +206,7 @@
             <span class="money">{{ product.price | money_with_currency  }}</span>
           {% endif %}
           </span>
-          {% if template contains 'collection' and  collection.handle == 'bundle-products' %}
+          {% if template contains 'collection' %}
           <div class="discount_text">{{ settings.product_discountext }}</div>
           {% endif %}
           {% comment %}Start automatically added Judge.me widget{% endcomment %}
