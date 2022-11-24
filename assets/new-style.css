@@ -439,6 +439,8 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
     border: none;
   }
   div#shopify-section-promos { z-index: 10010 !important; }
+
+  .template-collection .products.products-grid>.box.product { padding: 0; width: 49%; margin-bottom: 5px; }
 }
 @media(max-width:650px){
   .collection.search-results h1 { font-size: 20px; line-height: 30px; }
