@@ -442,7 +442,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
   div#shopify-section-promos { z-index: 10010 !important; }
 
   .template-collection .products.products-grid>.box.product { padding: 0; width: 49%; margin-bottom: 5px; }
-  .template-collection .products.products-grid>.box.product:last-child { margin-left: 10px; }
+  .template-collection .products.products-grid>.box.product:last-child { margin-left: 2%; }
 }
 @media(max-width:650px){
   .collection.search-results h1 { font-size: 20px; line-height: 30px; }
