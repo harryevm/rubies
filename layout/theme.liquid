@@ -11,7 +11,7 @@
 {% endcomment %}
 <!doctype html>
 <html class="no-js" lang="{{ shop.locale }}">
-  <head>
+<head>
   
 
   <meta charset="utf-8">
@@ -21,14 +21,14 @@
   <meta name="theme-color" content="{{ settings.primary_accent_color }}">
 
   {% if settings.favicon != blank %}
-  <link rel="apple-touch-icon" sizes="180x180" href="{% comment ls-rpl %}{{ settings.favicon | img_url: '180x180' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: settings.favicon, img_url: '180x180' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{% comment ls-rpl %}{{ settings.favicon | img_url: '32x32' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: settings.favicon, img_url: '32x32' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{% comment ls-rpl %}{{ settings.favicon | img_url: '16x16' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: settings.favicon, img_url: '16x16' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ settings.favicon | img_url: '180x180' }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ settings.favicon | img_url: '32x32' }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ settings.favicon | img_url: '16x16' }}">
   <link rel="mask-icon" color="{{ settings.primary_accent_color }}">
   {% endif %}
 
   <title>
-    {{ page_title }}{% if current_tags %}{% comment ls-rpl %}{% assign meta_tags = current_tags | join: ', ' %}{% endcomment %}{%- capture LS_TAGS -%}{%- render "ls-tags", resource: nil, tags: current_tags -%}{%- endcapture -%}{%- assign LS_TAGS = LS_TAGS | split: "," -%}{% assign meta_tags = LS_TAGS | join: ', ' %}{% comment /ls-rpl %}{% endcomment %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
   </title>
 
   {% if page_description %}
@@ -130,13 +130,9 @@
     window.lazySizesConfig = window.lazySizesConfig || {};
     window.lazySizesConfig.loadMode = 1;
   </script>
-  <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'lazysizes.min.js' | asset_url }}" async="async"></script><!--<![endif]-->
-  <!--[if lte IE 9]><script src="{{ 'lazysizes.min.js' | asset_url }}"></script><![endif]-->
-  <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
-  <!--[if lte IE 9]><script src="{{ 'vendor.js' | asset_url }}"></script><![endif]-->
-
-  <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
-  <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
+  <script src="{{ 'lazysizes.min.js' | asset_url }}" async="async"></script>
+  <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
   {% include 'judgeme_core' %}
   <!-- Hotjar Tracking Code for RUBYSHINES.COM -->
