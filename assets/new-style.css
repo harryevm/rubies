@@ -240,6 +240,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
   display:none;
 }
 div[data-app="eastsideco_sizeGuides"] { display: none; }
+.size-drop-box+div[data-app="eastsideco_sizeGuides"] { display: block; }
 
 /****/
 .aiod-bundle-discount-wrap .csapps-bunlde-wrapper { flex-direction: column; background: transparent; }
