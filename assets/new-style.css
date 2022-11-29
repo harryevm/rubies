@@ -241,6 +241,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 }
 div[data-app="eastsideco_sizeGuides"] { display: none; }
 .size-drop-box+div[data-app="eastsideco_sizeGuides"] { display: block; }
+.size-drop-box+div[data-app="eastsideco_sizeGuides"]>a { font-size: 18px; letter-spacing: 0px; color: #040F21; text-transform: uppercase; display: block; line-height: 30px; margin: 15px 0; }
 
 /****/
 .aiod-bundle-discount-wrap .csapps-bunlde-wrapper { flex-direction: column; background: transparent; }
