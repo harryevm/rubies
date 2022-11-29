@@ -42,7 +42,7 @@
   {% include 'social-meta-tags' %}
 
   {{ content_for_header }}
-  {{ 'gift-card.scss' | asset_url | stylesheet_tag }}
+  {{ 'themes.css' | asset_url | stylesheet_tag }}
   {% comment %}{{ 'theme.scss.css' | asset_url | stylesheet_tag }}{% endcomment %}
   {{ 'new-style.css' | asset_url | stylesheet_tag }}
   {% if template contains 'customers' %}
