@@ -239,7 +239,7 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 .accordion-content{
   display:none;
 }
-
+div[data-app="eastsideco_sizeGuides"] { display: none; }
 
 /****/
 .aiod-bundle-discount-wrap .csapps-bunlde-wrapper { flex-direction: column; background: transparent; }
