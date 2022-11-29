@@ -989,6 +989,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "15706352229161960306": {
+        "type": "shopify:\/\/apps\/slide-cart-sticky-cart-drawer\/blocks\/app-embeded\/41ace2ee-41e6-45af-a9c4-452e6defecc0",
+        "disabled": false,
+        "settings": {
+        }
       }
     }
   },
