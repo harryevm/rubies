@@ -2,7 +2,7 @@
   <section class="single-product" itemscope itemtype="http://schema.org/Product">
     <meta itemprop="name" content="{{ product.title }}{% unless product.has_only_default_variant %} - {{ current_variant.title }}{% endunless %}">
     <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
-    <meta itemprop="image" content="{% comment ls-rpl %}{{ product.featured_image.src | img_url: '1024x1024' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: product.featured_image.src, img_url: '1024x1024' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}">
+    <meta itemprop="image" content="{{ product.featured_image.src | img_url: '1024x1024' }}">
     {% comment %}
       Get first variant, or deep linked one
     {% endcomment %}
@@ -91,7 +91,7 @@
                   data-widths="[{{ image_widths }}]"
                   data-aspectratio="{{ image.aspect_ratio }}"
                   data-sizes="auto"
-                  alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+                  alt="{{ image.alt | escape }}">
               {% endif %}
             </div>
             <style>
@@ -229,7 +229,7 @@
           </div>
             <div data-app="eastsideco_sizeGuides"
                  data-shop="{{ shop.permanent_domain }}"
-                 data-tags="{% comment ls-rpl %}{{ product.tags | join:',' | escape }}{% endcomment %}{%- capture LS_TAGS -%}{%- render "ls-tags", resource: product, tags: product.tags -%}{%- endcapture -%}{%- assign LS_TAGS = LS_TAGS | split: "," -%}{{ LS_TAGS | join:',' | escape }}{% comment /ls-rpl %}{% endcomment %}"
+                 data-tags="{{ product.tags | join:',' | escape }}"
                  data-metafields="{{ product.metafields.esc-size-matters.tag }}"
                  data-popup="link">
             </div> 
