@@ -30,8 +30,8 @@
                     data-widths="[{{ image_widths }}]"
                     data-aspectratio="{{ image.aspect_ratio }}"
                     data-sizes="auto"
-                    src="{% comment ls-rpl %}{{ image | img_url: image_default }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: image_default -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}"
-                    alt="{% comment ls-rpl %}{{ image.alt | escape | default: shop.name }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape | default: shop.name }}{% comment /ls-rpl %}{% endcomment %}"> 
+                    src="{{ image | img_url: image_default }}"
+                    alt="{{ image.alt | escape | default: shop.name }}"> 
                 </a>
                	<script type="text/javascript">
 //                 	document.getElementById("changing-logo").src = "212g";
