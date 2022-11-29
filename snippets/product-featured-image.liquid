@@ -22,7 +22,7 @@
     data-ProductImageSlider>
     {%- for image in product.images -%}
       {%- assign image_width = image.width | append: 'x' -%}
-      {% comment ls-rpl %}{%- assign image_highresolution = image | img_url: image_width -%}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: image_width -%}{%- endcapture -%}{%- assign image_highresolution = LS_IMG_URL -%}{% comment /ls-rpl %}{% endcomment %}
+      {{%- assign image_highresolution = image | img_url: image_width -%}}
       {%- assign active_image = current_variant.featured_image | default: product.featured_image -%}
       <div class="product-image--cell" data-image-id="{{ image.id }}" {% if image == active_image %}data-initial-image{% endif %}>
         <div id="ProductImageCellContainer-{{ image.id }}">
@@ -39,9 +39,9 @@
               data-sizes="auto"
               data-position="{{ image.position | minus: 1 }}"
               data-max-width="{{ image.width }}"
-              alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+              alt="{{ image.alt | escape }}">
             <noscript>
-              <img src="{% comment ls-rpl %}{{ image | img_url: '590x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '590x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}" alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+              <img src="{{ image | img_url: '590x' }}" alt="{{ image.alt | escape }}">
             </noscript>
             {% assign height = image.height | plus: 0 %}
             {% assign width = image.width | plus: 0 %}
