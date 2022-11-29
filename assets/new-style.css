@@ -252,7 +252,7 @@ div[data-app="eastsideco_sizeGuides"] { display: none; }
 .aiod_price_qty_wrpr { position: absolute; bottom: 130px; left: 12px; }
 .aiod_price_qty_wrpr .csapps-price-qty { display: none; }
 .aiod_price_qty_wrpr .csapps-price span.money { position: relative; padding: 0 40px 0 0; }
-.aiod_price_qty_wrpr .csapps-price span.money::after { position: absolute; content: 'CAD'; right: 0; }
+.aiod_price_qty_wrpr .csapps-price span.money::after { position: absolute; content: ''; right: 0; }
 .aiod-bundle-discount-wrap+div[id^="AddToCartForm-template-"] { display: none; }
 h3.csapp_bundle_title { display: none; }
 .csapps-bunlde-tiers { padding: 0 !important; }
