@@ -139,7 +139,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
   .purchase-box .selection-wrapper.price { margin-bottom: 20px; }
   .purchase-box .selection-wrapper.variant >span.label-extra>a { font-size: 20px; line-height: 30px; margin: 15px 0; display: block; }
   /*  Product varient label    */
-  .selection-wrapper .product-form__item label, .selector-wrapper.quantity.quantity-product-template label {
+  .selection-wrapper .product-form__item label, .selector-wrapper.quantity.quantity-product-template label,.selector-wrapper.quantity label {
     font: 600 20px/29px Poppins;
     color: #040f21;
     text-transform: capitalize;
