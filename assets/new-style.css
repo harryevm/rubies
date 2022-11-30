@@ -251,6 +251,7 @@ div[data-app="eastsideco_sizeGuides"] { display: none; }
 .aiod-bundle-discount-wrap .csapps-bunlde-wrapper .csapps-bundle-thumb .csapps-p-title>a { font-weight: 600; font-size: 20px; line-height: 30px; }
 .csapps-p-title { padding-bottom: 20px; }
 .aiod_price_qty_wrpr { position: absolute; bottom: 125px; left: 0; font-weight: 600; }
+span.csapp_bundle_saveprice { display: block; color: #fc01ff; }
 .aiod_price_qty_wrpr .csapps-price-qty { display: none; }
 .aiod_price_qty_wrpr .csapps-price span.money { position: relative; padding: 0 40px 0 0; }
 .aiod_price_qty_wrpr .csapps-price span.money::after { position: absolute; content: ''; right: 0; }
