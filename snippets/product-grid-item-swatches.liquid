@@ -57,7 +57,9 @@
             
               {%- assign color_variant_image = variant.image | img_url: '295x' -%}
               
-              {% comment ls-rpl %}{%- assign color_variant_image_pattern = variant.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: variant.image, img_url: '1x1' -%}{%- endcapture -%}{%- assign color_variant_image_pattern = LS_IMG_URL | replace: '_1x1.', '_{width}x.' -%}{% comment /ls-rpl %}{% endcomment %}
+              
+              {%- assign color_variant_image_pattern = variant.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              
             {%- endif -%}
             {% break %}
           {%- endif -%}
