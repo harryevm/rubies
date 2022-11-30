@@ -555,8 +555,9 @@
 }
 {% endschema %}
 <style>
+  body.template-product { counter-reset: myCounter; }
   .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: none; }
-  .csapps-bunlde-tiers { box-shadow: 0 0 10px #ccc; padding: 20px !important; margin-bottom: 20px; }
+  .csapps-bunlde-tiers { box-shadow: 0 0 10px #ccc; padding: 20px !important; margin-bottom: 20px;position:relative; }
   .csapps-bunlde-tiers::after {
     position: absolute;
     top: 10px;
