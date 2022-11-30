@@ -70,13 +70,14 @@
             <meta itemprop="priceCurrency" content="{{ shop.currency }}">
             <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
 <!-- <div class="aiod-bundle-discount-wrap"></div> -->
-            <div class="aiod-bundle-discount-wrap"></div>
+            
             {% comment %}
               ID addToCartForm is a selector for the ajax cart plugin
             {% endcomment %}
             <div id="AddToCartForm-{{ section.id }}" data-AddToCartForm class="form-vertical product-form product-form-{{ section.id }}" {% if section.settings.show_payment_button %}data-dynamic-checkout="true"{% endif %} data-section="{{ section.id }}">
               {% include 'product-form' %}
             </div>
+            <div class="aiod-bundle-discount-wrap"></div>
           </div>
 
           {% if section.settings.trust_badge %}
