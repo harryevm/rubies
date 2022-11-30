@@ -557,6 +557,20 @@
 <style>
   .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: none; }
   .csapps-bunlde-tiers { box-shadow: 0 0 10px #ccc; padding: 20px !important; margin-bottom: 20px; }
+  .csapps-bunlde-tiers::after {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    counter-increment: myCounter;
+    content: "Bundle " counter(myCounter) ": ";
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 30px;
+}
 </style>
 <script>
   $('.template-product .size-drop-box label.single-option-radio__label').click(function(){
