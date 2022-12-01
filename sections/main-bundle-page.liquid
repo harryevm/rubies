@@ -1,8 +1,47 @@
+<section class="bundle-wrapper">
+  <div class="wrapper">
+    <div class="bundle-wr">
+      <div class="bundl">
+        <img src="">
+        <h4></h4>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</section>
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Section name",
+  "settings": [],
+  "blocks": [
+      {
+        "type": "bundle",
+        "name": "Bundle",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Bundle Name"
+          },
+          {
+            "type": "textarea",
+            "id": "info",
+            "label": "Bundle Text"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Bundle Link"
+          }
+        ]
+      }
+  ]
+}
 {% endschema %}
 
 {% stylesheet %}
