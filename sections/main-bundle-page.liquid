@@ -8,8 +8,8 @@
     <div class="bundle-wr">
       {% for block in section.blocks %}
       <div class="bundl">
-        <a href="{{ block.settings.link }}"><img src="{{ block.settings.image | img_url:'' }}" /></a>
-        <h4><a href="{{ block.settings.link }}">{{ block.settings.name }}</a></h4>
+        <a href="{% if  block.settings.info %}{{ block.settings.link }}{% else %}#{% endif %}"><img src="{{ block.settings.image | img_url:'' }}" /></a>
+        <h4><a href="{% if  block.settings.info %}{{ block.settings.link }}{% else %}#{% endif %}">{{ block.settings.name }}</a></h4>
         {% if  block.settings.info %}
         <p>{{ block.settings.info }}</p>
         {% endif %}
