@@ -2,6 +2,30 @@
   "sections": {
     "main": {
       "type": "main-bundle-page",
+      "blocks": {
+        "fd23e8e8-c7f6-443e-a9de-8a0e990bb765": {
+          "type": "bundle",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_18.png",
+            "name": "RUBIES Bikini Set",
+            "info": "",
+            "link": "#"
+          }
+        },
+        "67b9f504-35f2-4299-9015-370c7fba78d8": {
+          "type": "bundle",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_333.png",
+            "name": "RUBIES Bikini Set",
+            "info": "",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "fd23e8e8-c7f6-443e-a9de-8a0e990bb765",
+        "67b9f504-35f2-4299-9015-370c7fba78d8"
+      ],
       "settings": {
       }
     }
