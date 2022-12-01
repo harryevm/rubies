@@ -1,11 +1,13 @@
 <section class="bundle-wrapper">
   <div class="wrapper">
     <div class="bundle-wr">
+      {% for block in section.blocks %}
       <div class="bundl">
-        <img src="" />
-        <h4></h4>
-        <p></p>
+        <img src="{{ block.settings.image | image_url:'' }}" />
+        <h4>{{ block.settings.name }}</h4>
+        <p>{{ block.settings.info }}</p>
       </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -31,7 +33,12 @@
             {
               "type": "textarea",
               "id": "info",
-              "label": "Image"
+              "label": "Bundle Info"
+            },
+            {
+              "type": "url",
+              "id": "link",
+              "label": "Link"
             }
           ]
         }
