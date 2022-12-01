@@ -10,7 +10,9 @@
       <div class="bundl">
         <a href="{{ block.settings.link }}"><img src="{{ block.settings.image | img_url:'' }}" /></a>
         <h4><a href="{{ block.settings.link }}">{{ block.settings.name }}</a></h4>
+        {% if  block.settings.info %}
         <p>{{ block.settings.info }}</p>
+        {% endif %}
       </div>
       {% endfor %}
     </div>
