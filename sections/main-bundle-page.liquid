@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="bundle-wr">
       <div class="bundl">
-        <img src="">
+        <img src="" />
         <h4></h4>
         <p></p>
       </div>
@@ -10,38 +10,33 @@
   </div>
 </section>
 {% schema %}
-{
-  "name": "Bundle Product",
-  "settings": [],
-  "blocks": [
-      {
-        "type": "bundle",
-        "name": "Bundle",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          },
-          {
-            "type": "text",
-            "id": "name",
-            "label": "Bundle Name"
-          },
-          {
-            "type": "textarea",
-            "id": "info",
-            "label": "Bundle Text"
-          },
-          {
-            "type": "url",
-            "id": "link",
-            "label": "Bundle Link"
-          }
-        ]
-      }
-  ]
-}
+  {
+    "name": "Section name",
+    "settings": [],
+    "blocks": [
+        {
+          "type": "bundle",
+          "name": "Bundle",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+            {
+              "type": "text",
+              "id": "name",
+              "label": "Bundle Name"
+            },
+            {
+              "type": "textarea",
+              "id": "info",
+              "label": "Image"
+            }
+          ]
+        }
+    ]
+  }
 {% endschema %}
 
 {% stylesheet %}
