@@ -171,7 +171,13 @@
 
   {% include 'cscode_discount' %}
 
-  {% include 'wiser' %}{% include 'wiser_popup' %}</head>
+  {% include 'wiser' %}{% include 'wiser_popup' %}
+
+{% if content_for_header contains 'fastbundle.co' %}
+    {% render 'fast_bundle_service' %}
+{% endif %}
+
+</head>
 
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" data-template-directory="{{ template.directory }}" data-template="{{ template.name }}" >
 
