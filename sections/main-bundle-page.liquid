@@ -3,6 +3,7 @@
     <div class="bundle-wr">
       {% for block in section.blocks %}
       <div class="bundl">
+        <a href="{{ block.settings.link }}"></a>
         <img src="{{ block.settings.image | image_url:'' }}" />
         <h4>{{ block.settings.name }}</h4>
         <p>{{ block.settings.info }}</p>
