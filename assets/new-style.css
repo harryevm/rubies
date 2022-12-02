@@ -278,7 +278,7 @@ li.product-swatches__li.moreicons a { font-size: 12px; text-decoration: none; di
 .social-share.sharethis-inline-share-buttons { margin-top: 30px; }
 .template-collection section.collection { padding: 40px 0 20px; }
 /******/
-
+div#ship-calculator .srw-widget-content { width: 100%; }
 
 @media(min-width:701px){
   .middle-wrapper { display: none; }
