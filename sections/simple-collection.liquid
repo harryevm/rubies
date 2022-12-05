@@ -11,12 +11,17 @@
     </header>
     <div class="product-container owl-carousel" id="collection-{{ section.id }}">
     
-      {% for item in product.metafields.custom.you_may_also_like.value %}
-          {{ item.name }}
-        {% endfor %}
-      {% if template.name == 'product' %}ddddd{{ product.metafields.custom.you_may_also_like }}{% endif %}
+   
+      {% if template.name == 'product' %}
+        {%- assign collection = collections[product.metafields.custom.you_may_also_like] -%}
+        {%- assign product_limit = section.settings.product_count_range -%}
+        
+        
+        {% else %}
+       
       {%- assign collection = collections[section.settings.collection] -%}
       {%- assign product_limit = section.settings.product_count_range -%}
+       {% endif %}
       {% for product in collection.products limit: product_limit  %}
         
         {% include 'product-grid-item' %}
