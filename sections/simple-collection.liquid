@@ -11,7 +11,7 @@
     </header>
     <div class="product-container owl-carousel" id="collection-{{ section.id }}">
       Type: {{ product.metafields.custom.you_may_also_like.type }}
-Value: {{ product.metafields.custom.you_may_also_like.value }}
+Value: {{ product.metafields.custom.you_may_also_like.value }} 
       {% if template.name == 'product' %}ddddd{{ product.metafields.custom.you_may_also_like.value }}{% endif %}
       {%- assign collection = collections[section.settings.collection] -%}
       {%- assign product_limit = section.settings.product_count_range -%}
