@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "product-template",
+      "type": "fast-bundle-section",
       "blocks": {
         "5faab193-44b1-4ed6-90fc-022a02e5261b": {
           "type": "collapsible_tab",
