@@ -94,6 +94,7 @@
     },
     "1667559668cd7d6d49": {
       "type": "apps",
+      "disabled": true,
       "blocks": {
         "0f1677e2-ae15-42b6-acec-4a626b3bb765": {
           "type": "shopify:\/\/apps\/wiser-upsell-recommendations\/blocks\/wiser_related\/3f966edc-9a4a-465c-a4df-436d2a39160d",
@@ -110,7 +111,7 @@
     "9f07c648-ce4e-4e3d-afca-ee8d3926d983": {
       "type": "simple-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "You May Also Like",
         "center_heading": false,
         "button_label": "",
         "button_link": "",
