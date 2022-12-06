@@ -153,7 +153,7 @@
      {% endif %}
   {% endfor %}
   {% if preoder %}
-    <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
+    <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  disabled>
         
         <span id="AddToCartText-{{ section.id }}" >
 
