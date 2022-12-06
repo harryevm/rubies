@@ -109,6 +109,10 @@
                           {%- endfor -%}
                         {%- endunless -%}
                       </div>
+                <p class="cart-attribute__field">
+  <label for="your-name">Your name</label>
+  <input id="your-name" type="text" name="attributes[Your name]" value="{{ cart.attributes["Your name"] }}">
+</p>
                     <div class="cart-item-quantity">
                       <span>
                         <div class="quantity-select">
