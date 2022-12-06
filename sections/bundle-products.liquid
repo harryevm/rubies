@@ -61,6 +61,8 @@
               {% include 'product-thumbnails-slider' %}
             {%- endunless -%}
           </div>
+  <div class="also-bt-desk">{% include 'wiser_alsobought.liquid' %}</div>
+  
         </div>
 
         <aside class="product-aside">
@@ -68,6 +70,7 @@
             <meta itemprop="priceCurrency" content="{{ shop.currency }}">
             <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
 <div class="aiod-bundle-discount-wrap"></div>
+            
             {% comment %}
               ID addToCartForm is a selector for the ajax cart plugin
             {% endcomment %}
@@ -115,7 +118,7 @@
                 {%- assign auto_heading_end = '</' | append: section.settings.tabs_auto_headings | append: '>' -%}
                 {%- assign desc_tabs = description_first_part | split: auto_heading -%}
                 {%- assign first_tab = true -%}
-                {%- for tab in desc_tabs -%}
+                {%- comment -%}{%- for tab in desc_tabs -%}
                   {%- assign tab_size = tab | strip_html | strip | size -%}
                   {%- unless tab_size == 0 -%}
                     {%- assign tab_parts = tab | split: auto_heading_end -%}
@@ -129,11 +132,11 @@
                       {%- endif -%}
                     </div>
                   {%- endunless -%}
-                {%- endfor -%}
+                {%- endfor -%}{%- endcomment -%}
   
                 {%- comment -%}
                   Add the additional optional pages of tabs
-                {%- endcomment -%}
+                {%- endcomment -%}{% comment %}
                 {%- if section.settings.tabs_global_page_1 != blank -%}
                   <div class="tab tab--global-1">
                     <div class="tab__title" tabindex="0">{{ pages[section.settings.tabs_global_page_1].title }}</div>
@@ -151,11 +154,60 @@
                     <div class="tab__title" tabindex="0">{{ pages[section.settings.tabs_global_page_3].title }}</div>
                     <div class="tab__content">{{ pages[section.settings.tabs_global_page_3].content }}</div>
                   </div>
-                {%- endif -%}
-                {% for block in section.blocks %}
-                <div class="tab tab--global-1 ">
-                  <div class="tab__title" tabindex="0">{{ block.settings.heading }}</div>
-                  <div class="tab__content ">
+                {%- endif -%}{% endcomment %}
+              
+              {% if section.settings.tabs_enable %}
+                <div class="accordion-tab">
+                  <a href="javascript:;" class="active">
+                    {% if section.settings.tabs_title %}
+                    {{ section.settings.tabs_title }} 
+                    {% else %}
+                      Description
+                    {% endif %}
+                    <i class="fa fa-chevron-left"></i>
+                  </a>
+                  <div class="accordion-content" style="display: block;">
+                    {{ product.description }}
+                  </div>
+                </div>
+              {% endif %}
+              {% if section.settings.related_enable %}
+              <div class="accordion-tab also-bt-mob">
+                  <a href="javascript:;">
+                   {% if section.settings.related_title %}
+                    {{ section.settings.related_title }} 
+                    {% else %}
+                       Goes Well With
+                    {% endif %}
+                    <i class="fa fa-chevron-down"></i>
+                  </a>
+                  <div class="accordion-content">
+                    <div class="related-products-wr">{% include 'wiser_alsobought.liquid' %} </div>
+                  </div>
+                </div>
+                {% endif %}
+              {% if section.settings.bundle_enable %}
+                <div class="accordion-tab">
+                    <a href="javascript:;" >
+                      {% if section.settings.bundle_title %}
+                      {{ section.settings.bundle_title }} 
+                      {% else %}
+                        Bundles
+                      {% endif %}
+                      <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="accordion-content">
+                      {% render 'bundle-product' %}
+                    </div>
+                  </div>
+              {% endif %}
+              {% for block in section.blocks %}
+                <div class="accordion-tab">
+                  <a href="javascript:;">
+                    {{ block.settings.heading }} 
+                    <i class="fa fa-chevron-down"></i>
+                  </a>
+                  <div class="accordion-content">
                     {% if block.settings.page != blank %}
                       {{ pages[block.settings.page].content }}
                     {% elsif block.settings.content != blank %}
@@ -165,9 +217,9 @@
                         {{ block.settings.htmlcontent }}
                       </div>
                     {% endif %}
-                    </div>
-                </div>
-                {% endfor %}
+                  </div>
+                </div>{% endfor %}
+                
               </div>
             {%- else -%}
               {%- comment -%}
@@ -176,12 +228,7 @@
               {{ description_first_part }}
             {%- endif -%}
           </div>
-            <div data-app="eastsideco_sizeGuides"
-                 data-shop="{{ shop.permanent_domain }}"
-                 data-tags="{{ product.tags | join:',' | escape }}"
-                 data-metafields="{{ product.metafields.esc-size-matters.tag }}"
-                 data-popup="link">
-            </div> 
+             
           
           {% if section.settings.show_share_buttons %}
             {% include 'social-share' %}
@@ -433,7 +480,7 @@
     },
     {
       "type": "header",
-      "content": "Description tabs"
+      "content": "Tabs"
     },
     {
       "type": "checkbox",
@@ -442,62 +489,34 @@
       "default": false
     },
     {
-      "type": "select",
-      "id": "tabs_auto_headings",
-      "label": "Description headings to tabs",
-      "options": [
-        {
-          "value": "disabled",
-          "label": "Disabled"
-        },
-        {
-          "value": "h1",
-          "label": "Heading 1"
-        },
-        {
-          "value": "h2",
-          "label": "Heading 2"
-        },
-        {
-          "value": "h3",
-          "label": "Heading 3"
-        },
-        {
-          "value": "h4",
-          "label": "Heading 4"
-        },
-        {
-          "value": "h5",
-          "label": "Heading 5"
-        },
-        {
-          "value": "h6",
-          "label": "Heading 6"
-        }
-      ],
-      "default": "h4",
-      "info": "Automatically create tabs from the headings added to the product description."
-    },
-    {
       "type": "text",
       "id": "tabs_title",
       "label": "Default tab title",
       "default": "Description"
     },
     {
-      "type": "page",
-      "id": "tabs_global_page_1",
-      "label": "Tab content 1"
+      "type": "checkbox",
+      "id": "related_enable",
+      "label": "Enable Related Product tabs",
+      "default": false
     },
     {
-      "type": "page",
-      "id": "tabs_global_page_2",
-      "label": "Tab content 2"
+      "type": "text",
+      "id": "related_title",
+      "label": "Related title",
+      "default": "Related Products"
     },
     {
-      "type": "page",
-      "id": "tabs_global_page_3",
-      "label": "Tab content 3"
+      "type": "checkbox",
+      "id": "bundle_enable",
+      "label": "Enable Bundle Product tabs",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "bundle_title",
+      "label": "Bundle title",
+      "default": "Bundle"
     },
     {
       "type": "header",
@@ -555,24 +574,10 @@
 }
 {% endschema %}
 <style>
-  body.template-product { counter-reset: myCounter; }
   .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: none; }
-  .csapps-bunlde-tiers { box-shadow: 0 0 10px #ccc; padding: 20px !important; margin-bottom: 20px;position:relative; }
-.csapps-bunlde-tiers::after {
-    position: absolute;
-    top: 10px;
-    left: 0;
-    right: 0;
-    counter-increment: myCounter;
-    content: "Bundle " counter(myCounter) ": ";
-    text-align: center;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 20px;
-    line-height: 30px;
-    z-index: 0;
-}
 </style>
+
+{% unless  product.template_suffix == 'fastbundles' %}
 <script>
   $('.template-product .size-drop-box label.single-option-radio__label').click(function(){
     $(this).next().slideToggle(500);
@@ -592,6 +597,8 @@
 
     
 </script>
+{% endunless %}
+<!--Start Stamped.io Auto Installation--><div id="stamped-main-widget" class="stamped-main-widget" data-widget-style="standard" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}" data-product-sku="{{product.handle}}" data-product-type="{{product.type}}">{{ product.metafields.stamped.reviews }}</div><!--End Stamped.io Auto Installation-->
 <script type="text/javascript">
   var _learnq = _learnq || [];
 
@@ -629,11 +636,12 @@
   document.getElementById("AddToCart").addEventListener('click',function (){
     _learnq.push(['track', 'Added to Cart', item]);
   });
+
+
+
 </script>
 
 
 
-<script>
-  
-</script>
+
 <script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=450361b5-981b-4e6f-9164-d70d9effc17f"></script>
