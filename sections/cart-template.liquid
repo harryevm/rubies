@@ -109,6 +109,8 @@
                           {%- endfor -%}
                         {%- endunless -%}
                       </div>
+                {% assign productTags = item.tags | join: ', ' %}
+                {{ productTags }}
                 <p class="cart-attribute__field">
   <label for="your-name">Your name</label>
   <input id="your-name" type="text" name="attributes[Your name]" value="{{ cart.attributes["Your name"] }}">
