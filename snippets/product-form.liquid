@@ -149,23 +149,10 @@
 
 
 {% assign productTags = product.tags | join: ', ' %}
-<!--Now Check for the desired tag name-->
-{% if productTags contains 'Preorder' %}
 
-Okay.. I found the tag
-
-{% else %}
-ds
-<!--Tag not found :( -->
-{% endif %}
-      
-  {% assign preoder='' %}
-{% for t in product.tags %}
-     {% if t contains 'Preorder' %}     
-            {% assign preoder = 'preoder' %}  
-     {% endif %}
-  {% endfor %}
  {% if productTags contains 'Preorder' %}
+   <span class="extra-overlay"></span>
+  <p class="alert-size"></p>
     <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  disabled>
         
         <span  >
@@ -174,7 +161,7 @@ ds
 
         </span>
       </button>
-    {% else %}sss
+    {% else %}
       <span class="extra-overlay"></span>
   <p class="alert-size"></p>
       <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
@@ -195,6 +182,18 @@ ds
         <div class="discount-text-shipping">{{ section.settings.freeshippingtext }}</div>
       {% endif %}
       <div class="stickyaddCart">
+        {% if productTags contains 'Preorder' %}
+   <span class="extra-overlay"></span>
+  <p class="alert-size"></p>
+    <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  disabled>
+        
+        <span  >
+
+              {{ 'products.product.preorder' | t }}
+
+        </span>
+      </button>
+    {% else %}
         <span class="extra-overlay"></span>
           <p class="alert-size"></p>
         <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
@@ -211,6 +210,7 @@ ds
             {% endunless %}
           </span>
         </button>
+        {% endif %}
       </div>
     </div>
     <div id="PaymentButtonContainer-{{ section.id }}" class="payment-button__container">
