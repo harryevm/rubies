@@ -152,7 +152,7 @@
             {% assign preoder = 'preoder' %}  
      {% endif %}
   {% endfor %}
-  {{ preoder }}
+  {% if preoder %}test{% else %}sss{% endif %}
       <span class="extra-overlay"></span>
   <p class="alert-size"></p>
       <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
