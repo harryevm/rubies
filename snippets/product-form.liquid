@@ -142,18 +142,20 @@
       </select>
     </div>
   </div>
-  {% for t in product.tags %}
-     {% if t contains 'Preorder' %}     
-            <div class="product__label--bulk-buy"><span>Bulk Buy</span></div>      
-     {% endif %}
-  {% endfor %}
+  
   <div class="error cart-error cart-error-{{ section.id }}" style="display:none;"></div>
   <div id="CartButtons-{{ section.id }}" class="cart-buttons {% if cart_buttons_margin %}{{ cart_buttons_margin }}{% endif %} {% if section.settings.show_payment_button and current_variant.available %}cart-buttons__enabled{% elsif section_onboarding %}cart-buttons__enabled{% endif %}">
     <div class="button-wrapper default-cart-button">
-
+  {% assign preoder='' %}
+{% for t in product.tags %}
+     {% if t contains 'Preorder' %}     
+            {% assign preoder = 'preoder' %}  
+     {% endif %}
+  {% endfor %}
+  {{ preoder }}
       <span class="extra-overlay"></span>
   <p class="alert-size"></p>
-      <button type="submit" name="add" id="AddToCart-{{ section.id }}"  {% if preorder == true %} data-preorder {% endif %} class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
+      <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
         
         <span id="AddToCartText-{{ section.id }}" data-AddToCartText>
           {% unless current_variant.available or section_onboarding %}
@@ -173,7 +175,7 @@
       <div class="stickyaddCart">
         <span class="extra-overlay"></span>
           <p class="alert-size"></p>
-        <button type="submit" name="add" id="AddToCart-{{ section.id }}"  {% if preorder == true %} data-preorder {% endif %} class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
+        <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
           
           <span id="AddToCartText-{{ section.id }}" data-AddToCartText>
             {% unless current_variant.available or section_onboarding %}
