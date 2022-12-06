@@ -161,7 +161,7 @@
           {% unless current_variant.available or section_onboarding %}
             {{ 'products.product.sold_out' | t }}
           {% else %}
-            {%- if preoder -%}
+            {%- if preorder == true -%}
               {{ 'products.product.preorder' | t }}
             {%- else -%}
               {{ 'products.product.add_to_cart' | t }}
@@ -176,18 +176,19 @@
         <span class="extra-overlay"></span>
           <p class="alert-size"></p>
         <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
-          
+          {%- if preoder -%}
+               <span id="AddToCartText-{{ section.id }}" > {{ 'products.product.preorder' | t }}</span>
+              {%- else -%}
+               
+             
           <span id="AddToCartText-{{ section.id }}" data-AddToCartText>
             {% unless current_variant.available or section_onboarding %}
               {{ 'products.product.sold_out' | t }}
             {% else %}
-              {%- if preoder -%}
-                {{ 'products.product.preorder' | t }}
-              {%- else -%}
                 {{ 'products.product.add_to_cart' | t }}
-              {%- endif -%}
             {% endunless %}
           </span>
+           {%- endif -%}
         </button>
       </div>
     </div>
