@@ -151,9 +151,7 @@
 {% assign productTags = product.tags | join: ', ' %}
 
  {% if productTags contains 'Preorder' %}
-   {% for option in product.options_with_values %}
-     {{ option.name }}
-     {% endfor %}
+   {{ product.options.size }}
    <input id="your-name" value="Pre Order" type="hidden" name="properties[Status]">
    <span class="extra-overlay"></span>
   <p class="alert-size"></p>
