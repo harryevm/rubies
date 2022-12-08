@@ -149,6 +149,7 @@
 
 
 {% assign productTags = product.tags | join: ', ' %}
+  {%- for value in product.options_by_name['size'].values %} <option>{{ value }}</option> {%- endfor %}
  {{ product.options.value }}
   {% if product.options.size > 1 %}{{ product.options.size }}{% endif %}
  {% if productTags contains 'Preorder' %}
