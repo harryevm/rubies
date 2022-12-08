@@ -149,14 +149,13 @@
 
 
 {% assign productTags = product.tags | join: ', ' %}
-  {%- for value in product.options_by_name['size'].values %} <option>{{ value }}</option> {%- endfor %}
- {{ product.options.value }}
-  {% if product.options.size > 1 %}{{ product.options.size }}{% endif %}
+
+
  {% if productTags contains 'Preorder' %}
   
    <input id="your-name" value="Pre Order" type="hidden" name="properties[Status]">
-   <span class="extra-overlay"></span>
-  <p class="alert-size"></p>
+  {% if product.options.size > 1 %} <span class="extra-overlay"></span>
+  <p class="alert-size"></p>{% endif %}
     <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  disabled>
         
         <span  >
@@ -166,8 +165,9 @@
         </span>
       </button>
     {% else %}
+   {% if product.options.size > 1 %}
       <span class="extra-overlay"></span>
-  <p class="alert-size"></p>
+  <p class="alert-size"></p>{% endif %}
       <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
         
         <span id="AddToCartText-{{ section.id }}" data-AddToCartText>
@@ -187,8 +187,9 @@
       {% endif %}
       <div class="stickyaddCart">
         {% if productTags contains 'Preorder' %}
+          {% if product.options.size > 1 %}
    <span class="extra-overlay"></span>
-  <p class="alert-size"></p>
+  <p class="alert-size"></p>{% endif %}
     <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  disabled>
         
         <span  >
@@ -198,8 +199,9 @@
         </span>
       </button>
     {% else %}
+          {% if product.options.size > 1 %}
         <span class="extra-overlay"></span>
-          <p class="alert-size"></p>
+          <p class="alert-size"></p>{% endif %}
         <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
           
           <span id="AddToCartText-{{ section.id }}" data-AddToCartText>
