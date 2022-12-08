@@ -150,6 +150,7 @@
 
 {% assign productTags = product.tags | join: ', ' %}
  {{ product.options.value }}
+  {% if product.options.size == 1 and product.variants.size > 1 %}{{ product.options.size }}{% endif %}
  {% if productTags contains 'Preorder' %}
   
    <input id="your-name" value="Pre Order" type="hidden" name="properties[Status]">
