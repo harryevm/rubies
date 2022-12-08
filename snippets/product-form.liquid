@@ -149,7 +149,13 @@
 
 
 {% assign productTags = product.tags | join: ', ' %}
-
+<div id="variant-inventory" class="{% unless current_variant.available %} hide {% endunless %}">
+              {% if current_variant.inventory_management == "shopify" and current_variant.inventory_policy != "continue" %}
+              We have {{ current_variant.inventory_quantity }} in stock.
+              {% else %}
+              This product is available.
+              {% endif %}
+            </div>
  {% if productTags contains 'Preorder' %}
    <input id="your-name" value="Pre Order" type="hidden" name="properties[Status]">
    <span class="extra-overlay"></span>
