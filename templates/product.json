@@ -100,11 +100,20 @@
             "force_background": false,
             "btn_text": "Size Guide"
           }
+        },
+        "0370cf54-b5cd-40f6-9362-b46f4a885a9e": {
+          "type": "shopify:\/\/apps\/preorderly-pre-order-pro\/blocks\/app-block\/78f4ad8e-4f2e-4238-808a-21c6ab9dfbdc",
+          "disabled": true,
+          "settings": {
+            "heading": "Preorderly • Pre‑order PRO",
+            "description": "Preorderly kicks in regardless of current quantity levels. Replace the standard 'Add To Cart' button with a 'Pre-order' button that enables you to pre-order products that are coming soon and available for shipping at a future date."
+          }
         }
       },
       "block_order": [
         "43e7faab-63b9-42cc-aad5-26f18d366763",
-        "861f016a-8cca-4074-b880-5c5d4af1c5fe"
+        "861f016a-8cca-4074-b880-5c5d4af1c5fe",
+        "0370cf54-b5cd-40f6-9362-b46f4a885a9e"
       ],
       "settings": {
       }
