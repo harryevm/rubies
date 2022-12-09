@@ -146,9 +146,14 @@
   <div class="error cart-error cart-error-{{ section.id }}" style="display:none;"></div>
   <div id="CartButtons-{{ section.id }}" class="cart-buttons {% if cart_buttons_margin %}{{ cart_buttons_margin }}{% endif %} {% if section.settings.show_payment_button and current_variant.available %}cart-buttons__enabled{% elsif section_onboarding %}cart-buttons__enabled{% endif %}">
     <div class="button-wrapper default-cart-button">
+  
 {% for option in product.options_with_values %}
-  {{ option.name | downcase }}
+  {% if option.name == 'size' or option.name == 'youth size' %}
+    {% assign sizeOption = option.name | downcase %}
+    {% endif %}
   {% endfor %}
+
+  {{ sizeOption }}
 {% comment %}
 {% assign productTags = product.tags | join: ', ' %}
 
