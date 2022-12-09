@@ -147,10 +147,10 @@
   <div id="CartButtons-{{ section.id }}" class="cart-buttons {% if cart_buttons_margin %}{{ cart_buttons_margin }}{% endif %} {% if section.settings.show_payment_button and current_variant.available %}cart-buttons__enabled{% elsif section_onboarding %}cart-buttons__enabled{% endif %}">
     <div class="button-wrapper default-cart-button">
 
-
+{% comment %}
 {% assign productTags = product.tags | join: ', ' %}
 
-{{ product.options.size }}
+
  {% if productTags contains 'Preorder' %}
   
    <input id="your-name" value="Pre Order" type="hidden" name="properties[Status]">
@@ -164,10 +164,10 @@
 
         </span>
       </button>
-    {% else %}
-   {% unless product.options.size > 1 %}
+    {% else %}{% endif %}{% endcomment %}
+
       <span class="extra-overlay"></span>
-  <p class="alert-size"></p>{% endunless %}
+  <p class="alert-size"></p>
       <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
         
         <span id="AddToCartText-{{ section.id }}" data-AddToCartText>
@@ -181,15 +181,15 @@
             {%- endif -%}
           {% endunless %}
         </span>
-      </button>{% endif %}
+      </button>
       {% if section.settings.freeshippingtext %}
         <div class="discount-text-shipping">{{ section.settings.freeshippingtext }}</div>
       {% endif %}
       <div class="stickyaddCart">
-        {% if productTags contains 'Preorder' %}
-          {% unless product.options.size > 0 %}
+       {% comment %} {% if productTags contains 'Preorder' %}
+    
    <span class="extra-overlay"></span>
-  <p class="alert-size"></p>{% endunless %}
+  <p class="alert-size"></p>
     <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  disabled>
         
         <span  >
@@ -198,10 +198,10 @@
 
         </span>
       </button>
-    {% else %}
-          {% unless product.options.size > 1 %}
+    {% else %}{% endif %}{% endcomment %}
+          
         <span class="extra-overlay"></span>
-          <p class="alert-size"></p>{% endunless %}
+          <p class="alert-size"></p>
         <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
           
           <span id="AddToCartText-{{ section.id }}" data-AddToCartText>
@@ -216,7 +216,7 @@
             {% endunless %}
           </span>
         </button>
-        {% endif %}
+        
       </div>
     </div>
     <div id="PaymentButtonContainer-{{ section.id }}" class="payment-button__container">
