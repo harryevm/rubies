@@ -149,7 +149,7 @@
   
 {% for option in product.options_with_values %}
   {% if option.name == 'Size' or option.name == 'Youth Size' %}
-    {% assign sizeOption = option.name | downcase %}
+    {% assign sizeOption = option.name %}
     {% endif %}
   {% endfor %}
 
@@ -172,9 +172,9 @@
         </span>
       </button>
     {% else %}{% endif %}{% endcomment %}
-
+{% if sizeOption == 'Size' or sizeOption == 'Youth Size' %}
       <span class="extra-overlay"></span>
-  <p class="alert-size"></p>
+  <p class="alert-size"></p>{% endif %}
       <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
         
         <span id="AddToCartText-{{ section.id }}" data-AddToCartText>
