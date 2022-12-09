@@ -148,7 +148,7 @@
     <div class="button-wrapper default-cart-button">
   
 {% for option in product.options_with_values %}
-  {% if option.name == 'size' or option.name == 'youth size' %}
+  {% if option.name == 'Size' or option.name == 'Youth Size' %}
     {% assign sizeOption = option.name | downcase %}
     {% endif %}
   {% endfor %}
