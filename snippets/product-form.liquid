@@ -148,7 +148,7 @@
     <div class="button-wrapper default-cart-button">
 {% for variant in product.variants %}
     {% if variant.available %}    
-      {{ variant.name }}
+      {{ variant.options }}
        <option data-size="{{ variant.option1 }}" data-color="{{ variant.option2 }}" value="{{ variant.id }}"  >{{ variant.title }}</option>             
     {% endif %}
  {% endfor %} 
