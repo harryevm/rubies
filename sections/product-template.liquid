@@ -61,17 +61,17 @@
               {% include 'product-thumbnails-slider' %}
             {%- endunless -%}
           </div>
-  <div class="also-bt-desk">{% if section.settings.related_title %}
+  <div class="also-bt-desk"><h3>{% if section.settings.related_title %}
                     {{ section.settings.related_title }} 
                     {% else %}
                        Goes Well With
-                    {% endif %}
+                    {% endif %}</h3>
                     {% include 'wiser_alsobought.liquid' %}</div>
-  <div class="also-bt-desk">{% if section.settings.bundle_title %}
+  <div class="also-bt-desk"><h3>{% if section.settings.bundle_title %}
                     {{ section.settings.bundle_title }} 
                     {% else %}
                        Bundles
-                    {% endif %}
+                    {% endif %}</h3>
                     {% render 'bundle-product' %}</div>
   
         </div>
