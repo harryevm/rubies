@@ -61,7 +61,18 @@
               {% include 'product-thumbnails-slider' %}
             {%- endunless -%}
           </div>
-  <div class="also-bt-desk">{% include 'wiser_alsobought.liquid' %}</div>
+  <div class="also-bt-desk">{% if section.settings.related_title %}
+                    {{ section.settings.related_title }} 
+                    {% else %}
+                       Goes Well With
+                    {% endif %}
+                    {% include 'wiser_alsobought.liquid' %}</div>
+  <div class="also-bt-desk">{% if section.settings.bundle_title %}
+                    {{ section.settings.bundle_title }} 
+                    {% else %}
+                       Bundles
+                    {% endif %}
+                    {% render 'bundle-product' %}/div>
   
         </div>
 
@@ -187,7 +198,7 @@
                 </div>
                 {% endif %}
               {% if section.settings.bundle_enable %}
-                <div class="accordion-tab">
+                <div class="accordion-tab also-bt-mob">
                     <a href="javascript:;" >
                       {% if section.settings.bundle_title %}
                       {{ section.settings.bundle_title }} 
