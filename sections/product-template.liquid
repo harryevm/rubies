@@ -319,7 +319,7 @@
     {{ product | json }}
   </script>
 {% endunless %}
-
+{{ product.metafields.custom.size_guide }}
 {%- if section.settings.size_guide_page != blank -%}
 <div id="product-size-guide-content-{{ section.id }}" class="popup-page mfp-hide">
   <div class="rte">{{ pages[section.settings.size_guide_page].content }}</div>
