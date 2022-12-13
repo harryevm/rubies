@@ -137,7 +137,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
   .product-title-with-review .product-title { margin: 10px 0; }
   .purchase-box .selection-wrapper.price>span { color: #040F21; font-size: 25px; line-height: 35px; font-weight: 700; }
   .purchase-box .selection-wrapper.price { margin-bottom: 20px; }
-  .purchase-box .selection-wrapper.variant >span.label-extra>a { font-size: 20px; line-height: 30px; margin: 15px 0; display: block; }
+  .purchase-box .selection-wrapper.variant>span.label-extra>a { font-size: 20px; line-height: 30px; margin: 15px 0; display: block; color: #040F21; text-transform: uppercase; }
   /*  Product varient label    */
   .selection-wrapper .product-form__item label, .selector-wrapper.quantity.quantity-product-template label,.selector-wrapper.quantity label {
     font: 600 20px/29px Poppins;
