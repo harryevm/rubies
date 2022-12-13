@@ -180,6 +180,9 @@
                   </a>
                   <div class="accordion-content" style="display: block;">
                     {{ product.description }}
+                  {% if product.metafields.custom.size_guide != blank %}
+                    {{product.metafields.custom.size_guide}}
+                  {% endif %}
                   </div>
                 </div>
               {% endif %}
