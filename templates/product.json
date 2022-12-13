@@ -52,7 +52,7 @@
         "variant_swatch_images": true,
         "variant_swatch_shape": "circle",
         "variant_swatch_soldout": true,
-        "size_guide_page": "<p>{{ product.metafields.custom.size_guide | metafield_tag }}<\/p>",
+        "size_guide_page": "{{product.metafields.custom.size_guide}}",
         "product_quantity_enable": true,
         "show_payment_button": false,
         "product_box_padding": false,
