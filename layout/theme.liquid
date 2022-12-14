@@ -206,8 +206,7 @@
 
  {% include 'smile-initializer' %}
 <script>
-  
-  window.HS_SLIDE_CART_LOADED = function(cart) {
+  window.HS_SLIDE_CART_OPENED = function() {
     var VarCart = $('.hs-progess-content .hs-text-free-shipping span.money').text();
   alert(VarCart);
 }
