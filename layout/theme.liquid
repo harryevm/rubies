@@ -207,7 +207,7 @@
  {% include 'smile-initializer' %}
 <script>
   window.HS_SLIDE_CART_OPENED = function() {
-    var VarCart = $('.hs-progess-content .hs-text-free-shipping span.money').text();
+    var VarCart = $('.hs-progess-content .hs-text-free-shipping span.money').text().replace(".00","");
   alert(VarCart);
 }
   
