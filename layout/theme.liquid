@@ -208,11 +208,12 @@
 <script>
   window.HS_SLIDE_CART_OPENED = function() {
     var VarCart = $('.hs-progess-content .hs-text-free-shipping span.money').text().replace(".00","");
-  alert(VarCart);
+  $('.hs-progess-content .hs-text-free-shipping span.money').text(VarCart);
 }
   
   window.HS_SLIDE_CART_UPDATED = function(cart) {
-  alert();
+  var VarCart = $('.hs-progess-content .hs-text-free-shipping span.money').text().replace(".00","");
+  $('.hs-progess-content .hs-text-free-shipping span.money').text(VarCart);
 }
 </script>
 </body>
