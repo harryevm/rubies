@@ -622,9 +622,9 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Image_18.png",
-              "label": "Shop Dance & Gym",
-              "link": "shopify:\/\/collections\/form-fitting-clothing",
-              "title": "Ready For The Gym And Dance",
+              "label": "Shop Evryday Wear",
+              "link": "shopify:\/\/collections\/underwear",
+              "title": "Comfortable In Everything",
               "content": "<p>RUBIES underwear let's our kids keep doing the activities they love! They can feel great in their leggings, leotards and dresses.<\/p>"
             }
           },
@@ -632,9 +632,9 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Group_333.png",
-              "label": "Shop Evryday Wear",
-              "link": "#",
-              "title": "Comfortable In Everything",
+              "label": "Shop Dance & Gym",
+              "link": "shopify:\/\/collections\/tees",
+              "title": "Ready For The Gym And Dance",
               "content": "<p>RUBIES underwear let's our kids keep doing the activities they love! They can feel great in their leggings, leotards and dresses.<\/p>"
             }
           }
