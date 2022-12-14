@@ -23,7 +23,7 @@ header.util a#CartButton:hover, header.util a#CartButton:focus { background: tra
 .slide__item-content h2 { font-size: 60px; line-height: 65px; font-weight: 600; }
 .slide__item-content a.button { padding: 15px 20px; font-size: 17px; line-height: 30px; font-weight: 400; margin-top: 30px; text-transform: capitalize; }
 .slide__item-content p { font-size: 18px; line-height: 30px; font-weight: 600; margin-top: 15px; }
-.flex-data.grid img.card__image { position: relative; width: auto; height: auto; object-fit: contain; object-position: center; }
+.flex-data.grid img.card__image { position: relative; width: 85px; height: 85px; object-fit: contain; object-position: center; }
 .collection-list-updated header { margin-bottom: 50px; }
 .collection-list-updated .flex-data > .grid__item { width: calc(100%/3); padding: 0; }
 .collection-list-updated .flex-data > .grid__item h3 { font-size: 18px; line-height: 25px; margin-top: 15px !important; }
