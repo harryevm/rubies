@@ -8,8 +8,8 @@ footer.site-footer .menu ul li a { margin-bottom: 10px; display: block; font-siz
 
 span.icon.icon-search svg { width: 20px; height: 20px; }
 a#CartButton svg { width: 22px; height: 22px; }
-form.hs-event-static { position: static !important; }
-
+/* form.hs-event-static { position: static !important; }
+ */
 a#CartButton span#CartCount { position: absolute; right: -10px; background: #FC01FF; width: 20px; height: 20px; border-radius: 50%; top: -5px; text-align: center; font-size: 10px; line-height: 22px; color: #fff; }
 header.util a#CartButton:hover svg path, header.util a#CartButton:focus svg path { fill: #000; }
 header.util a#CartButton:hover, header.util a#CartButton:focus { background: transparent; }
