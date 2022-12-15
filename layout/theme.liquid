@@ -211,7 +211,8 @@
    
 }
 
-  $('a#CartButton').on('click',function(){
+  $('a#CartButton').on('click',function(e){
+    e.preventDefault();
     $('body .aiod_minicart').addClass('active_cart');
     $('.aiod_cart_mini.aiod_minicart_overlay.cs_overlay').addClass('cs_show');
   });
