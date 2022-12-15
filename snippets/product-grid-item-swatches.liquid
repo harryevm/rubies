@@ -19,7 +19,7 @@
         {%- endif -%}
         {%- assign swatch_color = value | handle | replace: '-', '' -%}
 
-        {% render 'swatch-colors' %}
+        {% include 'swatch-colors' %}
 
         {%- comment -%}
           Check to see if the color exists
