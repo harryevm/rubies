@@ -18,12 +18,13 @@
       {%- assign product_limit = 12 -%}
      
       {% for product in collection.products limit: product_limit  %}
-        
+        {% if section.settings.collection != blank%}
         {% include 'product-grid-item' %}
       {% else %}
         {% for i in (1..product_limit) %}
           {% include 'placeholder-product-grid-item' %}
         {% endfor %}
+        {% endif %}
       {% endfor %}
     </div>
   </div>
