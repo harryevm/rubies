@@ -63,7 +63,7 @@
             {%- endunless -%}
           </div>
 
-          
+       <div class="desk-tab-wrap">   
     <div class="also-bt-desk accordion-tab">
       <a href="javascript:;" class="active">{% if section.settings.related_title %}
                       {{ section.settings.related_title }} 
@@ -80,6 +80,7 @@
                       <div class="accordion-content" style="display: block;">{% render 'bundle-product' %}</div></div>
     
           </div>
+        </div>
 
         <aside class="product-aside">
           <div class="purchase-box {% if section.settings.product_box_padding %}padding-box{% endif %}" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
