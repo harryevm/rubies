@@ -196,6 +196,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
 table.csapps-table.table thead { display: none; }
 table.csapps-table.table tbody { font-size: 18px; line-height: 30px; }
 .desk-tab-wrap .also-bt-desk .product-container .box { padding: 0 20px; }
+.desk-tab-wrap .also-bt-desk .product-container ul.slick-dots { display: flex; }
 
 /* About us */
 .about-page-wrapper .banner-wr { margin: 0 0 50px; }
