@@ -70,7 +70,25 @@
                       {% else %}
                          Goes Well With
                       {% endif %} <i class="fa fa-chevron-left"></i></a>
-                      <div class="accordion-content" style="display: block;">{% include 'wiser_alsobought.liquid' %}</div></div>
+                      <div class="accordion-content" style="display: block;">
+                            {%- assign product_collection_count = '4' -%}
+              {%- assign collection_count = '4' -%}
+              <div class="simple-collection layout-{{ collection_count }}">
+                <div class="wrapper">
+                  <div class="product-container">
+                    {%- assign collection = collections[section.settings.collection] -%}
+                    {%- assign product_limit = collection_count -%}
+                    {% for product in collection.products limit: product_limit  %}
+                      {% include 'product-grid-item' %}
+                    {% else %}
+                      {% for i in (1..product_limit) %}
+                        {% include 'placeholder-product-grid-item' %}
+                      {% endfor %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+                      </div></div>
     <div class="also-bt-desk accordion-tab">
       <a href="javascript:;" class="active">{% if section.settings.bundle_title %}
                       {{ section.settings.bundle_title }} 
@@ -342,6 +360,7 @@
 {%- endif -%}
 
 
+
 {% schema %}
 {
   "name": "Product pages",
@@ -558,6 +577,15 @@
       "id": "show_share_buttons",
       "label": "Show social sharing buttons",
       "default": true
+    },
+    {
+      "type": "header",
+      "content": "You May Also Link"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "You May Also Like Collection"
     }
   ],
   "max_blocks":5,
