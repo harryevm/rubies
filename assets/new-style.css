@@ -193,6 +193,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
 .single-option-radio .swatch-container.soldout svg { width: 20px; right: 8px; left: unset; height: 20px; top: 8px; }
 
 .desk-tab-wrap .also-bt-desk:last-child { margin-top: 0px; }
+table.csapps-table.table thead { display: none; }
 
 /* About us */
 .about-page-wrapper .banner-wr { margin: 0 0 50px; }
