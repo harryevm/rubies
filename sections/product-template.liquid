@@ -206,14 +206,6 @@
                     {%- assign collection_count = '4' -%}
                     <div class="simple-collection layout-{{ collection_count }}">
                       <div class="wrapper">
-                        <header>
-                          {% if section.settings.title != blank %}
-                            <h4>{{ section.settings.title | escape }}</h4>
-                          {% endif %}
-                          {% if section.settings.button_link != blank and section.settings.button_label != blank %}
-                            <a href="{{ section.settings.button_link }}" class="button outline">{{ section.settings.button_label | escape }}</a>
-                          {% endif %}
-                        </header>
                         <div class="product-container">
                           {%- assign collection = collections[section.settings.collection] -%}
                           {%- assign product_limit = collection_count -%}
