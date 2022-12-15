@@ -40,6 +40,7 @@
     
     <a id="{{ wrapper_id }}" href="{% if template.name == 'index'  or template.name == 'cart' or template.name == 'product' %}javascript:;{% else %}{{ product.url }}{% endif %}" class="product_card">
       {%- assign image = product.featured_image -%}
+      {{ image }}
       <div  href="{{ product.url }}" class="product_card__image-wrapper" data-bgset="{% render 'bgset', image: image %}">
         {% assign image_widths = '295,394,590,700,800,1000,1200,1500,1800,2000,2400' %}
         {% render 'theme-rias' %}
