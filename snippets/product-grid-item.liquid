@@ -52,7 +52,8 @@
           data-sizes="auto"
           data-expand="600"
           data-fallback="{{ image | img_url: '295x' }}"
-          alt="{{ image.alt | escape }}">
+          alt="{{ image.alt | escape }}"
+          src="{{ image | img_url:'' }}" >
         
         {% comment %}</a>{% endcomment %}
           <noscript>
