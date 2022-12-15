@@ -43,8 +43,7 @@
       <div  href="{{ product.url }}" class="product_card__image-wrapper" data-bgset="{% render 'bgset', image: image %}">
         {% assign image_widths = '295,394,590,700,800,1000,1200,1500,1800,2000,2400' %}
         {% render 'theme-rias' %}
-        {% comment %}<a href="{{ product.url }}" class="pro_url">{% endcomment %}
-        <img onclick="getUrlFunc($(this))" id="{{ img_id }}" class="product_card__image lazyload {% if settings.variant_rollover == true and product.images.size > 1 %}featured{% endif %}"
+        {% comment %}<a href="{{ product.url }}" class="pro_url">{% endcomment %}<img onclick="getUrlFunc($(this))" id="{{ img_id }}" class="product_card__image lazyload {% if settings.variant_rollover == true and product.images.size > 1 %}featured{% endif %}"
           src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
           data-src="{{ image_url_pattern }}"
           data-widths="[{{ image_widths }}]"
@@ -52,12 +51,10 @@
           data-sizes="auto"
           data-expand="600"
           data-fallback="{{ image | img_url: '295x' }}"
-          alt="{{ image.alt | escape }}"
-          src="{{ image | img_url:'' }}" >
-        
+          alt="{{ product.featured_image.alt | escape }}">
         {% comment %}</a>{% endcomment %}
           <noscript>
-          <img class="product_card__image" src="{{ image | img_url: '394x' }}" alt="{{ image.alt | escape }}">
+          <img class="product_card__image" src="{{ image | img_url: '394x' }}" alt="{{ product.featured_image.alt | escape }}">
         </noscript>
         {%- assign collection_single_column_auto = false -%}
         {%- if settings.collections_product_columns == '1' and settings.collections_product_ratio == 'auto' -%}
@@ -79,7 +76,7 @@
             data-aspectratio="{{ image.aspect_ratio }}"
             data-sizes="auto"
             data-expand="600"
-            alt="{{ image.alt | escape }}">
+            alt="{{ product.featured_image.alt | escape }}">
           {% comment %}</a>{% endcomment %}
             {%- endif -%}
         {%- if sold_out -%}
