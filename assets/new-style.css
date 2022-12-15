@@ -195,6 +195,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
 .desk-tab-wrap .also-bt-desk { border-bottom: 1px solid #333; padding-bottom: 30px; }
 .desk-tab-wrap .also-bt-desk h3 { position: relative; }
 .desk-tab-wrap .also-bt-desk h3>span { position: absolute; right: 5px; }
+.desk-tab-wrap .also-bt-desk:last-child { margin-top: 20px; }
 
 /* About us */
 .about-page-wrapper .banner-wr { margin: 0 0 50px; }
