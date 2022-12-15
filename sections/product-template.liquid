@@ -70,14 +70,14 @@
                       {% else %}
                          Goes Well With
                       {% endif %} <i class="fa fa-chevron-left"></i></a>
-                      {% include 'wiser_alsobought.liquid' %}</div>
+                      <div class="accordion-content" style="display: block;">{% include 'wiser_alsobought.liquid' %}</div></div>
     <div class="also-bt-desk accordion-tab">
       <a href="javascript:;" class="active">{% if section.settings.bundle_title %}
                       {{ section.settings.bundle_title }} 
                       {% else %}
                          Bundles
                       {% endif %} <i class="fa fa-chevron-left"></i></a>
-                      {% render 'bundle-product' %}</div>
+                      <div class="accordion-content" style="display: block;">{% render 'bundle-product' %}</div></div>
     
           </div>
 
