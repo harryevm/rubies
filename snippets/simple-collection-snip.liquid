@@ -16,7 +16,10 @@
        
       {%- assign collection = collections[section.settings.collection] -%}
       {%- assign product_limit = 12 -%}
-     
+      {% for product in collection.products %}
+        {{ product.title }}
+      {% endfor %}
+        
       {% for product in collection.products limit: product_limit  %}
         {% if section.settings.collection != blank%}
         {% render 'product-grid-item' %}
