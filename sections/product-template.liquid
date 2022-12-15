@@ -202,7 +202,31 @@
                     <i class="fa fa-chevron-down"></i>
                   </a>
                   <div class="accordion-content" style="display: block;">
-                    <div class="related-products-wr">{% include 'wiser_alsobought.liquid' %} </div>
+                    {%- assign product_collection_count = '4' -%}
+                    {%- assign collection_count = '4' -%}
+                    <div class="simple-collection layout-{{ collection_count }}">
+                      <div class="wrapper">
+                        <header>
+                          {% if section.settings.title != blank %}
+                            <h4>{{ section.settings.title | escape }}</h4>
+                          {% endif %}
+                          {% if section.settings.button_link != blank and section.settings.button_label != blank %}
+                            <a href="{{ section.settings.button_link }}" class="button outline">{{ section.settings.button_label | escape }}</a>
+                          {% endif %}
+                        </header>
+                        <div class="product-container">
+                          {%- assign collection = collections[section.settings.collection] -%}
+                          {%- assign product_limit = collection_count -%}
+                          {% for product in collection.products limit: product_limit  %}
+                            {% include 'product-grid-item' %}
+                          {% else %}
+                            {% for i in (1..product_limit) %}
+                              {% include 'placeholder-product-grid-item' %}
+                            {% endfor %}
+                          {% endfor %}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 {% endif %}
