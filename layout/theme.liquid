@@ -210,6 +210,11 @@
  var VarCarts = $('.hs-progess-content .hs-text-free-shipping span.money').text();
    
 }
+
+  $('a#CartButton').on('click',function(){
+    $('body .aiod_minicart').addClass('active_cart');
+    $('.aiod_cart_mini.aiod_minicart_overlay.cs_overlay').addClass('cs_show');
+  });
 </script>
 </body>
 </html>
