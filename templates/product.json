@@ -71,7 +71,8 @@
         "bundle_enable": true,
         "bundle_title": "Part of bundles",
         "show_product_jump": false,
-        "show_share_buttons": true
+        "show_share_buttons": true,
+        "collection": "{{ product.metafields.custom.you_may_also_like.value }}"
       }
     },
     "recommended": {
