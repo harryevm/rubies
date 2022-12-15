@@ -72,8 +72,8 @@
                       {% endif %} <i class="fa fa-chevron-left"></i></a>
                       <div class="accordion-content" style="display: block;">
                             {%- assign product_collection_count = '4' -%}
-              {%- assign collection_count = '2' -%}
-              <div class="simple-collection ">
+              {%- assign collection_count = '4' -%}
+              <div class="simple-collection layout-{{ collection_count }}">
                 <div class="wrapper">
                   <div class="product-container">
                     {%- assign collection = collections[section.settings.collection] -%}
@@ -624,8 +624,6 @@
 <style>
 /*   .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: none; } */
   .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: block; }
-  .also-bt-desk .simple-collection .product-container { overflow: hidden; }
-  .simple-collection .product-container .box { width: 100% !important; }
 </style>
 
 {% unless  product.template_suffix == 'fastbundles' %}
@@ -651,7 +649,6 @@
       slidesToShow: 2,
       slidesToScroll: 1,
       dots: true,
-      arrows: false,
     });
 </script>
 {% endunless %}
