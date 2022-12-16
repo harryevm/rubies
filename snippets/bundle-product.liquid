@@ -5,7 +5,7 @@
       <div class="bundle-img"><img src="{{ product.featured_image | img_url: '' }}" alt="{{product.featured_image.alt}}" /></div>
       <div class="bundle-info">
         <h3>{{ product.title }}</h3>
-        <span class="percent-off">{{ product.metafields.custom.bundle_off_percentage }}<span>% Off</span></span>
+        <span class="percent-off">{{ product.metafields.custom.bundle_off_percentage }}% Off</span>
         <div class="selection-wrapper price product-single__price-{{ section.id }}">
           {% unless section_onboarding %}
             <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ current_variant.price | money_with_currency | remove: ',' }}">{{ current_variant.price | money_with_currency }}  </span>
