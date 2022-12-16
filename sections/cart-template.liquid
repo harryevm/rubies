@@ -34,11 +34,14 @@
       <div class="estimate-wr">
         <script>
         const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var d = new Date(dateString);
+     
         const date = new Date();
         const tomorrowDate = monthNames[date.getMonth()]+" "+ (date.getDate() + 1);
         const afterDayDate = monthNames[date.getMonth()]+" "+ (date.getDate() + 9);
         </script>
-        arrives to Canada between <script> document.write(tomorrowDate)</script> and <script> document.write(afterDayDate)</script></div>
+        arrives to Canada between <script> document.write(days[d.getDay()]+", "+tomorrowDate)</script> and <script> document.write(afterDayDate)</script></div>
         <div class="cart-list">
           <form action="/cart" method="post" novalidate class="cart-form">
             <div class="cart-items" data-csapp_line_wrapper>
