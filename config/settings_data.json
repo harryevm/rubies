@@ -931,6 +931,11 @@
         "settings": {
           "heading": ""
         }
+      },
+      "drawer": {
+        "type": "drawer",
+        "settings": {
+        }
       }
     },
     "content_for_index": [
@@ -986,7 +991,7 @@
       },
       "10910696115237310528": {
         "type": "shopify:\/\/apps\/sticky-cart-slide-cart-drawer\/blocks\/slide-cart-app-embed\/06f96c51-92d4-4ccf-8798-f65ef7359208",
-        "disabled": true,
+        "disabled": false,
         "settings": {
         }
       }
