@@ -243,8 +243,8 @@
                 {%- endif -%}
                 <div class="checkout-buttons">
                   <input type="submit" name="update" class="button btn btn-secondary outline cart-button--update" value="{{ 'cart.general.update' | t }}">
-        {% if cart.total_price > 0 %}sdfsdfs{% endif %}
-                  <input type="submit" name="checkout" class="button  btn btn-primary" value="{{ 'cart.general.checkout' | t }}">
+        
+                  <input {% if cart.total_price > 0 %}type="submit"{% endif %} name="checkout" class="button  btn btn-primary" value="{{ 'cart.general.checkout' | t }}">
                 </div>
 
               {% comment %}  {% if additional_checkout_buttons %}
