@@ -223,7 +223,7 @@ $('.test2').click(function(e){
     var ajax_load = '<div id="ajaxLoader" style=" text-align: center; position: fixed; top: 0; bottom: 0; left: 0; right: 0; "><img src="{{'ajax-loader.gif' | asset_img_url: ''  }}"  alt="loading..." style=" position: absolute; top: 50%; transform: translateY(-50%); "></div>';
     var page = 'https://rubies-v2-testing.myshopify.com/cart';
 
-    	$('#ddd').html(ajax_load).load(page);
+    	$('#ddd').html(ajax_load).load(page +" #your-shopping-cart");
 
     
   });
