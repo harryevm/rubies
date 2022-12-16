@@ -178,8 +178,7 @@
 </head>
 
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" data-template-directory="{{ template.directory }}" data-template="{{ template.name }}" >
-<div id="ddd"></div>
-  <a class="test2">dfsdsfdsfsdfsdfdsfsd</a>
+
   <div id="page">
     {% section 'promos' %}
     
@@ -212,22 +211,6 @@
    
 }
 
-
-$('.test2').click(function(e){
-
-    $.ajaxSetup ({
-        cache: false
-    });
-    e.preventDefault();
-  
-        var page = 'https://rubies-v2-testing.myshopify.com/cart';
-
-    	$('#ddd').load(page);
-alert()
-    
-  });
-
-  
   $('a#CartButton').on('click',function(e){
     e.preventDefault();
     $('body .aiod_minicart').addClass('active_cart');
