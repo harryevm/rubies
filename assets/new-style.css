@@ -307,6 +307,7 @@ div#smile-ui-lite-launcher-frame-container { left: 20px; }
     right: -100%;
     bottom: 0;
 }
+.cart .cart-checkout>* { position: relative; }
 
 @media(min-width:701px){
   .middle-wrapper { display: none; }
