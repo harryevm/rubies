@@ -174,12 +174,11 @@
 {% if content_for_header contains 'fastbundle.co' %}
     {% render 'fast_bundle_service' %}
 {% endif %}
-{{ 'drawer.css' | asset_url | stylesheet_tag }}
-{{ 'drawer.js' | asset_url | script_tag }}
+
 </head>
 
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" data-template-directory="{{ template.directory }}" data-template="{{ template.name }}" >
-{% section 'drawer' %}
+
   <div id="page">
     {% section 'promos' %}
     
