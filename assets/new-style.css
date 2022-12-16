@@ -297,6 +297,16 @@ body .aiod_checkout_clicked, body .upsell_opner_from_cart.is_loading { text-inde
 div#smile-ui-lite-launcher-frame-container { left: 20px; }
 .estimate-wr { margin-bottom: 20px; }
 .estimate-wr > span { color: #54C45E; }
+.cart .cart-checkout { position: relative; }
+.cart .cart-checkout::before {
+    position: absolute;
+    content: '';
+    background: #eeeff0;
+    top: 0;
+    left: -100%;
+    right: -100%;
+    bottom: 0;
+}
 
 @media(min-width:701px){
   .middle-wrapper { display: none; }
