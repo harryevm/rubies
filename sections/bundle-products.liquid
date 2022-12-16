@@ -204,7 +204,7 @@
                 </div>
               {% endif %}
               {% if section.settings.related_enable %}
-              <div class="accordion-tab also-bt-mob">
+              <div class="accordion-tab also-bt-mob active">
                   <a href="javascript:;">
                    {% if section.settings.related_title %}
                     {{ section.settings.related_title }} 
@@ -213,13 +213,13 @@
                     {% endif %}
                     <i class="fa fa-chevron-down"></i>
                   </a>
-                  <div class="accordion-content">
+                  <div class="accordion-content" style="display: block;">
                     <div class="related-products-wr">{% include 'wiser_alsobought.liquid' %} </div>
                   </div>
                 </div>
                 {% endif %}
               {% if section.settings.bundle_enable %}
-                <div class="accordion-tab">
+                <div class="accordion-tab also-bt-mob active">
                     <a href="javascript:;" >
                       {% if section.settings.bundle_title %}
                       {{ section.settings.bundle_title }} 
@@ -228,7 +228,7 @@
                       {% endif %}
                       <i class="fa fa-chevron-down"></i>
                     </a>
-                    <div class="accordion-content">
+                    <div class="accordion-content" style="display: block;">
                       {% render 'bundle-product' %}
                     </div>
                   </div>
