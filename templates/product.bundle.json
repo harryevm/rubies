@@ -109,11 +109,23 @@
       ],
       "settings": {
       }
+    },
+    "a174f53a-8165-465d-bc75-533e771d4391": {
+      "type": "simple-collection",
+      "settings": {
+        "title": "Featured collection",
+        "center_heading": false,
+        "button_label": "",
+        "button_link": "",
+        "collection": "",
+        "product_count_range": 4
+      }
     }
   },
   "order": [
     "main",
     "recommended",
-    "16678127156b1b6409"
+    "16678127156b1b6409",
+    "a174f53a-8165-465d-bc75-533e771d4391"
   ]
 }
