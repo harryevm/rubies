@@ -297,7 +297,7 @@ body .aiod_checkout_clicked, body .upsell_opner_from_cart.is_loading { text-inde
 div#smile-ui-lite-launcher-frame-container { left: 20px; }
 .estimate-wr { margin-bottom: 20px; }
 .estimate-wr > span { color: #54C45E; }
-
+.cart .cart-checkout input.csapp_aiod_coupan_code { max-width: 200px !important; }
 
 
 @media(min-width:701px){
