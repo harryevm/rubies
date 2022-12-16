@@ -6,7 +6,7 @@
       <div class="bundle-info">
         <h3>{{ product.title }}</h3>
         <span class="percent-off">{{ product.metafields.custom.bundle_off_percentage }}% Off</span>
-        <div class="selection-wrapper price product-single__price-{{ section.id }}">
+         {% comment %}<div class="selection-wrapper price product-single__price-{{ section.id }}">
           {% unless section_onboarding %}
             <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ current_variant.price | money_with_currency | remove: ',' }}">{{ current_variant.price | money_with_currency }}  </span>
           {% else %}
@@ -22,7 +22,7 @@
               <span class="compareprice__label">{{ 'products.product.compare_at' | t }} </span><span class="money">{{ current_variant.compare_at_price | money }}</span>
             </p>
           {% endif %}
-        </div>
+        </div> {% endcomment %}
       </div>
       <a href="{{ product.url }}">Add</a>
     </div>
