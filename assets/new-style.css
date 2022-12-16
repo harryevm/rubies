@@ -295,6 +295,7 @@ div#ship-calculator .srw-widget.srw-widget-manual { padding: 0; }
 .cart-tab-wrapper+.grid { margin-top: 30px; }
 body .aiod_checkout_clicked, body .upsell_opner_from_cart.is_loading { text-indent: 0 !important; }
 div#smile-ui-lite-launcher-frame-container { left: 20px; }
+.estimate-wr { margin-bottom: 20px; }
 
 @media(min-width:701px){
   .middle-wrapper { display: none; }
