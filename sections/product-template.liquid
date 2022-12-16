@@ -1,8 +1,6 @@
 
 <style>.mfp-content .popup-page { height: 85vh; overflow-y: auto; }</style>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
 <div class="product-template" id="ProductSection-{{ section.id }}" data-section-id="{{ section.id }}" data-ProductSection data-section-type="product-template" data-enable-history-state="true" data-enable-swatch="{% if section.settings.variant_style == 'dropdowns' %}false{% else %}true{% endif %}">{% render 'preorder-now-collection-item', product: product %}
   <section class="single-product" itemscope itemtype="http://schema.org/Product">
     <meta itemprop="name" content="{{ product.title }}{% unless product.has_only_default_variant %} - {{ current_variant.title }}{% endunless %}">
