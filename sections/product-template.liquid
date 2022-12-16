@@ -72,22 +72,22 @@
                       {% endif %} <i class="fa fa-chevron-left"></i></a>
                       <div class="accordion-content" style="display: block;">
                             {%- assign product_collection_count = '4' -%}
-              {%- assign collection_count = '4' -%}
-              <div class="simple-collection">
-                <div class="wrapper">
-                  <div class="product-container">
-                    {%- assign collection = collections[section.settings.collection] -%}
-                    {%- assign product_limit = collection_count -%}
-                    {% for product in collection.products limit: product_limit  %}
-                      {% include 'product-grid-item' %}
-                    {% else %}
-                      {% for i in (1..product_limit) %}
-                        {% include 'placeholder-product-grid-item' %}
-                      {% endfor %}
-                    {% endfor %}
-                  </div>
-                </div>
-              </div>
+                            {%- assign collection_count = '4' -%}
+                            <div class="simple-collection">
+                              <div class="wrapper">
+                                <div class="product-container">
+                                  {%- assign collection = collections[section.settings.collection] -%}
+                                  {%- assign product_limit = collection_count -%}
+                                  {% for product in collection.products limit: product_limit  %}
+                                    {% include 'product-grid-item' %}
+                                  {% else %}
+                                    {% for i in (1..product_limit) %}
+                                      {% include 'placeholder-product-grid-item' %}
+                                    {% endfor %}
+                                  {% endfor %}
+                                </div>
+                              </div>
+                            </div>
                       </div></div>
     <div class="also-bt-desk accordion-tab">
       <a href="javascript:;" class="active">{% if section.settings.bundle_title %}
@@ -216,7 +216,23 @@
                     <i class="fa fa-chevron-down"></i>
                   </a>
                   <div class="accordion-content" style="display: block;">
-                    <div class="related-products-wr">{% include 'wiser_alsobought.liquid' %} </div>
+                    {%- assign product_collection_count = '4' -%}
+                            {%- assign collection_count = '4' -%}
+                            <div class="simple-collection">
+                              <div class="wrapper">
+                                <div class="product-container">
+                                  {%- assign collection = collections[section.settings.collection] -%}
+                                  {%- assign product_limit = collection_count -%}
+                                  {% for product in collection.products limit: product_limit  %}
+                                    {% include 'product-grid-item' %}
+                                  {% else %}
+                                    {% for i in (1..product_limit) %}
+                                      {% include 'placeholder-product-grid-item' %}
+                                    {% endfor %}
+                                  {% endfor %}
+                                </div>
+                              </div>
+                            </div>
                   </div>
                 </div>
                 {% endif %}
