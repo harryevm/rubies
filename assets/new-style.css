@@ -200,6 +200,8 @@ table.csapps-table.table tbody { font-size: 18px; line-height: 30px; }
 .also-bt-mob .product-container ul.slick-dots li button::before,.also-bt-desk .product-container ul.slick-dots li button::before { font-size: 0; }
 
 .also-bt-mob .product-container .product-title a,.also-bt-desk .product-container .product-title a { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; }
+.bundle-products li  button:before { font-size: 0; }
+
 /* About us */
 .about-page-wrapper .banner-wr { margin: 0 0 50px; }
 section.about-page-wrapper nav.breadcrumb { margin-bottom: 30px; }
