@@ -42,7 +42,7 @@
         const date = new Date();
         const tomorrowDate = monthNames[date.getMonth()]+" "+ (date.getDate() + 1);
         const afterDayDate = monthNames[date.getMonth()]+" "+ (date.getDate() + 9);
-        var dt = new Date('December 25, 1995');
+        var dt = new Date(tomorrowDate+", "+date.getFullYear());
          document.write("getDay() : " + dt.getDay() ); 
         </script>
         arrives to Canada between <script> document.write(days[d.getDay()]+", "+tomorrowDate)</script> and <script> document.write(afterDayDate)</script></div>
