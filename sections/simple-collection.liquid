@@ -1,7 +1,7 @@
 
 <div class="simple-collection layout-{{ section.settings.product_count_range }}" data-section-id="{{ section.id }}" data-section-type="simple-collection-section">
   <div class="wrapper">
-    <header{% if section.settings.center_heading %} class="centered"{% endif %}>
+    <header {% if section.settings.center_heading %} class="centered"{% endif %}>
       {% if section.settings.title != blank %}
         <h4>{{ section.settings.title | escape }}</h4>
       {% endif %}
