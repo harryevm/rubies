@@ -74,30 +74,12 @@
       <div class="selection-wrapper variant radio js">
         {% for option in product.options_with_values %}
           {% include 'swatch' %}
-{% comment %}           <div data-app="eastsideco_sizeGuides"
-     data-shop="{{ shop.permanent_domain }}"
-     data-tags="{{ product.tags | join:',' | escape }}"
-     data-metafields="{{ product.metafields.esc-size-matters.tag }}"
-     data-popup="link">
-</div> {% endcomment %}
           {%- if section.settings.size_guide_page != blank and size_options == option_name  -%}
             <span class="label-extra 2222">
               <a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">Size Chart</a>
             </span>
-{% comment %}          <div data-app="eastsideco_sizeGuides"
-     data-shop="{{ shop.permanent_domain }}"
-     data-tags="{{ product.tags | join:',' | escape }}"
-     data-metafields="{{ product.metafields.esc-size-matters.tag }}"
-     data-popup="link">
-</div> {% endcomment %}
             {% elsif section.settings.size_guide_page != blank and 'youth-size' == option_name  %}
             <span class="label-extra 33333"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">Size Chart</a></span>
-{% comment %}           <div data-app="eastsideco_sizeGuides"
-     data-shop="{{ shop.permanent_domain }}"
-     data-tags="{{ product.tags | join:',' | escape }}"
-     data-metafields="{{ product.metafields.esc-size-matters.tag }}"
-     data-popup="link">
-</div> {% endcomment %}
             {%- endif -%}
         {% endfor %}
         {% if section.settings.product_quantity_enable %}
@@ -128,18 +110,6 @@
           {% else %}
         <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
          {% endif %}
-           {% comment %}
-          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">
-              {{ variant.title }} - {{ variant.price | money_with_currency }}
-            </option>
-       
-          {% if variant.available %}
-            <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">
-              {{ variant.title }} - {{ variant.price | money_with_currency }}
-            </option>
-          {% else %}
-            <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
-          {% endif %}{% endcomment %}
         {% endfor %}
       </select>
     </div>
@@ -155,24 +125,7 @@
     {% endif %}
   {% endfor %}
 
-{% comment %}
-{% assign productTags = product.tags | join: ', ' %}
 
-
- {% if productTags contains 'Preorder' %}
-  
-   <input id="your-name" value="Pre Order" type="hidden" name="properties[Status]">
-  {% unless product.options.size > 1 %} <span class="extra-overlay"></span>
-  <p class="alert-size"></p>{% endunless %}
-    <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  disabled>
-        
-        <span  >
-
-              {{ 'products.product.preorder' | t }}
-
-        </span>
-      </button>
-    {% else %}{% endif %}{% endcomment %}
 {% if sizeOption == 'Size' or sizeOption == 'Youth Size' %}
       <span class="extra-overlay"></span>
   <p class="alert-size"></p>{% endif %}
@@ -194,19 +147,6 @@
         <div class="discount-text-shipping">{{ section.settings.freeshippingtext }}</div>
       {% endif %}
       <div class="stickyaddCart">
-       {% comment %} {% if productTags contains 'Preorder' %}
-    
-   <span class="extra-overlay"></span>
-  <p class="alert-size"></p>
-    <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  disabled>
-        
-        <span  >
-
-              {{ 'products.product.preorder' | t }}
-
-        </span>
-      </button>
-    {% else %}{% endif %}{% endcomment %}
           
         <span class="extra-overlay"></span>
           <p class="alert-size"></p>
