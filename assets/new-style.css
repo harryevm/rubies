@@ -299,7 +299,7 @@ div#smile-ui-lite-launcher-frame-container { left: 20px; }
 .estimate-wr > span { color: #54C45E; }
 .cart .cart-checkout input.csapp_aiod_coupan_code { max-width: 200px !important; }
 .checkout-buttons>input { padding: 10px !important; font-size: 16px !important; line-height: 30px; }
-
+.page .content-container.narrow, .popup-page .content-container.narrow { max-width: 100%; }
 
 @media(min-width:701px){
   .middle-wrapper { display: none; }
