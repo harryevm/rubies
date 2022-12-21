@@ -59,7 +59,7 @@
               </select>
             </div>
             {%- if section.settings.size_guide_page != blank and size_options contains option_name -%}
-                <span class="label-extra"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">{{ pages[section.settings.size_guide_page].title }}</a></span>
+                <span class="label-extra dsfdfs"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">{{ pages[section.settings.size_guide_page].title }}</a></span>
                 {%- endif -%}
           {% endfor %}
           {% if section.settings.product_quantity_enable %}
@@ -81,7 +81,7 @@
      data-popup="link">
 </div> {% endcomment %}
           {%- if section.settings.size_guide_page != blank and size_options == option_name  -%}
-            <span class="label-extra"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">{{ pages[section.settings.size_guide_page].title }}</a></span>
+            <span class="label-extra 2222"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">{{ pages[section.settings.size_guide_page].title }}</a></span>
 {% comment %}          <div data-app="eastsideco_sizeGuides"
      data-shop="{{ shop.permanent_domain }}"
      data-tags="{{ product.tags | join:',' | escape }}"
@@ -89,7 +89,7 @@
      data-popup="link">
 </div> {% endcomment %}
             {% elsif section.settings.size_guide_page != blank and 'youth-size' == option_name  %}
-            <span class="label-extra"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">Size Chart</a></span>
+            <span class="label-extra 33333"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">Size Chart</a></span>
 {% comment %}           <div data-app="eastsideco_sizeGuides"
      data-shop="{{ shop.permanent_domain }}"
      data-tags="{{ product.tags | join:',' | escape }}"
