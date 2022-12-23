@@ -29,7 +29,7 @@ header.util a#CartButton:hover, header.util a#CartButton:focus { background: tra
 .collection-list-updated .flex-data > .grid__item h3 { font-size: 18px; line-height: 25px; margin-top: 15px !important; }
 .collection-list-updated .flex-data > .grid__item h3>a { font-weight: 600 !important;}
 .slide__item-image-contain.mobile .mob-img-updated + img.slide__image_this.slide__image.slide__image-mobile{display: none;}
-.btn-primary {
+.btn-primary, button.csapps_checkout {
     padding: 15px 25px !important;
     font-size: 17px;
     line-height: 30px;
@@ -43,7 +43,7 @@ header.util a#CartButton:hover, header.util a#CartButton:focus { background: tra
     border-radius: 4px;
     transition: all 0.35s ease-out;
 }
-.btn-primary:hover { background-color: transparent; color: #1A6CFC !important; transition: all 0.35s ease-in; }
+.btn-primary:hover, button.csapps_checkout:hover { background-color: transparent; color: #1A6CFC !important; transition: all 0.35s ease-in; }
 .gallery-box-wr figcaption.below h3 { font-size: 22px; line-height: 30px; font-weight: 700; letter-spacing: -1px; margin: 20px 0 10px !important; }
 h1, h2, h3 { font-weight: 600 !important; } 
 .simple-collection ul.product-swatches, .collection .product-swatches { margin: 0!important; position: absolute; list-style: none !important; }
