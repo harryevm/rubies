@@ -205,7 +205,7 @@
 <script>
 jQuery(document).ready(function(){
 setTimeout(function(){
-  $("<div>mydiv</div>").insertBefore('.aiod_minicart .csapp-discount-list');
+  $("<a href='{{ routes.cart_url }}' class='btn btn-primary'>View Cart</a>").insertBefore('.aiod_minicart button.csapps_checkout');
   alert();
   },5000);
 })
