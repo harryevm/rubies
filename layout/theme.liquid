@@ -203,9 +203,12 @@
 
  {% include 'smile-initializer' %}
 <script>
+jQuery(docuement).ready(function(){
 setTimeout(function(){
-  $("<div>mydiv</div>").insertBefore('button.csapps_checkout.btn');
-  },2000)
+  $("<div>mydiv</div>").insertBefore('.aiod_minicart .csapp-discount-list');
+  alert();
+  },2000);
+})
 </script>
 </body>
 </html>
