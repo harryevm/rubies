@@ -219,7 +219,7 @@
                 
                 <p class="subtotal">
                   <span class="label">{{ 'cart.general.subtotal' | t }} ({{ cart.item_count }} Items)</span>
-                  <span class="price money csapps-cart-original-total" data-cart-subtotal>{{ cart.total_price | money_with_currency }} {% comment %}{% if cart.currency.symbol == "$" %} {{ cart.currency.iso_code }}{%- endif -%}{% endcomment %}</span>
+                  <span class="price money" data-cart-subtotal><span class="csapps-cart-original-total">{{ cart.total_price | money_with_currency }}</span> {% comment %}{% if cart.currency.symbol == "$" %} {{ cart.currency.iso_code }}{%- endif -%}{% endcomment %}</span>
                 </p>
                 {% unless shop.enabled_currencies.size > 1 %}
                   <p class="shipping-at-checkout"><em>{{ 'cart.general.shipping_at_checkout' | t }}</em></p>
