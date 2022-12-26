@@ -64,7 +64,8 @@
               {% include 'product-thumbnails-slider' %}
             {%- endunless -%}
           </div>
-          <div class="desk-tab-wrap"> 
+          <div class="desk-tab-wrap">
+          <span class="save-full-text">{{ product.metafields.custom.save_text_for_bundle_product }}</span>
           {% if section.settings.related_enable %}
             <div class="also-bt-desk accordion-tab">  
               <a href="javascript:;" class="active">
