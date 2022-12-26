@@ -14,10 +14,10 @@
 
 {% endif %} {% endcomment %}
 
-{{"now" | date: "%a, %b %d, %Y" }}
 
-{% assign days = 3 | times: 86400 %}
-{{ "now" | date: "%s" | plus: days | date: "%Y, %m, %-d %Z" }}
+
+{% assign days = 1 | times: 777600 %}
+{{ "now" | date: "%a, %b %d, %Y" | plus: days | date: "%a, %b %d, %Y" }}
 
 <div class="aiod-general-discount-topbar"></div>
 {{ 'cart.css' | asset_url | stylesheet_tag }}
