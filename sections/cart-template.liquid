@@ -156,7 +156,7 @@
                     {%- endcomment -%}
                     <div class="td cart-item-total custom-cart-product-total" data-mobile-label="{{ 'cart.label.total' | t }}">
 <!--                       <div class="mobile-label">{{ 'cart.label.total' | t }}</div>  -->
-                      <p><span class="money" data-cart-item-line-price data-csapp_discount_summery data-csapp_line_price>{{ item.final_line_price | money_with_currency }}</span></p>
+                      <p><span class="money" data-cart-item-line-price 11>{{ item.final_line_price | money_with_currency }}</span></p>
                       {%- if item.original_line_price > item.final_line_price -%}
                         <p><span class="money original-price" data-cart-item-original-price><div class="pn-total-line-item" data-id="{{ item.key }}">{{ item.original_line_price |  money_with_currency }}</div></span></p>
                       {%- endif -%}
