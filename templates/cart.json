@@ -5,7 +5,7 @@
       "settings": {
         "show_notes": true,
         "show_vendors": true,
-        "ajax_cart": false,
+        "ajax_cart": true,
         "breadcrumbs": false,
         "terms_and_conditions": false,
         "terms_and_conditions_text": "<p>I agree with the terms and conditions.<\/p>",
