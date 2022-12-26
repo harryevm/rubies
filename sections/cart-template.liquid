@@ -1,6 +1,6 @@
 {% assign today = 'now' | date: '%s' %}
 {% assign single_day = 86400 %}
-{% assign today_number = 'now' | date: '%u' | plus: 0 %}
+{% assign today_number = 'now' | date: '%u' | plus: 9 %}
 
 {% if  today_number < 2 %}  
 
@@ -13,6 +13,7 @@
     Delivery by {{ today | plus: days_unix  | date: '%Y/%m/%d' }}
 
 {% endif %}
+
 <div class="aiod-general-discount-topbar"></div>
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 {% if cart.item_count > 0 %}
