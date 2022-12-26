@@ -159,6 +159,14 @@ p.shipping-at-checkout { margin: 25px 0 0 !important; }
 
   
 /* Mobile design start  */
+@media(max-width:1024px) { 
+  .cart .cart-checkout p.subtotal>span { margin-bottom: 15px; }
+  .cart .cart-checkout p.subtotal { flex-direction: column; }
+  .csapp-price-wrapper:not(.aiod_subtotal_text) { flex-direction: unset; }
+  .csapp_discount_total_wrapper {
+    align-items: flex-start;
+  }
+}
 @media(max-width:800px){
   .additional-checkout-buttons ul { justify-content: center; }
   .cart .cart-checkout input { width: 100%; padding: 15px !important; font-size: 16px; line-height: 25px; }
@@ -274,12 +282,6 @@ p.shipping-at-checkout { margin: 25px 0 0 !important; }
   #accordion-1 .head h2 { font-size: 16px !important; line-height: 25px; }
   #accordion-1 .head:after { top: 3px; }
   .cart .cart-checkout { padding: 20px 10px; }
-  .cart .cart-checkout p.subtotal>span { margin-bottom: 15px; }
-  .cart .cart-checkout p.subtotal { flex-direction: column; }
-  .csapp-price-wrapper:not(.aiod_subtotal_text) { flex-direction: unset; }
-  .csapp_discount_total_wrapper {
-    align-items: flex-start;
-  }
 }
 .td.cart-item-total.custom-cart-product-total .money {
       font: 700 18px/1.2 Poppins;
