@@ -66,6 +66,7 @@
           </div>
 
        <div class="desk-tab-wrap">   
+          {% if section.settings.related_enable %}
     <div class="also-bt-desk accordion-tab">
       <a href="javascript:;" class="active">{% if section.settings.related_title %}
                       {{ section.settings.related_title }} 
@@ -91,13 +92,15 @@
                               </div>
                             </div>
                       </div></div>
+            {% endif %}
+            {% if section.settings.bundle_enable %}
     <div class="also-bt-desk accordion-tab">
       <a href="javascript:;" class="active">{% if section.settings.bundle_title %}
                       {{ section.settings.bundle_title }} 
                       {% else %}
                          Bundles
                       {% endif %} <i class="fa fa-chevron-left"></i></a>
-                      <div class="accordion-content" style="display: block;">{% render 'bundle-product' %}</div></div>
+                      <div class="accordion-content" style="display: block;">{% render 'bundle-product' %}</div></div>{% endif %}
     
           </div>
         </div>
