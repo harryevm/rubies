@@ -16,7 +16,8 @@
 
 
 
-
+{% assign days = 1 | times: 777600 %}
+{{ "now" | date: "%s" | plus: days | date: "%a, %b %d, %Y" }}
 
 <div class="aiod-general-discount-topbar"></div>
 {{ 'cart.css' | asset_url | stylesheet_tag }}
@@ -52,8 +53,7 @@
         {% endif %}
         </div>
       <div class="estimate-wr">
-        {{ "now" | date: "%s" | plus: days | date: "%a, %b %d, %Y" }}
-        arrives to <b>Canada</b> between <span>{% assign days = 1 | times: 777600 %} {{ "now" | date: "%s" | plus: days | date: "%a, %b %d, %Y" }}</span></div>
+        arrives to <b>Canada</b> between <span>{{ "now" | date: "%s" | plus: days | date: "%a, %b %d, %Y" }}</span> and <span>{% assign days = 1 | times: 777600 %} {{ "now" | date: "%s" | plus: days | date: "%a, %b %d, %Y" }}</span></div>
         <div class="cart-list">
           <form action="/cart" method="post" novalidate class="cart-form">
             <div class="cart-items" data-csapp_line_wrapper>
