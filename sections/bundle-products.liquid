@@ -647,6 +647,9 @@
   header.content-util nav.breadcrumb { float: none; }
   header.content-util h1 { margin: 15px 0 0; font-size: 32px; line-height: 35px; }
   .desk-tab-wrap span.save-full-text { display: block; margin: 20px 0; }
+  @media(max-width:800px){
+    .single-product .grid .product-images { margin-top: 0; }
+  }
 </style>
 {% unless  product.template_suffix == 'fastbundles' %}
 <script>
