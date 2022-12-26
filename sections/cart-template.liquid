@@ -16,8 +16,7 @@
 
 
 
-{% assign days = 1 | times: 777600 %}
-{{ "now" | date: "%s" | plus: days | date: "%a, %b %d, %Y" }}
+
 
 <div class="aiod-general-discount-topbar"></div>
 {{ 'cart.css' | asset_url | stylesheet_tag }}
@@ -53,21 +52,8 @@
         {% endif %}
         </div>
       <div class="estimate-wr">
-        <script>
-        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-       
-        
-     
-        
-        const date = new Date();
-        const tomorrowDate = monthNames[date.getMonth()]+" "+ (date.getDate() + 1);
-        const afterDayDate = monthNames[date.getMonth()]+" "+ (date.getDate() + 9);
-        var tomorrowDateDay = new Date(tomorrowDate+", "+date.getFullYear());
-        var afterDayDateDay = new Date(afterDayDate+", "+date.getFullYear());
- 
-        </script>
-        arrives to <b>Canada</b> between <span><script> document.write(days[tomorrowDateDay.getDay()]+", "+tomorrowDate)</script></span> and <span><script> document.write(days[afterDayDateDay.getDay()]+", "+afterDayDate)</script></span></div>
+        {{ "now" | date: "%s" | plus: days | date: "%a, %b %d, %Y" }}
+        arrives to <b>Canada</b> between <span>{% assign days = 1 | times: 777600 %} {{ "now" | date: "%s" | plus: days | date: "%a, %b %d, %Y" }}</span></div>
         <div class="cart-list">
           <form action="/cart" method="post" novalidate class="cart-form">
             <div class="cart-items" data-csapp_line_wrapper>
