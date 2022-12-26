@@ -1,7 +1,7 @@
 {% assign today = 'now' | date: '%s' %}
 {% assign single_day = 86400 %}
-{% assign today_number = 'now' | date: '%u' | plus: 9 %}
-
+{% assign today_number = 'now' | date: '%u' | plus: 0 %}
+{{ today_number }}
 {% if  today_number < 2 %}  
 
     Delivery by {{ today | plus: single_day | date: '%Y/%m/%d' }}
