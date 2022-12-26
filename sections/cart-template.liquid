@@ -16,6 +16,8 @@
 
 {{"now" | date: "%a, %b %d, %Y" }}
 
+{% assign days = 3 | times: 86400 %}
+{{ "now" | date: "%s" | plus: days | date: "%Y, %m, %-d %Z" }}
 
 <div class="aiod-general-discount-topbar"></div>
 {{ 'cart.css' | asset_url | stylesheet_tag }}
