@@ -1356,5 +1356,5 @@ p.aiod_error {
     }
 }
 .csapp_discount_total_wrapper{
-  position:relative;
+  position:relative !important;
 }
