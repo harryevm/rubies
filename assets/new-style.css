@@ -338,6 +338,9 @@ div#smile-ui-lite-launcher-frame-container { left: 20px; }
     footer.site-footer .grid { flex-wrap: wrap; }
     footer.site-footer .grid .box { width: 50% !important; margin-bottom: 30px; }
     .bottom-bar { top: -15px; }
+
+    .csapps-p-detail .csapps-p-title { margin-bottom: 20px; }
+    .csapps-p-detail .csapps-p-title a { font-size: 18px !important; font-weight: 600; line-height: 20px !important; }
 }
 @media(max-width:800px){
   
