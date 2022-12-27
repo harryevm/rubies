@@ -1,416 +1,282 @@
 
-<div class="aiod-general-discount-topbar"></div>
-{{ 'cart.css' | asset_url | stylesheet_tag }}
-{% if cart.item_count > 0 %}
-  <style>
-  .collection-list-section { display: none !important; }
-    .simple-collection-section, .collection-list-section { width: 100%; }
-  </style>
-{% endif %}
-<section class="cart" data-section-id="{{ section.id }}" data-ajax-cart="{{ section.settings.ajax_cart }}" data-section-type="cart-template">
-  <div class="wrapper">
+{%- assign per_row = section.settings.per_row -%}
+{%- assign paginate_by = per_row | times: section.settings.rows_per_page -%}
 
-    <header class="content-util">
-      {% if section.settings.breadcrumbs %}
-    {% include 'breadcrumb' %}
-        {% endif %}
-    {% include 'social-icons' %}
-    </header>
+{%- paginate collection.products by paginate_by -%}
 
-    <div class="cart-container">
-      <header class="cart-header">
-        <h1>{{ 'cart.general.title' | t }}</h1>
-      </header>
-      {% if cart.item_count > 0 %}
-        
-      <div id="shipping-savings-message">
-        {% assign shipping_value = section.settings.free_price | remove: "." %}
-        {% assign cart_total = cart.total_price %}
-        {% assign shipping_value_left = shipping_value | minus: cart_total %}
-        {% if shipping_value_left > 0 %}
-          <p>Spend <b>{{ shipping_value_left | money }}</b> more for free shipping $8 CAD standard shipping fee</p>
-        {% else %}
-          <p>You've got free shipping </p>
-        {% endif %}
-        </div>
-      <div class="estimate-wr">
-        arrives to <b>Canada</b> between <span>{% assign nextday = 1 | times: 172800 %}{{ "now" | date: "%s" | plus: nextday |date: "%a, %b %d, %Y" }}</span> and <span>{% assign days = 1 | times: 777600 %} {{ "now" | date: "%s" | plus: days | date: "%a, %b %d, %Y" }}</span></div>
-        <div class="cart-list">
-          <form action="/cart" method="post" novalidate class="cart-form">
-            <div class="cart-items" data-csapp_line_wrapper>
-              {% comment %}
-              <div class="label-row">
-                <div class="grid">
-                  <div class="td cart-item-product">
-                    {{ 'cart.label.product' | t }}
-                  </div>
-<!--                   <div class="td cart-item-price">
-                    {{ 'cart.label.price' | t }}
-                  </div>
-                  <div class="td cart-item-quantity">
-                    {{ 'cart.label.quantity' | t }}
-                  </div> -->
-                  <div class="td cart-item-total">
-                    {{ 'cart.label.total' | t }}
-                  </div>
-                </div>
-              </div>
-               {% endcomment %}
-              {%- for item in cart.items -%}
-                
-                <div class="cart-item" data-cart-item="{{ item.key }}" data-csapp_line_index>
-                <div class="grid custom-cart-items">
-                <div class="td cart-item-product-image custom-cart-product-image">
-                    {%- comment -%}
-                        Cart item - image
-                      {%- endcomment -%}
-                      <div class="cart-item-image">
-                        {%- assign image = item.image -%}
-                        <a href="{{ item.url | within: collections.all }}" class="card__image-wrapper"
-                          style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%"
-                          data-cart-item-href>
-                          {%- assign image_widths = '120,240,394,590' -%}
-                          {% include 'theme-rias' %}
-                          <img class="card__image lazyload"
-                            src="{{ image | img_url: '120x' }}"
-                            data-src="{{ image_url_pattern }}"
-                            data-widths="[{{ image_widths }}]"
-                            data-aspectratio="{{ image.aspect_ratio }}"
-                            data-sizes="auto"
-                            data-cart-item-image
-                            alt="{{ image.alt | escape }}">
-                          <noscript>
-                            <img class="card__image" src="{{ image | img_url: '120x' }}" alt="{{ image.alt | escape }}">
-                          </noscript>
-                        </a>
-                      </div>
-                </div>
-                <div class="td cart-item-product custom-cart-product-title">
-                  
-                      {%- comment -%}
-                        Cart item - title
-                      {%- endcomment -%}
-                      <div class="cart-item-title">
-                        <a href="{{ item.url | within: collections.all }}" class="title" data-cart-item-href data-cart-item-title>{{ item.product.title }}</a>
-                        {%- unless item.product.has_only_default_variant -%}
-                          <span class="variant" data-cart-item-variant-title>{{ item.variant.title }}</span></br>
-                        {%- endunless -%}
-                        {%- comment -%}
-                          Optional, loop through custom product line items if available
-                          For more info on line item properties, visit:
-                            - https://help.shopify.com/en/themes/customization/products/features/get-customization-information-for-products
-                        {%- endcomment -%}
-                        {%- unless item.properties == empty -%}
-                          {%- for property in item.properties -%}
-                            {%- unless property.last == blank -%}
-                              {{ property.first }}: {% if property.last contains '/uploads/' %}
-                                <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
-                              {% else %}
-                                {{ property.last }}
-                              {% endif %}<br>
-                            {%- endunless -%}
-                          {%- endfor -%}
-                        {%- endunless -%}
-                      </div>
-                    <div class="cart-item-quantity">
-                      <span>
-                        <div class="quantity-select">
-                          <div class="button-wrapper">
-                            <button type="button" class="adjust adjust-minus" data-cart-item-quantity-minus>-</button>
-                          </div>
-                          <div class="input-wrapper">
-                            <input type="text" class="quantity" data-cart-item-quantity min="0" pattern="[0-9]*" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" >
-                          </div>
-                          <div class="button-wrapper">
-                            <button type="button" class="adjust adjust-plus" data-cart-item-quantity-plus>+</button>
-                          </div>
-                        </div>
-                      </span>
-                      <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="remove" data-cart-item-remove>
-                  <img src="https://cdn.shopify.com/s/files/1/0661/1822/2064/files/delete.png?v=1666160123">
-                </a>{% comment%}{{ 'cart.general.remove' | t }}{% endcomment %}
-                    </div>
-                 </div>
-                    {%- comment -%}
-                      Cart item - price
-                    {%- endcomment -%}
-                {% comment %}
-                    <div class="td cart-item-price">
-                      <p><span class="money final-price{% if item.original_line_price > item.final_line_price %} final-price-discount{% endif %}" data-cart-item-final-price data-csapp_price>{{ item.final_price | money }}</span></p>
-                      {%- if item.original_line_price > item.final_line_price -%}
-                        <p><span class="money original-price" data-cart-item-original-price><div class="pn-price-item" data-id="{{ item.key }}">{{ item.original_price | money }}</div></span></p>
-                      {%- endif -%}
-                      {% if item.line_level_discount_allocations.size > 0 %}
-                        <ul class="cart-item-discounts">
-                        {% for discount_allocation in item.line_level_discount_allocations %}
-                          <li class="cart-item-discount"><span class="cart-item-discount-title">{{ discount_allocation.discount_application.title }}</span><br>
-                          <span class="cart-item-discount-amount">(-<span class="money">{{ discount_allocation.amount | money_with_currency }}</span>)</span></li>
-                        {% endfor %}
-                        </ul>
-                      {% endif %}
-                    </div>
-                {% endcomment %}
- 
-                
-                    {%- comment -%}
-                      Cart item - total
-                    {%- endcomment -%}
-                    <div class="td cart-item-total custom-cart-product-total" data-mobile-label="{{ 'cart.label.total' | t }}" data-csapp_discount_summery data-csapp_line_price> 
-<!--                       <div class="mobile-label">{{ 'cart.label.total' | t }}</div>  -->
-                      <p><span class="money" data-cart-item-line-price >{{ item.final_line_price | money_with_currency }}</span></p>
-                      {% comment %}{%- if item.original_line_price > item.final_line_price -%}
-                        <p><span class="money original-price" data-cart-item-original-price><div class="pn-total-line-item" data-id="{{ item.key }}">{{ item.original_line_price |  money_with_currency }}</div></span></p>
-                      {%- endif -%}{% endcomment %}
-                    </div>
-                  </div>
-          </div>
-      {%- endfor -%}
-</div>
+<div
+  id="CollectionSection"
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-template">
 
-<!-- <div class="discountcodefield"> 
-  <label for="discount">Discount Code:</label> 
-  <input autocomplete="off" type="hidden" name="discount" class="discount_code" />
-  <input autocomplete="off" type="text" name="discount_code" class="discount_code_field" /> 
-  <input type="button" name="apply_discount_code" class="btn discount_code_btn" value="Apply"/>
-</div> 
-
-<div class="cart__savings discount_apply_code">
-</div> -->
-
-
-<div class="cart-tab-wrapper">
-   <div id="accordion-1">
-    <div class="head">
-      <h2>{{ section.settings.tab_title }}</h2>
-    </div>
-    <div class="content">
-      <p>{{ section.settings.tab_content }}</p>
-    </div>
-  </div>
-
-</div>
-        
-            <div class="grid">
-                <div class="cart-notes" id="ship-calculator">
-                    {% comment %}
-                    Optional, add a textarea for special notes
-                    - Your theme settings can turn this on or off. Default is on.
-                    - Make sure you have name="note" for the message to be submitted properly
-                    {% if section.settings.show_notes %}
-                    <label for="CartSpecialInstructions">{{ 'cart.general.note' | t }}</label>
-                    <textarea name="note" id="CartSpecialInstructions">{{ cart.note }}</textarea>
-                    {% endif %}
-                    {% endcomment %}
-
-                </div>
-
-              <div class="cart-checkout">
-                {%- if cart.cart_level_discount_applications != blank -%}
-                  <ul class="cart-discount">
-                    {%- for discount_application in cart.cart_level_discount_applications -%}
-                      <li class="cart-discount--applications">
-                        <span class="cart-discount--title">{{- discount_application.title -}}</span>
-                        <span class="cart-discount--amount">-<span class="money">{{ discount_application.total_allocated_amount | money_with_currency }}</span></span>
-                      </li>
-                    {%- endfor -%}
-                  </ul>
-                {%- endif -%}
-
-
-                
-                <p class="subtotal">
-                  <span class="label">{{ 'cart.general.subtotal' | t }} ({{ cart.item_count }} Items)</span>
-                  <span class="price money csapps-cart-original-total" data-cart-subtotal>{{ cart.total_price | money_with_currency }}{% comment %}{% if cart.currency.symbol == "$" %} {{ cart.currency.iso_code }}{%- endif -%}{% endcomment %}</span>
-                </p>
-                {% unless shop.enabled_currencies.size > 1 %}
-                  <p class="shipping-at-checkout"><em>{{ 'cart.general.shipping_at_checkout' | t }}</em></p>
-                {% endunless %}
-                {% if settings.show_multiple_currencies %}
-                {% assign default_currency = settings.default_currency | default: shop.currency | strip | upcase %}
-                <p class="currency-at-checkout" {%if default_currency == shop.currency %}style="display:none;"{% endif %}><em>{{ 'cart.general.currency_at_checkout_html' | t: shop_name: shop.name, shop_currency: shop.currency }}</em></p>
-                {% endif %}
-                <!--
-
-                <p style="text-align:left"> 
-                  <b>Please note orders may take up to 2 weeks to ship as we have just received delivery of our second order of <a href="https://rubyshines.com/products/the-aj-shaping-underwear">underwear</a> and are working through a large backlog of orders. Thanks for your patience!</b> 
-                </p>
-				-->
-                  
-                {%- if section.settings.terms_and_conditions -%}
-                  <div class="terms-and-conditions rte">
-                    <input style="float:none; vertical-align: middle;" type="checkbox" id="terms-and-conditions__agree" />
-                    <label style="display:inline; float:none" for="terms-and-conditions__agree">
-                      {{ section.settings.terms_and_conditions_text }}
-                    </label>
-                  </div>
-                {%- endif -%}
-                <div class="checkout-buttons">
-                  <input type="submit" name="update" class="button btn btn-secondary outline cart-button--update" value="{{ 'cart.general.update' | t }}">
-          {% if cart.total_price > 0 %}
-                  <input type="submit" name="checkout" class="button  btn btn-primary" value="{{ 'cart.general.checkout' | t }}">
-          {% else %}
-                  <a href="#" class="button  btn btn-primary">{{ 'cart.general.checkout' | t }}</a>
-          {% endif %}
-                </div>
-
-              {% comment %}  {% if additional_checkout_buttons %}
-                  	<div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
-                {% endif %} {% endcomment %}
-              </div>
-            </div>
-
-          </form>
-        </div>
-      {% else %}
-        {% comment %}
-          The cart is empty
-        
-        <p>{{ 'cart.general.empty' | t }}<br>
-        {{ 'cart.general.continue_browsing_html' | t }}</p>{% endcomment %}
-        <h4 style=" margin-bottom: 50px; ">No Items</h4>
-      <div class="cart-tab-wrapper">
-         <div id="accordion-1">
-          <div class="head">
-            <h2>{{ section.settings.tab_title }}</h2>
-          </div>
-          <div class="content">
-            <p>{{ section.settings.tab_content }}</p>
-          </div>
-        </div>
+  {%- if section.settings.description_position == 'top' -%}
+    {%- if collection.description != blank -%}
+      <div class="rte">
+        {{ collection.description }}
       </div>
-      <script>
-        setTimeout(function(){
-        $(".cart-tab-wrapper").appendTo(".collection-list-section .collection-list-updated");
-      },2000)
-      </script>
-      {% endif %}
+      <hr class="hr--clear hr--small">
+    {%- endif -%}
+  {%- endif -%}
 
+  {%- if section.settings.subcollection_style == 'above' -%}
+    {%- render 'subcollections', per_row: section.settings.subcollections_per_row -%}
+  {%- endif -%}
 
+  <div class="collection-filter">
+    {%- assign current_filter_size = current_tags | size -%}
+    <div class="collection-filter__item collection-filter__item--drawer">
+      <button
+        type="button"
+        class="js-drawer-open-collection-filters btn btn--tertiary{% unless current_filter_size == 0 %} btn--tertiary-active{% endunless %}"
+        aria-controls="FilterDrawer">
+        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-filter" viewBox="0 0 64 64"><path d="M48 42h10M48 42a5 5 0 1 1-5-5 5 5 0 0 1 5 5zM7 42h31M16 22H6M16 22a5 5 0 1 1 5 5 5 5 0 0 1-5-5zM57 22H26"/></svg>
+        {{ 'collections.filters.title_tags' | t }}
+        {%- if current_filter_size > 0 -%}
+          ({{ current_filter_size }})
+        {%- endif -%}
+      </button>
+    </div>
+
+    <div class="collection-filter__item collection-filter__item--count small--hide">
+      {%- if section.settings.enable_collection_count -%}
+        {{ 'collections.general.items_with_count' | t: count: collection.products_count }}
+      {%- endif -%}
+    </div>
+
+    <div class="collection-filter__item collection-filter__item--sort">
+      <div class="collection-filter__sort-container">
+        {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+        <label for="SortBy" class="hidden-label">{{ 'collections.sorting.title' | t }}</label>
+        <select name="SortBy" id="SortBy" data-default-sortby="{{ collection.default_sort_by }}">
+          <option value="title-ascending"{% if sort_by == collection.default_sort_by %} selected="selected"{% endif %}>{{ 'collections.sorting.title' | t }}</option>
+          {%- for option in collection.sort_options -%}
+            <option value="{{ option.value }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name }}</option>
+          {%- endfor -%}
+        </select>
+      </div>
     </div>
   </div>
 
-</section>
+  {%- if section.settings.enable_collection_count -%}
+    <p class="medium-up--hide text-center" data-scroll-to>{{ 'collections.general.items_with_count' | t: count: collection.products_count }}</p>
+  {%- endif -%}
+
+<!--   <div
+    class="grid grid--uniform{% if section.settings.mobile_flush_grid %} small--grid--flush{% endif %}"{% unless section.settings.enable_collection_count %} data-scroll-to{% endunless %}> -->
+    {%- liquid
+      assign grid_item_width = 'small--one-half medium-up--one-third'
+
+      case per_row
+        when 2
+          assign grid_item_width = 'medium-up--one-half'
+        when 3
+          assign grid_item_width = 'small--one-half medium-up--one-third'
+        when 4
+          assign grid_item_width = 'small--one-half medium-up--one-quarter'
+        when 5
+          assign grid_item_width = 'small--one-half medium-up--one-fifth'
+      endcase
+    -%}
+
+{%- for product in collection.products -%}
+  {% assign options = product.options %}
+    {% assign have_color = false %}
+    {% assign size_index = false %}
+          {% for option in options %}
+        {% comment %}Check if there is a color option{% endcomment %}
+        {% if option == "Flavors" or option == "Color" %}
+            {% assign have_color = forloop.index0 %}
+          {% assign fullWidthClass = '' %}
+        {% elsif option == "Size" %}
+            {% assign size_index = forloop.index0 %}
+          {% assign fullWidthClass = '' %}
+        {% else %}
+          {% assign have_color = forloop.index0 %}
+          {% assign fullWidthClass = 'ful-class-wrap' %}
+        {% endif %}
+
+        {% comment %}Get the size index
+        {% if option == "Size" %}
+            {% assign size_index = forloop.index0 %}
+        {% endif %}{% endcomment %}
+    {% endfor %}
+{%- endfor -%}
+
+<div
+    class="all-pro-wrapper {{ fullWidthClass }} grid grid--uniform{% if section.settings.mobile_flush_grid %} small--grid--flush{% endif %}"{% unless section.settings.enable_collection_count %} data-scroll-to{% endunless %}>
+    {%- for product in collection.products -%}
+      {%- render 'variant-collection', product: product, grid_item_width: grid_item_width, per_row: per_row -%}
+    {%- else -%}
+      <div class="grid__item">
+        <p>{{ 'collections.general.no_matches' | t }}</p>
+      </div>
+    {%- endfor -%}
+</div>
+<!--   </div> -->
+
+  {%- if section.settings.subcollection_style == 'below' -%}
+    {%- render 'subcollections', per_row: section.settings.subcollections_per_row -%}
+  {%- endif -%}
+
+  {%- if paginate.pages > 1 -%}
+    {%- render 'pagination', paginate: paginate -%}
+  {%- endif -%}
+
+  {%- if section.settings.description_position == 'bottom' -%}
+    {%- if collection.description != blank -%}
+      <hr class="hr--clear hr--small">
+      <div class="rte">
+        {{ collection.description }}
+      </div>
+      <hr class="hr--clear hr--small">
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- if settings.quick_shop_enable -%}
+    {%- for product in collection.products -%}
+      {%- render 'quick-shop-modal', product: product -%}
+    {%- endfor -%}
+  {%- endif -%}
+</div>
+
+{%- endpaginate -%}
+
 {% schema %}
-{
-  "name": "Cart page",
-  "class":"cart-templ-wr",
-  "settings": [
-     
-    {
-      "type": "checkbox",
-      "id": "show_notes",
-      "label": "Enable order notes",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_vendors",
-      "label": "Show product vendors",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "ajax_cart",
-      "label": "Auto update cart quantities",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "breadcrumbs",
-      "label": "Show Breadcrumbs",
-      "default": false
-    },
-    {
-      "type": "header",
-      "content": "Terms and conditions"
-    },
-    {
-      "type": "checkbox",
-      "id": "terms_and_conditions",
-      "label": "Enable checkbox",
-      "default": false
-    },
-    {
-      "type": "richtext",
-      "id": "terms_and_conditions_text",
-      "label": "Agreement text",
-      "default": "<p>I agree with the terms and conditions.</p>"
-    },
-    {
-      "type":"text",
-      "id":"tab_title",
-      "label":"Tab Title"
-    },
-     {
-      "type":"richtext",
-      "id":"tab_content",
-      "label":"Tab Content"
-    },
-    {
-      "type":"header",
-      "content": "Free Shipping"
-    },
-    {
-      "type":"text",
-      "id":"free_price",
-      "label":"Price for free shipping",
-      "info":"If you want to add $50, you would write 50.00"
-    },
-    {
-      "type":"text",
-      "id":"free_text",
-      "label":"Free shipping message"
-    }
-   
-    
-  ]
-}
+  {
+    "name": "Collection pages",
+    "settings": [
+      {
+        "type": "select",
+        "id": "description_position",
+        "label": "Collection description position",
+        "default": "top",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Subcollections"
+      },
+      {
+        "type": "paragraph",
+        "content": "Links to collections from your menu will appear here. [Learn more](https://archetypethemes.co/blogs/impulse/how-do-i-create-subcollections)"
+      },
+      {
+        "type": "select",
+        "id": "subcollection_style",
+        "label": "Subcollection style",
+        "default": "above",
+        "options": [
+          {
+            "value": "above",
+            "label": "Above products"
+          },
+          {
+            "value": "below",
+            "label": "Below products"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "subcollections_per_row",
+        "label": "Subcollections per row",
+        "default": 5,
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "type": "header",
+        "content": "Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_collection_count",
+        "label": "Enable collection count",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "per_row",
+        "label": "Products per row",
+        "default": 4,
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "type": "range",
+        "id": "rows_per_page",
+        "label": "Rows per page",
+        "default": 7,
+        "min": 3,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "type": "checkbox",
+        "id": "mobile_flush_grid",
+        "label": "Flush grid on mobile",
+        "default": false
+      }
+    ]
+  }
 {% endschema %}
 <style>
-  section.cart { overflow-x: hidden; }
-  {% unless cart.item_count > 0 %}
-  .simple-collection-section .slick-list.draggable { max-width: 100% !important; }
-  .simple-collection .product-container .box { padding: 0px 30px; }
-  .simple-collection-section, .collection-list-section { display: inline-flex; width: 50%; vertical-align: top; }
-  .simple-collection.layout-4 { max-width: 100%; }
-  .collection-list-section { margin-top: 100px; }
-  .collection-list-section .collection-list.collection-list-updated.section-standard { padding: 0; }
-  ul.slick-dots { left: 0; right: 0; }
-  .slick-dots li { width: 10px; height: 10px; margin: 0 3px; }
-  .slick-dots li button { background: transparent; border-radius: 50%; width: 10px; height: 10px; padding: 0; border: 1px solid #000; }
-  .slick-dots li.slick-active button { background: #000;  }
-  .slick-dots li button::before { display: none; }
-  .collection-list-updated .flex-data > .grid__item { margin-bottom: 0; }
+/* .all-pro-wrapper.ful-class-wrap { display: flex; justify-content: space-between; flex-wrap: wrap; }
+.all-pro-wrapper.ful-class-wrap >.grid.grid--uniform { width: calc(100%/4); padding: 0; }
+.all-pro-wrapper .grid.grid--uniform .grid__item.grid-product { width: 100%; }
 
-  @media(min-width:768px) {
-    .flex-data.grid img.card__image { width: 60px; height: 60px; }
-    div.collection-list .box figcaption.below a { font-size: 14px; line-height: 15px; }
-  }
-  @media(max-width:1100px) {
-    .flex-data.grid img.card__image { width: 80px; height: 80px; }
-    div.collection-list .box figcaption.below a { font-size: 16px; line-height: 20px; }
-    #accordion-1 .head h2 { font-size: 18px; line-height: 30px; }
-  }
   @media(max-width:768px){
-    .simple-collection-section, .collection-list-section { width: 100%; display: block; }
-    .collection-list-section { margin: 0; }
-    .simple-collection .product-container .box { padding: 0px 5px; }
+    .all-pro-wrapper.ful-class-wrap >.grid.grid--uniform { width: calc(100%/2); margin: 0; }
+    .all-pro-wrapper.ful-class-wrap >.grid.grid--uniform>.grid__item.grid-product { padding: 0 2px; }
+  } */
+/*   .all-pro-wrapper.ful-class-wrap { display: flex; justify-content: space-between; flex-wrap: wrap; }
+  .all-pro-wrapper.ful-class-wrap .ful-class-wrap.grid.grid--uniform { width: calc(100%/4); }
+  .all-pro-wrapper.ful-class-wrap .ful-class-wrap.grid.grid--uniform .grid__item.grid-product { width: 100%; }
+ @media(max-width:768px){
+  .all-pro-wrapper.ful-class-wrap .ful-class-wrap.grid.grid--uniform { width: calc(100%/2); margin-left: 0; }
+   .all-pro-wrapper.ful-class-wrap .ful-class-wrap.grid.grid--uniform .grid__item.grid-product { width: 100%; padding: 0 5px; }
+   .page-width { padding: 0 10px; }
+ } */
+  .modal__centered-content .product-section.is-modal:first-child {
+    display: block;
+}
+.modal__centered-content .product-section.is-modal {
+    display: none;
+}
+@media(max-width:768px){
+  .all-pro-wrapper.grid.grid--uniform { margin: 0; }
+  .all-pro-wrapper.grid.grid--uniform .grid__item { padding: 0 2px 0 0; }
   }
-  {% endunless %}
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
-  $('.head').click(function(){
-    $(this).toggleClass('active');
-    $(this).parent().find('.arrow').toggleClass('arrow-animate');
-    $(this).parent().find('.content').slideToggle(280);
-  })      
-  $('.quantity-select .button-wrapper button').click(function(){
-   
-    setTimeout(function(){
-    $("div#shipping-savings-message").load("/cart div#shipping-savings-message > p");
-    if($('.cart-items >.cart-item').length < 1){
-      window.location.href = "/cart";
-    }
-    },2000);
+$(document).ready(function(){
+  var $variantlength = $('.grid__item.grid-product >.grid-product__content').length;
+  $('.collection-filter__item--count').text($variantlength+' Products');
+  $('.quick-product__btn').click(function(){
+    var optVal = $(this).data('name').trim();
+      setTimeout(function(){
+    $(".modal--is-active .variant-input-wrap .variant-input").each(function(){
+        if($(this).data('value')==optVal){ 
+            $(this).children('.variant__button-label').click();  
+        }
+    });
+    },2000);  
   });
+});
 </script>
