@@ -352,7 +352,8 @@ div#smile-ui-lite-launcher-frame-container { left: 20px; }
   .single-product .grid { position: relative; margin: 0; }
   .product-title-with-review { position: absolute; top: 0; left: 0; right: 0; }
   .single-product .grid aside.product-aside, .single-product .grid .product-images { margin: 0; padding: 0; }
-  aside.product-aside .purchase-box, .description { max-width: unset; width: 92%; margin: 0 auto; border: none; }
+  aside.product-aside .purchase-box, .description { max-width: unset; width: 100%; margin: 0 auto; border: none; }
+  aside.product-aside .purchase-box .aiod-bundle-discount-wrap { padding: 0; }
   .purchase-box .selection-wrapper.price { border: none; }
   .single-product .grid .product-images { margin-top: 100px; }
 
