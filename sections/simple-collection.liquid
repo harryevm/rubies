@@ -148,13 +148,24 @@ $('.box.product select[id*=ProductSelect-]').change(function(){
 
 });
   
+{% unless template == 'cart' %}
   if ($(window).width() <= 650) {
+    $('#collection-{{section.id}}').slick({
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 2000,
+    });
+    }
+{% else %}
 $('#collection-{{section.id}}').slick({
   arrows: false,
   autoplay: true,
   autoplaySpeed: 2000,
+  slidesToShow: 2,
+  slidesToScroll: 2
 });
-}
+{% endunless %}
+  
 
 
 
