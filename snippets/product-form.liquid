@@ -1,4 +1,5 @@
 {% form 'product', product %}
+<div class="product-title-with-review">
 {% comment %}Start automatically added Judge.me widget{% endcomment %}
   {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
 {% comment %}End automatically added Judge.me widget{% endcomment %}
@@ -14,7 +15,7 @@
 
   <div class="selection-wrapper price product-single__price-{{ section.id }}">
     {% unless section_onboarding %}
-      <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ current_variant.price | money_without_currency | remove: ',' }}">{{ current_variant.price | money }} {% if cart.currency.symbol == "$" %} {{ cart.currency.iso_code }}{%- endif -%}</span>
+      <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ current_variant.price | money_without_currency | remove: ',' }}">{{ current_variant.price | money_with_currency }}  </span>
     {% else %}
       <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ 1999 | money_without_currency | remove: ',' }}">{{ 1999 | money }}</span>
     {% endunless %}
@@ -29,7 +30,9 @@
       </p>
     {% endif %}
   </div>
-
+</div>
+  <div class="discount_text">{{ settings.product_discountext }}</div>
+  
   {% unless product.has_only_default_variant %}
     {%- comment -%}
       Dropdown colleciton of variant options
@@ -40,6 +43,7 @@
           {% for option in product.options_with_values %}
             {%- assign option_name = option.name | downcase -%}
             {%- assign size_options = 'products.product.size_option' | t -%}
+           
             <div class="selector-wrapper">
               <label for="SingleOptionSelector-{{ forloop.index0 }}">
                 {{ option.name }}
@@ -70,9 +74,29 @@
       <div class="selection-wrapper variant radio js">
         {% for option in product.options_with_values %}
           {% include 'swatch' %}
-          {%- if section.settings.size_guide_page != blank and size_options == option_name -%}
-    <span class="label-extra"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">{{ pages[section.settings.size_guide_page].title }}</a></span>
-    {%- endif -%}
+          <div data-app="eastsideco_sizeGuides"
+     data-shop="{{ shop.permanent_domain }}"
+     data-tags="{{ product.tags | join:',' | escape }}"
+     data-metafields="{{ product.metafields.esc-size-matters.tag }}"
+     data-popup="link">
+</div>
+          {%- if section.settings.size_guide_page != blank and size_options == option_name  -%}
+            <span class="label-extra"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">{{ pages[section.settings.size_guide_page].title }}</a></span>
+         <div data-app="eastsideco_sizeGuides"
+     data-shop="{{ shop.permanent_domain }}"
+     data-tags="{{ product.tags | join:',' | escape }}"
+     data-metafields="{{ product.metafields.esc-size-matters.tag }}"
+     data-popup="link">
+</div>
+            {% elsif section.settings.size_guide_page != blank and 'youth-size' == option_name  %}
+            <span class="label-extra"><a href="{{ pages[section.settings.size_guide_page].url }}" class="product-size-guide-{{ section.id }}">{{ pages[section.settings.size_guide_page].title }}</a></span>
+          <div data-app="eastsideco_sizeGuides"
+     data-shop="{{ shop.permanent_domain }}"
+     data-tags="{{ product.tags | join:',' | escape }}"
+     data-metafields="{{ product.metafields.esc-size-matters.tag }}"
+     data-popup="link">
+</div>
+            {%- endif -%}
         {% endfor %}
         {% if section.settings.product_quantity_enable %}
           {% include 'quantity-selector' %}
@@ -118,10 +142,41 @@
       </select>
     </div>
   </div>
+  
   <div class="error cart-error cart-error-{{ section.id }}" style="display:none;"></div>
   <div id="CartButtons-{{ section.id }}" class="cart-buttons {% if cart_buttons_margin %}{{ cart_buttons_margin }}{% endif %} {% if section.settings.show_payment_button and current_variant.available %}cart-buttons__enabled{% elsif section_onboarding %}cart-buttons__enabled{% endif %}">
     <div class="button-wrapper default-cart-button">
-      <button type="submit" name="add" id="AddToCart-{{ section.id }}"  {% if preorder == true %} data-preorder {% endif %} class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart>
+  
+{% for option in product.options_with_values %}
+  {% if option.name == 'Size' or option.name == 'Youth Size' %}
+    {% assign sizeOption = option.name %}
+    {% endif %}
+  {% endfor %}
+
+  {{ sizeOption }}
+{% comment %}
+{% assign productTags = product.tags | join: ', ' %}
+
+
+ {% if productTags contains 'Preorder' %}
+  
+   <input id="your-name" value="Pre Order" type="hidden" name="properties[Status]">
+  {% unless product.options.size > 1 %} <span class="extra-overlay"></span>
+  <p class="alert-size"></p>{% endunless %}
+    <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  disabled>
+        
+        <span  >
+
+              {{ 'products.product.preorder' | t }}
+
+        </span>
+      </button>
+    {% else %}{% endif %}{% endcomment %}
+{% if sizeOption == 'Size' or sizeOption == 'Youth Size' %}
+      <span class="extra-overlay"></span>
+  <p class="alert-size"></p>{% endif %}
+      <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
+        
         <span id="AddToCartText-{{ section.id }}" data-AddToCartText>
           {% unless current_variant.available or section_onboarding %}
             {{ 'products.product.sold_out' | t }}
@@ -134,6 +189,42 @@
           {% endunless %}
         </span>
       </button>
+      {% if section.settings.freeshippingtext %}
+        <div class="discount-text-shipping">{{ section.settings.freeshippingtext }}</div>
+      {% endif %}
+      <div class="stickyaddCart">
+       {% comment %} {% if productTags contains 'Preorder' %}
+    
+   <span class="extra-overlay"></span>
+  <p class="alert-size"></p>
+    <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  disabled>
+        
+        <span  >
+
+              {{ 'products.product.preorder' | t }}
+
+        </span>
+      </button>
+    {% else %}{% endif %}{% endcomment %}
+          
+        <span class="extra-overlay"></span>
+          <p class="alert-size"></p>
+        <button type="submit" name="add" id="AddToCart-{{ section.id }}"  class="btn btn-primary default-cart-button__button {% unless current_variant.available or section_onboarding %}disabled{% endunless %}" {% unless current_variant.available %}disabled{% endunless %}  data-AddToCart disabled>
+          
+          <span id="AddToCartText-{{ section.id }}" data-AddToCartText>
+            {% unless current_variant.available or section_onboarding %}
+              {{ 'products.product.sold_out' | t }}
+            {% else %}
+              {%- if preorder == true -%}
+                {{ 'products.product.preorder' | t }}
+              {%- else -%}
+                {{ 'products.product.add_to_cart' | t }}
+              {%- endif -%}
+            {% endunless %}
+          </span>
+        </button>
+        
+      </div>
     </div>
     <div id="PaymentButtonContainer-{{ section.id }}" class="payment-button__container">
       {% if section.settings.show_payment_button %}
@@ -147,3 +238,16 @@
   <div class="aiod-bogo-discount-wrap"></div>
   <div class="aiod-wholesale-discount-topbar"></div>
 </div>
+<script>
+$(window).scroll(function() {
+  var sticky = $('.stickyaddCart'),
+    scroll = $(window).scrollTop();
+   
+  if (scroll >= 150) { 
+    sticky.addClass('fixed'); }
+  else { 
+   sticky.removeClass('fixed');
+
+}
+});
+</script>

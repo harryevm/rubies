@@ -1,252 +1,17 @@
-{% include 'spurit_po2_section_snippet', product: null, products: collections[section.settings.extra_featured_products].products %}
+<div class="aiod-general-discount-topbar"></div>
+{{ 'cart.css' | asset_url | stylesheet_tag }}
+{% if cart.item_count > 0 %}
+  <style>
+  .collection-list-section { display: none; }
+  </style>
+{% endif %}
 <section class="cart" data-section-id="{{ section.id }}" data-ajax-cart="{{ section.settings.ajax_cart }}" data-section-type="cart-template">
   <div class="wrapper">
-<style>
-  .cart-items .label-row .td.cart-item-product {
-    width: 70%;
-    color: black;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-  .cart-items .label-row .td.cart-item-total {
-    width: 30%;
-    color: black;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-  .td.cart-item-total.custom-cart-product-total {
-    width: 33%;
-  }
-  .cart .cart-item .cart-item-total span{
-    justify-content: right;
-  }
-  .cart .cart-item-quantity .quantity-select{
-    max-width: 120px;
-  }
-  .cart-item-quantity {
-    display: flex;
-    align-items: center;
-    margin-top: 5pc;
-  }
-  .cart-item-title span.variant {
-    font: normal normal normal 16px/35px Poppins !important;
-    color: #040F21 !important;
-  }
-  .quantity-select input {
-    border: none;
-    font-size: 18px;
-  }
-  .quantity-select .button-wrapper button {
-    width: 100%;
-    font-size: 18px;
-  }
-    .td.cart-item-total.custom-cart-product-total .money {
-        font: normal normal bold 18px/12px Poppins;
-        color: #040F21;
-    }
-/*  Cart page collection css start  */
-   .slide-dots{
-      width:100%;
-  text-align: center;
-  }
-    .slide-dots li{
-    display: inline-block;
-    margin: 0 8px;
-  }
-     .slide-dots li button{
-    position: relative;
-    text-indent: -9999px;
-    width: 12px;
-    height: 12px;
-    border: none;
-    border-radius: 50px;
-   }
-     .slide-dots li button:before{
-        content: '';
-        font-size: 20px;
-        text-indent: 0px;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-  ul.slide-dots li.slick-active button {
-    background: black;
-}
-   .cart-featured-collection-wrapper .product-title {
-    height: 40px;
-}
-/*  cart page colection css end  */
-/*  Acordian  */
-  #accordion-1{
-  position: relative;
-  box-shadow: 0px 1px 7px #DBDBDB;
-}
-/* .head{
-  background-color: #FFFFFF;
-  color: black;
-  padding: 20px 30px;
-  cursor: pointer;
-  transition: 0.2s ease;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
-#accordion-1  .head h2 {
-    font: normal normal 600 20px/40px Poppins;
-    letter-spacing: 0px;
-    color: #040F21;
-    padding: 0px 15px;
-}
-#accordion-1 .arrow{
-  color: #563e6e;
-  font-size: 60px;
-  transition: 0.25s ease;
-  opacity: 0.3;
-  transform: rotate(-90deg);
-}
-#accordion-1 .head:hover .arrow{
-  opacity: 1;
-}
-#accordion-1 .head:hover, #accordion-1 .active{
-  background-color: #FFE77AFF;
-}
-#accordion-1 .arrow-animate{
-  transform: rotate(0deg);
-  opacity: 1;
-}
-#accordion-1 .content{
-  background-color: #FFFFFF;
-  display: none;
-  padding: 20px 30px;
-  color: black;
-}
-  #accordion-1 .head{
-  position:relative;  
-  }
-  #accordion-1 .head:after {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    right: 5px;
-    top: 10px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0661/1822/2064/files/down-arrow.png?v=1666091652);
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: rotate(90deg);
-}
-  #accordion-1 .head.active:after {
-    content: "";
-    position: absolute;
-     width: 24px;
-    height: 24px;
-    right: 5px;
-    top: 10px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0661/1822/2064/files/down-arrow.png?v=1666091652);
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: rotate(360deg);
-}
-/* Mobile design start  */
-@media only screen and (max-width: 767px) {
-      .custom-cart-items{
-        display:flex;
-      }
-        .td.cart-item-product-image.custom-cart-product-image {
-        width: 50%!important;
-    }
-    .td.cart-item-total.custom-cart-product-total .money {
-        font: normal normal bold 14px/12px Poppins;
-    }
-        .cart-item-quantity {
-        margin-top: 0;
-    }
-      .cart .cart-item-product .cart-item-title a.title{
-          font: normal normal bold 12px/12px Poppins;
-          color: #040F21;
-      }
-    .td.cart-item-total.custom-cart-product-total {
-    width: 50%;
-}
-    .cart .cart-item-product .cart-item-title a.title {
-    font: normal normal bold 12px/16px Poppins;
-    color: #040F21;
-    letter-spacing: 0px;
-    text-transform: capitalize;
-    }
-    .cart-item-title span.variant {
-    font: normal normal normal 12px/28px Poppins !important;
-    color: #040F21 !important;
-    }
-    .cart .cart-item-quantity {
-      text-align: center;
-      width: 100%;
-    }
-    .mobile-label {
-      display: none !important;
-    }
-   .quantity-select .button-wrapper button {
-    width: 18px !important;
-    height: 18px !important;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0 auto;
-    font-size: 14px !important;
-}
-.input-wrapper input {
-    font-size: 16px !important;
-    width: 22px !important;
-}
-    .quantity-select {
-      align-items: center;
-    }
-    a.remove img {
-    width: 15px;
-    margin-top: 4px;
-    margin-left: 6px;
-}
-/*    cart collection      */
-   
- .cart-featured-collection-wrapper .box.product select[id*=ProductSelect-] {
-    width: 95%;
-    height: 27px;
-    padding: 0 3px;
-    border-radius: 5px;
-    font-size: 10px !important;
-} 
-.cart-featured-collection-wrapper .product-title {
-    font-size: 12px;
-    height: 35px;
-}
 
- .cart-featured-collection-wrapper span.price .money {
-    font-size: 12px;
-} 
-  .cart-featured-collection-wrapper .simple-collection input.btn.btn-primary {
-    font-size: 12px !important;
-    padding: 2px 5px !important;
-    margin-top: 0;
-}
- .cart-featured-collection-wrapper ul.product-swatches.product-swatches--circle > li>  a > .product-swatches__color {
-    width: 15px;
-    height: 15px;
-   margin: -1px;
-}
-    ul.product-swatches.product-swatches--circle > li>  a{
-     width:16px;
-     height:16px;
-   }
-/*  .cart-featured-collection-wrapper span.collection-size-swatch,
-  .cart-featured-collection-wrapper ul.product-swatches.product-swatches--circle {
-    display: none;
-} */
-
-  }
-
-  </style>
     <header class="content-util">
+      {% if section.settings.breadcrumbs %}
     {% include 'breadcrumb' %}
+        {% endif %}
     {% include 'social-icons' %}
     </header>
 
@@ -255,9 +20,22 @@
         <h1>{{ 'cart.general.title' | t }}</h1>
       </header>
       {% if cart.item_count > 0 %}
+        
+      <div id="shipping-savings-message">
+        {% assign shipping_value = section.settings.free_price | remove: "." %}
+        {% assign cart_total = cart.total_price %}
+        {% assign shipping_value_left = shipping_value | minus: cart_total %}
+        {% if shipping_value_left > 0 %}
+          <p>Spend <b>{{ shipping_value_left | money }}</b> more for free shipping $8 CAD standard shipping fee</p>
+        {% else %}
+          <p>You've got free shipping </p>
+        {% endif %}
+        </div>
+      
         <div class="cart-list">
           <form action="/cart" method="post" novalidate class="cart-form">
             <div class="cart-items" data-csapp_line_wrapper>
+              {% comment %}
               <div class="label-row">
                 <div class="grid">
                   <div class="td cart-item-product">
@@ -274,8 +52,9 @@
                   </div>
                 </div>
               </div>
-
+               {% endcomment %}
               {%- for item in cart.items -%}
+                
                 <div class="cart-item" data-cart-item="{{ item.key }}" data-csapp_line_index>
                 <div class="grid custom-cart-items">
                 <div class="td cart-item-product-image custom-cart-product-image">
@@ -290,15 +69,15 @@
                           {%- assign image_widths = '120,240,394,590' -%}
                           {% include 'theme-rias' %}
                           <img class="card__image lazyload"
-                            src="{% comment ls-rpl %}{{ image | img_url: '120x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '120x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}"
+                            src="{{ image | img_url: '120x' }}"
                             data-src="{{ image_url_pattern }}"
                             data-widths="[{{ image_widths }}]"
                             data-aspectratio="{{ image.aspect_ratio }}"
                             data-sizes="auto"
                             data-cart-item-image
-                            alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+                            alt="{{ image.alt | escape }}">
                           <noscript>
-                            <img class="card__image" src="{% comment ls-rpl %}{{ image | img_url: '120x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '120x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}" alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+                            <img class="card__image" src="{{ image | img_url: '120x' }}" alt="{{ image.alt | escape }}">
                           </noscript>
                         </a>
                       </div>
@@ -362,7 +141,7 @@
                         <ul class="cart-item-discounts">
                         {% for discount_allocation in item.line_level_discount_allocations %}
                           <li class="cart-item-discount"><span class="cart-item-discount-title">{{ discount_allocation.discount_application.title }}</span><br>
-                          <span class="cart-item-discount-amount">(-<span class="money">{{ discount_allocation.amount | money }}</span>)</span></li>
+                          <span class="cart-item-discount-amount">(-<span class="money">{{ discount_allocation.amount | money_with_currency }}</span>)</span></li>
                         {% endfor %}
                         </ul>
                       {% endif %}
@@ -375,9 +154,9 @@
                     {%- endcomment -%}
                     <div class="td cart-item-total custom-cart-product-total" data-mobile-label="{{ 'cart.label.total' | t }}">
 <!--                       <div class="mobile-label">{{ 'cart.label.total' | t }}</div>  -->
-                      <p><span class="money" data-cart-item-line-price data-csapp_discount_summery data-csapp_line_price>{{ item.final_line_price | money }}</span></p>
+                      <p><span class="money" data-cart-item-line-price data-csapp_discount_summery data-csapp_line_price>{{ item.final_line_price | money_with_currency }}</span></p>
                       {%- if item.original_line_price > item.final_line_price -%}
-                        <p><span class="money original-price" data-cart-item-original-price><div class="pn-total-line-item" data-id="{{ item.key }}">{{ item.original_line_price | money }}</div></span></p>
+                        <p><span class="money original-price" data-cart-item-original-price><div class="pn-total-line-item" data-id="{{ item.key }}">{{ item.original_line_price |  money_with_currency }}</div></span></p>
                       {%- endif -%}
                     </div>
                   </div>
@@ -395,30 +174,21 @@
 <div class="cart__savings discount_apply_code">
 </div> -->
 
-<div class="cart-featured-collection-wrapper">
-    {% include "cart-featured-collection" %}    
-</div>
+
 <div class="cart-tab-wrapper">
    <div id="accordion-1">
     <div class="head">
       <h2>{{ section.settings.tab_title }}</h2>
-      <i class="fas fa-angle-down arrow"></i>
     </div>
     <div class="content">
       <p>{{ section.settings.tab_content }}</p>
     </div>
   </div>
-        <script>
-    $('.head').click(function(){
-  $(this).toggleClass('active');
-  $(this).parent().find('.arrow').toggleClass('arrow-animate');
-  $(this).parent().find('.content').slideToggle(280);
-})       
-        </script>
+
 </div>
         
             <div class="grid">
-                <div class="cart-notes">
+                <div class="cart-notes" id="ship-calculator">
                     {% comment %}
                     Optional, add a textarea for special notes
                     - Your theme settings can turn this on or off. Default is on.
@@ -437,14 +207,17 @@
                     {%- for discount_application in cart.cart_level_discount_applications -%}
                       <li class="cart-discount--applications">
                         <span class="cart-discount--title">{{- discount_application.title -}}</span>
-                        <span class="cart-discount--amount">-<span class="money">{{ discount_application.total_allocated_amount | money }}</span></span>
+                        <span class="cart-discount--amount">-<span class="money">{{ discount_application.total_allocated_amount | money_with_currency }}</span></span>
                       </li>
                     {%- endfor -%}
                   </ul>
                 {%- endif -%}
+
+
+                
                 <p class="subtotal">
                   <span class="label">{{ 'cart.general.subtotal' | t }} ({{ cart.item_count }} Items)</span>
-                  <span class="price money" data-cart-subtotal><span class="csapps-cart-original-total">{{ cart.total_price | money }}</span> {% if cart.currency.symbol == "$" %} {{ cart.currency.iso_code }}{%- endif -%}</span>
+                  <span class="price money" data-cart-subtotal><span class="csapps-cart-original-total">{{ cart.total_price | money_with_currency }}</span> {% comment %}{% if cart.currency.symbol == "$" %} {{ cart.currency.iso_code }}{%- endif -%}{% endcomment %}</span>
                 </p>
                 {% unless shop.enabled_currencies.size > 1 %}
                   <p class="shipping-at-checkout"><em>{{ 'cart.general.shipping_at_checkout' | t }}</em></p>
@@ -469,13 +242,13 @@
                   </div>
                 {%- endif -%}
                 <div class="checkout-buttons">
-                  <input type="submit" name="update" class="button outline cart-button--update" value="{{ 'cart.general.update' | t }}">
-                  <input type="submit" name="checkout" class="button solid csapps_checkout" value="{{ 'cart.general.checkout' | t }}">
+                  <input type="submit" name="update" class="button btn btn-secondary outline cart-button--update" value="{{ 'cart.general.update' | t }}">
+                  <input type="submit" name="checkout" class="button  btn btn-primary" value="{{ 'cart.general.checkout' | t }}">
                 </div>
 
-                {% if additional_checkout_buttons %}
+              {% comment %}  {% if additional_checkout_buttons %}
                   	<div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
-                {% endif %}
+                {% endif %} {% endcomment %}
               </div>
             </div>
 
@@ -484,31 +257,22 @@
       {% else %}
         {% comment %}
           The cart is empty
-        {% endcomment %}
+        
         <p>{{ 'cart.general.empty' | t }}<br>
-        {{ 'cart.general.continue_browsing_html' | t }}</p>
-
-        {% unless section.settings.extra_featured_products == blank %}
-          {% assign collection_limit = 4 | plus:0 %}
-          <div class="simple-collection layout-{{ collection_limit }}">
-            <div class="wrapper">
-              <header>
-                <h4>{{ collections[section.settings.extra_featured_products].title }}</h4>
-                <a href="{{ collections[section.settings.extra_featured_products].url }}" class="button outline">{{ 'collections.general.all_of_collection' | t: collection: collections[section.settings.extra_featured_products].title }}</a>
-              </header>
-              <div class="product-container">
-                {% for product in collections[section.settings.extra_featured_products].products limit:collection_limit %}
-                  {% include 'product-grid-item' %}
-                {% else %}
-                  {% for i in (1..collection_limit) %}
-                    {% include 'placeholder-product-grid-item' %}
-                  {% endfor %}
-                {% endfor %}
-              </div>
-            </div>
+        {{ 'cart.general.continue_browsing_html' | t }}</p>{% endcomment %}
+        <h4 style=" margin-bottom: 50px; ">No Items</h4>
+      <div class="cart-tab-wrapper">
+         <div id="accordion-1">
+          <div class="head">
+            <h2>{{ section.settings.tab_title }}</h2>
           </div>
-        {% endunless %}
+          <div class="content">
+            <p>{{ section.settings.tab_content }}</p>
+          </div>
+        </div>
+      </div>
       {% endif %}
+
 
     </div>
   </div>
@@ -538,6 +302,12 @@
       "default": true
     },
     {
+      "type": "checkbox",
+      "id": "breadcrumbs",
+      "label": "Show Breadcrumbs",
+      "default": false
+    },
+    {
       "type": "header",
       "content": "Terms and conditions"
     },
@@ -554,41 +324,6 @@
       "default": "<p>I agree with the terms and conditions.</p>"
     },
     {
-      "type": "header",
-      "content": "Empty cart"
-    },
-    {
-      "type": "collection",
-      "id": "extra_featured_products",
-      "label": "Empty cart collection"
-    },
-    {
-      "type": "checkbox",
-      "id": "variant_rollover",
-      "label": "Show variant image on rollover",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Heading",
-      "default": "You may also like"
-    },
-    {
-      "id": "collection",
-      "type": "collection",
-      "label": "Collection"
-    },
-    {
-      "type": "range",
-      "id": "cart_product_count_range",
-      "label": "Number of products",
-      "min": 4,
-      "max": 20,
-      "step": 4,
-      "default": 4
-    },
-    {
       "type":"text",
       "id":"tab_title",
       "label":"Tab Title"
@@ -597,9 +332,40 @@
       "type":"richtext",
       "id":"tab_content",
       "label":"Tab Content"
+    },
+    {
+      "type":"header",
+      "content": "Free Shipping"
+    },
+    {
+      "type":"text",
+      "id":"free_price",
+      "label":"Price for free shipping",
+      "info":"Please do not use '.' in price. Example: if you want to add $50 so you can write $50"
+    },
+    {
+      "type":"text",
+      "id":"free_text",
+      "label":"Free shipping message"
     }
    
     
   ]
 }
 {% endschema %}
+<script>
+  $('.head').click(function(){
+    $(this).toggleClass('active');
+    $(this).parent().find('.arrow').toggleClass('arrow-animate');
+    $(this).parent().find('.content').slideToggle(280);
+  })      
+  $('.quantity-select .button-wrapper button').click(function(){
+   
+    setTimeout(function(){
+    $("div#shipping-savings-message").load("/cart div#shipping-savings-message > p");
+    if($('.cart-items >.cart-item').length < 1){
+      window.location.href = "/cart";
+    }
+    },2000);
+  });
+</script>

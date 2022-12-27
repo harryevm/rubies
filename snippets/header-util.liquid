@@ -24,14 +24,52 @@
           </a>
         </li>
       </ul>
-      {% comment %}
-        Include currency picker
-      {% endcomment %}
-      {% if settings.show_multiple_currencies or shop.enabled_currencies.size > 1 %}
-        {% include 'currency-picker' %}
-      {% endif %}
+     
     </div>
+    <div class="middle-wrapper">
+      <div class="logo-contain">
+            {% if template.name == 'index' %}
+              <h1 class="site-logo {% if section.settings.logo %}has-image{% endif %}" itemscope itemtype="http://schema.org/Organization">
+            {% else %}
+              <div class="site-logo {% if section.settings.logo %}has-image{% endif %}" itemscope itemtype="http://schema.org/Organization">
+            {% endif %}
+              {% if section.settings.logo %}
+                <a href="{{ routes.root_url }}" itemprop="url" class="logo-image">
+                  {%- assign image = section.settings.logo -%}
+                  {%- assign image_default_width = section.settings.logo_max_width -%}
+                  {%- assign image_2x_width = image_default_width | times: 2 -%}
+                  {%- assign image_3x_width = image_default_width | times: 3 -%}
+                  {%- assign image_default = image_default_width | append: 'x' -%}
+                  {%- capture widths -%}{{ image_default_width }},{{ image_2x_width }},{{ image_3x_width }}{%- endcapture -%}
+                  {% assign image_widths = widths %}
+                  {% include 'theme-rias' %}
 
+                  <img id="changing-logo"
+                    data-widths="[{{ image_widths }}]"
+                    data-aspectratio="{{ image.aspect_ratio }}"
+                    data-sizes="auto"
+                    src="{{ image | img_url: image_default }}"
+                    alt="{{ image.alt | escape | default: shop.name }}"> 
+                </a>
+               	<script type="text/javascript">
+//                 	document.getElementById("changing-logo").src = "212g";
+
+                    setTimeout(function()
+                      	{ 
+//                   			document.getElementById("changing-logo").src = "https://upload.wikimedia.org/wikipedia/commons/b/b0/Transgender_Pride_flag.svg";
+                    	}, 3000);
+
+              	</script>                                                                       
+              {% else %}
+                <a href="{{ routes.root_url }}" itemprop="url">{{ shop.name }}</a>
+              {% endif %}
+            {% if template.name == 'index' %}
+              </h1>
+            {% else %}
+              </div>
+            {% endif %}
+          </div>
+    </div>
     <div class="right-wrapper">
       {% comment %}
         If customer accounts are enabled, provide login and create account links

@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "search-template",
+      "settings": {
+        "search_layout": "grid",
+        "extra_featured_products": ""
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

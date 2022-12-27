@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "list-collections-template",
+      "settings": {
+        "title": "All collections",
+        "layout": "grid",
+        "list_mode": "default"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

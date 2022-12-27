@@ -1,0 +1,130 @@
+{
+  "sections": {
+    "main": {
+      "type": "cart-template",
+      "settings": {
+        "show_notes": true,
+        "show_vendors": true,
+        "ajax_cart": false,
+        "breadcrumbs": false,
+        "terms_and_conditions": false,
+        "terms_and_conditions_text": "<p>I agree with the terms and conditions.<\/p>",
+        "tab_title": "60 day risk free returns",
+        "tab_content": "<p>60 day risk free returns<\/p>",
+        "free_price": "75.00",
+        "free_text": "away from FREE shipping within the USA!"
+      }
+    },
+    "1482079506908": {
+      "type": "simple-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Cart collection",
+        "center_heading": false,
+        "button_label": "",
+        "button_link": "",
+        "collection": "swimwear",
+        "product_count_range": 4
+      }
+    },
+    "f97c5970-47cc-4354-86d2-d8e78b00ece9": {
+      "type": "collection-list-updated",
+      "blocks": {
+        "template--16614299402480__f97c5970-47cc-4354-86d2-d8e78b00ece9-166729784575f870bf-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bikini-tops-and-bottoms",
+            "collection_img": "shopify:\/\/shop_images\/Group_328_2x_1ff25d60-c05b-4fed-b9c0-3962dceed892.png",
+            "collection_title": "Beach & Pool"
+          }
+        },
+        "template--16614299402480__f97c5970-47cc-4354-86d2-d8e78b00ece9-166729784575f870bf-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "every-girl-deserves-to-shine-campaign",
+            "collection_img": "shopify:\/\/shop_images\/Group_329_2x_b47ac7c1-6675-435e-9b31-34533d3386c9.png",
+            "collection_title": "Dance & Gym"
+          }
+        },
+        "c38f3c95-46ab-4755-9a89-c33fdf44c406": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "postcards",
+            "collection_img": "shopify:\/\/shop_images\/Group_330_2x_a08efd72-957b-4d24-9d46-5feefee98308.png",
+            "collection_title": "Everyday Comfort"
+          }
+        },
+        "template--16614299402480__f97c5970-47cc-4354-86d2-d8e78b00ece9-166729784575f870bf-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frontpage",
+            "collection_img": "shopify:\/\/shop_images\/Group_331_2x_5e123233-2b0c-4fcb-809d-1cc68abb3d7e.png",
+            "collection_title": "Pride"
+          }
+        },
+        "6885d289-a451-4eb6-b194-0f26e0bd1393": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bikini-tops-and-bottoms",
+            "collection_img": "shopify:\/\/shop_images\/Group_332_2x_aae5da9d-3295-4b07-9ee1-11435a06d3b8.png",
+            "collection_title": "Bundles"
+          }
+        }
+      },
+      "block_order": [
+        "template--16614299402480__f97c5970-47cc-4354-86d2-d8e78b00ece9-166729784575f870bf-0",
+        "template--16614299402480__f97c5970-47cc-4354-86d2-d8e78b00ece9-166729784575f870bf-1",
+        "c38f3c95-46ab-4755-9a89-c33fdf44c406",
+        "template--16614299402480__f97c5970-47cc-4354-86d2-d8e78b00ece9-166729784575f870bf-2",
+        "6885d289-a451-4eb6-b194-0f26e0bd1393"
+      ],
+      "settings": {
+        "title": "",
+        "full_width": true,
+        "section_padding": true,
+        "gutter": true,
+        "columns_range": 3,
+        "text_placement": "below",
+        "color_overlay": "#4f4f4f",
+        "color_overlay_hover": "#000000",
+        "color_overlay_text": "#ffffff",
+        "color_overlay_alpha_range": 0,
+        "zoom": true
+      }
+    },
+    "1667559668cd7d6d49": {
+      "type": "apps",
+      "disabled": true,
+      "blocks": {
+        "0f1677e2-ae15-42b6-acec-4a626b3bb765": {
+          "type": "shopify:\/\/apps\/wiser-upsell-recommendations\/blocks\/wiser_related\/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "0f1677e2-ae15-42b6-acec-4a626b3bb765"
+      ],
+      "settings": {
+      }
+    },
+    "9f07c648-ce4e-4e3d-afca-ee8d3926d983": {
+      "type": "simple-collection",
+      "settings": {
+        "title": "You May Also Like",
+        "center_heading": false,
+        "button_label": "",
+        "button_link": "",
+        "collection": "bikini-tops-and-bottoms",
+        "product_count_range": 4
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1482079506908",
+    "f97c5970-47cc-4354-86d2-d8e78b00ece9",
+    "1667559668cd7d6d49",
+    "9f07c648-ce4e-4e3d-afca-ee8d3926d983"
+  ]
+}

@@ -1,0 +1,66 @@
+<style>
+  .bundle-wr { display: flex; padding: 50px 0; flex-wrap: wrap; }
+  .bundle-wr >.bundl { width: 31%; margin-right: 2%; margin: 0 1%; box-shadow: 0 0 10px #0000001c; padding: 20px; }
+  .bundle-wr >.bundl h4 { font-weight: 600; font-size: 18px; line-height: 30px; margin: 15px 0 10px; }
+  @media(max-width:700px){
+    .bundle-wr >.bundl { width: 48%;}
+  }
+  @media(max-width:500px){
+    .bundle-wr >.bundl { width: 100%; margin: 0 0 20px; }
+  }
+</style>
+<section class="bundle-wrapper">
+  <div class="wrapper">
+    <div class="bundle-wr">
+      {% for block in section.blocks %}
+      <div class="bundl">
+        <a href="{% if  block.settings.info %}{{ block.settings.link }}{% else %}#{% endif %}"><img src="{{ block.settings.image | img_url:'' }}" /></a>
+        <h4><a href="{% if  block.settings.info %}{{ block.settings.link }}{% else %}#{% endif %}">{{ block.settings.name }}</a></h4>
+        {% if  block.settings.info %}
+        <p>{{ block.settings.info }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [],
+    "blocks": [
+        {
+          "type": "bundle",
+          "name": "Bundle",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+            {
+              "type": "text",
+              "id": "name",
+              "label": "Bundle Name"
+            },
+            {
+              "type": "textarea",
+              "id": "info",
+              "label": "Bundle Info"
+            },
+            {
+              "type": "url",
+              "id": "link",
+              "label": "Link"
+            }
+          ]
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

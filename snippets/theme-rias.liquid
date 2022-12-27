@@ -1,7 +1,7 @@
 {%- comment -%}
   Create the URL pattern for lazyloading RIAS
 {%- endcomment -%}
-{% comment ls-rpl %}{%- assign image_url_pattern = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '1x1' -%}{%- endcapture -%}{%- assign image_url_pattern = LS_IMG_URL | replace: '_1x1.', '_{width}x.' -%}{% comment /ls-rpl %}{% endcomment %}
+{%- assign image_url_pattern = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
 {%- comment -%}
   Split the image_widths string into an array
 {%- endcomment -%}

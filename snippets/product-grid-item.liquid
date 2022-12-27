@@ -29,7 +29,7 @@
   {%- endcomment -%}
   {% capture img_id %}ProductGridImage-{{ section.id }}-{{ collection.id }}-{{ product.id }}{% endcapture %}
   {% capture wrapper_id %}ProductGridImageWrapper-{{ section.id }}-{{ collection.id }}-{{ product.id }}{% endcapture %}
-  {% comment ls-rpl %}{%- assign img_url = product.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: product.featured_image, img_url: '1x1' -%}{%- endcapture -%}{%- assign img_url = LS_IMG_URL | replace: '_1x1.', '_{width}x.' -%}{% comment /ls-rpl %}{% endcomment %}
+  {%- assign img_url = product.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
   {%- comment %}
   	Auto-crop
     - Square
@@ -38,23 +38,23 @@
   {% endcomment -%}
   <figure class="product-grid-item--{{ settings.collections_text_alignment }}">
     
-    <a id="{{ wrapper_id }}" href="{% if template.name == 'index' %}javascript:;{% else %}{{ product.url }}{% endif %}" class="product_card">
+    <a id="{{ wrapper_id }}" href="{% if template.name == 'index'  or template.name == 'cart' or template.name == 'product' %}javascript:;{% else %}{{ product.url }}{% endif %}" class="product_card">
       {%- assign image = product.featured_image -%}
-      <div class="product_card__image-wrapper" data-bgset="{% include 'bgset', image: image %}">
+      <div  href="{{ product.url }}" class="product_card__image-wrapper" data-bgset="{% include 'bgset', image: image %}">
         {% assign image_widths = '295,394,590,700,800,1000,1200,1500,1800,2000,2400' %}
         {% include 'theme-rias' %}
-        <a href="{{ product.url }}" class="pro_url"><img id="{{ img_id }}" class="product_card__image lazyload {% if settings.variant_rollover == true and product.images.size > 1 %}featured{% endif %}"
+        {% comment %}<a href="{{ product.url }}" class="pro_url">{% endcomment %}<img onclick="getUrlFunc($(this))" id="{{ img_id }}" class="product_card__image lazyload {% if settings.variant_rollover == true and product.images.size > 1 %}featured{% endif %}"
           src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
           data-src="{{ image_url_pattern }}"
           data-widths="[{{ image_widths }}]"
           data-aspectratio="{{ image.aspect_ratio }}"
           data-sizes="auto"
           data-expand="600"
-          data-fallback="{% comment ls-rpl %}{{ image | img_url: '295x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '295x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}"
-          alt="{% comment ls-rpl %}{{ product.featured_image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: product.featured_image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
-        </a>
+          data-fallback="{{ image | img_url: '295x' }}"
+          alt="{{ product.featured_image.alt | escape }}">
+        {% comment %}</a>{% endcomment %}
           <noscript>
-          <img class="product_card__image" src="{% comment ls-rpl %}{{ image | img_url: '394x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '394x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}" alt="{% comment ls-rpl %}{{ product.featured_image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: product.featured_image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+          <img class="product_card__image" src="{{ image | img_url: '394x' }}" alt="{{ product.featured_image.alt | escape }}">
         </noscript>
         {%- assign collection_single_column_auto = false -%}
         {%- if settings.collections_product_columns == '1' and settings.collections_product_ratio == 'auto' -%}
@@ -70,14 +70,14 @@
           {%- assign image = product.images[1] -%}
           {%- assign image_widths = '295,394,590,700,800,1000,1200,1500,1800,2000,2400' -%}
           {% include 'theme-rias' %}
-          <a href="{{ product.url }}" class="pro_url"><img id="{{ img_id }}" class="product_card__image alt lazyload"
+          {% comment %}<a href="{{ product.url }}" class="pro_url">{% endcomment %}<img onclick="getUrlFunc($(this))"  id="{{ img_id }}" class="product_card__image alt lazyload"
             data-src="{{ image_url_pattern }}"
             data-widths="[{{ image_widths }}]"
             data-aspectratio="{{ image.aspect_ratio }}"
             data-sizes="auto"
             data-expand="600"
-            alt="{% comment ls-rpl %}{{ product.featured_image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: product.featured_image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
-          </a>
+            alt="{{ product.featured_image.alt | escape }}">
+          {% comment %}</a>{% endcomment %}
             {%- endif -%}
         {%- if sold_out -%}
           <span class="label sold-out label--{{ settings.collections_badge_placement }} {%- if settings.collections_badge_soldout -%}label--image{%- endif -%}">
@@ -92,7 +92,7 @@
                 data-aspectratio="{{ image.aspect_ratio }}"
                 data-sizes="auto"
                 data-expand="600"
-                alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+                alt="{{ image.alt | escape }}">
             {%- else -%}
 <!--               {{ 'products.product.sold_out' | t }} -->
               <ls-static-674915>COMING SOON</ls-static-674915>
@@ -111,7 +111,7 @@
                 data-aspectratio="{{ image.aspect_ratio }}"
                 data-sizes="auto"
                 data-expand="600"
-                alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+                alt="{{ image.alt | escape }}">
             {%- else -%}
               {{ 'products.product.on_sale' | t }}
             {%- endif -%}
@@ -184,7 +184,7 @@
     {%- endif -%}
         <figcaption>
           <div class="product-title">
-            <a href="{{ product.url | within: collection }}" class="title">{{ product.title }}</a>
+            <a href="{{ product.url | within: collection }}" onclick="getProUrl($(this))" class="title">{{ product.title }}</a>
             {% if settings.show_vendors %}
               <span class="vendor">{{ product.vendor | link_to_vendor }}</span>
             {% endif %}
@@ -220,7 +220,7 @@
             <input type="hidden" name="quantity" value="1" />
             
             <input type="submit" value="Add To Cart" class="btn btn-primary"  /> 
-            
+            <span class="clickable-btn-over" style=" font-size: 0; ">Test</span>
           </form>
           {% endunless %}
         </figcaption>
@@ -231,3 +231,4 @@
 {%- if settings.collections_product_ratio == 'auto' and related_products_section != true -%}
   {% include 'product-grid-item-auto-ratio' %}
 {%- endif -%}
+

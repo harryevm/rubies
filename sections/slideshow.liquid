@@ -6,7 +6,7 @@
       {% else %}
         {% assign autoplay = false %}
       {% endif %}
-      <div class="slideshow-carousel"
+      <div class="{% if section.blocks.size > 1 %}slideshow-carousel{% else %}noslideshow-wr{% endif %}"
         data-slide-count="{{ section.blocks.size }}"
         data-flickity-options='{
           "imagesLoaded": true,
@@ -150,6 +150,10 @@
               @media (max-width: 700px) {
                 #block-{{ block.id }} .slide__item-image-contain.mobile { display: block; }
                 #block-{{ block.id }} .slide__item-image-contain.desktop { display: none; }
+                .noslideshow-wr >.slide__item-image { height: 550px; background: #ddfc67; }
+                .noslideshow-wr .slide__item-content .inner-wrapper { position: absolute; bottom: 50px; left: 0; right: 0; width: 94%; margin: 0 auto; }
+                .noslideshow-wr >.slide__item-image .slide__item-image img.mob-img-updated { object-fit: contain; max-height: 450px; object-position: left; }
+                img#dancer1 { height: 40% !important; top: 0 !important; }
               }
               @media (min-width: 701px) {
                 #block-{{ block.id }} .slide__item-image-contain.mobile { display: none; }
@@ -190,8 +194,10 @@
               }
               #block-{{ block.id }} a.button:hover,
               #block-{{ block.id }} a.button:focus {
-                color: {{ block.settings.color_text }};
-                border-color: {{ block.settings.color_text }};
+                color: {{ block.settings.color_accent }}; border-color: {{ block.settings.color_accent }}; background: transparent;
+              }
+              @media(max-width:420px){
+                
               }
             </style>
           </div>

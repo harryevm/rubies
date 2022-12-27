@@ -52,10 +52,14 @@
         {%- for variant in product.variants -%}
           {%- if variant[color_option_position] == value -%}
             {%- assign color_variant_id = variant.id -%}
-            {%- assign color_variant_url = variant.url -%}
+            {%- assign color_variant_url = variant.url -%} 
             {%- if variant.image -%}
-              {% comment ls-rpl %}{%- assign color_variant_image = variant.image | img_url: '295x' -%}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: variant.image, img_url: '295x' -%}{%- endcapture -%}{%- assign color_variant_image = LS_IMG_URL -%}{% comment /ls-rpl %}{% endcomment %}
-              {% comment ls-rpl %}{%- assign color_variant_image_pattern = variant.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: variant.image, img_url: '1x1' -%}{%- endcapture -%}{%- assign color_variant_image_pattern = LS_IMG_URL | replace: '_1x1.', '_{width}x.' -%}{% comment /ls-rpl %}{% endcomment %}
+            
+              {%- assign color_variant_image = variant.image | img_url: '295x' -%}
+              
+              
+              {%- assign color_variant_image_pattern = variant.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              
             {%- endif -%}
             {% break %}
           {%- endif -%}
@@ -68,7 +72,7 @@
             {{ color_variant_url | within: collection }}
           {%- endif -%}
         {%- endcapture -%}
-        <li class="product-swatches__li">
+        <li class="product-swatches__li{% if forloop.index >3  %} showelements{% endif %}" >
           <a href="javascript:;" 
           {% comment %}<a href="{{ swatch_url | strip }}" {% endcomment %}
             class="product-swatches__link {% if option.selected_value == value %}product-swatches__link--selected{% endif %}"
@@ -84,7 +88,9 @@
             </div>
           </a>
         </li>
-
+        {% if forloop.index == 4  %}
+        <li class="product-swatches__li moreicons" ><a href="{{ product.url }}" onclick="getProUrl($(this))">+ More</a></li>
+        {% endif %}
       {%- endfor -%}
     </ul>
 
