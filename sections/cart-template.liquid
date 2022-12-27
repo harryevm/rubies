@@ -3,8 +3,7 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 {% if cart.item_count > 0 %}
   <style>
-  .collection-list-section { display: none !important; }
-    .simple-collection-section, .collection-list-section { width: 100%; }
+  .collection-list-section { display: none; }
   </style>
 {% endif %}
 <section class="cart" data-section-id="{{ section.id }}" data-ajax-cart="{{ section.settings.ajax_cart }}" data-section-type="cart-template">
@@ -368,35 +367,10 @@
 {% endschema %}
 <style>
   section.cart { overflow-x: hidden; }
-  {% unless cart.item_count > 0 %}
   .simple-collection-section .slick-list.draggable { max-width: 100% !important; }
   .simple-collection .product-container .box { padding: 0px 30px; }
   .simple-collection-section, .collection-list-section { display: inline-flex; width: 50%; vertical-align: top; }
   .simple-collection.layout-4 { max-width: 100%; }
-  .collection-list-section { margin-top: 100px; }
-  .collection-list-section .collection-list.collection-list-updated.section-standard { padding: 0; }
-  ul.slick-dots { left: 0; right: 0; }
-  .slick-dots li { width: 10px; height: 10px; margin: 0 3px; }
-  .slick-dots li button { background: transparent; border-radius: 50%; width: 10px; height: 10px; padding: 0; border: 1px solid #000; }
-  .slick-dots li.slick-active button { background: #000;  }
-  .slick-dots li button::before { display: none; }
-  .collection-list-updated .flex-data > .grid__item { margin-bottom: 0; }
-
-  @media(min-width:768px) {
-    .flex-data.grid img.card__image { width: 60px; height: 60px; }
-    div.collection-list .box figcaption.below a { font-size: 14px; line-height: 15px; }
-  }
-  @media(max-width:1100px) {
-    .flex-data.grid img.card__image { width: 80px; height: 80px; }
-    div.collection-list .box figcaption.below a { font-size: 16px; line-height: 20px; }
-    #accordion-1 .head h2 { font-size: 18px; line-height: 30px; }
-  }
-  @media(max-width:768px){
-    .simple-collection-section, .collection-list-section { width: 100%; display: block; }
-    .collection-list-section { margin: 0; }
-    .simple-collection .product-container .box { padding: 0px 5px; }
-  }
-  {% endunless %}
 </style>
 <script>
   $('.head').click(function(){
