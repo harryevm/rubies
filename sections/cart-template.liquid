@@ -371,6 +371,12 @@
   .simple-collection .product-container .box { padding: 0px 30px; }
   .simple-collection-section, .collection-list-section { display: inline-flex; width: 50%; vertical-align: top; }
   .simple-collection.layout-4 { max-width: 100%; }
+  .collection-list-section { margin-top: 100px; }
+  .collection-list-section .collection-list.collection-list-updated.section-standard { padding: 0; }
+  @media(max-width:768px){
+    .simple-collection-section, .collection-list-section { width: 100%; display: block; }
+    .collection-list-section { margin: 0; }
+  }
 </style>
 <script>
   $('.head').click(function(){
