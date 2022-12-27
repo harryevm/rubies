@@ -1,3 +1,4 @@
+
 <div class="aiod-general-discount-topbar"></div>
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 {% if cart.item_count > 0 %}
@@ -31,7 +32,8 @@
           <p>You've got free shipping </p>
         {% endif %}
         </div>
-      
+      <div class="estimate-wr">
+        arrives to <b>Canada</b> between <span>{% assign nextday = 1 | times: 172800 %}{{ "now" | date: "%s" | plus: nextday |date: "%a, %b %d, %Y" }}</span> and <span>{% assign days = 1 | times: 777600 %} {{ "now" | date: "%s" | plus: days | date: "%a, %b %d, %Y" }}</span></div>
         <div class="cart-list">
           <form action="/cart" method="post" novalidate class="cart-form">
             <div class="cart-items" data-csapp_line_wrapper>
@@ -152,12 +154,12 @@
                     {%- comment -%}
                       Cart item - total
                     {%- endcomment -%}
-                    <div class="td cart-item-total custom-cart-product-total" data-mobile-label="{{ 'cart.label.total' | t }}">
+                    <div class="td cart-item-total custom-cart-product-total" data-mobile-label="{{ 'cart.label.total' | t }}" data-csapp_discount_summery data-csapp_line_price> 
 <!--                       <div class="mobile-label">{{ 'cart.label.total' | t }}</div>  -->
-                      <p><span class="money" data-cart-item-line-price data-csapp_discount_summery data-csapp_line_price>{{ item.final_line_price | money_with_currency }}</span></p>
-                      {%- if item.original_line_price > item.final_line_price -%}
+                      <p><span class="money" data-cart-item-line-price >{{ item.final_line_price | money_with_currency }}</span></p>
+                      {% comment %}{%- if item.original_line_price > item.final_line_price -%}
                         <p><span class="money original-price" data-cart-item-original-price><div class="pn-total-line-item" data-id="{{ item.key }}">{{ item.original_line_price |  money_with_currency }}</div></span></p>
-                      {%- endif -%}
+                      {%- endif -%}{% endcomment %}
                     </div>
                   </div>
           </div>
@@ -217,7 +219,7 @@
                 
                 <p class="subtotal">
                   <span class="label">{{ 'cart.general.subtotal' | t }} ({{ cart.item_count }} Items)</span>
-                  <span class="price money" data-cart-subtotal><span class="csapps-cart-original-total">{{ cart.total_price | money_with_currency }}</span> {% comment %}{% if cart.currency.symbol == "$" %} {{ cart.currency.iso_code }}{%- endif -%}{% endcomment %}</span>
+                  <span class="price money csapps-cart-original-total" data-cart-subtotal>{{ cart.total_price | money_with_currency }}{% comment %}{% if cart.currency.symbol == "$" %} {{ cart.currency.iso_code }}{%- endif -%}{% endcomment %}</span>
                 </p>
                 {% unless shop.enabled_currencies.size > 1 %}
                   <p class="shipping-at-checkout"><em>{{ 'cart.general.shipping_at_checkout' | t }}</em></p>
@@ -243,7 +245,11 @@
                 {%- endif -%}
                 <div class="checkout-buttons">
                   <input type="submit" name="update" class="button btn btn-secondary outline cart-button--update" value="{{ 'cart.general.update' | t }}">
+          {% if cart.total_price > 0 %}
                   <input type="submit" name="checkout" class="button  btn btn-primary" value="{{ 'cart.general.checkout' | t }}">
+          {% else %}
+                  <a href="#" class="button  btn btn-primary">{{ 'cart.general.checkout' | t }}</a>
+          {% endif %}
                 </div>
 
               {% comment %}  {% if additional_checkout_buttons %}
@@ -281,6 +287,7 @@
 {% schema %}
 {
   "name": "Cart page",
+  "class":"cart-templ-wr",
   "settings": [
      
     {
@@ -341,7 +348,7 @@
       "type":"text",
       "id":"free_price",
       "label":"Price for free shipping",
-      "info":"Please do not use '.' in price. Example: if you want to add $50 so you can write $50"
+      "info":"If you want to add $50, you would write 50.00"
     },
     {
       "type":"text",
@@ -353,6 +360,9 @@
   ]
 }
 {% endschema %}
+<style>
+  section.cart { overflow-x: hidden; }
+</style>
 <script>
   $('.head').click(function(){
     $(this).toggleClass('active');

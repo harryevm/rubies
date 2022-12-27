@@ -1,7 +1,7 @@
 
 <div class="simple-collection layout-{{ section.settings.product_count_range }}" data-section-id="{{ section.id }}" data-section-type="simple-collection-section">
   <div class="wrapper">
-    <header{% if section.settings.center_heading %} class="centered"{% endif %}>
+    <header {% if section.settings.center_heading %} class="centered"{% endif %}>
       {% if section.settings.title != blank %}
         <h4>{{ section.settings.title | escape }}</h4>
       {% endif %}
@@ -9,7 +9,7 @@
         <a href="{{ section.settings.button_link }}" class="button outline">{{ section.settings.button_label | escape }}</a>
       {% endif %}
     </header>
-    <div class="product-container owl-carousel" id="collection-{{ section.id }}">
+    <div class="product-container owl-carousel" id="collection-{{ section.id }}"> 
     
    
      
@@ -80,7 +80,10 @@
 }
 {% endschema %}
 <style>form.hs-event-static span.clickable-btn-over { position: absolute; left: 0; right: 0; bottom: 0; top: 0; font-size: 0; }
-form.hs-event-static {position:relative;}</style>
+form.hs-event-static,.simple-collection .product-container .box form { position: relative; }
+span.clickable-btn-over { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script>
@@ -133,6 +136,10 @@ $('.box.product select[id*=ProductSelect-]').change(function(){
       this.setAttribute('value','Added');
       this.previousSibling.previousSibling.style.display = "none";
       jQuery.getJSON('/cart.js', function(cart) { jQuery("#CartCount").text(cart.item_count); });
+      setTimeout(function(){
+        jQuery('.aiod_cart_mini.aiod_minicart').addClass('active_cart');
+      jQuery('.aiod_minicart_overlay ').addClass('cs_show');
+      },4000)
     })
     .catch((error) => {
       console.error('Error:', error);

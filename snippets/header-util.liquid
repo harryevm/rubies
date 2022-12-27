@@ -80,7 +80,7 @@
       {% comment %}
         Show number of items in the cart and total cost in the /cart link
       {% endcomment %}
-      <a href="{{ routes.cart_url }}" id="CartButton">
+      <a href="{{ routes.cart_url }}" id="CartButton" >
         <span class="icon-fallback-text">
           {%- assign cart_icon = 'icon-ui-' | append: settings.cart_icon -%}
           <span class="icon icon-cart" aria-hidden="true">{% include cart_icon %}</span>

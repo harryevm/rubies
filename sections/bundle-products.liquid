@@ -11,11 +11,14 @@
 
       <header class="content-util">
       {% include 'breadcrumb' %}
+      <h1>{{ product.title }}</h1>
+      <span class="save-text">Save {{ product.metafields.custom.bundle_off_percentage }}%</span>
       {% include 'social-icons' %}
       </header>
 
       <header class="product-header">
         <div class="product-jump-container">
+          
           {% comment %}
             If the user is on a collection product page (ie with /collections/collection-handle/products/product-handle)
             in the URL, we can show next/previous links to other products in the collection.
@@ -61,7 +64,43 @@
               {% include 'product-thumbnails-slider' %}
             {%- endunless -%}
           </div>
-  <div class="also-bt-desk">{% include 'wiser_alsobought.liquid' %}</div>
+          <div class="desk-tab-wrap">
+          <span class="save-full-text">{{ product.metafields.custom.save_text_for_bundle_product }}</span>
+          {% if section.settings.related_enable %}
+            <div class="also-bt-desk accordion-tab">  
+              <a href="javascript:;" class="active">
+                {% if section.settings.related_title %}{{ section.settings.related_title }}{% else %}Goes Well With {% endif %} 
+                <i class="fa fa-chevron-left"></i></a>  
+                <div class="accordion-content" style="display: block;"> 
+                      {%- assign product_collection_count = '4' -%} 
+                      {%- assign collection_count = '4' -%} 
+                      <div class="simple-collection"> 
+                        <div class="wrapper"> 
+                          <div class="product-container"> 
+                            {%- assign collection = collections[section.settings.collection] -%}  
+                            {%- assign product_limit = collection_count -%} 
+                            {% for product in collection.products limit: product_limit  %}  
+                              {% include 'product-grid-item' %} 
+                            {% else %}  
+                              {% for i in (1..product_limit) %} 
+                                {% include 'placeholder-product-grid-item' %} 
+                              {% endfor %}  
+                            {% endfor %}  
+                          </div>  
+                        </div>  
+                      </div>  
+                </div>
+            </div> 
+            {% endif %}
+            {% if section.settings.bundle_enable %}
+            <div class="also-bt-desk accordion-tab">  
+              <a href="javascript:;" class="active">
+                {% if section.settings.bundle_title %}{{ section.settings.bundle_title }}{% else %}Bundles{% endif %} 
+                <i class="fa fa-chevron-left"></i></a>  
+              <div class="accordion-content" style="display: block;">{% render 'bundle-product' %}</div>
+            </div>  
+              {% endif %}
+          </div>
   
         </div>
 
@@ -69,8 +108,9 @@
           <div class="purchase-box {% if section.settings.product_box_padding %}padding-box{% endif %}" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
             <meta itemprop="priceCurrency" content="{{ shop.currency }}">
             <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
-<div class="aiod-bundle-discount-wrap"></div>
-            
+
+            <div class="aiod-bundle-discount-wrap" data-offer_id="{{ product.metafields.custom.bundle_product_id }}"></div>
+
             {% comment %}
               ID addToCartForm is a selector for the ajax cart plugin
             {% endcomment %}
@@ -172,7 +212,7 @@
                 </div>
               {% endif %}
               {% if section.settings.related_enable %}
-              <div class="accordion-tab also-bt-mob">
+              <div class="accordion-tab also-bt-mob active">
                   <a href="javascript:;">
                    {% if section.settings.related_title %}
                     {{ section.settings.related_title }} 
@@ -181,13 +221,29 @@
                     {% endif %}
                     <i class="fa fa-chevron-down"></i>
                   </a>
-                  <div class="accordion-content">
-                    <div class="related-products-wr">{% include 'wiser_alsobought.liquid' %} </div>
+                  <div class="accordion-content" style="display: block;">
+                    {%- assign product_collection_count = '4' -%}
+                            {%- assign collection_count = '4' -%}
+                            <div class="simple-collection">
+                              <div class="wrapper">
+                                <div class="product-container">
+                                  {%- assign collection = collections[section.settings.collection] -%}
+                                  {%- assign product_limit = collection_count -%}
+                                  {% for product in collection.products limit: product_limit  %}
+                                    {% include 'product-grid-item' %}
+                                  {% else %}
+                                    {% for i in (1..product_limit) %}
+                                      {% include 'placeholder-product-grid-item' %}
+                                    {% endfor %}
+                                  {% endfor %}
+                                </div>
+                              </div>
+                            </div>
                   </div>
                 </div>
                 {% endif %}
               {% if section.settings.bundle_enable %}
-                <div class="accordion-tab">
+                <div class="accordion-tab also-bt-mob active">
                     <a href="javascript:;" >
                       {% if section.settings.bundle_title %}
                       {{ section.settings.bundle_title }} 
@@ -196,11 +252,11 @@
                       {% endif %}
                       <i class="fa fa-chevron-down"></i>
                     </a>
-                    <div class="accordion-content">
+                    <div class="accordion-content" style="display: block;">
                       {% render 'bundle-product' %}
                     </div>
                   </div>
-              {% endif %}
+              {% endif %} 
               {% for block in section.blocks %}
                 <div class="accordion-tab">
                   <a href="javascript:;">
@@ -309,16 +365,16 @@
   </script>
 {% endunless %}
 
-{%- if section.settings.size_guide_page != blank -%}
-<div id="product-size-guide-content-{{ section.id }}" class="popup-page mfp-hide">
-  <div class="rte">{{ pages[section.settings.size_guide_page].content }}</div>
-  <div data-app="eastsideco_sizeGuides"
-     data-shop="{{ shop.permanent_domain }}"
-     data-tags="{{ product.tags | join:',' | escape }}"
-     data-metafields="{{ product.metafields.esc-size-matters.tag }}"
-     data-popup="link">
-</div>
-</div>
+	{%- if section.settings.size_guide_page != blank -%}	
+<div id="product-size-guide-content-{{ section.id }}" class="popup-page mfp-hide">	
+  <div class="rte">{{ section.settings.size_guide_page }}</div>	
+<!--   <div data-app="eastsideco_sizeGuides"	
+     data-shop="{{ shop.permanent_domain }}"	
+     data-tags="{{ product.tags | join:',' | escape }}"	
+     data-metafields="{{ product.metafields.esc-size-matters.tag }}"	
+     data-popup="link">	
+</div> --> 	
+</div>	
 {%- endif -%}
 
 
@@ -386,7 +442,7 @@
       "default": true
     },
     {
-      "type": "page",
+      "type": "liquid",
       "id": "size_guide_page",
       "label": "Size guide content"
     },
@@ -538,6 +594,15 @@
       "id": "show_share_buttons",
       "label": "Show social sharing buttons",
       "default": true
+    },	
+    {	
+      "type": "header",	
+      "content": "You May Also Link"	
+    },	
+    {	
+      "type": "collection",	
+      "id": "collection",	
+      "label": "You May Also Like Collection"	
     }
   ],
   "max_blocks":5,
@@ -575,25 +640,17 @@
 {% endschema %}
 <style>
   .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: none; }
-</style>
-<style>
   body.template-product { counter-reset: myCounter; }
   .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: none; }
   .csapps-bunlde-tiers { box-shadow: 0 0 10px #ccc; padding: 20px !important; margin-bottom: 20px;position:relative; }
-.csapps-bunlde-tiers::after {
-    position: absolute;
-    top: 10px;
-    left: 0;
-    right: 0;
-    counter-increment: myCounter;
-    content: "Bundle " counter(myCounter) ": ";
-    text-align: center;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 20px;
-    line-height: 30px;
-    z-index: 0;
-}
+  .slick-list.draggable { overflow: hidden; width: 100%; }
+  header.content-util nav.breadcrumb { float: none; }
+  header.content-util h1 { margin: 15px 0 0; font-size: 32px; line-height: 35px; }
+  .desk-tab-wrap span.save-full-text { display: block; margin: 20px 0; }
+  
+  @media(max-width:800px){
+    .single-product .grid .product-images { margin-top: 0; }
+  }
 </style>
 {% unless  product.template_suffix == 'fastbundles' %}
 <script>
@@ -613,47 +670,54 @@
         $(this).next('.alert-size').html("<b>Please select a size</b>");
     })
 
-    
+  $('.also-bt-desk .simple-collection .product-container,.also-bt-mob .simple-collection .product-container').slick({	
+      slidesToShow: 2,	
+      slidesToScroll: 1,	
+      arrows: false,	
+      dots: true	
+    });
+
+  
 </script>
 {% endunless %}
 <!--Start Stamped.io Auto Installation--><div id="stamped-main-widget" class="stamped-main-widget" data-widget-style="standard" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}" data-product-sku="{{product.handle}}" data-product-type="{{product.type}}">{{ product.metafields.stamped.reviews }}</div><!--End Stamped.io Auto Installation-->
 <script type="text/javascript">
-  var _learnq = _learnq || [];
+  // var _learnq = _learnq || [];
 
-  var item = {
-    Name: {{ product.title|json }},
-    ProductID: {{ product.id|json }},
-    Categories: {{ product.collections|map:'title'|json }},
-    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
-    URL: "{{ shop.secure_url }}{{ product.url }}",
-    Brand: {{ product.vendor|json }},
-    Price: {{ product.price|money|json }},
-    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
-  };
+  // var item = {
+  //   Name: {{ product.title|json }},
+  //   ProductID: {{ product.id|json }},
+  //   Categories: {{ product.collections|map:'title'|json }},
+  //   ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+  //   URL: "{{ shop.secure_url }}{{ product.url }}",
+  //   Brand: {{ product.vendor|json }},
+  //   Price: {{ product.price|money|json }},
+  //   CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+  // };
 
-  _learnq.push(['track', 'Viewed Product', item]);
-  _learnq.push(['trackViewedItem', {
-    Title: item.Name,
-    ItemId: item.ProductID,
-    Categories: item.Categories,
-    ImageUrl: item.ImageURL,
-    Url: item.URL,
-    Metadata: {
-      Brand: item.Brand,
-      Price: item.Price,
-      CompareAtPrice: item.CompareAtPrice
-    }
-  }]);
+  // _learnq.push(['track', 'Viewed Product', item]);
+  // _learnq.push(['trackViewedItem', {
+  //   Title: item.Name,
+  //   ItemId: item.ProductID,
+  //   Categories: item.Categories,
+  //   ImageUrl: item.ImageURL,
+  //   Url: item.URL,
+  //   Metadata: {
+  //     Brand: item.Brand,
+  //     Price: item.Price,
+  //     CompareAtPrice: item.CompareAtPrice
+  //   }
+  // }]);
 </script>
 
 
 
 
 <script type="text/javascript">
-  var _learnq = _learnq || [];
-  document.getElementById("AddToCart").addEventListener('click',function (){
-    _learnq.push(['track', 'Added to Cart', item]);
-  });
+  // var _learnq = _learnq || [];
+  // document.getElementById("AddToCart").addEventListener('click',function (){
+  //   _learnq.push(['track', 'Added to Cart', item]);
+  // });
 
 
 
@@ -662,4 +726,4 @@
 
 
 
-<script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=450361b5-981b-4e6f-9164-d70d9effc17f"></script>
+<!-- <script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=450361b5-981b-4e6f-9164-d70d9effc17f"></script> -->

@@ -5,13 +5,13 @@
       "settings": {
         "show_notes": true,
         "show_vendors": true,
-        "ajax_cart": false,
+        "ajax_cart": true,
         "breadcrumbs": false,
         "terms_and_conditions": false,
         "terms_and_conditions_text": "<p>I agree with the terms and conditions.<\/p>",
         "tab_title": "60 day risk free returns",
         "tab_content": "<p>60 day risk free returns<\/p>",
-        "free_price": "75.00",
+        "free_price": "120.00",
         "free_text": "away from FREE shipping within the USA!"
       }
     },
@@ -24,6 +24,17 @@
         "button_label": "",
         "button_link": "",
         "collection": "swimwear",
+        "product_count_range": 4
+      }
+    },
+    "9f07c648-ce4e-4e3d-afca-ee8d3926d983": {
+      "type": "simple-collection",
+      "settings": {
+        "title": "You May Also Like",
+        "center_heading": false,
+        "button_label": "",
+        "button_link": "",
+        "collection": "bikini-tops-and-bottoms",
         "product_count_range": 4
       }
     },
@@ -107,24 +118,13 @@
       ],
       "settings": {
       }
-    },
-    "9f07c648-ce4e-4e3d-afca-ee8d3926d983": {
-      "type": "simple-collection",
-      "settings": {
-        "title": "You May Also Like",
-        "center_heading": false,
-        "button_label": "",
-        "button_link": "",
-        "collection": "bikini-tops-and-bottoms",
-        "product_count_range": 4
-      }
     }
   },
   "order": [
     "main",
     "1482079506908",
+    "9f07c648-ce4e-4e3d-afca-ee8d3926d983",
     "f97c5970-47cc-4354-86d2-d8e78b00ece9",
-    "1667559668cd7d6d49",
-    "9f07c648-ce4e-4e3d-afca-ee8d3926d983"
+    "1667559668cd7d6d49"
   ]
 }

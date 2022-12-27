@@ -12,12 +12,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ shop.locale }}">
 <head>
-  <!-- Added by Pix - preorder -->
-  <script async src='https://stingray-app-n99th.ondigitalocean.app/script.js?shop=rubies-v2-testing.myshopify.com'></script>
-  <!-- Added by Pix - preorder -->
-  <!-- Added by Pix - preorder -->
-  <script async src='https://stingray-app-n99th.ondigitalocean.app/script.js?shop=rubies-v2-testing.myshopify.com'></script>
-  <!-- Added by Pix - preorder -->
+
   
 
   <meta charset="utf-8">
@@ -157,10 +152,12 @@
 
 
 
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="{{ 'custom.js' | asset_url }}"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
 
  <style>
    {% unless template.name == 'index' %}
@@ -174,11 +171,11 @@
 
   {% include 'cscode_discount' %}
 
-  {% include 'wiser' %}{% include 'wiser_popup' %}
+{% comment %}  {% include 'wiser' %}{% include 'wiser_popup' %}
 
 {% if content_for_header contains 'fastbundle.co' %}
     {% render 'fast_bundle_service' %}
-{% endif %}
+{% endif %} {% endcomment %}
 
 </head>
 
@@ -197,14 +194,20 @@
   </div>
   
 
-  <!-- District v3.5.2 -->
+  {% comment %}<!-- District v3.5.2 -->
 {% include 'spurit_po2_theme_snippet' %}
-
+ {% endcomment %}
   
 {% render 'preorder-now' %}
 
 
  {% include 'smile-initializer' %}
-
+<script>
+jQuery(document).ready(function(){
+setTimeout(function(){
+  $("<a href='{{ routes.cart_url }}' class='btn btn-primary text-center'>View Cart</a>").insertBefore('.aiod_minicart button.csapps_checkout');
+  },6000);
+})
+</script>
 </body>
 </html>
