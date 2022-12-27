@@ -373,7 +373,7 @@ div#smile-ui-lite-launcher-frame-container { left: 20px; }
     padding: 0px 8px;
     line-height: 50px;
 }
-.aiod-bundle-discount-wrap .csapps-bunlde-wrapper .csapps-bundle-thumb:last-child .csapp-thumb-inner::before { display: block; }
+.aiod-bundle-discount-wrap .csapps-bunlde-wrapper .csapps-bundle-thumb:last-child .csapp-thumb-inner::before { display: none; }
   .purchase-box .selection-wrapper.price { border: none; }
   .single-product .grid .product-images { margin-top: 100px; }
 
