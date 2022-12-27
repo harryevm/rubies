@@ -154,7 +154,7 @@ $('.box.product select[id*=ProductSelect-]').change(function(){
       arrows: false,
       autoplay: true,
       autoplaySpeed: 2000,
-      dots: true
+      dots: true,
     });
     }
 {% else %}
@@ -162,9 +162,9 @@ $('#collection-{{section.id}}').slick({
   arrows: false,
   autoplay: false,
   autoplaySpeed: 2000,
+  dots: true,
   slidesToShow: 2,
-  slidesToScroll: 2,
-  dots: true
+  slidesToScroll: 2
 });
 {% endunless %}
   
