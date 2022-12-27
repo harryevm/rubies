@@ -278,7 +278,9 @@
         </div>
       </div>
       <script>
-        $(".cart-tab-wrapper").appendTo(".collection-list-section .collection-list-updated");
+        setTimeout(function(){
+          $(".cart-tab-wrapper").appendTo(".collection-list-section .collection-list-updated");
+        },2000)
       </script>
       {% endif %}
 
