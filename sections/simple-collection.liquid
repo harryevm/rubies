@@ -145,11 +145,11 @@ $('.box.product select[id*=ProductSelect-]').change(function(){
       console.error('Error:', error);
     });
  }
- 
+
 });
   
-{% unless template == 'cart'  %}
-  if ($(window).width() <= 650) {
+
+  if ($(window).width() <= 750) {
     $('#collection-{{section.id}}').slick({
       arrows: false,
       autoplay: true,
@@ -157,25 +157,7 @@ $('.box.product select[id*=ProductSelect-]').change(function(){
       dots: true,
     });
     }
-{% else %}
-  {% if cart.item_count > 0 %}
-if ($(window).width() <= 650) {
-  {% endif %}
-  $('#collection-{{section.id}}').slick({
-    arrows: false,
-    autoplay: false,
-    autoplaySpeed: 2000,
-    dots: true,
-    {% unless cart.item_count > 0 %}
-    slidesToShow: 2,
-    slidesToScroll: 2
-    {% endunless %}
-  });
-  {% if cart.item_count > 0 %}
-}
-  {% endif %}
 
-{% endunless %}
   
 
 
