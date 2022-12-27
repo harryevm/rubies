@@ -3,7 +3,8 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 {% if cart.item_count > 0 %}
   <style>
-  .collection-list-section { display: none; }
+  .collection-list-section { display: none !important; }
+    .simple-collection-section, .collection-list-section { width: 100%; }
   </style>
 {% endif %}
 <section class="cart" data-section-id="{{ section.id }}" data-ajax-cart="{{ section.settings.ajax_cart }}" data-section-type="cart-template">
