@@ -142,7 +142,7 @@ $('.box.product select[id*=ProductSelect-]').change(function(){
       },2000);
       setTimeout(function(){
         $("<a href='{{ routes.cart_url }}' class='btn btn-primary text-center'>View Cart</a>").insertBefore('.aiod_minicart button.csapps_checkout');
-        },2000);
+        },6000);
     })
     .catch((error) => {
       console.error('Error:', error);
