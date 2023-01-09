@@ -343,7 +343,7 @@ button.csapps_checkout.btn.button.aiod_cart_loaded { display: none !important; }
 .template-product .purchase-box .selection-wrapper.price { margin-bottom: 0; }
 .template-product .selection-wrapper .product-form__item label, .template-product .selector-wrapper.quantity.quantity-product-template label, 
 .template-product .selector-wrapper.quantity label { font-size: 16px; line-height: 25px; }
-.template-product .single-option-radio .swatch-container label { padding: 6px 12px; font-size: 15px !important; line-height: 20px !important; margin-bottom: 5px; }
+
 .template-product .purchase-box .selection-wrapper.variant>span.label-extra>a { font-size: 18px; line-height: 30px; }
 }
 @media(max-width:1100px){
