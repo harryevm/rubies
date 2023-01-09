@@ -305,6 +305,9 @@ div#smile-ui-lite-launcher-frame-container { left: 20px; }
 
 button.csapps_checkout.btn.button.aiod_cart_loaded { display: none !important; }
 
+.aiod_minicart .aiod_cart_product_name{color: #000;}
+.aiod_cart_mini  span.cs_final_price span.money, .aiod_cart_mini .discount-label-conatiner { color: #1a6dfc !important; }
+
 
 
 @media(min-width:701px){
