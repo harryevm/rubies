@@ -79,17 +79,16 @@
                             <div class="simple-collection">
                               <div class="wrapper">
                                 <div class="product-container">
-                                  {%- assign collection = collections[section.settings.collection] -%}
+                                  {%- assign collection = collections[shop-page] -%}
                                   {%- assign product_limit = collection_count -%}
-                                  {% if section.settings.collection != blank }
-                                  {% for product in collection.products limit: product_limit  %}
-                                    {% include 'product-grid-item' %}
+                                    {% for product in collection.products limit: product_limit  %}
+                                      {% include 'product-grid-item' %}
+                                    {% endfor %}
                                   {% else %}
                                     {% for i in (1..product_limit) %}
                                       {% include 'placeholder-product-grid-item' %}
                                     {% endfor %}
-                                  {% endif %}
-                                  {% endfor %}
+                                  
                                 </div>
                               </div>
                             </div>
