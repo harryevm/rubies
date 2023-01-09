@@ -243,15 +243,22 @@
                         <div class="simple-collection">
                           <div class="wrapper">
                             <div class="product-container">
-                              {%- assign collection = collections[section.settings.collection] -%}
-                              {%- assign product_limit = collection_count -%}
-                              {% for product in collection.products limit: product_limit  %}
-                                {% include 'product-grid-item' %}
-                              {% else %}
-                                {% for i in (1..product_limit) %}
-                                  {% include 'placeholder-product-grid-item' %}
-                                {% endfor %}
-                              {% endfor %}
+                              {% unless section.settings.collection != blank %}
+                                  {% assign collection_handle = 'shop-page' %}
+                                  {%- assign collection = collections[collection_handle] -%}
+                                  {% else %}
+                                  {%- assign collection = collections[section.settings.collection] -%}
+                                  {% endunless %}
+                                  
+                                  {%- assign product_limit = collection_count -%}
+                        
+                                    {% for product in collection.products limit: product_limit  %}
+                                      {% include 'product-grid-item' %}
+                                    {% endfor %}
+                                {% comment %}  {% else %}
+                                    {% for i in (1..product_limit) %}
+                                      {% include 'placeholder-product-grid-item' %}
+                                    {% endfor %}{% endcomment %}
                             </div>
                           </div>
                         </div>
