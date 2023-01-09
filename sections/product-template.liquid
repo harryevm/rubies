@@ -79,9 +79,15 @@
                             <div class="simple-collection">
                               <div class="wrapper">
                                 <div class="product-container">
-                                  {%- assign collection = collections[shop-page] -%}
+                                 {% unless section.settings.collection != blank %}
+                                  {% assign collection_handle = 'shop-page' %}
+                                  {%- assign collection = collections[collection_handle] -%}
+                                  {% else %}
+                                  {%- assign collection = collections[section.settings.collection] -%}
+                                  {% endunless %}
+                                  
                                   {%- assign product_limit = collection_count -%}
-            {% if section.settings.collection != blank %}
+                              {% if section.settings.collection != blank %}
                                     {% for product in collection.products limit: product_limit  %}
                                       {% include 'product-grid-item' %}
                                     {% endfor %}
