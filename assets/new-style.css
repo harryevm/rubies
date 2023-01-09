@@ -421,6 +421,7 @@ button.csapps_checkout.btn.button.aiod_cart_loaded { display: none !important; }
 }
 .cart .cart-checkout>* { position: relative; }
 
+.template-product .description.rte { margin-top: 50px; }
 .template-product .description.rte .description__tabs,.template-product .description.rte>* {width: 100%;}
 
 }
