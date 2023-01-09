@@ -90,12 +90,12 @@
                         
                                     {% for product in collection.products limit: product_limit  %}
                                       {% include 'product-grid-item' %}
-                                    {% endfor %}
+                                    
                                   {% else %}
                                     {% for i in (1..product_limit) %}
                                       {% include 'placeholder-product-grid-item' %}
                                     {% endfor %}
-                           
+                           {% endfor %}
                                 </div>
                               </div>
                             </div>
