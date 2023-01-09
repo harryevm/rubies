@@ -348,6 +348,7 @@ button.csapps_checkout.btn.button.aiod_cart_loaded { display: none !important; }
 .template-product .single-option-radio .swatch-container label { padding: 3px 10px; margin-bottom: 0; position: relative; }
 .template-product .single-option-radio .swatch-container.color label span.swatch--swatch { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
 .template-product main.main-content.main-content--breadcrumb-all { margin-top: 10px !important; }
+.template-product .purchase-box .selection-wrapper.variant { margin-bottom: 0; }
 }
 @media(max-width:1100px){
   .slide__item-content h2 { font-size: 40px; line-height: 50px; }
