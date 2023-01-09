@@ -205,8 +205,13 @@
 <script>
 jQuery(document).ready(function(){
 setInterval(function(){
+  var hasChildDiv = document.querySelector(".aiod_minicart").querySelector(".btn-primary");
+  if (hasChildDiv !== null) {
+    alert('yes')
+  }
   $("<a href='{{ routes.cart_url }}' class='btn btn-primary text-center'>View Cart</a>").insertBefore('.aiod_minicart button.csapps_checkout');
   },6000);
+ 
 })
 </script>
 </body>
