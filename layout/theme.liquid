@@ -204,7 +204,7 @@
  {% include 'smile-initializer' %}
 <script>
 jQuery(document).ready(function(){
-setTimeout(function(){
+setInterval(function(){
   $("<a href='{{ routes.cart_url }}' class='btn btn-primary text-center'>View Cart</a>").insertBefore('.aiod_minicart button.csapps_checkout');
   },6000);
 })
