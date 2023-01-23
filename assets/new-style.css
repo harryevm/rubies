@@ -353,6 +353,7 @@ button.csapps_checkout.btn.button.aiod_cart_loaded { display: none !important; }
   .gallery-box-wr figcaption.below div p { font-size: 14px; line-height: 20px; }
   .evm-related-product { width: 96%; }
 
+  header.site-header.minimal>.wrapper { max-width: 96% !important; }
   
 }
 @media(max-width:1100px){
