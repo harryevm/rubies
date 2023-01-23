@@ -628,7 +628,7 @@ header.collection-header>.container {
   .template-collection section.collection { padding: 20px 0 40px; }
   .template-collection section.collection header.collection-header { margin-bottom: 30px; }
   span.jdgm-prev-badge__text { display: block; }
-  
+  .bundle-products>* { min-width: 45%; }
   
 }
 @media(max-width:480px){
