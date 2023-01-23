@@ -635,6 +635,7 @@ header.collection-header>.container {
   .bundle-products>* { min-width: 45%; }
 
   .simple-collection figcaption span.original-price { font-size: 12px; position: absolute; margin-left: 4px; }
+  .simple-collection figcaption .product-title { min-height: 45px; }
   
 }
 @media(max-width:480px){
