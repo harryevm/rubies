@@ -155,9 +155,11 @@ $('.box.product select[id*=ProductSelect-]').change(function(){
   if ($(window).width() <= 750) {
     $('#collection-{{section.id}}').slick({
       arrows: false,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 2000,
       dots: true,
+      slidesToShow: 4,
+  slidesToScroll: 4,
     });
     }
 
