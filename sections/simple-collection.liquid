@@ -139,7 +139,7 @@ $('.box.product select[id*=ProductSelect-]').change(function(){
       setTimeout(function(){
         jQuery('.aiod_cart_mini.aiod_minicart').addClass('active_cart');
       jQuery('.aiod_minicart_overlay ').addClass('cs_show');
-      },2000);
+      },500);
       setTimeout(function(){
         $("<a href='{{ routes.cart_url }}' class='btn btn-primary text-center'>View Cart</a>").insertBefore('.aiod_minicart button.csapps_checkout');
         },6000);
