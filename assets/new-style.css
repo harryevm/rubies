@@ -435,6 +435,8 @@ button.csapps_checkout.btn.button.aiod_cart_loaded { display: none !important; }
 .template-product .description.rte { margin-top: 50px; }
 .template-product .description.rte .description__tabs,.template-product .description.rte>* {width: 100%;}
 
+div.gallery .box figcaption.below h3 { overflow: visible; display: block; min-height: 60px; }
+
 }
 @media(max-width:701px){
   .cs_general_msg.top_msg_main { position: fixed; top: 0; left: 0; right: 0; z-index: 99999; }
