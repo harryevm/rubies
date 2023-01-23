@@ -9,7 +9,7 @@
         <a href="{{ section.settings.button_link }}" class="button outline">{{ section.settings.button_label | escape }}</a>
       {% endif %}
     </header>
-    <div class="product-container" id="collection-{{ section.id }}"> 
+    <div class="product-container owl-carousel" id="collection-{{ section.id }}"> 
     
    
      
@@ -152,14 +152,14 @@ $('.box.product select[id*=ProductSelect-]').change(function(){
 });
   
 
-
-    $('#collection-{{ section.id }}').slick({
+  if ($(window).width() <= 750) {
+    $('#collection-{{section.id}}').slick({
       arrows: false,
       autoplay: true,
       autoplaySpeed: 2000,
       dots: true,
     });
-    
+    }
 
   
 
