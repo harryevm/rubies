@@ -633,6 +633,8 @@ header.collection-header>.container {
   .template-collection section.collection header.collection-header { margin-bottom: 30px; }
   span.jdgm-prev-badge__text { display: block; }
   .bundle-products>* { min-width: 45%; }
+
+  .simple-collection figcaption span.original-price { font-size: 12px; position: absolute; margin-left: 4px; }
   
 }
 @media(max-width:480px){
