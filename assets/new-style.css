@@ -1,5 +1,7 @@
 .simple-collection-section { overflow-x: hidden; }
 .simple-collection .product-container > * { width: 100% !important }
+.simple-collection .product-container .box { padding: 0 10px; }
+.simple-collection .product-container .box .preorder-description { position: absolute; font-size: 14px !important; top: -30px; }
 
  
 
