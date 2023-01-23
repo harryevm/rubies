@@ -136,7 +136,7 @@ footer.site-footer .box.box-first>*:last-child { border: none; padding: 0; }
 span.jdgm-prev-badge__stars span:before { color: black; }
 header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { color: #000; font-size: 16px; line-height: 25px; }
   header.content-util nav.breadcrumb span { color: #040F21; }
-  .product-title-with-review .product-title { margin: 10px 0; }
+  .product-title-with-review .product-title { margin: 10px 0 5px; }
   .purchase-box .selection-wrapper.price>span { color: #040F21; font-size: 25px; line-height: 35px; font-weight: 700; }
   .purchase-box .selection-wrapper.price { margin-bottom: 20px; }
   .purchase-box .selection-wrapper.variant>span.label-extra>a { font-size: 20px; line-height: 30px; margin: 15px 0; display: block; color: #040F21; text-transform: uppercase; }
