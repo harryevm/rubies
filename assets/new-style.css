@@ -306,7 +306,7 @@ div#ship-calculator .srw-widget.srw-widget-manual { padding: 0; }
 body .aiod_checkout_clicked, body .upsell_opner_from_cart.is_loading { text-indent: 0 !important; }
 div#smile-ui-lite-launcher-frame-container { left: 20px; }
 .estimate-wr { margin-bottom: 20px; }
-.estimate-wr > span { color: #54C45E; }
+.estimate-wr>span { color: #000; font-weight: 700; }
 .cart .cart-checkout input.csapp_aiod_coupan_code { max-width: 200px !important; }
 .checkout-buttons>input { padding: 15px 40px !important; font-size: 16px!important; line-height: 30px; }
 .page .content-container.narrow, .popup-page .content-container.narrow { max-width: 100%; }
