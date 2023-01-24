@@ -251,7 +251,8 @@ span.extra-overlay { position: absolute; content: ''; background: transparent; t
 .alert-size b { font-weight: 700; font-size: 14px; line-height: 20px; text-align: center; display: block; color: #ff0000; }
 .simple-collection figure a.pro_url_updated { position: absolute; top: 0; left: 0; right: 0; bottom: 65%; background: transparent; z-index: 99; }
 
-.single-option-radio .swatch-container.soldout svg { width: 100%; left: 0; right: 0; top: 0; bottom: 0; height: 100%; stroke: #ccc0; }
+.single-option-radio .swatch-container.soldout svg { width: 100%; left: 0; right: 0; top: 0; bottom: 0; height: 100%; 
+                                                    stroke: #ccc0; display:none; }
 .single-option-radio .swatch-container.soldout svg path { fill: #ccc; }
 .template-product  .jdgm-histogram.jdgm-temp-hidden { display: none; }
 
