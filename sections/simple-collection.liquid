@@ -136,10 +136,12 @@ $('.box.product select[id*=ProductSelect-]').change(function(){
       this.setAttribute('value','Added');
       this.previousSibling.previousSibling.style.display = "none";
       jQuery.getJSON('/cart.js', function(cart) { jQuery("#CartCount").text(cart.item_count); });
+      {% if template != 'cart' %}
       setTimeout(function(){
         jQuery('.aiod_cart_mini.aiod_minicart').addClass('active_cart');
       jQuery('.aiod_minicart_overlay ').addClass('cs_show');
       },500);
+      {% endif %}
       setTimeout(function(){
         $("<a href='{{ routes.cart_url }}' class='btn btn-primary text-center'>View Cart</a>").insertBefore('.aiod_minicart button.csapps_checkout');
         },6000);
