@@ -100,7 +100,7 @@
         "color_overlay_hover": "#000000",
         "color_overlay_text": "#ffffff",
         "color_overlay_alpha_range": 0,
-        "zoom": true
+        "zoom": false
       }
     },
     "1667559668cd7d6d49": {
@@ -108,7 +108,7 @@
       "disabled": true,
       "blocks": {
         "0f1677e2-ae15-42b6-acec-4a626b3bb765": {
-          "type": "shopify:\/\/apps\/wiser-upsell-recommendations\/blocks\/wiser_related\/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "type": "shopify:\/\/apps\/wiser-product-recommendations\/blocks\/wiser_related\/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {
           }
         }
