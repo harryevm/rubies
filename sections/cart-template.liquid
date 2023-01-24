@@ -1,9 +1,9 @@
 {% for item in cart.items %}
 {% if item.product.tags contains 'Preorder'  %}
-   hello
+   {% assign preordermessage = 'Your order contains a pre-order item and will be shipped out when all items are available.' %}
 {% endif %}
 {% endfor %}
-
+{{preordermessage}}
 <div class="aiod-general-discount-topbar"></div>
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 {% if cart.item_count > 0 %}
