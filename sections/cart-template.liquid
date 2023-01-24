@@ -99,6 +99,9 @@
                         {%- unless item.product.has_only_default_variant -%}
                           <span class="variant" data-cart-item-variant-title>{{ item.variant.title }}</span></br>
                         {%- endunless -%}
+                        {% if item.product.tags contains 'Preorder'  %}
+                          {% assign preClass = 'havepreorder' %}
+                        {% endif %}
                         {%- comment -%}
                           Optional, loop through custom product line items if available
                           For more info on line item properties, visit:
@@ -110,11 +113,12 @@
                               {{ property.first }}: {% if property.last contains '/uploads/' %}
                                 <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
                               {% else %}
-                                {{ property.last }}
+                              <span class="{{preClass}}">  {{ property.last }}</span>
                               {% endif %}<br>
                             {%- endunless -%}
                           {%- endfor -%}
                         {%- endunless -%}
+                       
                       </div>
                     <div class="cart-item-quantity">
                       <span>
