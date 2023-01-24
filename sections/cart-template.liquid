@@ -1,3 +1,8 @@
+{% for item in cart.items %}
+{% if item.product.tags contains 'Preorder'  %}
+   hello
+{% endif %}
+{% endfor %}
 
 <div class="aiod-general-discount-topbar"></div>
 {{ 'cart.css' | asset_url | stylesheet_tag }}
