@@ -756,7 +756,7 @@
           "color_overlay_hover": "#000000",
           "color_overlay_text": "#ffffff",
           "color_overlay_alpha_range": 0,
-          "zoom": true
+          "zoom": false
         }
       },
       "collection-template": {
