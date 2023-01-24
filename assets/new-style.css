@@ -344,7 +344,7 @@ button.csapps_checkout.btn.button.aiod_cart_loaded { display: none !important; }
   /* .template-product .single-option-radio .swatch-container label { padding: 6px 12px; font-size: 15px !important; line-height: 20px !important; margin-bottom: 5px; } */
   .template-product .purchase-box .selection-wrapper.variant>span.label-extra>a { font-size: 18px; line-height: 30px; }
   .template-product .single-option-radio .swatch-container label { padding: 3px 10px; margin-bottom: 0; position: relative; }
-  .template-product .size-drop-box .single-option-radio .swatch-container label { padding: 7px 2px; margin-bottom: 0; position: relative; width: 53px; text-align: center; }
+  .template-product .size-drop-box .single-option-radio .swatch-container label { padding: 7px 2px; margin-bottom: 0; position: relative; min-width: 53px; text-align: center; }
   .template-product .single-option-radio .swatch-container.color label span.swatch--swatch { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
   .template-product main.main-content.main-content--breadcrumb-all { margin-top: 10px !important; }
   .template-product .purchase-box .selection-wrapper.variant { margin-bottom: 0; }
