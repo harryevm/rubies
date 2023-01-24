@@ -144,7 +144,7 @@ $('.box.product select[id*=ProductSelect-]').change(function(){
         $("<a href='{{ routes.cart_url }}' class='btn btn-primary text-center'>View Cart</a>").insertBefore('.aiod_minicart button.csapps_checkout');
         },6000);
         {% if template == 'cart' %}
-          alert();
+        window.location.reload();
         {% endif %}
     })
     .catch((error) => {
