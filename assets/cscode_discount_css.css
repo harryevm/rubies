@@ -1076,7 +1076,7 @@ p.aiod_error {
     flex-wrap: wrap;
 }
 .aiod_minicart .aiod_cart_item .acdw {
-    padding-left: 30px;
+    padding-left: 0 10px 0 10px;
     width: 80%;
 }
 .aiod_minicart .aiod_cart_item .aciw {
