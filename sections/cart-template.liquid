@@ -60,12 +60,9 @@
                 </div>
               </div>
                {% endcomment %}
-               {%- for item in cart.items -%}
-  "{{ item.id }}": {{- item.variant.inventory_quantity -}}
-  {%- unless forloop.index == cart_items_count -%},{%- endunless -%}
-  {%- endfor -%}
+               
               {%- for item in cart.items -%}
-              {{item.inventory_quantity }}sdfsf{{item.variant.inventory_quantity}}
+              {{- item.variant.inventory_quantity -}}
 
                 <div class="cart-item" data-cart-item="{{ item.key }}" data-csapp_line_index>
                 <div class="grid custom-cart-items">
