@@ -113,7 +113,7 @@
                               {{ property.first }}: {% if property.last contains '/uploads/' %}
                                 <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
                               {% else %}
-                              <span class="{{preClass}}">  {{ property.last }}</span>
+                              <span class="{{preClass}}"> {{item.inventory_quantity }} {{ property.last }}</span>
                               {% endif %}<br>
                             {%- endunless -%}
                           {%- endfor -%}
