@@ -1,3 +1,4 @@
+.aiod_minicart_wraper>a.btn.btn-primary.text-center { display: none !important; }
 .simple-collection-section { overflow-x: hidden; }
 .simple-collection .product-container > * { width: 100% !important }
 .simple-collection .product-container .box { padding: 0 10px; }
