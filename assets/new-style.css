@@ -367,6 +367,13 @@ button.csapps_checkout.btn.button.aiod_cart_loaded { display: none !important; }
   header.site-header.minimal>.wrapper { max-width: 96% !important; }
   
 }
+
+@media only screen and (max-width: 1600px) and (min-width: 1400px)  {
+  a#CartButton { right: -8%; }
+  header.util li.search-wrap { right: -6%; }
+}
+
+
 @media(max-width:1100px){
   .slide__item-content h2 { font-size: 40px; line-height: 50px; }
  
