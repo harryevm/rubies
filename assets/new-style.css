@@ -337,7 +337,7 @@ button.csapps_checkout.btn.button.aiod_cart_loaded { display: none !important; }
 .template-product .description.rte { display: flex; align-items: baseline; justify-content: space-between; }
 .template-product .description.rte>* { width: 50%; }
 .template-product .description.rte .description__tabs { width: 40%; }
-
+.also-bt-desk .product-title { min-height: 50px; }
 
 
 @media(min-width:701px){
