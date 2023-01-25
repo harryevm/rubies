@@ -354,7 +354,7 @@ button.csapps_checkout.btn.button.aiod_cart_loaded { display: none !important; }
     .contain-site-width, .wrapper { max-width: 1170px !important; width: 96%; margin: 0 auto; }
     .contain-site-width>.wrapper { width: 100%; }
     a#CartButton { right:0%; }
-    header.util li.search-wrap {right: 0%;}
+    header.util li.search-wrap { right: 2%; }
     .slideshow .contain-full-width.no-padding .wrapper { width: 100%; }
     .slide__item-content.justify-center .inner-wrapper .content-contain { max-width: 75%; }
     .flex-data.grid { margin: 0; }
