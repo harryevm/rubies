@@ -209,7 +209,7 @@ setTimeout(function(){
   if (hasChildDiv !== null) {
     $("").insertBefore('.aiod_minicart_wraper button.csapps_checkout');
   }else{
-    $("<a href='{{ routes.cart_url }}' class='btn btn-primary text-center'>View Cart</a>").insertBefore('.aiod_minicart_wraper button.csapps_checkout');
+    $("<a href='{{ routes.cart_url }}' class='btn btn-cart text-center'>View Cart</a>").insertBefore('.aiod_minicart_wraper button.csapps_checkout');
   }
   
   },6000);
