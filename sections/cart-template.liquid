@@ -61,7 +61,7 @@
               </div>
                {% endcomment %}
               {%- for item in cart.items -%}
-                
+              {{item.inventory_quantity }}sdfsf
                 <div class="cart-item" data-cart-item="{{ item.key }}" data-csapp_line_index>
                 <div class="grid custom-cart-items">
                 <div class="td cart-item-product-image custom-cart-product-image">
@@ -113,7 +113,7 @@
                               {{ property.first }}: {% if property.last contains '/uploads/' %}
                                 <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
                               {% else %}
-                              <span class="{{preClass}}"> {{item.inventory_quantity }} {{ property.last }}</span>
+                              <span class="{{preClass}}">  {{ property.last }}</span>
                               {% endif %}<br>
                             {%- endunless -%}
                           {%- endfor -%}
