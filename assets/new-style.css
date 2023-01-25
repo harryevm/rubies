@@ -321,7 +321,7 @@ div#ship-calculator { padding-right: 20px; }
 div#ship-calculator .srw-widget.srw-widget-manual { padding: 0; }
 .cart-tab-wrapper+.grid { margin-top: 30px; }
 body .aiod_checkout_clicked, body .upsell_opner_from_cart.is_loading { text-indent: 0 !important; }
-div#smile-ui-lite-launcher-frame-container { right: -15px !important; }
+
 .estimate-wr { margin-bottom: 20px; }
 .estimate-wr>span { color: #000; font-weight: 700; }
 .cart .cart-checkout input.csapp_aiod_coupan_code { max-width: 200px !important; }
