@@ -205,11 +205,11 @@
 <script>
 jQuery(document).ready(function(){
 setInterval(function(){
-  var hasChildDiv = document.querySelector(".aiod_minicart").querySelector(".btn-primary");
+  var hasChildDiv = document.querySelector(".aiod_minicart_wraper").querySelector(".btn-primary");
   if (hasChildDiv !== null) {
-    $("").insertBefore('.aiod_minicart button.csapps_checkout');
+    $("").insertBefore('.aiod_minicart_wraper button.csapps_checkout');
   }else{
-    $("<a href='{{ routes.cart_url }}' class='btn btn-primary text-center'>View Cart</a>").insertBefore('.aiod_minicart button.csapps_checkout');
+    $("<a href='{{ routes.cart_url }}' class='btn btn-primary text-center'>View Cart</a>").insertBefore('.aiod_minicart_wraper button.csapps_checkout');
   }
   
   },6000);
