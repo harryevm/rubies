@@ -61,7 +61,7 @@
               </div>
                {% endcomment %}
               {%- for item in cart.items -%}
-              {{item.inventory_quantity }}sdfsf{{lineitem.variant.inventory_quantity}}
+              {{item.inventory_quantity }}sdfsf{{item.variant.inventory_quantity}}
 
                 <div class="cart-item" data-cart-item="{{ item.key }}" data-csapp_line_index>
                 <div class="grid custom-cart-items">
