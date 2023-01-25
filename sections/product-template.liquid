@@ -667,6 +667,11 @@
     // $(this).parent().toggleClass('active-dropdown');
   });
 
+  $('.accordion-tab>a').click(function(){
+    $('.accordion-content>div').slick('refresh');
+    alert();
+})
+
   $('.template-product .size-drop-box .single-option-radio .swatch-container:first-child > input').removeAttr('checked');
 
 
