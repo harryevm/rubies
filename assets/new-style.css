@@ -76,7 +76,7 @@ h1, h2, h3 { font-weight: 600 !important; }
 .simple-collection span.price, .collection span.price { display: block; margin: 10px 0; font-size: 20px !important; line-height: 30px; font-weight: 700 !important; }
 header h4 { font-weight: 700 !important; font-size: 32px !important; line-height: 40px; margin-bottom: 30px !important; }
 
-span.collection-size-swatch {display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
+span.collection-size-swatch {display: flex; align-items: center; flex-wrap: wrap; margin: 10px 0; }
 .collection-size-swatch .size-values { margin: 0 5px 5px 0; background-color: #fff; min-width: 32px; height: 32px; border: 1px solid #cccccc91; color: #040f21; font-size: 14px; line-height: 30px; padding: 0 5px; }
 .simple-collection input.btn.btn-primary, .collection input.btn.btn-primary { width: 100%; }
 .section-standard .feature-row__item.feature-row__text { padding: 0 80px; }
