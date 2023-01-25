@@ -460,6 +460,9 @@ button.csapps_checkout.btn.button.aiod_cart_loaded { display: none !important; }
 div.gallery .box figcaption.below h3 { overflow: visible; display: block; min-height: 60px; }
 
 .also-bt-mob .product-title { min-height: 45px; }
+.simple-collection .product-container {
+  margin-left: 0;
+}
 
 }
 @media(max-width:701px){
