@@ -635,6 +635,8 @@ div.gallery .box figcaption.below h3 { overflow: visible; display: block; min-he
   .td.cart-item-total.custom-cart-product-total .money,div#shipping-savings-message, .estimate-wr { font-size: 14px; line-height: 20px; }
   .gallery-section .grid>.grid__item { width: 100%; }
   div.gallery .box figcaption.below h3 { min-height: unset; }
+
+  .contain-site-width, .wrapper { width: 100%;  padding: 0 15px; }
   
 }
 @media(max-width:600px){
