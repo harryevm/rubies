@@ -403,6 +403,11 @@
     $(this).parent().find('.arrow').toggleClass('arrow-animate');
     $(this).parent().find('.content').slideToggle(280);
   })      
+  $('.cart .cart-item-quantity a.remove').click(function(){
+    setTimeout(function(){
+      location.reload();
+    },500)
+  })
   $('.quantity-select .button-wrapper button').click(function(){
    
     setTimeout(function(){
