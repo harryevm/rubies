@@ -112,7 +112,6 @@
     },
     "42b1d4c8-4036-4fc4-91ba-23e7981d2f0b": {
       "type": "simple-collection",
-      "disabled": true,
       "settings": {
         "title": "You may also like",
         "center_heading": false,
