@@ -372,7 +372,9 @@ End automatically added Judge.me widget{% endcomment %}
       {% endcase %}
     </div>
   {% endfor %}
+  <div class="product-review-sec">
   {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
+  </div>
 
 </div>
 {% unless product.empty? %}
@@ -660,6 +662,8 @@ End automatically added Judge.me widget{% endcomment %}
   .slick-list.draggable { overflow: hidden; width: 100%;padding-left: 0;}
   .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: block; }
   .simple-collection-section { display: none; }
+  .product-review-sec .jdgm-widget.jdgm-widget { display: block !important; height: 100%; }
+  .product-review-sec .jdgm-widget-actions-wrapper, .product-review-sec .jdgm-rev__icon, .product-review-sec .jdgm-rev-widg__summary-text{display: block !important;}
 
 </style>
 
