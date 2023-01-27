@@ -341,6 +341,7 @@ button.csapps_checkout.btn.button.aiod_cart_loaded { display: none !important; }
 .template-product .description.rte .description__tabs { width: 40%; }
 .also-bt-desk .product-title { min-height: 50px; }
 span.original-price { display: none; }
+.template-product .size-drop-box .single-option-radio .swatch-container label{font-weight: 400; font-size: 15px; line-height: 25px;}
 
 @media(min-width:701px){
   .middle-wrapper { display: none; }
