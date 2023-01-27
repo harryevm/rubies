@@ -372,7 +372,7 @@
       {% endcase %}
     </div>
   {% endfor %}
-
+  {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
 </div>
 {% unless product.empty? %}
   <script type="application/json" id="ProductJson-{{ section.id }}">
