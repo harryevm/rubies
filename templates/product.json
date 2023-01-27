@@ -35,7 +35,7 @@
           "settings": {
             "heading": "What our customers say",
             "content": "",
-            "htmlcontent": "{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}",
+            "htmlcontent": "",
             "page": ""
           }
         }
