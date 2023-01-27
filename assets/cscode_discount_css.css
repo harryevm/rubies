@@ -638,7 +638,8 @@ body .cs_overlay {
     height: 100%;
     width: 100%;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #00000085;
+    z-index: 99999;
 }
 .cs_bogo_overlay {
     z-index: 999999;
