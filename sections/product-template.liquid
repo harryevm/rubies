@@ -706,7 +706,9 @@ End automatically added Judge.me widget{% endcomment %}
     });
 
     $(document).ready(function(){
-      $('.single-option-radio .swatch-container').removeClass('soldout');
+      setTimeout(function(){
+        $('.single-option-radio .swatch-container').removeClass('soldout');
+      },1000)
     })
 
 
