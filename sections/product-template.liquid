@@ -776,5 +776,6 @@ $(window).on("load", function () {
     $('html,body').animate({
       scrollTop: $('#' + urlHash).offset().top - 160
     }, 4000);
+    $('#'+urlHash).children('a').trigger('click');
 });
 </script>
