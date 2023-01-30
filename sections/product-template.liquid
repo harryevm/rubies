@@ -281,7 +281,7 @@
               </div>
           {% endif %}
           {% for block in section.blocks %}
-            <div class="accordion-tab" id="{{block.settings.heading | strip}}">
+            <div class="accordion-tab" id="{{block.settings.heading  | remove:' '}}">
               <a href="javascript:;">
                 {{ block.settings.heading }} 
                 <i class="fa fa-chevron-down"></i>
