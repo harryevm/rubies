@@ -74,6 +74,9 @@
       {% comment %}
         If customer accounts are enabled, provide login and create account links
       {% endcomment %}
+      {% if settings.show_multiple_currencies or shop.enabled_currencies.size > 1 %}
+        {% include 'currency-picker' %}
+      {% endif %}
       {% if shop.customer_accounts_enabled %}
         {% include 'accounts-nav' %}
       {% endif %}
