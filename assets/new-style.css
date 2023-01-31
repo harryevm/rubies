@@ -153,7 +153,7 @@ header.content-util ul.social-icons {  display: none; }
 .product-images .thumbnails a { border-radius: 0 !important; border: 1px solid #040F21; }
 footer.site-footer form .input-wrapper input { width: 100% !important; }
 footer.site-footer .box.box-first>*:last-child { border: none; padding: 0; }
-
+footer.site-footer form .input-wrapper input:focus, footer.site-footer form .input-wrapper input:focus-visible { outline: none; }
 
 
 /* Product single */
