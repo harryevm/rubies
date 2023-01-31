@@ -20,7 +20,7 @@
         <h1>{{ 'cart.general.title' | t }}</h1>
       </header>
       {% if cart.item_count > 0 %}
-        
+        {{ "now" | date: "%s" |date: "%a %b %d, %Y" }}
       <div id="shipping-savings-message">
         {% assign shipping_value = section.settings.free_price | remove: "." %}
         {% assign cart_total = cart.total_price %}
@@ -38,7 +38,7 @@
         {% endfor %}
       <div class="pre-order-message">{{preordermessage}}</div>
       <div class="estimate-wr">
-        Arrives in <b>Canada</b> between <span>{% assign nextday = 1 | times: 172800 %}{{ "now" | date: "%s" | plus: nextday |date: "%a %b %d, %Y" }}</span> and <span>{% assign days = 1 | times: 777600 %} {{ "now" | date: "%s" | plus: days | date: "%a %b %d, %Y" }}</span></div>
+        Arrives in <b>Canada</b> between <span>{% assign nextday = 1 | times: 172800 %}{{ "now" | date: "%s" | plus: nextday |date: "%a %b %e, %Y" }}</span> and <span>{% assign days = 1 | times: 777600 %} {{ "now" | date: "%s" | plus: days | date: "%a %e %d, %Y" }}</span></div>
         <div class="cart-list">
           <form action="/cart" method="post" novalidate class="cart-form">
             <div class="cart-items" data-csapp_line_wrapper>
