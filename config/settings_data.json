@@ -1,562 +1,528 @@
 {
   "current": {
-    "primary_text_color": "#040f21",
-    "primary_title_color": "#040f21",
-    "primary_background_color": "#ffffff",
-    "content_box_background_color": "#ffffff",
-    "primary_accent_color": "#fc01ff",
-    "primary_dropshadow": true,
-    "homepage_show_borders": true,
-    "site_border_color": "#ffffff",
-    "site_border_text_color": "#040f21",
-    "site_header_title_text_color": "#040f21",
-    "site_header_nav_text_color": "#040f21",
-    "site_header_background_color": "#ffffff",
-    "site_header_accent_color": "#040f21",
-    "footer_background_color": "#040f21",
-    "footer_title_text_color": "#ffffff",
-    "footer_title_accent_color": "#ffffff",
-    "typography_body_font": "poppins_n4",
-    "typography_base_size_modify": "1",
-    "typography_headings_font": "poppins_n7",
-    "typography_header_base_size_modify": "1",
-    "typography_headings_capitalize": false,
-    "typography_headings_bold": false,
-    "typography_navigation_font": "poppins_n3",
-    "favicon": "shopify:\/\/shop_images\/favicon.jpg",
-    "newsletter_discount_code": "",
-    "newsletter_redirect_link": "",
-    "product_discountext": "",
-    "collections_product_ratio": "100%",
-    "collection_product_auto_crop": true,
-    "variant_rollover": true,
-    "collection_swatches": true,
-    "collection_swatches_images": true,
-    "collection_swatches_shape": "circle",
-    "collections_product_columns": "1",
-    "show_vendors": false,
-    "collections_text_alignment": "left",
     "collections_badge_placement": "top-left",
-    "collections_badge_onsale": "",
-    "collections_badge_soldout": "",
-    "show_breadcrumbs": "all",
-    "ajax_cart_enable": true,
-    "cart_icon": "bag2",
-    "social_twitter_link": "",
-    "social_facebook_link": "https:\/\/www.facebook.com\/RUBIES-Form-fitting-clothing-for-trans-girls-101476751300330\/",
-    "social_instagram_link": "https:\/\/www.instagram.com\/rubiesdad\/",
-    "social_pinterest_link": "",
-    "social_tumblr_link": "",
-    "social_youtube_link": "",
-    "social_snapchat_link": "",
-    "social_spotify_link": "",
-    "social_googleplus_link": "",
-    "social_medium_link": "",
-    "social_linkedin_link": "",
-    "social_amazon_link": "",
-    "social_share_facebook_enabled": true,
-    "social_share_twitter_enabled": true,
-    "social_share_pinterest_enabled": true,
-    "social_share_googleplus_enabled": false,
-    "social_share_fancy_enabled": false,
-    "default_opengraph_image": "",
-    "show_multiple_currencies": false,
-    "currency_format": "money_format",
-    "supported_currencies": "USD GIP",
-    "default_currency": "USD",
-    "checkout_header_image": "",
-    "checkout_logo_image": "shopify:\/\/shop_images\/rubies-logo-shopify_377f7784-2194-4246-804d-89a716a72f8d.png",
-    "checkout_logo_position": "left",
-    "checkout_logo_size": "medium",
-    "checkout_body_background_image": "",
-    "checkout_body_background_color": "#ffffff",
-    "checkout_input_background_color_mode": "white",
-    "checkout_sidebar_background_image": "",
-    "checkout_sidebar_background_color": "#fafafa",
-    "checkout_heading_font": "Helvetica Neue",
     "checkout_body_font": "Helvetica Neue",
-    "checkout_accent_color": "#442778",
-    "checkout_button_color": "#0043fa",
-    "checkout_error_color": "#ff6d6d",
+    "social_youtube_link": "",
     "email_offer_form_action": "",
     "mlvedaACS_autoSwitch": false,
+    "checkout_header_image": "",
+    "social_share_googleplus_enabled": false,
+    "show_breadcrumbs": "all",
+    "collections_badge_onsale": "",
+    "collection_swatches": true,
+    "social_linkedin_link": "",
+    "checkout_accent_color": "#442778",
     "mlvedaACS_isCustomized": true,
+    "footer_background_color": "#040f21",
+    "collection_swatches_shape": "circle",
+    "site_header_accent_color": "#040f21",
+    "checkout_logo_size": "medium",
     "mlvedaACS_borderLook": false,
+    "typography_navigation_font": "poppins_n3",
+    "content_box_background_color": "#ffffff",
+    "checkout_button_color": "#0043fa",
+    "typography_headings_capitalize": false,
+    "social_share_pinterest_enabled": true,
+    "collections_product_columns": "1",
+    "default_opengraph_image": "",
+    "show_vendors": false,
+    "checkout_input_background_color_mode": "white",
     "mlvedaACS_textColor": "inherit",
     "mlvedaACS_flagStyle": "circle",
+    "social_pinterest_link": "",
     "mlvedaACS_isMessageDisplay": true,
+    "social_medium_link": "",
+    "typography_base_size_modify": "1",
+    "collection_product_auto_crop": true,
     "mlvedaACS_messageColor": "inherit",
+    "checkout_heading_font": "Helvetica Neue",
+    "homepage_show_borders": true,
+    "footer_title_accent_color": "#ffffff",
+    "social_share_twitter_enabled": true,
+    "social_googleplus_link": "",
+    "footer_title_text_color": "#ffffff",
+    "checkout_body_background_image": "",
+    "newsletter_discount_code": "",
+    "social_share_facebook_enabled": true,
+    "product_discountext": "",
+    "social_share_fancy_enabled": false,
+    "social_amazon_link": "",
+    "site_border_text_color": "#040f21",
+    "site_header_background_color": "#ffffff",
+    "default_currency": "USD",
+    "site_header_nav_text_color": "#040f21",
     "mlvedaACS_roundDecimal": false,
+    "primary_accent_color": "#fc01ff",
+    "collections_badge_soldout": "",
+    "supported_currencies": "USD GIP",
+    "typography_headings_font": "poppins_n7",
+    "cart_icon": "bag2",
     "mlvedaACS_messageContent": "<<shop.name>> process all orders in <<shop.currency>>. While the content of your cart is currently displayed in <<shop.selected_currency>>, you will checkout using <<shop.currency>> at the most current exchange rate.",
+    "social_instagram_link": "https:\/\/www.instagram.com\/rubiesdad\/",
+    "checkout_body_background_color": "#ffffff",
+    "primary_title_color": "#040f21",
+    "checkout_sidebar_background_image": "",
+    "collections_text_alignment": "left",
     "mlvedaACS_os2": true,
     "mlvedaACS_positionTop": "10px",
-    "mlvedaACS_positionRight": "10px",
-    "newsletter_type": "shopify",
-    "mlvedaACS_positionLeft": "10px",
-    "mlvedaACS_defaultCurrency": "CAD",
-    "mlvedaACS_positionBottom": "10px",
-    "mlvedaACS_messageBackgroundColor": "inherit",
-    "mlvedaACS_roundDecimalValue": 1,
-    "mlvedaACS_backgroundColor": "inherit",
-    "mlvedaACS_position": "inline",
-    "mlvedaACS_textHoverColor": "inherit",
-    "mlvedaACS_enable": true,
-    "mlvedaACS_supportedCurrencies": "CAD USD GBP EUR AUD INR JPY",
-    "mlvedaACS_hideDecimal": false,
-    "mlvedaACS_hoverBackgroundColor": "inherit",
-    "mlvedaACS_currencyFormat": "money_with_currency_format",
-    "mlvedaACS_borderLineColor": "inherit",
-    "mlvedaACS_displayFlag": false,
+    "ajax_cart_enable": true,
+    "social_spotify_link": "",
+    "newsletter_redirect_link": "",
     "sections": {
       "footer": {
-        "type": "footer",
+        "settings": {
+          "show_payment_icons": false,
+          "trust_richtext": "",
+          "trust_badge": "shopify:\/\/shop_images\/rubies_logo.png"
+        },
         "blocks": {
-          "6e3799b7-4ef3-4977-95f4-ee159724ae4f": {
-            "type": "menu",
-            "settings": {
-              "title": "Popular products",
-              "text": "",
-              "footer_linklist": "popular-products"
-            }
-          },
-          "63403eca-f29c-47b6-89a1-932b0380bbda": {
-            "type": "menu",
-            "settings": {
-              "title": "Policies",
-              "text": "",
-              "footer_linklist": "footer"
-            }
-          },
           "ae889cab-fb6b-46b2-8387-d8a9aeb84619": {
-            "type": "contact",
             "settings": {
-              "title": "Get in touch",
-              "show_contact": true,
+              "address": "<p><\/p>",
               "phone": "",
               "contact_text": "Feel free to use our chat or send email to hello@rubyshines.com",
-              "contact_link": "",
-              "address": "<p><\/p>",
-              "show_social": true
-            }
+              "show_contact": true,
+              "title": "Get in touch",
+              "show_social": true,
+              "contact_link": ""
+            },
+            "type": "contact"
+          },
+          "6e3799b7-4ef3-4977-95f4-ee159724ae4f": {
+            "settings": {
+              "text": "",
+              "title": "Popular products",
+              "footer_linklist": "popular-products"
+            },
+            "type": "menu"
+          },
+          "63403eca-f29c-47b6-89a1-932b0380bbda": {
+            "settings": {
+              "text": "",
+              "title": "Policies",
+              "footer_linklist": "footer"
+            },
+            "type": "menu"
           },
           "4a397a78-000f-4c3b-837f-c1243c79ca49": {
-            "type": "newsletter",
             "settings": {
-              "title": "Signup For Newsletter",
-              "text_richtext": "<p><\/p>"
-            }
+              "text_richtext": "<p><\/p>",
+              "title": "Signup For Newsletter"
+            },
+            "type": "newsletter"
           }
         },
+        "type": "footer",
         "block_order": [
           "6e3799b7-4ef3-4977-95f4-ee159724ae4f",
           "63403eca-f29c-47b6-89a1-932b0380bbda",
           "ae889cab-fb6b-46b2-8387-d8a9aeb84619",
           "4a397a78-000f-4c3b-837f-c1243c79ca49"
-        ],
-        "settings": {
-          "show_payment_icons": false,
-          "trust_richtext": "",
-          "trust_badge": "shopify:\/\/shop_images\/rubies_logo.png"
-        }
+        ]
       },
       "166297655829f69ad1": {
-        "type": "featured-row",
         "settings": {
-          "section_padding": true,
-          "image": "shopify:\/\/shop_images\/Group_113_2x_de0a001e-f66e-4e46-bb07-2b307f09630c.png",
           "layout": "left",
-          "text_align": "left",
-          "title": "Donate A Pair To Families In Need",
+          "image": "shopify:\/\/shop_images\/Group_113_2x_de0a001e-f66e-4e46-bb07-2b307f09630c.png",
+          "bg_color": "#eeeff0",
+          "button_link": "#",
           "text": "<p>RUBIES has been able to donate over 15% of all bikini bottoms to families all around the world through generous donations from people like you. Every girl should be able to have a bikini bottom no matter what their economic situation.<\/p>",
           "button_label": "Donate Now",
-          "button_link": "#",
-          "bg_color": "#eeeff0"
-        }
+          "title": "Donate A Pair To Families In Need",
+          "section_padding": true,
+          "text_align": "left"
+        },
+        "type": "featured-row"
       },
       "1662977266f9153198": {
-        "type": "simple-collection",
         "settings": {
-          "title": "What’s New",
-          "center_heading": true,
-          "button_label": "",
+          "product_count_range": 4,
           "button_link": "",
+          "button_label": "",
           "collection": "underwear",
-          "product_count_range": 4
-        }
+          "title": "What’s New",
+          "center_heading": true
+        },
+        "type": "simple-collection"
       },
       "1481011869014": {
-        "type": "slideshow",
-        "blocks": {
-          "1481011869014-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/RUBIES-home-page-banner-02-17-2020-no-text.png",
-              "mobile_image": "shopify:\/\/shop_images\/RUBIES-home-page-banner-mobile-02-17-2020-no-text.png",
-              "link": "",
-              "title": "Form-fitting clothing for trans girls.",
-              "text": "<p>We want every active trans girl to be as confident and comfortable in her clothes as her friends.<\/p>",
-              "button_label": "Shop Shaping Wear",
-              "button_link": "shopify:\/\/collections\/shop-page",
-              "vertical_alignment": "align-center",
-              "horizontal_alignment": "justify-start",
-              "color_text": "#fb00ff",
-              "color_text_btn": "#ffffff",
-              "color_accent": "#1a6cfc",
-              "color_overlay": "#000000",
-              "color_overlay_alpha_range": 0
-            }
-          }
-        },
-        "block_order": [
-          "1481011869014-0"
-        ],
         "settings": {
+          "show_arrows": false,
           "full_width": true,
-          "autoplay": false,
           "autoplay_speed_range": 5,
           "show_dots": false,
-          "show_arrows": false
-        }
-      },
-      "article-template": {
-        "type": "article-template",
+          "autoplay": false
+        },
         "blocks": {
-          "1481845836398": {
-            "type": "recent_posts",
+          "1481011869014-0": {
             "settings": {
-              "title": "Recent posts",
-              "article_count_range": 3,
-              "show_date": true
-            }
-          },
-          "1481845849086": {
-            "type": "rss",
-            "settings": {
-              "title": "RSS feed"
-            }
-          },
-          "1481845845733": {
-            "type": "tags",
-            "settings": {
-              "title": "Blog categories"
-            }
+              "image": "shopify:\/\/shop_images\/RUBIES-home-page-banner-02-17-2020-no-text.png",
+              "color_overlay_alpha_range": 0,
+              "color_accent": "#1a6cfc",
+              "link": "",
+              "vertical_alignment": "align-center",
+              "horizontal_alignment": "justify-start",
+              "title": "Form-fitting clothing for trans girls.",
+              "color_text": "#fb00ff",
+              "color_overlay": "#000000",
+              "mobile_image": "shopify:\/\/shop_images\/RUBIES-home-page-banner-mobile-02-17-2020-no-text.png",
+              "button_link": "shopify:\/\/collections\/shop-page",
+              "color_text_btn": "#ffffff",
+              "text": "<p>We want every active trans girl to be as confident and comfortable in her clothes as her friends.<\/p>",
+              "button_label": "Shop Shaping Wear"
+            },
+            "type": "image"
           }
         },
+        "type": "slideshow",
+        "block_order": [
+          "1481011869014-0"
+        ]
+      },
+      "article-template": {
+        "settings": {
+          "show_title": true,
+          "center_title": true,
+          "show_date": true,
+          "show_image_first": "after",
+          "show_author": true
+        },
+        "blocks": {
+          "1481845836398": {
+            "settings": {
+              "article_count_range": 3,
+              "show_date": true,
+              "title": "Recent posts"
+            },
+            "type": "recent_posts"
+          },
+          "1481845849086": {
+            "settings": {
+              "title": "RSS feed"
+            },
+            "type": "rss"
+          },
+          "1481845845733": {
+            "settings": {
+              "title": "Blog categories"
+            },
+            "type": "tags"
+          }
+        },
+        "type": "article-template",
         "block_order": [
           "1481845836398",
           "1481845845733",
           "1481845849086"
-        ],
-        "settings": {
-          "show_title": true,
-          "show_image_first": "after",
-          "show_author": true,
-          "show_date": true,
-          "center_title": true
-        }
+        ]
       },
       "product-template": {
-        "type": "product-template",
+        "settings": {
+          "show_product_jump": false,
+          "variant_style": "swatches",
+          "size_guide_page": "<p>size-chart<\/p>",
+          "variant_swatch_images": true,
+          "show_vendors": true,
+          "show_dots": false,
+          "enable_image_slider": true,
+          "enable_thumb_slider": true,
+          "show_arrows": true,
+          "product_quantity_enable": true,
+          "thumbnails_placement": "side--left",
+          "tabs_title": "Why You 'll Love it",
+          "freeshippingtext": "60 day risk free returns <span> | <\/span>free shipping over $120",
+          "show_share_buttons": true,
+          "product_featured_zoom_enable": true,
+          "tabs_enable": true,
+          "product_featured_lightbox_enable": true,
+          "variant_swatch_soldout": true,
+          "show_payment_button": false,
+          "variant_swatch_shape": "circle",
+          "product_box_padding": false
+        },
         "blocks": {
           "92a4cb15-279e-4482-9ce0-3af64ad4a418": {
-            "type": "collapsible_tab",
             "settings": {
               "heading": "Fabric and care",
-              "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.<\/p>",
               "htmlcontent": "",
-              "page": ""
-            }
+              "page": "",
+              "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.<\/p>"
+            },
+            "type": "collapsible_tab"
           },
           "e18221c4-a59a-47a2-8da4-d459e412f9fc": {
-            "type": "collapsible_tab",
             "settings": {
               "heading": "Is RUBIES just for kids?",
-              "content": "",
               "htmlcontent": "",
-              "page": "about"
-            }
+              "page": "about",
+              "content": ""
+            },
+            "type": "collapsible_tab"
           },
           "5faab193-44b1-4ed6-90fc-022a02e5261b": {
-            "type": "collapsible_tab",
             "settings": {
               "heading": "60 day risk free returns",
-              "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.<\/p>",
               "htmlcontent": "",
-              "page": ""
-            }
+              "page": "",
+              "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.<\/p>"
+            },
+            "type": "collapsible_tab"
           },
           "77e4cc35-566e-4e15-bd68-71d744ec057e": {
-            "type": "collapsible_tab",
             "settings": {
               "heading": "What our customers say",
-              "content": "",
               "htmlcontent": "{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}",
-              "page": ""
-            }
+              "page": "",
+              "content": ""
+            },
+            "type": "collapsible_tab"
           }
         },
+        "type": "product-template",
         "block_order": [
           "5faab193-44b1-4ed6-90fc-022a02e5261b",
           "92a4cb15-279e-4482-9ce0-3af64ad4a418",
           "e18221c4-a59a-47a2-8da4-d459e412f9fc",
           "77e4cc35-566e-4e15-bd68-71d744ec057e"
-        ],
-        "settings": {
-          "show_vendors": true,
-          "variant_style": "swatches",
-          "variant_swatch_images": true,
-          "variant_swatch_shape": "circle",
-          "variant_swatch_soldout": true,
-          "size_guide_page": "<p>size-chart<\/p>",
-          "product_quantity_enable": true,
-          "show_payment_button": false,
-          "product_box_padding": false,
-          "freeshippingtext": "60 day risk free returns <span> | <\/span>free shipping over $120",
-          "enable_image_slider": true,
-          "show_dots": false,
-          "show_arrows": true,
-          "thumbnails_placement": "side--left",
-          "enable_thumb_slider": true,
-          "product_featured_zoom_enable": true,
-          "product_featured_lightbox_enable": true,
-          "tabs_enable": true,
-          "tabs_title": "Why You 'll Love it",
-          "show_product_jump": false,
-          "show_share_buttons": true
-        }
+        ]
       },
       "blog-template": {
-        "type": "blog-template",
+        "settings": {
+          "show_title": true,
+          "center_title": true,
+          "show_date": true,
+          "show_tags": true,
+          "show_comments": true,
+          "show_image_first": "after",
+          "show_author": true,
+          "blog_layout": "featured-columns"
+        },
         "blocks": {
           "1481793110411": {
-            "type": "recent_posts",
             "settings": {
-              "title": "Recent posts",
               "article_count_range": 3,
-              "show_date": true
-            }
+              "show_date": true,
+              "title": "Recent posts"
+            },
+            "type": "recent_posts"
           },
           "1481793121738": {
-            "type": "rss",
             "settings": {
               "title": "RSS feed"
-            }
+            },
+            "type": "rss"
           },
           "1481793118498": {
-            "type": "tags",
             "settings": {
               "title": "Blog categories"
-            }
+            },
+            "type": "tags"
           }
         },
+        "type": "blog-template",
         "block_order": [
           "1481793110411",
           "1481793118498",
           "1481793121738"
-        ],
-        "settings": {
-          "show_title": true,
-          "blog_layout": "featured-columns",
-          "show_image_first": "after",
-          "show_author": true,
-          "show_date": true,
-          "center_title": true,
-          "show_tags": true,
-          "show_comments": true
-        }
+        ]
       },
       "cart-template": {
-        "type": "cart-template",
         "settings": {
-          "show_notes": true,
-          "show_vendors": false,
-          "ajax_cart": true,
           "terms_and_conditions": false,
+          "tab_content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.<\/p><p><\/p>",
           "terms_and_conditions_text": "<p>I agree with the terms and conditions.<\/p>",
           "tab_title": "60 day risk free returns",
-          "tab_content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.<\/p><p><\/p>"
-        }
+          "show_vendors": false,
+          "ajax_cart": true,
+          "show_notes": true
+        },
+        "type": "cart-template"
       },
       "1662975491150131ea": {
-        "type": "featured-text",
         "settings": {
-          "title": "Confidence And Comfort",
-          "text": "<p>We want every trans girl has the freedom to be who she is, wherever she is and to shine.<\/p>",
-          "alignment": "center",
           "bg_color": "#fa768e",
-          "text_color": "#ffffff"
-        }
+          "text": "<p>We want every trans girl has the freedom to be who she is, wherever she is and to shine.<\/p>",
+          "text_color": "#ffffff",
+          "title": "Confidence And Comfort",
+          "alignment": "center"
+        },
+        "type": "featured-text"
       },
       "1664173457268d2b5f": {
-        "type": "updated-slideshow",
-        "disabled": true,
-        "blocks": {
-          "1664173457268d2b5f-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Group_340.png",
-              "mobile_image": "shopify:\/\/shop_images\/Group_340.png",
-              "link": "",
-              "title": "shopify:\/\/shop_images\/heading-text.png",
-              "mtitle": "shopify:\/\/shop_images\/Group_336.png",
-              "text": "<p><strong>Form-fitting clothing for trans girls.<\/strong><\/p><p><\/p><p>We want every active trans girl to be as confident and comfortable in her clothes as her friends.<\/p>",
-              "button_label": "Shop Shaping Wear",
-              "button_link": "#",
-              "vertical_alignment": "align-center",
-              "horizontal_alignment": "justify-start",
-              "color_text": "#fb00ff",
-              "color_text_btn": "#000000",
-              "color_accent": "#1a6cfc",
-              "color_overlay": "#040f21",
-              "color_overlay_alpha_range": 0
-            }
-          }
-        },
-        "block_order": [
-          "1664173457268d2b5f-0"
-        ],
         "settings": {
+          "show_arrows": false,
           "full_width": true,
-          "autoplay": true,
           "autoplay_speed_range": 5,
           "show_dots": true,
-          "show_arrows": false
-        }
-      },
-      "promos": {
-        "type": "promos",
+          "autoplay": true
+        },
         "blocks": {
-          "a47d61b2-c6fd-4cd4-ac31-a45b0b3cb5a3": {
-            "type": "announcement-bar",
+          "1664173457268d2b5f-0": {
             "settings": {
-              "show_announcement_bar": true,
-              "title": "Summer Solstice Sale - 10% Off All Products - Use Code Summer10",
-              "link": "https:\/\/www.gofundme.com\/f\/nz7aec-help-me-send-form-fitting-swimwear-to-trans-girls",
-              "color_background": "#ffebff",
-              "color_text": "#040f21",
-              "homepage_limit": false,
-              "show_for": "both",
-              "bar_size": "default",
-              "bar_placement": "top",
-              "autohide": false,
-              "autohide_delay_range": 11
-            }
-          },
-          "e628641c-0d11-481b-9aee-da991eece550": {
-            "type": "announcement-bar",
-            "disabled": true,
-            "settings": {
-              "show_announcement_bar": true,
-              "title": "SUMMER SOLSTICE SALE  - 10% OFF ALL PRODUCTS - USE CODE SUMMER10",
+              "image": "shopify:\/\/shop_images\/Group_340.png",
+              "color_overlay_alpha_range": 0,
+              "color_accent": "#1a6cfc",
               "link": "",
-              "color_background": "#ffebff",
-              "color_text": "#040f21",
-              "homepage_limit": true,
-              "show_for": "both",
-              "bar_size": "default",
-              "bar_placement": "bottom",
-              "autohide": true,
-              "autohide_delay_range": 10
-            }
-          },
-          "1591110688544": {
-            "type": "announcement-bar",
-            "disabled": true,
-            "settings": {
-              "show_announcement_bar": true,
-              "title": "FREE SHIPPING TO ANYWHERE IN CANADA AND THE US FOR ORDERS OVER $120 USD",
-              "link": "",
-              "color_background": "#ffebff",
-              "color_text": "#040f21",
-              "homepage_limit": false,
-              "show_for": "both",
-              "bar_size": "default",
-              "bar_placement": "bottom",
-              "autohide": true,
-              "autohide_delay_range": 10
-            }
-          },
-          "6efac18b-859a-432b-8994-469963dc4214": {
-            "type": "announcement-bar",
-            "disabled": true,
-            "settings": {
-              "show_announcement_bar": true,
-              "title": "OUR REDESIGNED SKY ONE-PIECE                 SWIMSUIT NOW AVAILABLE",
-              "link": "shopify:\/\/products\/the-sky-shaping-one-piece",
-              "color_background": "#ffebff",
-              "color_text": "#040f21",
-              "homepage_limit": false,
-              "show_for": "both",
-              "bar_size": "default",
-              "bar_placement": "bottom",
-              "autohide": true,
-              "autohide_delay_range": 10
-            }
+              "vertical_alignment": "align-center",
+              "horizontal_alignment": "justify-start",
+              "title": "shopify:\/\/shop_images\/heading-text.png",
+              "color_text": "#fb00ff",
+              "color_overlay": "#040f21",
+              "mobile_image": "shopify:\/\/shop_images\/Group_340.png",
+              "button_link": "#",
+              "color_text_btn": "#000000",
+              "text": "<p><strong>Form-fitting clothing for trans girls.<\/strong><\/p><p><\/p><p>We want every active trans girl to be as confident and comfortable in her clothes as her friends.<\/p>",
+              "button_label": "Shop Shaping Wear",
+              "mtitle": "shopify:\/\/shop_images\/Group_336.png"
+            },
+            "type": "image"
           }
         },
+        "disabled": true,
+        "type": "updated-slideshow",
+        "block_order": [
+          "1664173457268d2b5f-0"
+        ]
+      },
+      "promos": {
+        "settings": {
+          "scroll_lock": true
+        },
+        "blocks": {
+          "a47d61b2-c6fd-4cd4-ac31-a45b0b3cb5a3": {
+            "settings": {
+              "show_announcement_bar": true,
+              "color_background": "#ffebff",
+              "show_for": "both",
+              "bar_size": "default",
+              "autohide_delay_range": 11,
+              "color_text": "#040f21",
+              "bar_placement": "top",
+              "link": "https:\/\/www.gofundme.com\/f\/nz7aec-help-me-send-form-fitting-swimwear-to-trans-girls",
+              "autohide": false,
+              "title": "Summer Solstice Sale - 10% Off All Products - Use Code Summer10",
+              "homepage_limit": false
+            },
+            "type": "announcement-bar"
+          },
+          "1591110688544": {
+            "settings": {
+              "show_announcement_bar": true,
+              "color_background": "#ffebff",
+              "show_for": "both",
+              "bar_size": "default",
+              "autohide_delay_range": 10,
+              "color_text": "#040f21",
+              "bar_placement": "bottom",
+              "link": "",
+              "autohide": true,
+              "title": "FREE SHIPPING TO ANYWHERE IN CANADA AND THE US FOR ORDERS OVER $120 USD",
+              "homepage_limit": false
+            },
+            "disabled": true,
+            "type": "announcement-bar"
+          },
+          "e628641c-0d11-481b-9aee-da991eece550": {
+            "settings": {
+              "show_announcement_bar": true,
+              "color_background": "#ffebff",
+              "show_for": "both",
+              "bar_size": "default",
+              "autohide_delay_range": 10,
+              "color_text": "#040f21",
+              "bar_placement": "bottom",
+              "link": "",
+              "autohide": true,
+              "title": "SUMMER SOLSTICE SALE  - 10% OFF ALL PRODUCTS - USE CODE SUMMER10",
+              "homepage_limit": true
+            },
+            "disabled": true,
+            "type": "announcement-bar"
+          },
+          "6efac18b-859a-432b-8994-469963dc4214": {
+            "settings": {
+              "show_announcement_bar": true,
+              "color_background": "#ffebff",
+              "show_for": "both",
+              "bar_size": "default",
+              "autohide_delay_range": 10,
+              "color_text": "#040f21",
+              "bar_placement": "bottom",
+              "link": "shopify:\/\/products\/the-sky-shaping-one-piece",
+              "autohide": true,
+              "title": "OUR REDESIGNED SKY ONE-PIECE                 SWIMSUIT NOW AVAILABLE",
+              "homepage_limit": false
+            },
+            "disabled": true,
+            "type": "announcement-bar"
+          }
+        },
+        "type": "promos",
         "block_order": [
           "a47d61b2-c6fd-4cd4-ac31-a45b0b3cb5a3",
           "e628641c-0d11-481b-9aee-da991eece550",
           "1591110688544",
           "6efac18b-859a-432b-8994-469963dc4214"
-        ],
-        "settings": {
-          "scroll_lock": true
-        }
+        ]
       },
       "1591114062327": {
-        "type": "logo-list",
+        "settings": {
+          "logo_margins": 10,
+          "title": "",
+          "logo_width": 110
+        },
         "blocks": {
-          "47bda5f8-fba2-4ee0-bf2b-aa1f7af658e6": {
-            "type": "logo_image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/CNN.png",
-              "link": "https:\/\/edition.cnn.com\/2021\/02\/06\/us\/dad-trans-swimwear-daughter-trnd\/index.html"
-            }
-          },
-          "d78a853f-d021-47ea-be04-0ae284dc2282": {
-            "type": "logo_image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/todays-parents.png",
-              "link": "https:\/\/www.todaysparent.com\/family\/style\/rubies-swimwear-line-for-trans-girls\/"
-            }
-          },
-          "6c836689-df08-4e92-86e2-717b15dbe96f": {
-            "type": "logo_image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/the-Washington.png",
-              "link": "https:\/\/www.thelily.com\/this-dad-started-a-swimwear-line-with-his-transgender-daughter-its-giving-other-families-hope\/"
-            }
-          },
           "0836be43-ad90-455e-9795-5807f24d8038": {
-            "type": "logo_image",
             "settings": {
               "image": "shopify:\/\/shop_images\/good-morning.png",
               "link": "https:\/\/www.goodmorningamerica.com\/living\/video\/dad-daughter-create-inclusive-swimwear-trans-girls-77077472"
-            }
+            },
+            "type": "logo_image"
           },
-          "cbee5106-64e5-449f-95a6-3e2692fa0ef2": {
-            "type": "logo_image",
+          "d78a853f-d021-47ea-be04-0ae284dc2282": {
             "settings": {
-              "image": "shopify:\/\/shop_images\/today.png",
-              "link": "https:\/\/www.today.com\/parents\/dad-designs-swimwear-transgender-girls-daughter-t206361"
-            }
-          },
-          "6b651466-a83a-4c68-9d18-22aad16bae0a": {
-            "type": "logo_image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/kidsspot.png",
-              "link": "https:\/\/www.kidspot.com.au\/news\/transgender-girls-share-the-first-time-they-tried-rubies-swimwear\/news-story\/83da1962c76a6d80491c63593fb50a80"
-            }
+              "image": "shopify:\/\/shop_images\/todays-parents.png",
+              "link": "https:\/\/www.todaysparent.com\/family\/style\/rubies-swimwear-line-for-trans-girls\/"
+            },
+            "type": "logo_image"
           },
           "1591114062327-0": {
-            "type": "logo_image",
             "settings": {
               "image": "shopify:\/\/shop_images\/CBC.png",
               "link": "https:\/\/www.cbc.ca\/news\/canada\/toronto\/swimwear-bathing-suits-transgender-rubies-1.5493054"
-            }
+            },
+            "type": "logo_image"
+          },
+          "cbee5106-64e5-449f-95a6-3e2692fa0ef2": {
+            "settings": {
+              "image": "shopify:\/\/shop_images\/today.png",
+              "link": "https:\/\/www.today.com\/parents\/dad-designs-swimwear-transgender-girls-daughter-t206361"
+            },
+            "type": "logo_image"
+          },
+          "47bda5f8-fba2-4ee0-bf2b-aa1f7af658e6": {
+            "settings": {
+              "image": "shopify:\/\/shop_images\/CNN.png",
+              "link": "https:\/\/edition.cnn.com\/2021\/02\/06\/us\/dad-trans-swimwear-daughter-trnd\/index.html"
+            },
+            "type": "logo_image"
+          },
+          "6c836689-df08-4e92-86e2-717b15dbe96f": {
+            "settings": {
+              "image": "shopify:\/\/shop_images\/the-Washington.png",
+              "link": "https:\/\/www.thelily.com\/this-dad-started-a-swimwear-line-with-his-transgender-daughter-its-giving-other-families-hope\/"
+            },
+            "type": "logo_image"
+          },
+          "6b651466-a83a-4c68-9d18-22aad16bae0a": {
+            "settings": {
+              "image": "shopify:\/\/shop_images\/kidsspot.png",
+              "link": "https:\/\/www.kidspot.com.au\/news\/transgender-girls-share-the-first-time-they-tried-rubies-swimwear\/news-story\/83da1962c76a6d80491c63593fb50a80"
+            },
+            "type": "logo_image"
           }
         },
+        "type": "logo-list",
         "block_order": [
           "47bda5f8-fba2-4ee0-bf2b-aa1f7af658e6",
           "d78a853f-d021-47ea-be04-0ae284dc2282",
@@ -565,360 +531,358 @@
           "cbee5106-64e5-449f-95a6-3e2692fa0ef2",
           "6b651466-a83a-4c68-9d18-22aad16bae0a",
           "1591114062327-0"
-        ],
-        "settings": {
-          "title": "",
-          "logo_width": 110,
-          "logo_margins": 10
-        }
+        ]
       },
       "list-collections-template": {
-        "type": "list-collections-template",
+        "settings": {
+          "layout": "grid",
+          "list_mode": "default",
+          "title": "All collections"
+        },
         "blocks": {
           "1484256561216": {
-            "type": "collection",
             "settings": {
               "collection": ""
-            }
+            },
+            "type": "collection"
           },
           "1484256559451": {
-            "type": "collection",
             "settings": {
               "collection": ""
-            }
+            },
+            "type": "collection"
           },
           "1484256562272": {
-            "type": "collection",
             "settings": {
               "collection": ""
-            }
+            },
+            "type": "collection"
           }
         },
+        "type": "list-collections-template",
         "block_order": [
           "1484256559451",
           "1484256561216",
           "1484256562272"
-        ],
-        "settings": {
-          "title": "All collections",
-          "layout": "grid",
-          "list_mode": "default"
-        }
+        ]
       },
       "166296728818c2c2ea": {
-        "type": "featured-grid",
+        "settings": {
+          "gutter": true,
+          "full_width": false,
+          "color_overlay_text": "#ffffff",
+          "images_per_row_range": 3,
+          "text_placement": "below",
+          "color_overlay_alpha_range": 0,
+          "color_overlay": "#4f4f4f",
+          "zoom": true,
+          "title": "",
+          "section_padding": true,
+          "color_overlay_hover": "#000000"
+        },
         "blocks": {
-          "166296728818c2c2ea-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/CONFIDENCE.png",
-              "label": "Shop Beach & Pool",
-              "link": "shopify:\/\/products\/form-fitting-bikini-bottom",
-              "title": "Confidence At The Beach",
-              "content": "<p>Ruby knows that every girl can feel comfortable and confident at the beach in their RUBIES bikini bottoms.<\/p>"
-            }
-          },
           "166296728818c2c2ea-3": {
-            "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Image_18.png",
-              "label": "Shop Everyday Wear",
               "link": "shopify:\/\/collections\/underwear",
+              "label": "Shop Everyday Wear",
               "title": "Comfortable In Everything",
               "content": "<p>RUBIES underwear let's our kids keep doing the activities they love! They can feel great in their leggings, leotards and dresses.<\/p>"
-            }
+            },
+            "type": "image"
           },
           "166296728818c2c2ea-1": {
-            "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Group_333.png",
-              "label": "Shop Dance & Gym",
               "link": "shopify:\/\/collections\/tees",
+              "label": "Shop Dance & Gym",
               "title": "Ready For The Gym And Dance",
               "content": "<p>RUBIES underwear let's our kids keep doing the activities they love! They can feel great in their leggings, leotards and dresses.<\/p>"
-            }
+            },
+            "type": "image"
+          },
+          "166296728818c2c2ea-0": {
+            "settings": {
+              "image": "shopify:\/\/shop_images\/CONFIDENCE.png",
+              "link": "shopify:\/\/products\/form-fitting-bikini-bottom",
+              "label": "Shop Beach & Pool",
+              "title": "Confidence At The Beach",
+              "content": "<p>Ruby knows that every girl can feel comfortable and confident at the beach in their RUBIES bikini bottoms.<\/p>"
+            },
+            "type": "image"
           }
         },
+        "type": "featured-grid",
         "block_order": [
           "166296728818c2c2ea-0",
           "166296728818c2c2ea-3",
           "166296728818c2c2ea-1"
-        ],
-        "settings": {
-          "title": "",
-          "full_width": false,
-          "section_padding": true,
-          "gutter": true,
-          "images_per_row_range": 3,
-          "text_placement": "below",
-          "color_overlay": "#4f4f4f",
-          "color_overlay_hover": "#000000",
-          "color_overlay_text": "#ffffff",
-          "color_overlay_alpha_range": 0,
-          "zoom": true
-        }
+        ]
       },
       "collection-list-template": {
-        "type": "collection-list-template",
+        "settings": {
+          "layout_enable": true,
+          "image_placement": "default",
+          "products_per_page_range": 12,
+          "sort_enable": true
+        },
         "blocks": {
           "1482292071355": {
-            "type": "tags",
             "settings": {
-              "title": "Shop by",
               "tag_style": "buttons",
+              "title": "Shop by",
               "tag_grouping": false
-            }
+            },
+            "type": "tags"
           },
           "1482292067654": {
-            "type": "menu",
             "settings": {
               "linklist": "main-menu"
-            }
+            },
+            "type": "menu"
           }
         },
+        "type": "collection-list-template",
         "block_order": [
           "1482292067654",
           "1482292071355"
-        ],
-        "settings": {
-          "products_per_page_range": 12,
-          "image_placement": "default",
-          "sort_enable": true,
-          "layout_enable": true
-        }
+        ]
       },
       "search-template": {
-        "type": "search-template",
         "settings": {
           "search_layout": "grid",
           "extra_featured_products": ""
-        }
+        },
+        "type": "search-template"
       },
       "16627222910bad4250": {
-        "type": "collection-list-updated",
+        "settings": {
+          "gutter": true,
+          "full_width": false,
+          "color_overlay_text": "#ffffff",
+          "text_placement": "below",
+          "color_overlay_alpha_range": 0,
+          "color_overlay": "#4f4f4f",
+          "zoom": false,
+          "columns_range": 3,
+          "title": "Shop Our Collections",
+          "section_padding": true,
+          "color_overlay_hover": "#000000"
+        },
         "blocks": {
-          "16627222910bad4250-0": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "bikini-tops-and-bottoms",
-              "collection_img": "shopify:\/\/shop_images\/icons_1.png",
-              "collection_title": "Beach & Pool"
-            }
-          },
-          "16627222910bad4250-1": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "every-girl-deserves-to-shine-campaign",
-              "collection_img": "shopify:\/\/shop_images\/icons_5.png",
-              "collection_title": "Dance & Gym"
-            }
-          },
-          "16627222910bad4250-2": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "every-girl-deserves-to-shine-campaign-postcards",
-              "collection_img": "shopify:\/\/shop_images\/icons_4.png",
-              "collection_title": "Everyday Comfort"
-            }
-          },
           "a26b1406-718f-4f13-a020-5eb5cd7f7e08": {
-            "type": "featured_collection",
             "settings": {
+              "collection_title": "Pride",
               "collection": "frontpage",
-              "collection_img": "shopify:\/\/shop_images\/icons_3.png",
-              "collection_title": "Pride"
-            }
+              "collection_img": "shopify:\/\/shop_images\/icons_3.png"
+            },
+            "type": "featured_collection"
           },
           "6b62283e-2a40-4810-9bfa-13c2db928163": {
-            "type": "featured_collection",
             "settings": {
+              "collection_title": "Bundles",
               "collection": "bikini-tops-and-bottoms",
-              "collection_img": "shopify:\/\/shop_images\/icons_2.png",
-              "collection_title": "Bundles"
-            }
+              "collection_img": "shopify:\/\/shop_images\/icons_2.png"
+            },
+            "type": "featured_collection"
+          },
+          "16627222910bad4250-1": {
+            "settings": {
+              "collection_title": "Dance & Gym",
+              "collection": "every-girl-deserves-to-shine-campaign",
+              "collection_img": "shopify:\/\/shop_images\/icons_5.png"
+            },
+            "type": "featured_collection"
+          },
+          "16627222910bad4250-2": {
+            "settings": {
+              "collection_title": "Everyday Comfort",
+              "collection": "every-girl-deserves-to-shine-campaign-postcards",
+              "collection_img": "shopify:\/\/shop_images\/icons_4.png"
+            },
+            "type": "featured_collection"
+          },
+          "16627222910bad4250-0": {
+            "settings": {
+              "collection_title": "Beach & Pool",
+              "collection": "bikini-tops-and-bottoms",
+              "collection_img": "shopify:\/\/shop_images\/icons_1.png"
+            },
+            "type": "featured_collection"
           }
         },
+        "type": "collection-list-updated",
         "block_order": [
           "16627222910bad4250-0",
           "16627222910bad4250-1",
           "16627222910bad4250-2",
           "a26b1406-718f-4f13-a020-5eb5cd7f7e08",
           "6b62283e-2a40-4810-9bfa-13c2db928163"
-        ],
-        "settings": {
-          "title": "Shop Our Collections",
-          "full_width": false,
-          "section_padding": true,
-          "gutter": true,
-          "columns_range": 3,
-          "text_placement": "below",
-          "color_overlay": "#4f4f4f",
-          "color_overlay_hover": "#000000",
-          "color_overlay_text": "#ffffff",
-          "color_overlay_alpha_range": 0,
-          "zoom": false
-        }
+        ]
       },
       "collection-template": {
-        "type": "collection-template",
+        "settings": {
+          "layout_enable": false,
+          "image_placement": "hidden",
+          "products_per_page_range": 12,
+          "sort_enable": false
+        },
         "blocks": {
           "1481677963388": {
-            "type": "menu",
-            "disabled": true,
             "settings": {
               "linklist": ""
-            }
+            },
+            "disabled": true,
+            "type": "menu"
           }
         },
+        "type": "collection-template",
         "block_order": [
           "1481677963388"
-        ],
-        "settings": {
-          "products_per_page_range": 12,
-          "image_placement": "hidden",
-          "sort_enable": false,
-          "layout_enable": false
-        }
+        ]
       },
       "password-template": {
-        "type": "password-template",
         "settings": {
-          "logo": "",
-          "logo_max_width": 280,
-          "title": "Coming Soon",
-          "show_newsletter": true,
-          "newsletter_subheading": "<p>Subscribe to be the first to hear about our exclusive offers and latest arrivals.<\/p>",
           "show_social_share": true,
-          "social_share_title": "Share the news",
-          "color_text": "#3b3a3d",
-          "color_title": "#3b3a3d",
+          "background_image": "",
+          "newsletter_subheading": "<p>Subscribe to be the first to hear about our exclusive offers and latest arrivals.<\/p>",
           "color_background": "#fafafa",
+          "logo_max_width": 280,
+          "color_text": "#3b3a3d",
           "color_accent": "#442778",
-          "background_image": ""
-        }
+          "logo": "",
+          "social_share_title": "Share the news",
+          "title": "Coming Soon",
+          "color_title": "#3b3a3d",
+          "show_newsletter": true
+        },
+        "type": "password-template"
       },
       "16629848551f1ad81a": {
-        "type": "simple-collection",
         "settings": {
-          "title": "Featured Product",
-          "center_heading": true,
-          "button_label": "",
+          "product_count_range": 4,
           "button_link": "",
+          "button_label": "",
           "collection": "swimwear",
-          "product_count_range": 4
-        }
+          "title": "Featured Product",
+          "center_heading": true
+        },
+        "type": "simple-collection"
       },
       "1662976991610d8e6e": {
-        "type": "featured-row",
         "settings": {
-          "section_padding": true,
-          "image": "shopify:\/\/shop_images\/swim_590x_50055bc7-5ea7-4d9c-a397-7683db446cd6.gif",
           "layout": "left",
-          "text_align": "left",
-          "title": "Send A Gift Of Comfort And Confidence",
+          "image": "shopify:\/\/shop_images\/swim_590x_50055bc7-5ea7-4d9c-a397-7683db446cd6.gif",
+          "bg_color": "#eeeff0",
+          "button_link": "shopify:\/\/products\/every-girl-deserves-to-shine-gender-neutral-tee",
           "text": "<p>RUBIES has been able to donate over 15% of all bikini bottoms to families all around the world through generous donations from people like you. Every girl should be able to have a bikini bottom no matter what their economic situation.<\/p>",
           "button_label": "Order Gift Cards",
-          "button_link": "shopify:\/\/products\/every-girl-deserves-to-shine-gender-neutral-tee",
-          "bg_color": "#eeeff0"
-        }
+          "title": "Send A Gift Of Comfort And Confidence",
+          "section_padding": true,
+          "text_align": "left"
+        },
+        "type": "featured-row"
       },
       "1663735858989f6aa1": {
-        "type": "instafeed",
         "settings": {
-          "heading_size": 30,
+          "html_area": "",
           "feed_width": 100,
-          "html_area": ""
-        }
+          "heading_size": 30
+        },
+        "type": "instafeed"
       },
       "header": {
-        "type": "header",
         "settings": {
-          "header_layout": "horizontal",
-          "logo": "shopify:\/\/shop_images\/rubies_logo.png",
-          "logo_max_width": 200,
-          "main_linklist": "main-menu",
           "mega_menu": false,
-          "scroll_lock": "header",
           "minimal_padding": "minimal",
+          "header_layout": "horizontal",
+          "scroll_lock": "header",
           "top_bar_full_width": false,
-          "header_full_width": false
-        }
+          "logo_max_width": 200,
+          "logo": "shopify:\/\/shop_images\/rubies_logo.png",
+          "header_full_width": false,
+          "main_linklist": "main-menu"
+        },
+        "type": "header"
       },
       "product-recommendations": {
-        "type": "product-recommendations",
         "settings": {
           "show_product_recommendations": true,
           "product_recommendations_heading": "You may also like",
           "product_recommendations_limit": "4"
-        }
+        },
+        "type": "product-recommendations"
       },
       "1663737217fb136d00": {
-        "type": "customer-review",
+        "settings": {
+          "heading": ""
+        },
         "blocks": {
           "1663737217fb136d00-0": {
-            "type": "tesimonial",
             "settings": {
+              "date": "06\/07\/2022",
               "heading": "Almost perfect",
-              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
               "name": "Amy Ackert",
-              "date": "06\/07\/2022"
-            }
-          },
-          "323b42b6-7f0e-4c9a-b464-510131a9ae99": {
-            "type": "tesimonial",
-            "settings": {
-              "heading": "Almost perfect",
-              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
-              "name": "Amy Ackert",
-              "date": "06\/07\/2022"
-            }
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \""
+            },
+            "type": "tesimonial"
           },
           "67105895-5020-4b09-b03c-2e51e2477a0f": {
-            "type": "tesimonial",
             "settings": {
+              "date": "06\/07\/2022",
               "heading": "Almost perfect",
-              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
               "name": "Amy Ackert",
-              "date": "06\/07\/2022"
-            }
-          },
-          "3f17d2f0-dd2c-4507-a314-d504fc2f669f": {
-            "type": "tesimonial",
-            "settings": {
-              "heading": "Almost perfect",
-              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
-              "name": "Amy Ackert",
-              "date": "06\/07\/2022"
-            }
-          },
-          "c07335b3-2259-4c0e-8eeb-4d7b0c9708b7": {
-            "type": "tesimonial",
-            "settings": {
-              "heading": "Almost perfect",
-              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
-              "name": "Amy Ackert",
-              "date": "06\/07\/2022"
-            }
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \""
+            },
+            "type": "tesimonial"
           },
           "17bc53a0-d46d-4363-b279-fdf7da06544c": {
-            "type": "tesimonial",
             "settings": {
+              "date": "06\/07\/2022",
               "heading": "Almost perfect",
-              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
               "name": "Amy Ackert",
-              "date": "06\/07\/2022"
-            }
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \""
+            },
+            "type": "tesimonial"
+          },
+          "c07335b3-2259-4c0e-8eeb-4d7b0c9708b7": {
+            "settings": {
+              "date": "06\/07\/2022",
+              "heading": "Almost perfect",
+              "name": "Amy Ackert",
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \""
+            },
+            "type": "tesimonial"
           },
           "51153e64-814f-47b1-bda6-49c5c818d5d7": {
-            "type": "tesimonial",
             "settings": {
+              "date": "06\/07\/2022",
               "heading": "Almost perfect",
-              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \"",
               "name": "Amy Ackert",
-              "date": "06\/07\/2022"
-            }
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \""
+            },
+            "type": "tesimonial"
+          },
+          "323b42b6-7f0e-4c9a-b464-510131a9ae99": {
+            "settings": {
+              "date": "06\/07\/2022",
+              "heading": "Almost perfect",
+              "name": "Amy Ackert",
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \""
+            },
+            "type": "tesimonial"
+          },
+          "3f17d2f0-dd2c-4507-a314-d504fc2f669f": {
+            "settings": {
+              "date": "06\/07\/2022",
+              "heading": "Almost perfect",
+              "name": "Amy Ackert",
+              "info": "\" My daughter loves her new underwear! However, there are two things that could use improvement. One, they are a bit too low. Since she doesn’t like to tuck, they just barely \""
+            },
+            "type": "tesimonial"
           }
         },
+        "type": "customer-review",
         "block_order": [
           "1663737217fb136d00-0",
           "323b42b6-7f0e-4c9a-b464-510131a9ae99",
@@ -927,12 +891,10 @@
           "c07335b3-2259-4c0e-8eeb-4d7b0c9708b7",
           "17bc53a0-d46d-4363-b279-fdf7da06544c",
           "51153e64-814f-47b1-bda6-49c5c818d5d7"
-        ],
-        "settings": {
-          "heading": ""
-        }
+        ]
       }
     },
+    "mlvedaACS_positionRight": "10px",
     "content_for_index": [
       "1664173457268d2b5f",
       "1481011869014",
@@ -947,44 +909,82 @@
       "1663737217fb136d00",
       "1663735858989f6aa1"
     ],
+    "primary_dropshadow": true,
+    "checkout_logo_position": "left",
+    "social_twitter_link": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/rubies-logo-shopify_377f7784-2194-4246-804d-89a716a72f8d.png",
+    "checkout_sidebar_background_color": "#fafafa",
+    "typography_header_base_size_modify": "1",
+    "currency_format": "money_format",
+    "newsletter_type": "shopify",
+    "mlvedaACS_positionLeft": "10px",
+    "mlvedaACS_defaultCurrency": "CAD",
+    "mlvedaACS_positionBottom": "10px",
+    "typography_headings_bold": false,
+    "collection_swatches_images": true,
+    "mlvedaACS_messageBackgroundColor": "inherit",
+    "checkout_error_color": "#ff6d6d",
+    "social_tumblr_link": "",
+    "mlvedaACS_roundDecimalValue": 1,
+    "mlvedaACS_backgroundColor": "inherit",
+    "mlvedaACS_position": "inline",
+    "site_header_title_text_color": "#040f21",
+    "site_border_color": "#ffffff",
+    "mlvedaACS_textHoverColor": "inherit",
+    "favicon": "shopify:\/\/shop_images\/favicon.jpg",
+    "variant_rollover": true,
+    "mlvedaACS_enable": true,
     "blocks": {
       "6143736321357441667": {
-        "type": "shopify:\/\/apps\/tidio-live-chat-chatbots\/blocks\/app-embed\/1002274d-fb18-4939-98f6-5f05a8deeadc",
-        "disabled": false,
         "settings": {
-        }
+        },
+        "disabled": false,
+        "type": "shopify:\/\/apps\/tidio-live-chat-chatbots\/blocks\/app-embed\/1002274d-fb18-4939-98f6-5f05a8deeadc"
       },
       "3294164036280357830": {
-        "type": "shopify:\/\/apps\/mlv-auto-currency-switcher\/blocks\/mlveda-currencies-head\/92ab730f-097e-4571-b27c-3f449e098ca3",
-        "disabled": false,
         "settings": {
-        }
+        },
+        "disabled": false,
+        "type": "shopify:\/\/apps\/mlv-auto-currency-switcher\/blocks\/mlveda-currencies-head\/92ab730f-097e-4571-b27c-3f449e098ca3"
       },
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": false,
         "settings": {
-        }
+        },
+        "disabled": false,
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507"
       },
       "6174324309569838175": {
-        "type": "shopify:\/\/apps\/smile-loyalty-rewards\/blocks\/smile-shopify-app\/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
-        "disabled": false,
         "settings": {
-        }
+        },
+        "disabled": false,
+        "type": "shopify:\/\/apps\/smile-loyalty-rewards\/blocks\/smile-shopify-app\/2fae4e25-1841-4ea2-bc02-bd548478c4f6"
       },
       "127709043890318779": {
-        "type": "shopify:\/\/apps\/all-in-one-automatic-discount\/blocks\/install-snippets\/9537caf0-36d5-4981-a648-8961a8e85652",
-        "disabled": true,
         "settings": {
-        }
+        },
+        "disabled": true,
+        "type": "shopify:\/\/apps\/all-in-one-automatic-discount\/blocks\/install-snippets\/9537caf0-36d5-4981-a648-8961a8e85652"
       },
       "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
         "settings": {
-        }
+        },
+        "disabled": false,
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8"
       }
-    }
+    },
+    "social_facebook_link": "https:\/\/www.facebook.com\/RUBIES-Form-fitting-clothing-for-trans-girls-101476751300330\/",
+    "mlvedaACS_supportedCurrencies": "CAD USD GBP EUR AUD INR JPY",
+    "social_snapchat_link": "",
+    "mlvedaACS_hideDecimal": false,
+    "mlvedaACS_hoverBackgroundColor": "inherit",
+    "primary_text_color": "#040f21",
+    "collections_product_ratio": "100%",
+    "show_multiple_currencies": false,
+    "mlvedaACS_currencyFormat": "money_with_currency_format",
+    "mlvedaACS_borderLineColor": "inherit",
+    "mlvedaACS_displayFlag": false,
+    "primary_background_color": "#ffffff",
+    "typography_body_font": "poppins_n4"
   },
   "presets": {
     "Coast": {
