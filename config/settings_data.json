@@ -60,7 +60,7 @@
     "social_share_googleplus_enabled": false,
     "social_share_fancy_enabled": false,
     "default_opengraph_image": "",
-    "show_multiple_currencies": true,
+    "show_multiple_currencies": false,
     "currency_format": "money_format",
     "supported_currencies": "USD GIP",
     "default_currency": "USD",
