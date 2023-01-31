@@ -154,7 +154,7 @@ header.content-util ul.social-icons {  display: none; }
 footer.site-footer form .input-wrapper input { width: 100% !important; }
 footer.site-footer .box.box-first>*:last-child { border: none; padding: 0; }
 footer.site-footer form .input-wrapper input:focus, footer.site-footer form .input-wrapper input:focus-visible { outline: none; }
-
+form#newsletter-footer p { font-weight: 900; color: #018501; }
 
 /* Product single */
 span.jdgm-prev-badge__stars span:before { color: black; }
