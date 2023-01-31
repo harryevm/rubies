@@ -186,7 +186,9 @@
 
   <div id="page">
     {% section 'promos' %}
-    
+     {% if settings.show_multiple_currencies or shop.enabled_currencies.size > 1 %}
+        {% include 'currency-picker' %}
+      {% endif %}
     {% section 'header' %}
 
     <main class="main-content main-content--breadcrumb-{{ settings.show_breadcrumbs }}" role="main">
