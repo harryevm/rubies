@@ -20,7 +20,7 @@
         <h1>{{ 'cart.general.title' | t }}</h1>
       </header>
       {% if cart.item_count > 0 %}
-        {{ "now" | date: "%s" |date: "%a %b %d, %Y" }}
+
       <div id="shipping-savings-message">
         {% assign shipping_value = section.settings.free_price | remove: "." %}
         {% assign cart_total = cart.total_price %}
