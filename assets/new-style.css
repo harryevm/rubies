@@ -4,7 +4,7 @@
 .simple-collection .product-container .box { padding: 0 10px; }
 .simple-collection .product-container .box .preorder-description { position: absolute; font-size: 14px!important; top: -30px; display: none; }
 span.from{display: none;}
- 
+.preorder-now-active >.preorder-description { display: none; } 
 
 .cart-preview { display: none !important; }
 /* .needsclick.kl-private-reset-css-Xuajs1 { display: none !important; } */
