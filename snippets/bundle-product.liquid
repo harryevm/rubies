@@ -1,8 +1,6 @@
 
-  {%- assign collection = collections[section.settings.bundlecollection] -%}
-
 <div class="bundle-products">
-  {% for product in collection.products %}
+  {% for product in collections[section.settings.bundlecollection].products %}
     {% assign current_variant = product.selected_or_first_available_variant %}
     <div class="bundle-wrapper">
       <div class="bundle-img"><img src="{{ product.featured_image | img_url: '' }}" alt="{{product.featured_image.alt}}" /></div>
