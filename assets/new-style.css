@@ -353,7 +353,7 @@ span.original-price { display: none; }
 
 .jdgm-rev-widg__header { text-align: left; }
 .template-product .jdgm-histogram.jdgm-temp-hidden,.jdgm-row-actions { display: block; }
-.jdgm-review-widget--medium .jdgm-write-rev-link, .jdgm-review-widget--medium .jdgm-ask-question-btn { margin: 0; }
+.jdgm-review-widget--medium .jdgm-write-rev-link, .jdgm-review-widget--medium .jdgm-ask-question-btn { margin: 0; text-align: center; }
 
 
 @media(min-width:701px){
