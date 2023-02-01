@@ -351,6 +351,7 @@ span.original-price { display: none; }
   display: block;
 }
 
+.jdgm-rev-widg__header { text-align: left; }
 .template-product .jdgm-histogram.jdgm-temp-hidden,.jdgm-row-actions { display: block; }
 
 
