@@ -1,3 +1,6 @@
+
+<style>.mfp-content .popup-page { height: 85vh; overflow-y: auto; }</style>
+
 <div class="product-template" id="ProductSection-{{ section.id }}" data-section-id="{{ section.id }}" data-ProductSection data-section-type="product-template" data-enable-history-state="true" data-enable-swatch="{% if section.settings.variant_style == 'dropdowns' %}false{% else %}true{% endif %}">{% render 'preorder-now-collection-item', product: product %}
   <section class="single-product" itemscope itemtype="http://schema.org/Product">
     <meta itemprop="name" content="{{ product.title }}{% unless product.has_only_default_variant %} - {{ current_variant.title }}{% endunless %}">
@@ -11,13 +14,11 @@
 
       <header class="content-util">
       {% include 'breadcrumb' %}
-     
       {% include 'social-icons' %}
       </header>
 
       <header class="product-header">
         <div class="product-jump-container">
-          
           {% comment %}
             If the user is on a collection product page (ie with /collections/collection-handle/products/product-handle)
             in the URL, we can show next/previous links to other products in the collection.
@@ -41,7 +42,7 @@
               {% endif %}
 
               </ul>
-            {% endif %}
+            {% endif %} 
           {% endif %}
         </div>
 
@@ -49,10 +50,6 @@
 
       <div class="grid">
         <div class="product-images thumbnails-placement-{{ section.settings.thumbnails_placement }}">
-          <div class="product-title-w">
-            <h1>{{ product.title }}</h1>
-            <span class="save-text">Save {{ product.metafields.custom.bundle_off_percentage }}%</span>
-          </div>
           <div class="images-container">
             {% include 'product-featured-image' %}
 
@@ -67,44 +64,8 @@
               {% include 'product-thumbnails-slider' %}
             {%- endunless -%}
           </div>
-          <div class="desk-tab-wrap">
           <span class="save-full-text">{{ product.metafields.custom.save_text_for_bundle_product }}</span>
-          {% if section.settings.related_enable %}
-            <div class="also-bt-desk accordion-tab">  
-              <a href="javascript:;" class="active">
-                {% if section.settings.related_title %}{{ section.settings.related_title }}{% else %}Goes Well With {% endif %} 
-                <i class="fa fa-chevron-left"></i></a>  
-                <div class="accordion-content" style="display: block;"> 
-                      {%- assign product_collection_count = '4' -%} 
-                      {%- assign collection_count = '4' -%} 
-                      <div class="simple-collection"> 
-                        <div class="wrapper"> 
-                          <div class="product-container"> 
-                            {%- assign collection = collections[section.settings.collection] -%}  
-                            {%- assign product_limit = collection_count -%} 
-                            {% for product in collection.products limit: product_limit  %}  
-                              {% include 'product-grid-item' %} 
-                            {% else %}  
-                              {% for i in (1..product_limit) %} 
-                                {% include 'placeholder-product-grid-item' %} 
-                              {% endfor %}  
-                            {% endfor %}  
-                          </div>  
-                        </div>  
-                      </div>  
-                </div>
-            </div> 
-            {% endif %}
-            {% if section.settings.bundle_enable %}
-            <div class="also-bt-desk accordion-tab">  
-              <a href="javascript:;" class="active">
-                {% if section.settings.bundle_title %}{{ section.settings.bundle_title }}{% else %}Bundles{% endif %} 
-                <i class="fa fa-chevron-left"></i></a>  
-              <div class="accordion-content" style="display: block;">{% render 'bundle-product' %}</div>
-            </div>  
-              {% endif %}
-          </div>
-  
+       
         </div>
 
         <aside class="product-aside">
@@ -113,10 +74,7 @@
             <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
 
             <div class="aiod-bundle-discount-wrap" data-offer_id="{{ product.metafields.custom.bundle_product_id }}"></div>
-
-            {% comment %}
-              ID addToCartForm is a selector for the ajax cart plugin
-            {% endcomment %}
+            
             <div id="AddToCartForm-{{ section.id }}" data-AddToCartForm class="form-vertical product-form product-form-{{ section.id }}" {% if section.settings.show_payment_button %}data-dynamic-checkout="true"{% endif %} data-section="{{ section.id }}">
               {% include 'product-form' %}
             </div>
@@ -146,147 +104,7 @@
             </style>
           {% endif %}
 
-          <div class="description rte" itemprop="description" data-tabs-enable="{{ section.settings.tabs_enable }}">
-            {%- assign description_parts = product.description | split: '<!-- split -->' -%}
-            {%- assign description_first_part = description_parts | first -%}
-            {%- if section.settings.tabs_enable -%}
-              {%- comment -%}
-                Split up the content of the description into tab titles and content by the auto_headings value
-              {%- endcomment -%}
-              <div class="description__tabs">
-                {%- comment -%}
-                  Break up description into headings and tabs using auto heading values
-                {%- endcomment -%}
-                {%- assign auto_heading= '<' | append: section.settings.tabs_auto_headings | append: '>' -%}
-                {%- assign auto_heading_end = '</' | append: section.settings.tabs_auto_headings | append: '>' -%}
-                {%- assign desc_tabs = description_first_part | split: auto_heading -%}
-                {%- assign first_tab = true -%}
-                {%- comment -%}{%- for tab in desc_tabs -%}
-                  {%- assign tab_size = tab | strip_html | strip | size -%}
-                  {%- unless tab_size == 0 -%}
-                    {%- assign tab_parts = tab | split: auto_heading_end -%}
-                    <div class="tab tab--{{ forloop.index }} {% if first_tab %}tab--active {%- assign first_tab = false -%} {% endif %}">
-                      {%- if tab_parts.size > 1 -%}
-                        <div class="tab__title" tabindex="0">{{ tab_parts[0] }}</div>
-                        <div class="tab__content">{{ tab_parts[1] }}</div>
-                      {%- else -%}
-                        <div class="tab__title" tabindex="0">{{ section.settings.tabs_title }}</div>
-                        <div class="tab__content">{{ tab_parts[0] }}</div>
-                      {%- endif -%}
-                    </div>
-                  {%- endunless -%}
-                {%- endfor -%}{%- endcomment -%}
-  
-                {%- comment -%}
-                  Add the additional optional pages of tabs
-                {%- endcomment -%}{% comment %}
-                {%- if section.settings.tabs_global_page_1 != blank -%}
-                  <div class="tab tab--global-1">
-                    <div class="tab__title" tabindex="0">{{ pages[section.settings.tabs_global_page_1].title }}</div>
-                    <div class="tab__content">{{ pages[section.settings.tabs_global_page_1].content }}</div>
-                  </div>
-                {%- endif -%}
-                {%- if section.settings.tabs_global_page_2 != blank -%}
-                  <div class="tab tab--global-1">
-                    <div class="tab__title" tabindex="0">{{ pages[section.settings.tabs_global_page_2].title }}</div>
-                    <div class="tab__content">{{ pages[section.settings.tabs_global_page_2].content }}</div>
-                  </div>
-                {%- endif -%}
-                {%- if section.settings.tabs_global_page_3 != blank -%}
-                  <div class="tab tab--global-1">
-                    <div class="tab__title" tabindex="0">{{ pages[section.settings.tabs_global_page_3].title }}</div>
-                    <div class="tab__content">{{ pages[section.settings.tabs_global_page_3].content }}</div>
-                  </div>
-                {%- endif -%}{% endcomment %}
-              
-              {% if section.settings.tabs_enable %}
-                <div class="accordion-tab">
-                  <a href="javascript:;" class="active">
-                    {% if section.settings.tabs_title %}
-                    {{ section.settings.tabs_title }} 
-                    {% else %}
-                      Description
-                    {% endif %}
-                    <i class="fa fa-chevron-left"></i>
-                  </a>
-                  <div class="accordion-content" style="display: block;">
-                    {{ product.description }}
-                  </div>
-                </div>
-              {% endif %}
-              {% if section.settings.related_enable %}
-              <div class="accordion-tab also-bt-mob active">
-                  <a href="javascript:;">
-                   {% if section.settings.related_title %}
-                    {{ section.settings.related_title }} 
-                    {% else %}
-                       Goes Well With
-                    {% endif %}
-                    <i class="fa fa-chevron-down"></i>
-                  </a>
-                  <div class="accordion-content" style="display: block;">
-                    {%- assign product_collection_count = '4' -%}
-                            {%- assign collection_count = '4' -%}
-                            <div class="simple-collection">
-                              <div class="wrapper">
-                                <div class="product-container">
-                                  {%- assign collection = collections[section.settings.collection] -%}
-                                  {%- assign product_limit = collection_count -%}
-                                  {% for product in collection.products limit: product_limit  %}
-                                    {% include 'product-grid-item' %}
-                                  {% else %}
-                                    {% for i in (1..product_limit) %}
-                                      {% include 'placeholder-product-grid-item' %}
-                                    {% endfor %}
-                                  {% endfor %}
-                                </div>
-                              </div>
-                            </div>
-                  </div>
-                </div>
-                {% endif %}
-              {% if section.settings.bundle_enable %}
-                <div class="accordion-tab also-bt-mob active">
-                    <a href="javascript:;" >
-                      {% if section.settings.bundle_title %}
-                      {{ section.settings.bundle_title }} 
-                      {% else %}
-                        Bundles
-                      {% endif %}
-                      <i class="fa fa-chevron-down"></i>
-                    </a>
-                    <div class="accordion-content" style="display: block;">
-                      {% render 'bundle-product' %}
-                    </div>
-                  </div>
-              {% endif %} 
-              {% for block in section.blocks %}
-                <div class="accordion-tab">
-                  <a href="javascript:;">
-                    {{ block.settings.heading }} 
-                    <i class="fa fa-chevron-down"></i>
-                  </a>
-                  <div class="accordion-content">
-                    {% if block.settings.page != blank %}
-                      {{ pages[block.settings.page].content }}
-                    {% elsif block.settings.content != blank %}
-                      {{ block.settings.content }}
-                    {% else %}
-                      <div class="tab-html-content">
-                        {{ block.settings.htmlcontent }}
-                      </div>
-                    {% endif %}
-                  </div>
-                </div>{% endfor %}
-                
-              </div>
-            {%- else -%}
-              {%- comment -%}
-                Display the normal description or first description part before the split
-              {%- endcomment -%}
-              {{ description_first_part }}
-            {%- endif -%}
-          </div>
+          
              
           
           {% if section.settings.show_share_buttons %}
@@ -294,7 +112,203 @@
           {% endif %}
         </aside>
       </div>
+      <div class="description rte" itemprop="description" data-tabs-enable="{{ section.settings.tabs_enable }}">
+        <div class="desk-tab-wrap">   
+          {% if section.settings.related_enable %}
+    <div class="also-bt-desk accordion-tab">
+      <a href="javascript:;" class="active">{% if section.settings.related_title %}
+                      {{ section.settings.related_title }} 
+                      {% else %}
+                         Goes Well With
+                      {% endif %} <i class="fa fa-chevron-left"></i></a>
+                      <div class="accordion-content" style="display: block;">
+                            {%- assign product_collection_count = '4' -%}
+                            {%- assign collection_count = '4' -%}
+                            <div class="simple-collection simple-collection-wrp">
+                              <div class="wrapper">
+                                <div class="product-container">
+                                 {% unless section.settings.collection != blank %}
+                                  {% assign collection_handle = 'shop-page' %}
+                                  {%- assign collection = collections[collection_handle] -%}
+                                  {% else %}
+                                  {%- assign collection = collections[section.settings.collection] -%}
+                                  {% endunless %}
+                                  
+                                  {%- assign product_limit = collection_count -%}
+                        
+                                    {% for product in collection.products limit: product_limit  %}
+                                      {% include 'product-grid-item' %}
+                                    {% endfor %}
+                                {% comment %}  {% else %}
+                                    {% for i in (1..product_limit) %}
+                                      {% include 'placeholder-product-grid-item' %}
+                                    {% endfor %}{% endcomment %}
+                           
+                                </div>
+                              </div>
+                            </div>
+                      </div></div>
+            {% endif %}
+            {% if section.settings.bundle_enable and section.settings.bundlecollection %}
+    <div class="also-bt-desk accordion-tab">
+      <a href="javascript:;" class="active">{% if section.settings.bundle_title %}
+                      {{ section.settings.bundle_title }} 
+                      {% else %}
+                         Bundles
+                      {% endif %} <i class="fa fa-chevron-left"></i></a>
+                      <div class="accordion-content" style="display: block;">{% render 'bundle-product' %}</div></div>{% endif %}
+    
+          </div>
+        {%- assign description_parts = product.description | split: '<!-- split -->' -%}
+        {%- assign description_first_part = description_parts | first -%}
+        {%- if section.settings.tabs_enable -%}
+          {%- comment -%}
+            Split up the content of the description into tab titles and content by the auto_headings value
+          {%- endcomment -%}
+          <div class="description__tabs">
+            {%- comment -%}
+              Break up description into headings and tabs using auto heading values
+            {%- endcomment -%}
+            {%- assign auto_heading= '<' | append: section.settings.tabs_auto_headings | append: '>' -%}
+            {%- assign auto_heading_end = '</' | append: section.settings.tabs_auto_headings | append: '>' -%}
+            {%- assign desc_tabs = description_first_part | split: auto_heading -%}
+            {%- assign first_tab = true -%}
+            {%- comment -%}{%- for tab in desc_tabs -%}
+              {%- assign tab_size = tab | strip_html | strip | size -%}
+              {%- unless tab_size == 0 -%}
+                {%- assign tab_parts = tab | split: auto_heading_end -%}
+                <div class="tab tab--{{ forloop.index }} {% if first_tab %}tab--active {%- assign first_tab = false -%} {% endif %}">
+                  {%- if tab_parts.size > 1 -%}
+                    <div class="tab__title" tabindex="0">{{ tab_parts[0] }}</div>
+                    <div class="tab__content">{{ tab_parts[1] }}</div>
+                  {%- else -%}
+                    <div class="tab__title" tabindex="0">{{ section.settings.tabs_title }}</div>
+                    <div class="tab__content">{{ tab_parts[0] }}</div>
+                  {%- endif -%}
+                </div>
+              {%- endunless -%}
+            {%- endfor -%}{%- endcomment -%}
 
+            {%- comment -%}
+              Add the additional optional pages of tabs
+            {%- endcomment -%}{% comment %}
+            {%- if section.settings.tabs_global_page_1 != blank -%}
+              <div class="tab tab--global-1">
+                <div class="tab__title" tabindex="0">{{ pages[section.settings.tabs_global_page_1].title }}</div>
+                <div class="tab__content">{{ pages[section.settings.tabs_global_page_1].content }}</div>
+              </div>
+            {%- endif -%}
+            {%- if section.settings.tabs_global_page_2 != blank -%}
+              <div class="tab tab--global-1">
+                <div class="tab__title" tabindex="0">{{ pages[section.settings.tabs_global_page_2].title }}</div>
+                <div class="tab__content">{{ pages[section.settings.tabs_global_page_2].content }}</div>
+              </div>
+            {%- endif -%}
+            {%- if section.settings.tabs_global_page_3 != blank -%}
+              <div class="tab tab--global-1">
+                <div class="tab__title" tabindex="0">{{ pages[section.settings.tabs_global_page_3].title }}</div>
+                <div class="tab__content">{{ pages[section.settings.tabs_global_page_3].content }}</div>
+              </div>
+            {%- endif -%}{% endcomment %}
+          
+          {% if section.settings.tabs_enable %}
+            <div class="accordion-tab">
+              <a href="javascript:;" class="active">
+                {% if section.settings.tabs_title %}
+                {{ section.settings.tabs_title }} 
+                {% else %}
+                  Description
+                {% endif %}
+                <i class="fa fa-chevron-left"></i>
+              </a>
+              <div class="accordion-content" style="display: block;">
+                {{ product.description }}
+              {% if product.metafields.custom.size_guide != blank %}
+                {{product.metafields.custom.size_guide}}
+              {% endif %}
+              </div>
+            </div>
+          {% endif %}
+          {% if section.settings.related_enable %}
+          <div class="accordion-tab also-bt-mob active">
+              <a href="javascript:;">
+               {% if section.settings.related_title %}
+                {{ section.settings.related_title }} 
+                {% else %}
+                   Goes Well With
+                {% endif %}
+                <i class="fa fa-chevron-down"></i>
+              </a>
+              <div class="accordion-content" style="display: block;">
+                {%- assign product_collection_count = '4' -%}
+                        {%- assign collection_count = '4' -%}
+                        <div class="simple-collection simple-collection-wrp">
+                          <div class="wrapper">
+                            <div class="product-container">
+                              {% unless section.settings.collection != blank %}
+                                  {% assign collection_handle = 'shop-page' %}
+                                  {%- assign collection = collections[collection_handle] -%}
+                                  {% else %}
+                                  {%- assign collection = collections[section.settings.collection] -%}
+                                  {% endunless %}
+                                  
+                                  {%- assign product_limit = collection_count -%}
+                        
+                                    {% for product in collection.products limit: product_limit  %}
+                                      {% include 'product-grid-item' %}
+                                    {% endfor %}
+                                {% comment %}  {% else %}
+                                    {% for i in (1..product_limit) %}
+                                      {% include 'placeholder-product-grid-item' %}
+                                    {% endfor %}{% endcomment %}
+                            </div>
+                          </div>
+                        </div>
+              </div>
+            </div>
+            {% endif %}
+          {% if section.settings.bundle_enable and section.settings.bundlecollection %}
+            <div class="accordion-tab also-bt-mob active">
+                <a href="javascript:;" >
+                  {% if section.settings.bundle_title %}
+                  {{ section.settings.bundle_title }} 
+                  {% else %}
+                    Bundles
+                  {% endif %}
+                  <i class="fa fa-chevron-down"></i>
+                </a>
+                <div class="accordion-content" style="display: block;">
+                  {% render 'bundle-product' %}
+                </div>
+              </div>
+          {% endif %}
+          {% for block in section.blocks %}
+            <div class="accordion-tab" id="{{block.settings.heading  | remove:' '}}">
+              <a href="javascript:;">
+                {{ block.settings.heading }} 
+                <i class="fa fa-chevron-down"></i>
+              </a>
+              <div class="accordion-content">
+                {% if block.settings.page != blank %}
+                  {{ pages[block.settings.page].content }}
+                {% elsif block.settings.content != blank %}
+                  {{ block.settings.content }}
+                {% else %}
+                  <div class="tab-html-content">
+                    {{ block.settings.htmlcontent }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>{% endfor %}
+            
+          </div>
+        {%- else -%}
+          {%- comment -%}
+            Display the normal description or first description part before the split
+          {%- endcomment -%}
+          {{ description_first_part }}
+        {%- endif -%}
+      </div>
       {%- if description_parts.size > 1 -%}
         <div class="additional-description rte">
           {%- for description_part in description_parts -%}
@@ -314,9 +328,9 @@
       <div class="product-reviews"></div>
 
     
-{% comment %}Start automatically added Judge.me widget{% endcomment %}
+{% comment %}Start automatically added Judge.me widget
   {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product %}
-{% comment %}End automatically added Judge.me widget{% endcomment %}
+End automatically added Judge.me widget{% endcomment %}
 </div>
   </section>
 
@@ -334,7 +348,7 @@
         {% when 'product_collection'}
           {%- assign product_collection_count = '4' -%}
           {%- assign collection_count = '4' -%}
-          <div class="simple-collection layout-{{ collection_count }}">
+          <div class="simple-collection simple-collection-wrp layout-{{ collection_count }}">
             <div class="wrapper">
               <header>
                 {% if block.settings.title != blank %}
@@ -360,6 +374,11 @@
       {% endcase %}
     </div>
   {% endfor %}
+  <div class="product-review-sec">
+    <div class="wrapper">
+      {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
+    </div>
+  </div>
 
 </div>
 {% unless product.empty? %}
@@ -368,17 +387,18 @@
   </script>
 {% endunless %}
 
-	{%- if section.settings.size_guide_page != blank -%}	
-<div id="product-size-guide-content-{{ section.id }}" class="popup-page mfp-hide">	
-  <div class="rte">{{ section.settings.size_guide_page }}</div>	
-<!--   <div data-app="eastsideco_sizeGuides"	
-     data-shop="{{ shop.permanent_domain }}"	
-     data-tags="{{ product.tags | join:',' | escape }}"	
-     data-metafields="{{ product.metafields.esc-size-matters.tag }}"	
-     data-popup="link">	
-</div> --> 	
-</div>	
+{%- if section.settings.size_guide_page != blank -%}
+<div id="product-size-guide-content-{{ section.id }}" class="popup-page mfp-hide">
+  <div class="rte">{{ section.settings.size_guide_page }}</div>
+<!--   <div data-app="eastsideco_sizeGuides"
+     data-shop="{{ shop.permanent_domain }}"
+     data-tags="{{ product.tags | join:',' | escape }}"
+     data-metafields="{{ product.metafields.esc-size-matters.tag }}"
+     data-popup="link">
+</div> --> 
+</div>
 {%- endif -%}
+
 
 
 {% schema %}
@@ -597,15 +617,20 @@
       "id": "show_share_buttons",
       "label": "Show social sharing buttons",
       "default": true
-    },	
-    {	
-      "type": "header",	
-      "content": "You May Also Link"	
-    },	
-    {	
-      "type": "collection",	
-      "id": "collection",	
-      "label": "You May Also Like Collection"	
+    },
+    {
+      "type": "header",
+      "content": "You May Also Link and Bundle Products"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "You May Also Like Collection"
+    },
+    {
+      "type": "collection",
+      "id": "bundlecollection",
+      "label": "Bundle Collection"
     }
   ],
   "max_blocks":5,
@@ -642,34 +667,30 @@
 }
 {% endschema %}
 <style>
-  .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: none; }
-  body.template-product { counter-reset: myCounter; }
-  .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: none; }
-  .csapps-bunlde-tiers { margin-bottom: 20px; position: relative; }
-  .csapps-bunlde-tiers .csapps-bundle-thumb a.grid_img { display: none; }
-  .csapps-p-detail .csapps-p-title a { font-size: 20px !important; font-weight: 600; line-height: 30px; }
-  .csapps-bunlde-tiers .csapps-bundle-thumb select.csapp-select-option-selector { text-transform: capitalize; height: 40px; border-color: #333; border-radius: 5px; }
-  .slick-list.draggable { overflow: hidden; width: 100%; }
-  header.content-util nav.breadcrumb { float: none; }
-  .product-title-w { margin: 20px 0; }
-  .product-title-w h1 { margin: 0; font-size: 32px; line-height: 35px; }
-  .desk-tab-wrap span.save-full-text { display: block; margin: 20px 0; }
-  @media(max-width:980px){
-    .single-product .grid .product-images, .single-product .grid aside.product-aside { width: 50%; padding-left: 20px; }
-    .aiod_price_qty_wrpr { top: 50px; }
-    .product-title-w h1 { font-size: 25px; line-height: 30px; }
-  }
-  @media(max-width:800px){
-    .single-product .grid .product-images { margin-top: 0; }
-    .single-product .grid .product-images, .single-product .grid aside.product-aside { width: 100%; padding: 0; }
+/*   .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: none; } */
+  .slick-list.draggable { overflow: hidden; width: 100%;padding-left: 0;}
+  .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: block; }
+  .simple-collection-section { display: none; }
+  .product-review-sec .jdgm-widget.jdgm-widget { display: block !important; height: 100%; }
+  .product-review-sec .jdgm-widget-actions-wrapper, .product-review-sec .jdgm-rev__icon, .product-review-sec .jdgm-rev-widg__summary-text{display: block !important;}
+  .cart-buttons .button-wrapper.default-cart-button { padding-top: 10px; }
+  @media(max-width:1800px) and (min-width:1300px){
+    .single-product .grid aside.product-aside { margin-top: -65px; }
+    .template-product .purchase-box .selection-wrapper.variant>span.label-extra>a { font-size: 16px; line-height: 25px; margin-bottom: 5px; }
+    .template-product .selection-wrapper.variant.radio > div { margin-top: 0; }
+    .form-vertical.product-form>form .discount_text { margin: 5px 0; }
+    
   }
 </style>
+
 {% unless  product.template_suffix == 'fastbundles' %}
 <script>
   $('.template-product .size-drop-box label.single-option-radio__label').click(function(){
-    $(this).next().slideToggle(500);
-    $(this).parent().toggleClass('active-dropdown');
+    // $(this).next().slideToggle(500);
+    // $(this).parent().toggleClass('active-dropdown');
   });
+
+  
 
   $('.template-product .size-drop-box .single-option-radio .swatch-container:first-child > input').removeAttr('checked');
 
@@ -682,14 +703,30 @@
         $(this).next('.alert-size').html("<b>Please select a size</b>");
     })
 
-  $('.also-bt-desk .simple-collection .product-container,.also-bt-mob .simple-collection .product-container').slick({	
-      slidesToShow: 2,	
-      slidesToScroll: 1,	
-      arrows: false,	
-      dots: true	
+    $('.also-bt-desk .simple-collection-wrp .product-container,.also-bt-mob .simple-collection-wrp .product-container').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
     });
 
-  
+    $(document).ready(function(){
+      setTimeout(function(){
+        $('.single-option-radio .swatch-container').removeClass('soldout');
+      },1000)
+    })
+
+
+    
 </script>
 {% endunless %}
 <!--Start Stamped.io Auto Installation--><div id="stamped-main-widget" class="stamped-main-widget" data-widget-style="standard" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}" data-product-sku="{{product.handle}}" data-product-type="{{product.type}}">{{ product.metafields.stamped.reviews }}</div><!--End Stamped.io Auto Installation-->
@@ -737,5 +774,15 @@
 
 
 
+<!-- 
+<script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=450361b5-981b-4e6f-9164-d70d9effc17f"></script> -->
 
-<!-- <script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=450361b5-981b-4e6f-9164-d70d9effc17f"></script> -->
+<script>
+$(window).on("load", function () {
+    var urlHash = window.location.href.split("#")[1];
+    $('html,body').animate({
+      scrollTop: $('#' + urlHash).offset().top - 160
+    }, 4000);
+    $('#'+urlHash).children('a').trigger('click');
+});
+</script>
