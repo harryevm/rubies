@@ -6,8 +6,8 @@
         "38735000-3763-4a02-ac3d-b9cf6333bdb5": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "60 day risk free returns{{ product.metafields.custom.product_info1.value }}",
-            "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.{{ product.metafields.custom.product_info1_content | metafield_tag }}<\/p>",
+            "heading": "60 day risk free returns",
+            "content": "<p>We want you to be completely satisfied, whether you purchased a pair of RUBIES or received them as a donation. With this in mind we offer a 100% guarantee for 60 days from when you receive your package.  This should let you or your child wear them for a few days to see how comfortable they are. <\/p><p>If they don't fit, no problem.  We will help you select another size and send them out right way.  We don’t need to wait for you to return any items. <\/p><p>If they just don't work out we are happy to accept a return for a full refund.<\/p>",
             "htmlcontent": "",
             "page": ""
           }
@@ -15,8 +15,8 @@
         "0c501610-df7b-4ee0-aa23-53f9b2f695c5": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Fabric and care{{ product.metafields.custom.product_info2.value }}",
-            "content": "<p>The underwear should be close to standard US sizing.   If it seems far off of what you would have expected, contact us through our chat with the waist size measured under the belly button and we would be happy to help you pick.{{ product.metafields.custom.product_info2_content | metafield_tag }}<\/p>",
+            "heading": "How RUBIES shaping products work",
+            "content": "<p>RUBIES shaping products for bottoms such as our shaping underwear, bikini bottoms and one piece are designed to look and feel like regular stylish clothing that cis people are wearing.  <\/p><p>It should not be necessary to tuck or wear our bottoms super tight.  Ideally they fit comfortably: not too tight and not too loose.<\/p><p>Unlike tucking bottoms, they are not intended to completely “hide the bump”.  Instead they are designed to convert the pointy area to a more feminine mound. This is why they are extremely comfortable compared to any other products on the market.<\/p><p>If these are intended for your child who is struggling to feel comfortable in their RUBIES, it may be helpful to educate them that girls and women are not completely flat in this area either. Some of our community have reported it helpful to browse together online through pictures of girls and women in leggings.<\/p><p>RUBIES shaping products for up top such as our bras, bikini top and one-piece have two slits in the chest area that can be used to add multiple inserts like the RUBIES shaping chest pads. This is perfect for those that are experimenting with shaping up top.<\/p><p>Our tops are made to accommodate a slightly wider torso.  Our bra has adjustable straps and clasps.  The bra strap is stretchy enough to allow the bra to be put on without using a clasp, as some people new to bras can find this daunting.<\/p><p>Do not hesitate to reach out to us at hello@rubyshines.com if you have any further questions about how any of our products work or any suggestions about how we can make them even better.<\/p>",
             "htmlcontent": "",
             "page": ""
           }
@@ -24,8 +24,8 @@
         "a5fca244-de0a-44e1-b20f-4d0b63ccd1fc": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Is RUBIES just for kids?{{ product.metafields.custom.product_info3.value }}",
-            "content": "<p>{{ product.metafields.custom.product_info3_content | metafield_tag }}<\/p>",
+            "heading": "Fabric and washing instructions",
+            "content": "<p>All our bikini bottoms are made with a combination of nylon and Spandex.  All our underwear and bras are made from a combination of polyester and Spandex and our t-shirts are 100% cotton.<\/p><p>We recommend that you do not use a high heat setting when you put RUBIES products in the wash and dry on a very low heat setting or line dry. <\/p>",
             "htmlcontent": "",
             "page": ""
           }
@@ -66,13 +66,14 @@
         "product_featured_lightbox_enable": true,
         "tabs_enable": true,
         "tabs_title": "Why You 'll Love it",
-        "related_enable": false,
+        "related_enable": true,
         "related_title": "Related Products",
-        "bundle_enable": false,
+        "bundle_enable": true,
         "bundle_title": "Bundle",
         "show_product_jump": false,
         "show_share_buttons": true,
-        "collection": ""
+        "collection": "{{ product.metafields.custom.you_may_also_like.value }}",
+        "bundlecollection": "{{ product.metafields.custom.part_of_bundle_collection.value }}"
       }
     },
     "recommended": {
@@ -88,7 +89,7 @@
       "type": "apps",
       "blocks": {
         "43e7faab-63b9-42cc-aad5-26f18d366763": {
-          "type": "shopify:\/\/apps\/wiser-upsell-recommendations\/blocks\/wiser_fbt\/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "type": "shopify:\/\/apps\/wiser-product-recommendations\/blocks\/wiser_fbt\/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "disabled": true,
           "settings": {
           }
