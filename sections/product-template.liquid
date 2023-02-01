@@ -147,7 +147,7 @@
                             </div>
                       </div></div>
             {% endif %}
-            {% if section.settings.bundle_enable %}
+            {% if section.settings.bundle_enable and section.settings.bundlecollection %}
     <div class="also-bt-desk accordion-tab">
       <a href="javascript:;" class="active">{% if section.settings.bundle_title %}
                       {{ section.settings.bundle_title }} 
@@ -265,7 +265,7 @@
               </div>
             </div>
             {% endif %}
-          {% if section.settings.bundle_enable %}
+          {% if section.settings.bundle_enable and section.settings.bundlecollection %}
             <div class="accordion-tab also-bt-mob active">
                 <a href="javascript:;" >
                   {% if section.settings.bundle_title %}
