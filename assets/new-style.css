@@ -343,6 +343,14 @@ button.csapps_checkout.btn.button.aiod_cart_loaded { display: none !important; }
 span.original-price { display: none; }
 .template-product .size-drop-box .single-option-radio .swatch-container label{font-weight: 400; font-size: 15px; line-height: 25px;}
 
+
+
+
+.jdgm-widget-actions-wrapper, .jdgm-rev__icon, .jdgm-rev-widg__summary-text { display: block !important; }
+.jdgm-rev-widg[data-number-of-reviews="0"] .jdgm-histogram.jdgm-histogram, .jdgm-rev-widg[data-number-of-reviews="0"] .jdgm-row-search, .jdgm-rev-widg[data-number-of-reviews="0"] .jdgm-row-actions, .jdgm-rev-widg[data-number-of-reviews="0"] .jdgm-rev-widg__body, .jdgm-rev-widg[data-number-of-reviews="0"] .jdgm-paginate {
+  display: block;
+}
+
 @media(min-width:701px){
   .middle-wrapper { display: none; }
   header.util .wrapper { padding: 0; }
