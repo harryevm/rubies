@@ -372,11 +372,11 @@ End automatically added Judge.me widget{% endcomment %}
       {% endcase %}
     </div>
   {% endfor %}
-  <div class="product-review-sec">
+  {%comment%}<div class="product-review-sec">
     <div class="wrapper">
       {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
     </div>
-  </div>
+  </div>{%endcomment%}
 
 </div>
 {% unless product.empty? %}
