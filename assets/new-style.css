@@ -351,6 +351,9 @@ span.original-price { display: none; }
   display: block;
 }
 
+.template-product .jdgm-histogram.jdgm-temp-hidden,.jdgm-row-actions { display: block; }
+
+
 @media(min-width:701px){
   .middle-wrapper { display: none; }
   header.util .wrapper { padding: 0; }
