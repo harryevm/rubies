@@ -351,9 +351,9 @@ span.original-price { display: none; }
   display: block;
 }
 
-.jdgm-rev-widg__header { text-align: left; }
+.jdgm-rev-widg__header { text-align: left !important; }
 .template-product .jdgm-histogram.jdgm-temp-hidden,.jdgm-row-actions { display: block; }
-.jdgm-rev-widg__summary-text { visibility: unset; margin-top: 10px; }
+.jdgm-rev-widg__summary-text {  margin-top: 10px !important; }
 .jdgm-review-widget--medium .jdgm-write-rev-link, .jdgm-review-widget--medium .jdgm-ask-question-btn { margin: 0; text-align: center; }
 
 
