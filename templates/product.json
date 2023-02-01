@@ -73,7 +73,8 @@
         "bundle_title": "Part of bundles",
         "show_product_jump": false,
         "show_share_buttons": true,
-        "collection": "{{ product.metafields.custom.you_may_also_like.value }}"
+        "collection": "{{ product.metafields.custom.you_may_also_like.value }}",
+        "bundlecollection": "{{ product.metafields.custom.part_of_bundle_collection.value }}"
       }
     },
     "recommended": {

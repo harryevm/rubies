@@ -147,7 +147,7 @@
                             </div>
                       </div></div>
             {% endif %}
-            {% if section.settings.bundle_enable and section.settings.bundlecollection != blank %}
+            {% if section.settings.bundle_enable %}
     <div class="also-bt-desk accordion-tab">
       <a href="javascript:;" class="active">{% if section.settings.bundle_title %}
                       {{ section.settings.bundle_title }} 
@@ -156,7 +156,7 @@
                       {% endif %} <i class="fa fa-chevron-left"></i></a>
                       <div class="accordion-content" style="display: block;">{% render 'bundle-product' %}</div></div>{% endif %}
     
-          </div>{% endif %}
+          </div>
         {%- assign description_parts = product.description | split: '<!-- split -->' -%}
         {%- assign description_first_part = description_parts | first -%}
         {%- if section.settings.tabs_enable -%}
@@ -265,7 +265,7 @@
               </div>
             </div>
             {% endif %}
-            {% if section.settings.bundle_enable and section.settings.bundlecollection != blank %}
+          {% if section.settings.bundle_enable %}
             <div class="accordion-tab also-bt-mob active">
                 <a href="javascript:;" >
                   {% if section.settings.bundle_title %}
