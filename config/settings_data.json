@@ -156,7 +156,7 @@
         "settings": {
           "show_payment_icons": false,
           "trust_richtext": "",
-          "trust_badge": "shopify:\/\/shop_images\/rubies_logo.png"
+          "trust_badge": "shopify:\/\/shop_images\/rubies-logo.png"
         }
       },
       "166297655829f69ad1": {
@@ -834,7 +834,7 @@
         "type": "header",
         "settings": {
           "header_layout": "horizontal",
-          "logo": "shopify:\/\/shop_images\/rubies_logo.png",
+          "logo": "shopify:\/\/shop_images\/rubies-logo.png",
           "logo_max_width": 200,
           "main_linklist": "main-menu",
           "mega_menu": false,
