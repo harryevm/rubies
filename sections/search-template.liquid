@@ -4,6 +4,9 @@
   @media(max-width:991px){
     .products.products-grid.search-grid>.box.product { width: 33%; }
   }
+  @media(max-width:650px){
+    .products.products-grid.search-grid>.box.product { width: 50%; }
+  }
 </style>
 <section class="collection search-results" data-section-id="{{ section.id }}" data-section-type="search-template">
   {% if section.settings.search_layout == 'grid' %}
