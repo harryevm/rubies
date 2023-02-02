@@ -222,7 +222,7 @@ header.content-util nav.breadcrumb a, header.content-util nav.breadcrumb span { 
 .desk-tab-wrap .also-bt-desk:last-child { margin-top: 0px; }
 table.csapps-table.table thead { display: none; }
 table.csapps-table.table tbody { font-size: 18px; line-height: 30px; }
- .also-bt-desk .product-container .box,.also-bt-mob .product-container .box { padding: 0 20px; }
+ .also-bt-desk .product-container .box,.also-bt-mob .product-container .box { padding: 0 10px; }
 .desk-tab-wrap .also-bt-desk .product-container ul.slick-dots,.also-bt-mob .product-container ul.slick-dots { display: flex; }
 .also-bt-mob .product-container ul.slick-dots li button::before,.also-bt-desk .product-container ul.slick-dots li button::before { font-size: 0; }
 
