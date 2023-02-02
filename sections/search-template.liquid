@@ -1,4 +1,7 @@
-
+<style>
+  .products.products-grid.search-grid { display: flex; flex-wrap: wrap; }
+  .products.products-grid.search-grid>.box.product { width: 24%; }
+</style>
 <section class="collection search-results" data-section-id="{{ section.id }}" data-section-type="search-template">
   {% if section.settings.search_layout == 'grid' %}
     {%- assign grid_results = true -%}
