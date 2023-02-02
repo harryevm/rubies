@@ -725,3 +725,4 @@ header.collection-header>.container {
 
 /*** New **/
 .product-swatches__link--selected { border-color: #fff; }
+span.collection-size-swatch, .simple-collection .product-container .box form { display: none; }
