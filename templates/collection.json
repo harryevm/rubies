@@ -3,7 +3,7 @@
     "main": {
       "type": "collection-template",
       "settings": {
-        "products_per_page_range": 12,
+        "products_per_page_range": 48,
         "image_placement": "hidden",
         "sort_enable": false,
         "layout_enable": false
