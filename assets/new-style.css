@@ -735,3 +735,4 @@ span.label.sold-out.label--top-left { background: transparent !important; }
 section.collection.search-results .box.product { padding: 0 0 0 30px!important; margin-bottom: 0; }
 .simple-collection figure>*:not(a),section.collection.search-results figure>*:not(a) { padding: 0 10px; }
 .also-bt-desk .product-container .box span.collection-size-swatch, .also-bt-mob .product-container .box span.collection-size-swatch { display: block; }
+.template-product .simple-collection figure { box-shadow: none; }
