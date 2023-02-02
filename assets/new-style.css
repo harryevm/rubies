@@ -729,3 +729,4 @@ span.collection-size-swatch, .simple-collection .product-container .box form,.pr
 .simple-collection-section .slick-track { margin-left: 0; }
 .simple-collection figure { box-shadow: 0 0 10px #0000001c; padding: 0; margin: 20px 0; }
 span.label.sold-out.label--top-left { background: transparent !important; }
+.template-collection .products.products-grid>.box.product ul.product-swatches { padding: 0 10px; }
