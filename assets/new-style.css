@@ -736,3 +736,8 @@ section.collection.search-results .box.product { padding: 0 0 0 30px!important; 
 .simple-collection figure>*:not(a),section.collection.search-results figure>*:not(a) { padding: 0 10px; }
 .also-bt-desk .product-container .box span.collection-size-swatch, .also-bt-mob .product-container .box span.collection-size-swatch { display: block; }
 .template-product .simple-collection figure { box-shadow: none; }
+@media(max-width:701px){
+  .products.products-grid.search-grid>.box.product { padding: 0 !important; width: 49%; margin-bottom: 5px; }
+  .products.products-grid.search-grid { margin-left: 0; justify-content: space-between; }
+  section.collection.search-results figure { margin: 0; }
+}
