@@ -737,6 +737,8 @@ section.collection.search-results .box.product { padding: 0 0 0 30px!important; 
 .simple-collection figure>*:not(a),section.collection.search-results figure>*:not(a) { padding: 0 10px; }
 .also-bt-desk .product-container .box span.collection-size-swatch, .also-bt-mob .product-container .box span.collection-size-swatch { display: block; }
 .template-product .simple-collection figure { box-shadow: none; }
+
+.purchase-box .selection-wrapper.variant { margin-bottom: 20px; border: none; }
 @media(max-width:800px){
   .products.products-grid.search-grid>.box.product { width: 50% !important; }
 }
