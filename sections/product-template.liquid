@@ -724,6 +724,7 @@ End automatically added Judge.me widget{% endcomment %}
         
         if($('.jdgm-prev-badge').attr('data-number-of-reviews') > 0){
           $('div#Whatourcustomerssay').show();
+          $('#Whatourcustomerssay>a').trigger('click');
         }else{
           $('div#Whatourcustomerssay').hide();
         }
