@@ -721,10 +721,11 @@ End automatically added Judge.me widget{% endcomment %}
       setTimeout(function(){
         $('.single-option-radio .swatch-container').removeClass('soldout');
 
-        if($('.jdgm-prev-badge').attr('data-average-rating')){
-          $('div#Whatourcustomerssay').hide();
-        }else{
+        
+        if($('.jdgm-prev-badge').attr('data-number-of-reviews') > 0){
           $('div#Whatourcustomerssay').show();
+        }else{
+          $('div#Whatourcustomerssay').hide();
         }
         
       },1000)
