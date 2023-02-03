@@ -721,9 +721,7 @@ End automatically added Judge.me widget{% endcomment %}
       setTimeout(function(){
         $('.single-option-radio .swatch-container').removeClass('soldout');
 
-        if($('.jdgm-prev-badge').attr('data-average-rating')){
-          $('div#Whatourcustomerssay').remove();
-        }
+        
       },1000)
 
       
@@ -789,5 +787,11 @@ $(window).on("load", function () {
       scrollTop: $('#' + urlHash).offset().top - 160
     }, 4000);
     $('#'+urlHash).children('a').trigger('click');
+
+    if($('.jdgm-prev-badge').attr('data-average-rating')){
+          $('div#Whatourcustomerssay').hide();
+        }else{
+          $('div#Whatourcustomerssay').show();
+        }
 });
 </script>
