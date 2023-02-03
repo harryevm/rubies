@@ -742,7 +742,7 @@ section.collection.search-results .box.product { padding: 0 0 0 30px!important; 
 .product-title-with-review .product-title+.jdgm-widget.jdgm-widget { height: auto; }
 .product-title-with-review .product-title+.jdgm-widget.jdgm-widget .jdgm-prev-badge { margin-bottom: 10px; }
 .jdgm-prev-badge__text { margin-left: 12px !important; text-decoration: underline; }
-
+.jdgm-widget-actions-wrapper { display: none !important; }
 @media(max-width:800px){
   .products.products-grid.search-grid>.box.product { width: 50% !important; }
 }
