@@ -741,7 +741,7 @@ section.collection.search-results .box.product { padding: 0 0 0 30px!important; 
 .purchase-box .selection-wrapper.variant { margin-bottom: 20px; border: none; }
 .product-title-with-review .product-title+.jdgm-widget.jdgm-widget { height: auto; }
 .product-title-with-review .product-title+.jdgm-widget.jdgm-widget .jdgm-prev-badge { margin-bottom: 10px; }
-.jdgm-prev-badge__text { visibility: unset; margin-left: 12px; text-decoration: underline; }
+.jdgm-prev-badge__text { margin-left: 12px !important; text-decoration: underline; }
 
 @media(max-width:800px){
   .products.products-grid.search-grid>.box.product { width: 50% !important; }
