@@ -740,6 +740,7 @@ section.collection.search-results .box.product { padding: 0 0 0 30px!important; 
 
 .purchase-box .selection-wrapper.variant { margin-bottom: 20px; border: none; }
 .product-title-with-review .product-title+.jdgm-widget.jdgm-widget { height: auto; }
+.product-title-with-review .product-title+.jdgm-widget.jdgm-widget { height: auto; }
 @media(max-width:800px){
   .products.products-grid.search-grid>.box.product { width: 50% !important; }
 }
