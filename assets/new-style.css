@@ -74,7 +74,7 @@ h1, h2, h3 { font-weight: 600 !important; }
 .simple-collection ul.product-swatches, .collection .product-swatches { margin: 0!important; position: absolute; list-style: none !important; }
 /* .simple-collection figcaption, .collection figcaption { margin-top: 50px; } */
 .featured-collection figcaption, .simple-collection figcaption, .collection figcaption { margin-top: 40px;}
-.simple-collection span.price, .collection span.price { display: block; margin: 10px 0; font-size: 20px !important; line-height: 30px; font-weight: 700 !important; }
+.simple-collection span.price, .collection span.price { display: block; margin: 10px 0; font-size: 18px!important; line-height: 28px; font-weight: 500 !important; }
 header h4 { font-weight: 700 !important; font-size: 32px !important; line-height: 40px; margin-bottom: 30px !important; }
 
 span.collection-size-swatch {display: flex; align-items: center; flex-wrap: wrap; margin: 10px 0; }
