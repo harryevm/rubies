@@ -750,6 +750,9 @@ section.collection.search-results .box.product { padding: 0 0 0 30px!important; 
   .products.products-grid.search-grid>.box.product { padding: 0 !important; width: 49%!important; margin-bottom: 5px; }
   .products.products-grid.search-grid { margin-left: 0; justify-content: space-between; }
   section.collection.search-results figure { margin: 0; }
+
+  .doubly-float+div { position: relative !important; }
+  div#tidio-chat iframe#tidio-chat-iframe { bottom: 45px !important; }
 }
 header.site-header.minimal .wrapper, header.util .wrapper { width: 96% !important; max-width: unset !important; }
 .doubly-nice-select.currency-switcher.right { bottom: 65px; }
