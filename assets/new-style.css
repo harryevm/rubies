@@ -484,6 +484,7 @@ div.gallery .box figcaption.below h3 { overflow: visible; display: block; min-he
 
 }
 @media(max-width:701px){
+  .site-logo.has-image { margin: 0 auto; }
   .cs_general_msg.top_msg_main { position: fixed; top: 0; left: 0; right: 0; z-index: 99999; }
     header.util .left-wrapper ul.text-links li.search-wrap { display: block; position: absolute; bottom: -50px; right: 35px; }
     header.util a#CartButton { border: none; position: absolute; bottom: -47px; right: 0; }
