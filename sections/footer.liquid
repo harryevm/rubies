@@ -297,6 +297,8 @@
 if ($(window).width() < 701) {
   // $('header.util .currency-picker-contain')
   // $('nav#menu ul.site-nav').appendTo($('header.util .currency-picker-contain'));
+  $('nav#menu ul.site-nav').append($('<li class="switcher"><a></a></li>'));
+  $('header.util .currency-picker-contain').appendTo($('nav#menu ul.site-nav li.switcher>a'));
 
 }
 if ($(window).width() <= 650) {
