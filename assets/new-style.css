@@ -752,3 +752,4 @@ section.collection.search-results .box.product { padding: 0 0 0 30px!important; 
   section.collection.search-results figure { margin: 0; }
 }
 header.site-header.minimal .wrapper, header.util .wrapper { width: 96% !important; max-width: unset !important; }
+.doubly-nice-select.currency-switcher.right { bottom: 65px; }
