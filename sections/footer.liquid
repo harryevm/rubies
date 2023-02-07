@@ -294,6 +294,11 @@
 
 
 <script>
+if ($(window).width() < 701) {
+  $('header.util .currency-picker-contain')
+  $('nav#menu ul.site-nav').prependTo($('header.util .currency-picker-contain'));
+
+}
 if ($(window).width() <= 650) {
  $('footer.site-footer .grid .box>h4').click(function(){
    $(this).next().slideToggle();
