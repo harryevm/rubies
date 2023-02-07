@@ -751,3 +751,4 @@ section.collection.search-results .box.product { padding: 0 0 0 30px!important; 
   .products.products-grid.search-grid { margin-left: 0; justify-content: space-between; }
   section.collection.search-results figure { margin: 0; }
 }
+header.site-header.minimal .wrapper, header.util .wrapper { width: 96% !important; max-width: unset !important; }
