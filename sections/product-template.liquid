@@ -827,4 +827,10 @@ $(window).on("load", function () {
 
     
 });
+
+var selectedVal='';
+$('.product-container .box.product li.product-swatches__li').click(function(){
+  selectedVal += $(this).find('.product-swatches__label').text();
+})
+console.log(selectedVal);
 </script>
