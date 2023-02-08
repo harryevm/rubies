@@ -696,7 +696,7 @@ End automatically added Judge.me widget{% endcomment %}
 
   $('.template-product .size-drop-box .single-option-radio .swatch-container:first-child > input').removeAttr('checked');
 setTimeout(function(){
-  $('.template-product .size-drop-box .single-option-radio .swatch-container:first-child label').trigger('click');
+  $('.template-product .size-drop-box .single-option-radio .swatch-container:first-child label,.template-product .size-drop-box .single-option-radio .swatch-container:first-child input').trigger('click');
 },1000)
     $('.single-option-radio .swatch-container').click(function(){
         $('span.extra-overlay').hide();
