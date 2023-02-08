@@ -87,7 +87,11 @@ span.clickable-btn-over { position: absolute; top: 0; left: 0; right: 0; bottom:
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script>
-
+var selectedVal='';
+$('.product-container .box.product li.product-swatches__li').click(function(){
+  selectedVal += $(this).find('.product-swatches__label').text();
+})
+console.log(selectedVal);
 
 var swatchVal,swatchVal2;
 $('.box.product .product-swatches__li').click(function(){
