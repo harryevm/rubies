@@ -733,6 +733,25 @@ setTimeout(function(){
         }else{
           $('div#Whatourcustomerssay').hide();
         }
+
+        if(($('.bundle-products>.bundle-wrapper').length)>4){
+          $('.bundle-products').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            responsive: [
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+          });
+        }
+
         
       },1000)
 
