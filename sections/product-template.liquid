@@ -722,19 +722,7 @@ setTimeout(function(){
     ]
     });
 
-    $(document).ready(function(){
-      setTimeout(function(){
-        // $('.single-option-radio .swatch-container').removeClass('soldout');
-
-        
-        if($('.jdgm-prev-badge').attr('data-number-of-reviews') > 0){
-          $('div#Whatourcustomerssay').show();
-          $('#Whatourcustomerssay>a').trigger('click');
-        }else{
-          $('div#Whatourcustomerssay').hide();
-        }
-
-        if(($('.bundle-products>.bundle-wrapper').length)>4){
+    if(($('.bundle-products>.bundle-wrapper').length)>4){
           $('.bundle-products').slick({
             slidesToShow: 2,
             slidesToScroll: 1,
@@ -751,6 +739,20 @@ setTimeout(function(){
           ]
           });
         }
+
+    $(document).ready(function(){
+      setTimeout(function(){
+        // $('.single-option-radio .swatch-container').removeClass('soldout');
+
+        
+        if($('.jdgm-prev-badge').attr('data-number-of-reviews') > 0){
+          $('div#Whatourcustomerssay').show();
+          $('#Whatourcustomerssay>a').trigger('click');
+        }else{
+          $('div#Whatourcustomerssay').hide();
+        }
+
+       
 
         
       },1000)
