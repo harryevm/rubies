@@ -746,6 +746,7 @@ End automatically added Judge.me widget{% endcomment %}
     $(document).ready(function(){
       setTimeout(function(){
         // $('.single-option-radio .swatch-container').removeClass('soldout');
+        $(".single-option-radio .swatch-container.color [type='radio']:checked + label").parents('.swatch-container.color.circle.soldout').removeClass('soldout');
 
         
         if($('.jdgm-prev-badge').attr('data-number-of-reviews') > 0){
