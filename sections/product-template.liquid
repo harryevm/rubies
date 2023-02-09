@@ -831,13 +831,18 @@ $(window).on("load", function () {
 var selectedVal='';
 $('.simple-collection .product-container .box.product li.product-swatches__li').click(function(){
   selectedVal = $(this).find('.product-swatches__label').text();
-     $(this).parents('.box.product').find('select#variant-select option:contains("'+selectedVal+'")').each(function(i){ 
+     $(this).parents('.box.product').find('select#variant-select option:contains("'+selectedVal+'")').each(function(key, value){ 
 
 
       var attr = $(this).attr('disabled');
       var attrClass = $(this).html();
       $(this).parents('.box.product').find('select[id*=ProductSelect-] option').remove();
       console.log(attrClass);
+
+      // $('#mySelect')
+      //    .append($("<option></option>")
+      //               .attr("value", key)
+      //               .text(value)); 
 
 
       // $(this).parents('.box.product').find('select[id*=ProductSelect-] option').each(function(i){ 
