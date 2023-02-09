@@ -828,12 +828,12 @@ $(window).on("load", function () {
     
 });
 
-var selectedVal='';
+var selectedVal='',arr=[];
 $('.simple-collection .product-container .box.product li.product-swatches__li').click(function(){
   selectedVal = $(this).find('.product-swatches__label').text();
      $(this).parents('.box.product').find('select#variant-select option:contains("'+selectedVal+'")').each(function(key, value){ 
 
-
+      arr.push[key]
       var attr = $(this).attr('disabled');
       var attrClass = $(this).html();
       var dAttr=$(this).attr('disabled');
@@ -842,7 +842,7 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
       vlas = vlas.replace('- sold out!', '');
       vlas = vlas.replace(/\s/g, '');
       $(this).parents('.box.product').find('select[id*=ProductSelect-] option').remove();
-      console.log(key, vlas,dAttr);
+      console.log(key, vlas,dAttr,arr.length);
 
       $(this).parents('.box.product').find('select[id*=ProductSelect-]').append($('<option ></option>'));
 
