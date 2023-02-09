@@ -844,7 +844,9 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
      
       console.log(key, vlas,dAttr);
 
-      $(this).parents('.box.product').find('select[id*=ProductSelect-]').append($('<option ></option>'));
+      var newDiv = document.createElement("<option >");
+
+      $(this).parents('.box.product').find('select[id*=ProductSelect-]').append(newDiv);
 
 
       // $(this).parents('.box.product').find('select[id*=ProductSelect-] option').each(function(i){ 
