@@ -845,10 +845,15 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
       vlas = vlas.replace(/\s/g, '');
      
       console.log(key, vlas,dAttr);
+      if (typeof attr !== 'undefined' && attr !== false) {
+        $(this).attr('disabled',true);
+      }else{
+        $(this).removeAttr('disabled');
+      }
 
       // $(this).parents('.box.product').find('select[id*=ProductSelect-] option:eq(0)').addClass('test')
 
-      $(this).parents('.box.product').find('select[id*=ProductSelect-]').append('<option value="'+vlas+'"'+vlas+'>'+vlas+'</option>');
+      $(this).parents('.box.product').find('select[id*=ProductSelect-]').append('<option value="'+vlas+'"'+attr+'>'+vlas+'</option>');
 
 
       // $(this).parents('.box.product').find('select[id*=ProductSelect-] option').each(function(i){ 
