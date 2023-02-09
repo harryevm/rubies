@@ -828,30 +828,6 @@ $(window).on("load", function () {
     
 });
 
-// var selectedVal='';
-// $('.simple-collection .product-container .box.product li.product-swatches__li').click(function(){
-//   selectedVal = $(this).find('.product-swatches__label').text();
-//      $(this).parents('.box.product').find('select#variant-select option:contains("'+selectedVal+'")').each(function(i){ 
-
-
-//       var attr = $(this).attr('disabled');
-//       var attrClass = $(this).attr('class');
-      
-
-
-//       $(this).parents('.box.product').find('select[id*=ProductSelect-] option').each(function(i){ 
-//         if (typeof attr !== 'undefined' && attr !== false) {
-//           console.log($(this).attr('disabled'));
-//         }else{
-//           console.log('non-disable')
-//         }
-//       })
-      
-      
-          
-//      })
-// })
-
 var selectedVal='';
 $('.simple-collection .product-container .box.product li.product-swatches__li').click(function(){
   selectedVal = $(this).find('.product-swatches__label').text();
@@ -861,13 +837,24 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
       var attr = $(this).attr('disabled');
       var attrClass = $(this).attr('class');
       
-console.log(attrClass.replace(selectedVal+" /",""))
 
-    
+
+      $(this).parents('.box.product').find('select[id*=ProductSelect-] option').each(function(i){ 
+
+      if($(this).val() == attrClass.replace(selectedVal+" /","")){
+        if (typeof attr !== 'undefined' && attr !== false) {
+            $(this).attr('disabled',true);
+          }else{
+            $(this).removeAttr('disabled');
+          }
+        }
+      })
       
       
           
      })
 })
+
+
 
 </script>
