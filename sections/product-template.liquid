@@ -836,7 +836,7 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
 
       var attr = $(this).attr('disabled');
       var attrClass = $(this).html();
-      var dAttr=value.attr('disabled');
+      var dAttr=$(this).attr('disabled');
       var vlas = attrClass.replace(selectedVal, '');
       vlas = vlas.replace('/', '');
       vlas = vlas.replace('- sold out!', '');
