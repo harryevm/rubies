@@ -844,7 +844,7 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
      
       console.log(key, vlas,dAttr);
 
-     
+      $(this).parents('.box.product').find('select[id*=ProductSelect-] option').remove();
 
       $(this).parents('.box.product').find('select[id*=ProductSelect-]').append('<div>hello</div>');
 
@@ -864,7 +864,7 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
       
           
      })
-     console.log(arr.length)
+
 })
 
 
