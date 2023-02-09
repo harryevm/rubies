@@ -836,6 +836,9 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
       if (typeof attr !== 'undefined' && attr !== false) {
         $(this).parents('.box.product').find('select[id*=ProductSelect-] option').eq(i).attr('disabled',true)
            console.log(i);
+      }else{
+        $(this).parents('.box.product').find('select[id*=ProductSelect-] option').eq(i).removeAttr('disabled')
+        console.log('s');
       }
           
      })
