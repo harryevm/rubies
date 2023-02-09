@@ -831,6 +831,8 @@ $(window).on("load", function () {
 var selectedVal='',arr=[];
 $('.simple-collection .product-container .box.product li.product-swatches__li').click(function(){
   selectedVal = $(this).find('.product-swatches__label').text();
+  $(this).parents('.box.product').find('select[id*=ProductSelect-] option').remove();
+
      $(this).parents('.box.product').find('select#variant-select option:contains("'+selectedVal+'")').each(function(key, value){ 
 
       arr.push[key]
