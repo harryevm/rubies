@@ -838,6 +838,8 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
       var attrClass = $(this).html();
       var vlas = attrClass.replace(selectedVal, '');
       vlas = vlas.replace('/', '');
+      vlas = vlas.replace('- sold out!', '');
+      vlas = vlas.replace(/\s/g, '');
       $(this).parents('.box.product').find('select[id*=ProductSelect-] option').remove();
       console.log(key, vlas);
 
