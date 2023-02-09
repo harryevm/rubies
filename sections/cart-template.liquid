@@ -419,8 +419,8 @@
   });
 
   setTimeout(function(){
-  $.getJSON(Shopify.shop + '/admin/api/2022-07/shipping_zones.json', function(zone) {
-    console.log(zone)
+  $.getJSON('/admin/api/2022-07/shipping_zones.json', function(zone) {
+    console.log(zone.shipping_zones)
   })
   alert() 
 },1000)
