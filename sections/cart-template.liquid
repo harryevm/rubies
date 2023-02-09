@@ -418,8 +418,10 @@
     },2000);
   });
 
-alert(window.Shopify.routes.root + '/admin/api/2022-07/shipping_zones.json')
+  setTimeout(function(){
   $.getJSON(window.Shopify.routes.root + '/admin/api/2022-07/shipping_zones.json', function(zone) {
     console.log(zone)
   })
+  alert()
+},1000)
 </script>
