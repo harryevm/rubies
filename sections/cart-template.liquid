@@ -417,4 +417,9 @@
     }
     },2000);
   });
+
+
+  $.getJSON(window.Shopify.routes.root + '/admin/api/2022-07/shipping_zones.json', function(zone) {
+    console.log(zone)
+  })
 </script>
