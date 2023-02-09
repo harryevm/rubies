@@ -832,14 +832,8 @@ var selectedVal='';
 $('.simple-collection .product-container .box.product li.product-swatches__li').click(function(){
   selectedVal = $(this).find('.product-swatches__label').text();
      $(this).parents('.box.product').find('select#variant-select option[class*="'+selectedVal+'"]').each(function(i){ 
-      var attr = $(this).attr('disabled');
-      if (typeof attr !== 'undefined' && attr !== false) {
-        $(this).parents('.box.product').find('select[id*=ProductSelect-] option').eq(i).attr('disabled',true)
-           console.log(i);
-      }else{
-        $(this).parents('.box.product').find('select[id*=ProductSelect-] option').eq(i).removeAttr('disabled')
-        console.log('s');
-      }
+       console.log($(this).html());
+      
           
      })
 })
