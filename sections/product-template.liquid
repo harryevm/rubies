@@ -841,7 +841,7 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
 
       $(this).parents('.box.product').find('select[id*=ProductSelect-] option').each(function(i){ 
 
-      if($(this).val() == attrClass){
+      if($(this).val() == attrClass[i]){
         console.log($(this).val())
         if (typeof attr !== 'undefined' && attr !== false) {
             $(this).attr('disabled',true);
