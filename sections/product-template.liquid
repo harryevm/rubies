@@ -832,7 +832,7 @@ var selectedVal='';
 $('.simple-collection .product-container .box.product li.product-swatches__li').click(function(){
   selectedVal = $(this).find('.product-swatches__label').text();
      $(this).parents('.box.product').find('select#variant-select option[class*="'+selectedVal+'"]').each(function(i){ 
-      console.log($(this).parents('.box.product').find('select[id*=ProductSelect-] option:eq(0)').attr('class'))
+      console.log($(this).parents('.box.product').find('select[id*=ProductSelect-] option:eq(0)').attr('class',0))
            console.log(i);
           
      })
