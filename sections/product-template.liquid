@@ -832,7 +832,12 @@ var selectedVal='';
 $('.simple-collection .product-container .box.product li.product-swatches__li').click(function(){
   selectedVal = $(this).find('.product-swatches__label').text();
      $(this).parents('.box.product').find('select#variant-select option:contains("'+selectedVal+'")').each(function(i){ 
-       console.log($(this).html());
+      var attr = $(this).attr('disabled');
+      if (typeof attr !== 'undefined' && attr !== false) {
+         console.log($(this).attr('disabled'));
+      }else{
+        console.log('non-disable')
+      }
       
           
      })
