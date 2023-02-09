@@ -842,7 +842,7 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
       vlas = vlas.replace('- sold out!', '');
       vlas = vlas.replace(/\s/g, '');
      
-      console.log(key, vlas,dAttr,arr.length);
+      console.log(key, vlas,dAttr);
 
       $(this).parents('.box.product').find('select[id*=ProductSelect-]').append($('<option ></option>'));
 
@@ -862,6 +862,7 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
       
           
      })
+     console.log(arr.length)
 })
 
 
