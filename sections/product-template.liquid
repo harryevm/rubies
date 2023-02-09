@@ -846,8 +846,8 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
 
       $(this).parents('.box.product').find('select[id*=ProductSelect-] option').remove();
 
-      $(this).parents('.box.product').find('select[id*=ProductSelect-]').append('<option value="'+vlas+'" >'+vlas+'</option>');
-
+      $(this).parents('.box.product').find('select[id*=ProductSelect-]').append('<option></option>');
+      $(this).parents('.box.product').find('select[id*=ProductSelect-] option:eq(0)').addClass('test')
 
       // $(this).parents('.box.product').find('select[id*=ProductSelect-] option').each(function(i){ 
       //   console.log($(this).val() +"=="+ attrClass[i])
