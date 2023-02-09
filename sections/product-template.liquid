@@ -836,8 +836,10 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
 
       var attr = $(this).attr('disabled');
       var attrClass = $(this).html();
+      var vlas = attrClass.replace(selectedVal, '');
+      vlas = vlas.replace('/', '');
       $(this).parents('.box.product').find('select[id*=ProductSelect-] option').remove();
-      console.log(key, value);
+      console.log(key, vlas);
 
       // $(this).parents('.box.product').find('select[id*=ProductSelect-]')
       //    .append($("<option></option>")
