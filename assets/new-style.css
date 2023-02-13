@@ -149,7 +149,7 @@ header.content-util ul.social-icons {  display: none; }
   box-shadow: none; 
 }
 .template-collection .products.products-grid>.box.product ul.product-swatches { padding: 0 10px; }
-.template-collection .products.products-grid>.box.product figcaption { padding: 5px  10px 15px; }
+.template-collection .products.products-grid>.box.product figcaption { padding: 5px  10px ; }
 
 .slide__item-content.justify-start .inner-wrapper .content-contain { max-width: 55%; }
 
