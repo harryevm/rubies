@@ -10,9 +10,10 @@
       {% endunless %}
     </h1>
   </div>
+  <a href="#Whatourcustomerssay">
   {% comment %}Start automatically added Judge.me widget{% endcomment %}
   {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
-{% comment %}End automatically added Judge.me widget{% endcomment %}
+{% comment %}End automatically added Judge.me widget{% endcomment %}</a>
   <div class="selection-wrapper price product-single__price-{{ section.id }}">
     {% unless section_onboarding %}
       <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ current_variant.price | money_without_currency | remove: ',' }}">{{ current_variant.price | money_with_currency }}  </span>
