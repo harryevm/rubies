@@ -670,6 +670,7 @@ div.gallery .box figcaption.below h3 { overflow: visible; display: block; min-he
 
   .simple-collection-section .product-title>a.title { font-size: 14px; line-height: 20px; }
   .simple-collection figcaption span.price { font-size: 14px !important; }
+  .featured-collection figcaption span.price, .simple-collection figcaption span.price, .collection figcaption span.price { margin: 2px 0; }
   
 }
 @media(max-width:600px){
