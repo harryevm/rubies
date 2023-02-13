@@ -103,7 +103,7 @@ body .jdgm-preview-badge[data-template=index] { display: block!important; min-he
 .collection figcaption .product-title { min-height: 50px; }
 div#insta-feed { padding: 20px 0 50px !important; }
 
-.simple-collection-section .product-title>a.title {
+/* .simple-collection-section .product-title>a.title {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -111,7 +111,7 @@ div#insta-feed { padding: 20px 0 50px !important; }
     line-clamp: 2;
     -webkit-box-orient: vertical;
     min-height: 45px;
-}
+} */
 select#variant-select { visibility: hidden; position: absolute; }
 
 .box.product select[id*=ProductSelect-], .box.product select { width: 100%; height: 45px; padding: 0 10px; border-radius: 5px; border: 1px solid #ccc; }
@@ -360,6 +360,9 @@ span.original-price { display: none; }
 .template-product .jdgm-histogram.jdgm-temp-hidden,.jdgm-row-actions { display: block; }
 .jdgm-rev-widg__summary-text {  margin-top: 10px !important; }
 .jdgm-review-widget--medium .jdgm-write-rev-link, .jdgm-review-widget--medium .jdgm-ask-question-btn { margin: 0; text-align: center; }
+
+
+.simple-collection figcaption { margin-top: 30px; }
 
 
 @media(min-width:701px){
@@ -663,6 +666,10 @@ div.gallery .box figcaption.below h3 { overflow: visible; display: block; min-he
 
 
   .featured-row-section .wrapper { padding: 0; }
+
+
+  .simple-collection-section .product-title>a.title { font-size: 14px; line-height: 20px; }
+  .simple-collection figcaption span.price { font-size: 14px !important; }
   
 }
 @media(max-width:600px){
@@ -688,7 +695,7 @@ header.collection-header>.container {
   .jdgm-widget.jdgm-widget { height: auto; }
   .template-collection section.collection { padding: 20px 0 40px; }
   .template-collection section.collection header.collection-header { margin-bottom: 30px; }
-  span.jdgm-prev-badge__text { display: block; text-decoration: none; position: absolute; bottom: 0; left: 85px; }
+  span.jdgm-prev-badge__text { display: block; text-decoration: none; margin: 0 !important; }
   .jdgm-preview-badge .jdgm-star { font-size: 12px; }
 
 
