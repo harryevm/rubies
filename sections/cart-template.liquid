@@ -107,7 +107,7 @@
                         {%- unless item.product.has_only_default_variant -%}
                           <span class="variant" data-cart-item-variant-title>{{ item.variant.title }}</span></br>
                         {%- endunless -%}
-                        {% if item.product.tags contains 'Pre-order' %}
+                        {% if item.variant.inventory_quantity < 1 %}
                           {% assign preClass = 'havepreorder' %}
                         {% endif %}
                         {%- comment -%}
