@@ -601,6 +601,7 @@ div.gallery .box figcaption.below h3 { overflow: visible; display: block; min-he
 }
 @media(max-width:650px){
   .collection.search-results h1 { font-size: 20px; line-height: 30px; }
+  .template-collection section.collection .wrapper { padding: 0 5px; }
   footer.site-footer .grid .box { width: 100% !important; padding: 0; margin: 0 0 20px; border-bottom: 1px solid #ffffff2b; padding-bottom: 5px; }
   footer.site-footer .grid .box>h4+div { display: none; border: none; margin-bottom: 10px; padding: 0; }
   footer.site-footer form { margin: 0; }
