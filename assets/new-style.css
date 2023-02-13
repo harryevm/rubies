@@ -480,7 +480,7 @@ span.jdgm-prev-badge__text {text-decoration: none;}
 }
 .cart .cart-checkout>* { position: relative; }
 
-.template-product .description.rte { margin-top: 50px; }
+.template-product .description.rte { margin-top: 50px;    display: block; }
 .template-product .description.rte .description__tabs,.template-product .description.rte>* {width: 100%;}
 
 div.gallery .box figcaption.below h3 { overflow: visible; display: block; min-height: 60px; }
