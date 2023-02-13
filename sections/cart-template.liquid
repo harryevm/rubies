@@ -32,17 +32,17 @@
         {% endif %}
         </div>
         {% for item in cart.items %}
-        {{item.variant.inventory_quantity}}
+       
 
         {% if item.product.tags contains 'Pre-order' %}
            {% assign preordermessage = 'Your order contains a pre-order item and will be shipped out when all items are available.' %}
         {% endif %}
-        {{- item.variant.inventory_quantity -}}
-          {% if item.variant.inventory_quantity < 1 }
+       
+          {% if item.variant.inventory_quantity < 1 %}
           Your order contains a pre-order item and will be shipped out when all items are available.
           {%else%}
           sdfsdfsdf
-          {%endif%}
+          {% endif %}
         {% endfor %}
       <div class="pre-order-message">{{preordermessage}}</div>
       <div class="estimate-wr">
