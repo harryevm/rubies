@@ -35,6 +35,7 @@
         {% if item.product.tags contains 'Pre-order' %}
            {% assign preordermessage = 'Your order contains a pre-order item and will be shipped out when all items are available.' %}
         {% endif %}
+        {{- item.variant.inventory_quantity -}}
         {% endfor %}
       <div class="pre-order-message">{{preordermessage}}</div>
       <div class="estimate-wr">
@@ -418,10 +419,4 @@
     },2000);
   });
 
-  setTimeout(function(){
-  $.getJSON('/admin/api/2022-07/shipping_zones.json', function(zone) {
-    console.log(zone.shipping_zones)
-  })
-  alert() 
-},1000)
 </script>
