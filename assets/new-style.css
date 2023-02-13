@@ -683,7 +683,7 @@ header.collection-header>.container {
 
   ul.social-share { display: flex; justify-content: flex-start; flex-wrap: wrap; }
   .featured-collection figcaption .product-title, .simple-collection figcaption .product-title, .collection figcaption .product-title { min-height: unset; }
-  .jdgm-widget.jdgm-widget { height: 45px; }
+  .jdgm-widget.jdgm-widget { height: auto; }
   .template-collection section.collection { padding: 20px 0 40px; }
   .template-collection section.collection header.collection-header { margin-bottom: 30px; }
   span.jdgm-prev-badge__text { display: block; }
