@@ -35,6 +35,7 @@
         {% if item.product.tags contains 'Pre-order' %}
            {% assign preordermessage = 'Your order contains a pre-order item and will be shipped out when all items are available.' %}
         {% endif %}
+        {{item.variant.inventory_quantity}}
           {% if item.variant.inventory_quantity < 1 }
           Your order contains a pre-order item and will be shipped out when all items are available.
           {%else%}
