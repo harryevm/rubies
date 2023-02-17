@@ -266,7 +266,7 @@
           {% if cart.total_price > 0 %}
                   <input type="submit" name="checkout" class="button  btn btn-primary" value="{{ 'cart.general.checkout' | t }}">
           {% else %}
-                 <input type="submit" name="checkout" class="button  btn btn-primary" value="{{ 'cart.general.checkout' | t }}">
+                  <a href="#" class="button  btn btn-primary">{{ 'cart.general.checkout' | t }}</a>
           {% endif %}
                 </div>
 
