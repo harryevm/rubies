@@ -366,6 +366,10 @@ span.original-price { display: none; }
 span.jdgm-prev-badge__text {text-decoration: none;}
 
 
+/* Pages */
+.selection-wrapper .input-row input { height: 40px; border: 1px solid #ccc; outline: none; border-radius: 5px; }
+
+
 @media(min-width:701px){
   .middle-wrapper { display: none; }
   header.util .wrapper { padding: 0; }
