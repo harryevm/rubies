@@ -171,44 +171,7 @@
             {%- assign auto_heading_end = '</' | append: section.settings.tabs_auto_headings | append: '>' -%}
             {%- assign desc_tabs = description_first_part | split: auto_heading -%}
             {%- assign first_tab = true -%}
-            {%- comment -%}{%- for tab in desc_tabs -%}
-              {%- assign tab_size = tab | strip_html | strip | size -%}
-              {%- unless tab_size == 0 -%}
-                {%- assign tab_parts = tab | split: auto_heading_end -%}
-                <div class="tab tab--{{ forloop.index }} {% if first_tab %}tab--active {%- assign first_tab = false -%} {% endif %}">
-                  {%- if tab_parts.size > 1 -%}
-                    <div class="tab__title" tabindex="0">{{ tab_parts[0] }}</div>
-                    <div class="tab__content">{{ tab_parts[1] }}</div>
-                  {%- else -%}
-                    <div class="tab__title" tabindex="0">{{ section.settings.tabs_title }}</div>
-                    <div class="tab__content">{{ tab_parts[0] }}</div>
-                  {%- endif -%}
-                </div>
-              {%- endunless -%}
-            {%- endfor -%}{%- endcomment -%}
 
-            {%- comment -%}
-              Add the additional optional pages of tabs
-            {%- endcomment -%}{% comment %}
-            {%- if section.settings.tabs_global_page_1 != blank -%}
-              <div class="tab tab--global-1">
-                <div class="tab__title" tabindex="0">{{ pages[section.settings.tabs_global_page_1].title }}</div>
-                <div class="tab__content">{{ pages[section.settings.tabs_global_page_1].content }}</div>
-              </div>
-            {%- endif -%}
-            {%- if section.settings.tabs_global_page_2 != blank -%}
-              <div class="tab tab--global-1">
-                <div class="tab__title" tabindex="0">{{ pages[section.settings.tabs_global_page_2].title }}</div>
-                <div class="tab__content">{{ pages[section.settings.tabs_global_page_2].content }}</div>
-              </div>
-            {%- endif -%}
-            {%- if section.settings.tabs_global_page_3 != blank -%}
-              <div class="tab tab--global-1">
-                <div class="tab__title" tabindex="0">{{ pages[section.settings.tabs_global_page_3].title }}</div>
-                <div class="tab__content">{{ pages[section.settings.tabs_global_page_3].content }}</div>
-              </div>
-            {%- endif -%}{% endcomment %}
-          
           {% if section.settings.tabs_enable %}
             <div class="accordion-tab">
               <a href="javascript:;" class="active">
