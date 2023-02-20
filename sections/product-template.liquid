@@ -785,28 +785,7 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
       }else{
         $(this).removeAttr('disabled');
       }
-
-      // $(this).parents('.box.product').find('select[id*=ProductSelect-] option:eq(0)').addClass('test')
-
       $(this).parents('.box.product').find('select[id*=ProductSelect-]').append('<option value="'+vlas+'"'+attr+'>'+vlas+'</option>');
-
-
-      // $(this).parents('.box.product').find('select[id*=ProductSelect-] option').each(function(i){ 
-      //   console.log($(this).val() +"=="+ attrClass[i])
-      // if($(this).val() == attrClass[i]){
-      //   console.log($(this).val())
-      //   if (typeof attr !== 'undefined' && attr !== false) {
-      //       $(this).attr('disabled',true);
-      //     }else{
-      //       $(this).removeAttr('disabled');
-      //     }
-      //   }
-      // })
-      
-      
-          
-     })
-     console.log(arr.length)
 })
 
 
