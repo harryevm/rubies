@@ -49,28 +49,9 @@
         <div class="cart-list">
           <form action="/cart" method="post" novalidate class="cart-form">
             <div class="cart-items" data-csapp_line_wrapper>
-              {% comment %}
-              <div class="label-row">
-                <div class="grid">
-                  <div class="td cart-item-product">
-                    {{ 'cart.label.product' | t }}
-                  </div>
-<!--                   <div class="td cart-item-price">
-                    {{ 'cart.label.price' | t }}
-                  </div>
-                  <div class="td cart-item-quantity">
-                    {{ 'cart.label.quantity' | t }}
-                  </div> -->
-                  <div class="td cart-item-total">
-                    {{ 'cart.label.total' | t }}
-                  </div>
-                </div>
-              </div>
-               {% endcomment %}
                
               {%- for item in cart.items -%}
               
-
                 <div class="cart-item" data-cart-item="{{ item.key }}" data-csapp_line_index>
                 <div class="grid custom-cart-items">
                 <div class="td cart-item-product-image custom-cart-product-image">
@@ -111,11 +92,6 @@
                         {% if item.variant.inventory_quantity < 1 %}
                           {% assign preClass = 'havepreorder' %}
                         {% endif %}
-                        {%- comment -%}
-                          Optional, loop through custom product line items if available
-                          For more info on line item properties, visit:
-                            - https://help.shopify.com/en/themes/customization/products/features/get-customization-information-for-products
-                        {%- endcomment -%}
                         {%- unless item.properties == empty -%}
                           {%- for property in item.properties -%}
                             {%- unless property.last == blank -%}
@@ -148,25 +124,7 @@
                 </a>{% comment%}{{ 'cart.general.remove' | t }}{% endcomment %}
                     </div>
                  </div>
-                    {%- comment -%}
-                      Cart item - price
-                    {%- endcomment -%}
-                {% comment %}
-                    <div class="td cart-item-price">
-                      <p><span class="money final-price{% if item.original_line_price > item.final_line_price %} final-price-discount{% endif %}" data-cart-item-final-price data-csapp_price>{{ item.final_price | money }}</span></p>
-                      {%- if item.original_line_price > item.final_line_price -%}
-                        <p><span class="money original-price" data-cart-item-original-price><div class="pn-price-item" data-id="{{ item.key }}">{{ item.original_price | money }}</div></span></p>
-                      {%- endif -%}
-                      {% if item.line_level_discount_allocations.size > 0 %}
-                        <ul class="cart-item-discounts">
-                        {% for discount_allocation in item.line_level_discount_allocations %}
-                          <li class="cart-item-discount"><span class="cart-item-discount-title">{{ discount_allocation.discount_application.title }}</span><br>
-                          <span class="cart-item-discount-amount">(-<span class="money">{{ discount_allocation.amount | money_with_currency }}</span>)</span></li>
-                        {% endfor %}
-                        </ul>
-                      {% endif %}
-                    </div>
-                {% endcomment %}
+
  
                 
                     {%- comment -%}
@@ -184,17 +142,6 @@
       {%- endfor -%}
 </div>
 
-<!-- <div class="discountcodefield"> 
-  <label for="discount">Discount Code:</label> 
-  <input autocomplete="off" type="hidden" name="discount" class="discount_code" />
-  <input autocomplete="off" type="text" name="discount_code" class="discount_code_field" /> 
-  <input type="button" name="apply_discount_code" class="btn discount_code_btn" value="Apply"/>
-</div> 
-
-<div class="cart__savings discount_apply_code">
-</div> -->
-
-
 <div class="cart-tab-wrapper">
    <div id="accordion-1">
     <div class="head">
@@ -204,7 +151,6 @@
       <p>{{ section.settings.tab_content }}</p>
     </div>
   </div>
-
 </div>
         
             <div class="grid">
@@ -218,7 +164,6 @@
                     <textarea name="note" id="CartSpecialInstructions">{{ cart.note }}</textarea>
                     {% endif %}
                     {% endcomment %}
-
                 </div>
 
               <div class="cart-checkout">
