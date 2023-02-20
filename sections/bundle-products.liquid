@@ -173,43 +173,7 @@
             {%- assign auto_heading_end = '</' | append: section.settings.tabs_auto_headings | append: '>' -%}
             {%- assign desc_tabs = description_first_part | split: auto_heading -%}
             {%- assign first_tab = true -%}
-            {%- comment -%}{%- for tab in desc_tabs -%}
-              {%- assign tab_size = tab | strip_html | strip | size -%}
-              {%- unless tab_size == 0 -%}
-                {%- assign tab_parts = tab | split: auto_heading_end -%}
-                <div class="tab tab--{{ forloop.index }} {% if first_tab %}tab--active {%- assign first_tab = false -%} {% endif %}">
-                  {%- if tab_parts.size > 1 -%}
-                    <div class="tab__title" tabindex="0">{{ tab_parts[0] }}</div>
-                    <div class="tab__content">{{ tab_parts[1] }}</div>
-                  {%- else -%}
-                    <div class="tab__title" tabindex="0">{{ section.settings.tabs_title }}</div>
-                    <div class="tab__content">{{ tab_parts[0] }}</div>
-                  {%- endif -%}
-                </div>
-              {%- endunless -%}
-            {%- endfor -%}{%- endcomment -%}
-
-            {%- comment -%}
-              Add the additional optional pages of tabs
-            {%- endcomment -%}{% comment %}
-            {%- if section.settings.tabs_global_page_1 != blank -%}
-              <div class="tab tab--global-1">
-                <div class="tab__title" tabindex="0">{{ pages[section.settings.tabs_global_page_1].title }}</div>
-                <div class="tab__content">{{ pages[section.settings.tabs_global_page_1].content }}</div>
-              </div>
-            {%- endif -%}
-            {%- if section.settings.tabs_global_page_2 != blank -%}
-              <div class="tab tab--global-1">
-                <div class="tab__title" tabindex="0">{{ pages[section.settings.tabs_global_page_2].title }}</div>
-                <div class="tab__content">{{ pages[section.settings.tabs_global_page_2].content }}</div>
-              </div>
-            {%- endif -%}
-            {%- if section.settings.tabs_global_page_3 != blank -%}
-              <div class="tab tab--global-1">
-                <div class="tab__title" tabindex="0">{{ pages[section.settings.tabs_global_page_3].title }}</div>
-                <div class="tab__content">{{ pages[section.settings.tabs_global_page_3].content }}</div>
-              </div>
-            {%- endif -%}{% endcomment %}
+          
           
           {% if section.settings.tabs_enable %}
             <div class="accordion-tab">
@@ -326,11 +290,6 @@
         - Judge.me
       {%- endcomment -%}
       <div class="product-reviews"></div>
-
-    
-{% comment %}Start automatically added Judge.me widget
-  {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product %}
-End automatically added Judge.me widget{% endcomment %}
 </div>
   </section>
 
@@ -667,47 +626,7 @@ End automatically added Judge.me widget{% endcomment %}
 }
 {% endschema %}
 <style>
-/*   .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: none; } */
-  .slick-list.draggable { overflow: hidden; width: 100%;padding-left: 0;}
-  .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: block; }
-  .simple-collection-section { display: none; }
-  .product-review-sec .jdgm-widget.jdgm-widget { display: block !important; height: 100%; }
-  .product-review-sec .jdgm-widget-actions-wrapper, .product-review-sec .jdgm-rev__icon, .product-review-sec .jdgm-rev-widg__summary-text{display: block !important;}
-  .cart-buttons .button-wrapper.default-cart-button { padding-top: 10px; }
-  @media(max-width:1800px) and (min-width:1300px){
-    .single-product .grid aside.product-aside { margin-top: -65px; }
-    .template-product .purchase-box .selection-wrapper.variant>span.label-extra>a { font-size: 16px; line-height: 25px; margin-bottom: 5px; }
-    .template-product .selection-wrapper.variant.radio > div { margin-top: 0; }
-    .form-vertical.product-form>form .discount_text { margin: 5px 0; }
-    
-  }
 
-  .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: none; }
-  body.template-product { counter-reset: myCounter; }
-  .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: none; }
-  .csapps-bunlde-tiers { margin-bottom: 20px; position: relative; }
-  .csapps-bunlde-tiers .csapps-bundle-thumb a.grid_img { display: none; }
-  .csapps-p-detail .csapps-p-title a { font-size: 20px !important; font-weight: 600; line-height: 30px; }
-  .csapps-bunlde-tiers .csapps-bundle-thumb select.csapp-select-option-selector { text-transform: capitalize; height: 40px; border-color: #333; border-radius: 5px; }
-  .slick-list.draggable { overflow: hidden; width: 100%; }
-  header.content-util nav.breadcrumb { float: none; }
-  .product-title-w { margin: 20px 0; }
-  .product-title-w h1 { margin: 0; font-size: 32px; line-height: 35px; }
-  .desk-tab-wrap .save-full-text { display: block; margin: 20px 0; }
-  .save-full-text { margin-top: 50px; }
-  .template-product .box.product select[id*=ProductSelect-], .template-product .box.product form { display: block; }
-  .single-product .grid aside.product-aside { margin-top: -63px; }
-  @media(max-width:980px){
-    .single-product .grid .product-images, .single-product .grid aside.product-aside { width: 50%; padding-left: 20px; }
-    .aiod_price_qty_wrpr { top: 50px; }
-    .product-title-w h1 { font-size: 25px; line-height: 30px; }
-  }
-  @media(max-width:800px){
-    .single-product .grid .product-images,.single-product .grid aside.product-aside { margin-top: 0; }
-    .single-product .grid .product-images, .single-product .grid aside.product-aside { width: 100%; padding: 0; }
-     .save-full-text { margin-top: 15px; }
-  }
-  .template-product .description.rte .description__tabs { display: none; }
 </style>
 
 {% unless  product.template_suffix == 'fastbundles' %}
