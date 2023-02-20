@@ -1,4 +1,3 @@
-
 <div class="simple-collection layout-{{ section.settings.product_count_range }}" data-section-id="{{ section.id }}" data-section-type="simple-collection-section">
   <div class="wrapper">
     <header {% if section.settings.center_heading %} class="centered"{% endif %}>
@@ -10,10 +9,6 @@
       {% endif %}
     </header>
     <div class="product-container owl-carousel" id="collection-{{ section.id }}"> 
-    
-   
-     
-       
       {%- assign collection = collections[section.settings.collection] -%}
       {%- assign product_limit = section.settings.product_count_range -%}
      
@@ -79,7 +74,8 @@
   ]
 }
 {% endschema %}
-<style>form.hs-event-static span.clickable-btn-over { position: absolute; left: 0; right: 0; bottom: 0; top: 0; font-size: 0; }
+<style>
+form.hs-event-static span.clickable-btn-over { position: absolute; left: 0; right: 0; bottom: 0; top: 0; font-size: 0; }
 form.hs-event-static,.simple-collection .product-container .box form { position: relative; }
 span.clickable-btn-over { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
 </style>
