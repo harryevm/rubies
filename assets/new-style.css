@@ -367,7 +367,7 @@ span.jdgm-prev-badge__text {text-decoration: none;}
 
 
 /* Pages */
-.selection-wrapper .input-row input { height: 40px; border: 1px solid #ccc; outline: none; border-radius: 5px; }
+.selection-wrapper .input-row input { height: 50px; border: 1px solid #ccc; outline: none; border-radius: 5px; }
 
 
 @media(min-width:701px){
