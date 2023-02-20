@@ -368,7 +368,7 @@ span.jdgm-prev-badge__text {text-decoration: none;}
 
 /* Pages */
 .selection-wrapper .input-row input { height: 50px; border: 1px solid #ccc; outline: none; border-radius: 5px; }
-
+.selection-wrapper .input-row  label { font-size: 16px; line-height: 25px; font-weight: 500; color: #000; }
 
 @media(min-width:701px){
   .middle-wrapper { display: none; }
