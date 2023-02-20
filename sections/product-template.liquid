@@ -688,18 +688,12 @@ End automatically added Judge.me widget{% endcomment %}
       setTimeout(function(){
         // $('.single-option-radio .swatch-container').removeClass('soldout');
         $(".single-option-radio .swatch-container.color [type='radio']:checked + label").parents('.swatch-container.color.circle.soldout').removeClass('soldout');
-
-        
         if($('.jdgm-prev-badge').attr('data-number-of-reviews') > 0){
           $('div#Whatourcustomerssay').show();
           $('#Whatourcustomerssay>a').trigger('click');
         }else{
           $('div#Whatourcustomerssay').hide();
         }
-
-       
-
-        
       },1000)
 
       
@@ -766,7 +760,6 @@ $(window).on("load", function () {
     }, 4000);
     $('#'+urlHash).children('a').trigger('click');
 
-    
 });
 
 var selectedVal='',arr=[];
