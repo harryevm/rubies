@@ -13,14 +13,14 @@
         {% assign image_widths = '295,394,590,700,900,1200,1500,1800,2000,2400' %}
         {% include 'theme-rias' %}
         <img class="card__image lazyload"
-          src="{% comment ls-rpl %}{{ image | img_url: '590x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '590x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}"
+          src="{{ image | img_url: '590x' }}"
           data-src="{{ image_url_pattern }}"
           data-widths="[{{ image_widths }}]"
           data-aspectratio="{{ image.aspect_ratio }}"
           data-sizes="auto"
-          alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+          alt="{{ image.alt | escape }}">
         <noscript>
-          <img class="card__image" src="{% comment ls-rpl %}{{ image | img_url: '1200x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '1200x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}" alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+          <img class="card__image" src="{{ image | img_url: '1200x' }}" alt="{{ image.alt | escape }}">
         </noscript>
       </div>
     </div>
@@ -50,15 +50,15 @@
                 {% assign image_widths = '295,394,590,700,900,1200,1500,1800,2000,2400' %}
                 {% include 'theme-rias' %}
                 <img class="card__image lazyload"
-                  src="{% comment ls-rpl %}{{ image | img_url: '590x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '590x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}"
+                  src="{{ image | img_url: '590x' }}"
                   data-src="{{ image_url_pattern }}"
                   data-widths="[{{ image_widths }}]"
                   data-aspectratio="{{ image.aspect_ratio }}"
                   data-sizes="auto"
                   style="width:{{ image.width }}px;"
-                  alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+                  alt="{{ image.alt | escape }}">
                 <noscript>
-                  <img class="card__image" src="{% comment ls-rpl %}{{ image | img_url: '1200x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: image, img_url: '1200x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}" alt="{% comment ls-rpl %}{{ image.alt | escape }}{% endcomment %}{%- capture LS_ALT -%}{%- render "ls-alt", image: image -%}{%- endcapture -%}{{ LS_ALT | escape }}{% comment /ls-rpl %}{% endcomment %}">
+                  <img class="card__image" src="{{ image | img_url: '1200x' }}" alt="{{ image.alt | escape }}">
                 </noscript>
               </div>
             </div>
