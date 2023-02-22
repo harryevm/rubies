@@ -730,7 +730,13 @@ End automatically added Judge.me widget{% endcomment %}
         }
       },1000)
 
-      
+      $(".single-option-radio input[type='radio']:checked").parent().attr('class');
+      $('.template-product .size-drop-box .single-option-radio .swatch-container label').click(function(){
+        if($(this).prev().is(':checked') && !$(this).parent().hasClass('soldout') ){
+            $('.cart-buttons .button-wrapper.default-cart-button .btn-primary').removeAttr('disabled')
+            $('.cart-buttons .button-wrapper.default-cart-button .btn-primary').text('Add to cart')
+        }
+      })
 
     })
 
@@ -793,6 +799,8 @@ $(window).on("load", function () {
       scrollTop: $('#' + urlHash).offset().top - 160
     }, 4000);
     $('#'+urlHash).children('a').trigger('click');
+
+    
 
 });
 
