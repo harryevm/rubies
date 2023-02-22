@@ -9,10 +9,11 @@
 
 
 {% endcomment %}
+{%- capture LS_INPUT -%}
 <!doctype html>
-<html class="no-js" lang="{{ shop.locale }}">
+{% comment ls-rpl %}<html class="no-js" lang="{{ shop.locale }}">{% endcomment %}<html class="no-js" lang="{%- render "ls-language" -%}" dir="{%- render "ls-language-direction" -%}">{% comment /ls-rpl %}{% endcomment %}
 <head>
-
+  {%- render "ls-head" -%}
   
 
   <meta charset="utf-8">
@@ -223,3 +224,4 @@ setInterval(function(){
 </script>
 </body>
 </html>
+{%- endcapture -%}{%- render "ls-output", input: LS_INPUT -%}
