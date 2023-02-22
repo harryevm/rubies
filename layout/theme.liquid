@@ -181,7 +181,9 @@
     {% render 'fast_bundle_service' %}
 {% endif %} {% endcomment %}
 
-</head>
+{% capture cur %}{% include "booster-currency" %}{% endcapture %}{% unless cur contains "Liquid error" %}{{ cur }}{% endunless %}
+{% include 'bucks-cc' %}
+            </head>
 
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" data-template-directory="{{ template.directory }}" data-template="{{ template.name }}" >
 
