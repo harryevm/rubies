@@ -511,7 +511,7 @@ div.gallery .box figcaption.below h3 { overflow: visible; display: block; min-he
   footer.site-footer h4.activate { margin-bottom: 20px; }
 
     .gallery-section figure { width: 100%; max-width: unset !important; }
-    .gallery-section .contain-site-width{ width: 100%; }
+    .gallery-section .contain-site-width{ width: 96%; }
     .featured-row.section-standard .contain-site-width { width: 100%; padding: 0; }
     .gallery-section .contain-site-width .grid__item { margin-bottom: 50px; }
     .gallery-section .contain-site-width .grid__item figcaption.below { width: 96%; margin: 0 auto; }
@@ -639,7 +639,8 @@ div.gallery .box figcaption.below h3 { overflow: visible; display: block; min-he
   .simple-collection .product-container .box { padding: 0 5px; }
   .logo-bar >.logo-bar__item { width: 18% !important; }
   .logo-bar >.logo-bar__item img { width: 100%; height: auto; }
-  .gallery-section .contain-site-width { padding: 0; }
+  .gallery-section .contain-site-width { padding: 0; width: 100%; }
+  .gallery-section .wrapper { padding: 0; }
 
   header h4 {font-size: 20px!important; line-height: 30px !important;}
   .collection-list-updated header { margin-bottom: 30px; }
