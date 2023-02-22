@@ -712,6 +712,7 @@ header.collection-header>.container {
 
   .product-title-with-review .jdgm-prev-badge { display: flex !important; align-items: center; }
   .product-title-with-review .jdgm-prev-badge>span.jdgm-prev-badge__text { margin-left: 10px !important; margin-top: 2px !important; }
+  .jdgm-widget.jdgm-widget span.jdgm-prev-badge__text { display: block; text-align: left; margin: 0 !important; }
   
 }
 @media(max-width:480px){
