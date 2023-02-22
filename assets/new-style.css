@@ -495,7 +495,7 @@ div.gallery .box figcaption.below h3 { overflow: visible; display: block; min-he
   margin-left: 0;
 }
 .single-product .grid .product-images .product-title-with-review { display: block !important; position: static; }
-.single-product .grid .product-images .product-title-with-review .selection-wrapper.price { margin-top: 10px; }.
+.single-product .grid .product-images .product-title-with-review .selection-wrapper.price { margin-top: 10px; }
 .single-product .grid aside.product-aside .product-title-with-review { display: none; }
 
 }
