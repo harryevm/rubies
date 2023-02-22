@@ -48,6 +48,40 @@
 
       <div class="grid">
         <div class="product-images thumbnails-placement-{{ section.settings.thumbnails_placement }}">
+          <div class="product-title-with-review" style="display: none;">
+
+            <div class="product-title">
+              <h1 itemprop="name">
+                {% unless section_onboarding %}
+                  {{ product.title }}
+                {% else %}
+                  {{ 'homepage.onboarding.product_title' | t }}
+                {% endunless %}
+              </h1>
+            </div>
+            <a href="#Whatourcustomerssay" style=" position: absolute; height: 25px; width: 200px; "></a>
+            {% comment %}Start automatically added Judge.me widget{% endcomment %}
+            {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+          {% comment %}End automatically added Judge.me widget{% endcomment %}
+            <div class="selection-wrapper price product-single__price-{{ section.id }}">
+              {% unless section_onboarding %}
+                <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ current_variant.price | money_without_currency | remove: ',' }}">{{ current_variant.price | money_with_currency }}  </span>
+              {% else %}
+                <span class="money" id="ProductPrice-{{ section.id }}" data-ProductPrice itemprop="price" content="{{ 1999 | money_without_currency | remove: ',' }}">{{ 1999 | money }}</span>
+              {% endunless %}
+              
+              {% if current_variant.compare_at_price > current_variant.price %}
+                <p id="ComparePrice-{{ section.id }}" data-ComparePrice style="display:inline-block;">
+                  <span class="compareprice__label">{{ 'products.product.compare_at' | t }} </span><span class="money">{{ current_variant.compare_at_price | money }}</span>
+                </p>
+              {% else %}
+                <p id="ComparePrice-{{ section.id }}" data-ComparePrice style="display:none;">
+                  <span class="compareprice__label">{{ 'products.product.compare_at' | t }} </span><span class="money">{{ current_variant.compare_at_price | money }}</span>
+                </p>
+              {% endif %}
+            </div>
+          </div>
+
           <div class="images-container">
             {% include 'product-featured-image' %}
 
