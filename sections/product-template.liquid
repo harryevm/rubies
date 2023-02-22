@@ -732,7 +732,10 @@ End automatically added Judge.me widget{% endcomment %}
 
       $(".single-option-radio input[type='radio']:checked").parent().attr('class');
       $('.template-product .single-option-radio .swatch-container.color').click(function(){
-        $(".template-product .size-drop-box .single-option-radio .swatch-container:not(.color) input[type='radio']:checked + label").trigger('click')
+        setTimeout(function(){
+          $(".template-product .size-drop-box .single-option-radio .swatch-container:not(.color) input[type='radio']:checked + label").click();
+            alert()
+        })
       })
       $('.template-product .size-drop-box .single-option-radio .swatch-container:not(.color) label').click(function(){
         if($(this).prev().is(':checked') && !$(this).parent().hasClass('soldout') ){
