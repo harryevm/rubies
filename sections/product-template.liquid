@@ -801,12 +801,17 @@ End automatically added Judge.me widget{% endcomment %}
 <script>
 $(window).on("load", function () {
     var urlHash = window.location.href.split("#")[1];
-    $('html,body').animate({
-      scrollTop: $('#' + urlHash).offset().top 
-    }, 4000);
+    // $('html,body').animate({
+    //   scrollTop: $('#' + urlHash).offset().top 
+    // }, 4000);
     $('#'+urlHash).children('a').trigger('click');
 
-    
+    $('a[href^="#"]').click(function(){
+      $('html, body').animate({
+          scrollTop: $( $(this).attr('href') ).offset().top - 140
+      }, 500);
+      return false;
+  });
 
 });
 
