@@ -40,7 +40,7 @@
     
     <a id="{{ wrapper_id }}" href="{% if  template.name == 'cart' or template.name == 'product' %}javascript:;{% else %}{{ product.url }}{% endif %}" class="product_card">
       {%- assign image = product.featured_image -%}
-      <div  href="{{ product.url }}" class="product_card__image-wrapper" data-bgset="{% include 'bgset', image: image %}">
+      <div   class="product_card__image-wrapper" data-bgset="{% include 'bgset', image: image %}">
         {% assign image_widths = '295,394,590,700,800,1000,1200,1500,1800,2000,2400' %}
         {% include 'theme-rias' %}
         {% comment %}<a href="{{ product.url }}" class="pro_url">{% endcomment %}<img onclick="getUrlFunc($(this))" id="{{ img_id }}" class="product_card__image lazyload {% if settings.variant_rollover == true and product.images.size > 1 %}featured{% endif %}"
