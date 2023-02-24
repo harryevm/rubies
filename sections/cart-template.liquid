@@ -44,9 +44,9 @@
           {% endif %}
         {% endfor %}
       <div class="pre-order-message">{{preordermessage}}</div>
-      <div class="estimate-wr">
+      {% comment %}<div class="estimate-wr">
         Estimated arrival in <b>Canada</b> between <span>{% assign nextday = 1 | times: 172800 %}{{ "now" | date: "%s" | plus: nextday |date: "%a %b %e, %Y" }}</span> and <span>{% assign days = 1 | times: 777600 %} {{ "now" | date: "%s" | plus: days | date: "%a %b %e, %Y" }}</span></div>
-        <div class="cart-list">
+        {% endcomment %}<div class="cart-list">
           <form action="/cart" method="post" novalidate class="cart-form">
             <div class="cart-items" data-csapp_line_wrapper>
                
