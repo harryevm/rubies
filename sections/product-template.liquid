@@ -802,7 +802,7 @@ End automatically added Judge.me widget{% endcomment %}
 $(window).on("load", function () {
     var urlHash = window.location.href.split("#")[1];
     $('html,body').animate({
-      scrollTop: $('#' + urlHash).offset().top - 180
+      scrollTop: $('#' + urlHash).offset().top - 140
     }, 4000);
     $('#'+urlHash).children('a').trigger('click');
 
