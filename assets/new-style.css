@@ -792,3 +792,6 @@ section.collection.search-results .box.product { padding: 0 0 0 30px!important; 
 }
 header.site-header.minimal .wrapper, header.util .wrapper { width: 96% !important; max-width: unset !important; }
 .doubly-nice-select.currency-switcher.right { bottom: 65px; }
+
+
+a.proz-href { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
