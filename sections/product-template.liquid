@@ -670,15 +670,7 @@ End automatically added Judge.me widget{% endcomment %}
     // $(this).parent().toggleClass('active-dropdown');
   });
 
-$('a[href^="#"]').click(function(){
-  setTimeout(function(){
-    
-$('html, body').animate({
-          scrollTop: $( $(this).attr('href') ).offset().top - 140
-      }, 500);
-      return false;
-    },500)
-  });  
+ 
 
   $('.template-product .size-drop-box .single-option-radio .swatch-container:first-child > input').removeAttr('checked');
 // setTimeout(function(){
@@ -844,6 +836,13 @@ $('.simple-collection .product-container .box.product li.product-swatches__li').
       $(this).parents('.box.product').find('select[id*=ProductSelect-]').append('<option value="'+vlas+'"'+attr+'>'+vlas+'</option>');
 })
 })
-
+$('a[href^="#"]').click(function(){
+      
+$('html, body').animate({
+          scrollTop: $( $(this).attr('href') ).offset().top - 140
+      }, 500);
+      return false;
+ 
+  }); 
 
 </script>
