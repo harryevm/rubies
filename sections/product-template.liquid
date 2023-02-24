@@ -810,10 +810,13 @@ $(window).on("load", function () {
 
 });
 $('a[href^="#"]').click(function(){
-      $('html, body').animate({
+  setTimeout(function(){
+alert()      
+$('html, body').animate({
           scrollTop: $( $(this).attr('href') ).offset().top - 140
       }, 500);
       return false;
+    },500)
   });
 var selectedVal='',arr=[];
 $('.simple-collection .product-container .box.product li.product-swatches__li').click(function(){
