@@ -735,7 +735,7 @@ End automatically added Judge.me widget{% endcomment %}
         setTimeout(function(){
           $(".template-product .size-drop-box .single-option-radio .swatch-container:not(.color) input[type='radio']:checked + label").click();
          
-        },2000)
+        },500)
       })
       $('.template-product .size-drop-box .single-option-radio .swatch-container:not(.color) label').click(function(){
         if($(this).prev().is(':checked') && !$(this).parent().hasClass('soldout') ){
