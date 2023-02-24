@@ -21,7 +21,7 @@
         <h1>{{ 'cart.general.title' | t }}</h1>
       </header>
       {% if cart.item_count > 0 %}
-
+{% comment %}
       <div id="shipping-savings-message">
         {% assign shipping_value = section.settings.free_price | remove: "." %}
         {% assign cart_total = cart.total_price %}
@@ -31,7 +31,7 @@
         {% else %}
           <p>You've got free shipping </p>
         {% endif %}
-        </div>
+        </div>{% endcomment %}
         {% for item in cart.items %}
        
 
