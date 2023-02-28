@@ -24,20 +24,7 @@
              <p><ls-static-509291>Pick up some RUBIES T-shirts in many vibrant styles for the whole family.  All proceeds go towards helping achieve my goal of sending 1000 pairs of RUBIES swimwear to trans girls from families in need.  Every girl should feel comfortable swimming and chilling out at the beach!</ls-static-509291></p>
              <p> </p>
   
-             <div class="simple-collection layout-3">
-                 <div class="wrapper">
-                     <div class="product-container">
-  
-                         {% for product in collections['every-girl-deserves-to-shine-campaign-tees'].products limit: 3  %}
-                         {% include 'product-grid-item' %}
-                         {% else %}
-                         {% for i in (1..product_limit) %}
-                         {% include 'placeholder-product-grid-item' %}
-                         {% endfor %}
-                         {% endfor %}
-                     </div>
-                 </div>
-             </div>
+
               
   
   
