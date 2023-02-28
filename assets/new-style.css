@@ -434,6 +434,10 @@ span.jdgm-prev-badge__text {text-decoration: none;}
 
     .csapps-p-detail .csapps-p-title { margin-bottom: 20px; }
     .csapps-p-detail .csapps-p-title a { font-size: 18px !important; font-weight: 600; line-height: 20px !important; }
+
+
+    .section-standard .feature-row__item.feature-row__text { padding: 20px; }
+    .simple-collection .product-container.slick-dotted.slick-slider { margin-bottom: 0; }
 }
 @media(max-width:800px){
   
@@ -648,7 +652,7 @@ div.gallery .box figcaption.below h3 { overflow: visible; display: block; min-he
   header h4 {font-size: 20px!important; line-height: 30px !important;}
   .collection-list-updated header { margin-bottom: 30px; }
   .gallery-box-wr figcaption.below h3 { font-size: 18px; line-height: 25px; font-weight: 900 !important; letter-spacing: 0; }
-  .gallery-box-wr figcaption.below p { font-size: 14px; line-height: 25px; }
+  .gallery-box-wr figcaption.below p { font-size: 14px; line-height: 25px;min-height: unset; }
   .gallery-section .contain-site-width .grid__item figcaption.below { width: 70%; }
   .simple-collection input.btn.btn-primary { width: 100%; padding: 10px !important; font-size: 18px !important; line-height: 30px;margin-top:20px; }
   footer.site-footer .box.trust-badge { text-align: left; }
