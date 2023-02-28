@@ -1,13 +1,24 @@
 {
-    "sections": {
-      "main": {
-        "type": "main-campaign",
-        "settings": {
-        }
+  "sections": {
+    "main": {
+      "type": "main-campaign",
+      "settings": {
       }
     },
-    "order": [
-      "main"
-    ]
-  }
-  
+    "3e706091-5033-493f-a19a-695d611cf53c": {
+      "type": "simple-collection",
+      "settings": {
+        "title": "Featured collection",
+        "center_heading": false,
+        "button_label": "",
+        "button_link": "",
+        "collection": "every-girl-deserves-to-shine-campaign",
+        "product_count_range": 4
+      }
+    }
+  },
+  "order": [
+    "main",
+    "3e706091-5033-493f-a19a-695d611cf53c"
+  ]
+}
