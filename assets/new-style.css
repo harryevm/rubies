@@ -498,6 +498,9 @@ div.gallery .box figcaption.below h3 { overflow: visible; display: block; min-he
 .single-product .grid .product-images .product-title-with-review .selection-wrapper.price { margin-top: 10px; }
 .single-product .grid aside.product-aside .product-title-with-review { display: none; }
 
+
+.simple-collection header.centered { margin: 0; padding: 0; }
+
 }
 @media(max-width:701px){
   .site-logo.has-image { margin: 0 auto; }
