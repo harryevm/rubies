@@ -692,6 +692,7 @@
             "type": "featured_collection",
             "settings": {
               "collection": "bikini-tops-and-bottoms",
+              "collection_img": "shopify:\/\/shop_images\/icons_1.png",
               "collection_title": "Beach & Pool"
             }
           },
@@ -699,6 +700,7 @@
             "type": "featured_collection",
             "settings": {
               "collection": "every-girl-deserves-to-shine-campaign",
+              "collection_img": "shopify:\/\/shop_images\/icons_5.png",
               "collection_title": "Dance & Gym"
             }
           },
@@ -706,6 +708,7 @@
             "type": "featured_collection",
             "settings": {
               "collection": "every-girl-deserves-to-shine-campaign-postcards",
+              "collection_img": "shopify:\/\/shop_images\/icons_4.png",
               "collection_title": "Everyday Comfort"
             }
           },
@@ -713,6 +716,7 @@
             "type": "featured_collection",
             "settings": {
               "collection": "frontpage",
+              "collection_img": "shopify:\/\/shop_images\/icons_3.png",
               "collection_title": "Pride"
             }
           },
@@ -720,6 +724,7 @@
             "type": "featured_collection",
             "settings": {
               "collection": "bikini-tops-and-bottoms",
+              "collection_img": "shopify:\/\/shop_images\/icons_2.png",
               "collection_title": "Bundles"
             }
           }
