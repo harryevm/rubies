@@ -116,7 +116,7 @@
             "settings": {
               "title": "Popular products",
               "text": "",
-              "footer_linklist": "popular-products"
+              "footer_linklist": ""
             }
           },
           "63403eca-f29c-47b6-89a1-932b0380bbda": {
@@ -155,15 +155,13 @@
         ],
         "settings": {
           "show_payment_icons": false,
-          "trust_richtext": "",
-          "trust_badge": "shopify:\/\/shop_images\/rubies-logo.png"
+          "trust_richtext": ""
         }
       },
       "166297655829f69ad1": {
         "type": "featured-row",
         "settings": {
           "section_padding": true,
-          "image": "shopify:\/\/shop_images\/Group_113_2x_de0a001e-f66e-4e46-bb07-2b307f09630c.png",
           "layout": "left",
           "text_align": "left",
           "title": "Donate A Pair To Families In Need",
@@ -394,11 +392,7 @@
           "1664173457268d2b5f-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Group_340.png",
-              "mobile_image": "shopify:\/\/shop_images\/Group_340.png",
               "link": "",
-              "title": "shopify:\/\/shop_images\/heading-text.png",
-              "mtitle": "shopify:\/\/shop_images\/Group_336.png",
               "text": "<p><strong>Form-fitting clothing for trans girls.<\/strong><\/p><p><\/p><p>We want every active trans girl to be as confident and comfortable in her clothes as her friends.<\/p>",
               "button_label": "Shop Shaping Wear",
               "button_link": "#",
@@ -510,28 +504,25 @@
           "47bda5f8-fba2-4ee0-bf2b-aa1f7af658e6": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/CNN.png",
+              "image": "shopify:\/\/shop_images\/cnn.png",
               "link": "https:\/\/edition.cnn.com\/2021\/02\/06\/us\/dad-trans-swimwear-daughter-trnd\/index.html"
             }
           },
           "d78a853f-d021-47ea-be04-0ae284dc2282": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/todays-parents.png",
               "link": "https:\/\/www.todaysparent.com\/family\/style\/rubies-swimwear-line-for-trans-girls\/"
             }
           },
           "6c836689-df08-4e92-86e2-717b15dbe96f": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/the-Washington.png",
               "link": "https:\/\/www.thelily.com\/this-dad-started-a-swimwear-line-with-his-transgender-daughter-its-giving-other-families-hope\/"
             }
           },
           "0836be43-ad90-455e-9795-5807f24d8038": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/good-morning.png",
               "link": "https:\/\/www.goodmorningamerica.com\/living\/video\/dad-daughter-create-inclusive-swimwear-trans-girls-77077472"
             }
           },
@@ -545,14 +536,12 @@
           "6b651466-a83a-4c68-9d18-22aad16bae0a": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/kidsspot.png",
               "link": "https:\/\/www.kidspot.com.au\/news\/transgender-girls-share-the-first-time-they-tried-rubies-swimwear\/news-story\/83da1962c76a6d80491c63593fb50a80"
             }
           },
           "1591114062327-0": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/CBC.png",
               "link": "https:\/\/www.cbc.ca\/news\/canada\/toronto\/swimwear-bathing-suits-transgender-rubies-1.5493054"
             }
           }
@@ -611,7 +600,6 @@
           "166296728818c2c2ea-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/CONFIDENCE.png",
               "label": "Shop Beach & Pool",
               "link": "shopify:\/\/products\/form-fitting-bikini-bottom",
               "title": "Confidence At The Beach",
@@ -621,7 +609,6 @@
           "166296728818c2c2ea-3": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Image_18.png",
               "label": "Shop Everyday Wear",
               "link": "shopify:\/\/collections\/underwear",
               "title": "Comfortable In Everything",
@@ -631,7 +618,6 @@
           "166296728818c2c2ea-1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Group_333.png",
               "label": "Shop Dance & Gym",
               "link": "shopify:\/\/collections\/tees",
               "title": "Ready For The Gym And Dance",
@@ -701,7 +687,6 @@
             "type": "featured_collection",
             "settings": {
               "collection": "bikini-tops-and-bottoms",
-              "collection_img": "shopify:\/\/shop_images\/icons_1.png",
               "collection_title": "Beach & Pool"
             }
           },
@@ -709,7 +694,6 @@
             "type": "featured_collection",
             "settings": {
               "collection": "every-girl-deserves-to-shine-campaign",
-              "collection_img": "shopify:\/\/shop_images\/icons_5.png",
               "collection_title": "Dance & Gym"
             }
           },
@@ -717,7 +701,6 @@
             "type": "featured_collection",
             "settings": {
               "collection": "every-girl-deserves-to-shine-campaign-postcards",
-              "collection_img": "shopify:\/\/shop_images\/icons_4.png",
               "collection_title": "Everyday Comfort"
             }
           },
@@ -725,7 +708,6 @@
             "type": "featured_collection",
             "settings": {
               "collection": "frontpage",
-              "collection_img": "shopify:\/\/shop_images\/icons_3.png",
               "collection_title": "Pride"
             }
           },
@@ -733,7 +715,6 @@
             "type": "featured_collection",
             "settings": {
               "collection": "bikini-tops-and-bottoms",
-              "collection_img": "shopify:\/\/shop_images\/icons_2.png",
               "collection_title": "Bundles"
             }
           }
@@ -812,7 +793,6 @@
         "type": "featured-row",
         "settings": {
           "section_padding": true,
-          "image": "shopify:\/\/shop_images\/swim_590x_50055bc7-5ea7-4d9c-a397-7683db446cd6.gif",
           "layout": "left",
           "text_align": "left",
           "title": "Send A Gift Of Comfort And Confidence",
@@ -974,12 +954,6 @@
       },
       "14060646107696862457": {
         "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "776302416715791028": {
-        "type": "shopify:\/\/apps\/bucks-currency-converter-pro\/blocks\/app-embed\/4f0a9b06-9da4-4a49-b378-2de9d23a3af3",
         "disabled": false,
         "settings": {
         }
