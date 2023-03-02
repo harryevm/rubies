@@ -116,7 +116,7 @@
             "settings": {
               "title": "Popular products",
               "text": "",
-              "footer_linklist": ""
+              "footer_linklist": "popular-products"
             }
           },
           "63403eca-f29c-47b6-89a1-932b0380bbda": {
@@ -155,13 +155,15 @@
         ],
         "settings": {
           "show_payment_icons": false,
-          "trust_richtext": ""
+          "trust_richtext": "",
+          "trust_badge": "shopify:\/\/shop_images\/rubies-logo.png"
         }
       },
       "166297655829f69ad1": {
         "type": "featured-row",
         "settings": {
           "section_padding": true,
+          "image": "shopify:\/\/shop_images\/Group_113_2x_de0a001e-f66e-4e46-bb07-2b307f09630c.png",
           "layout": "left",
           "text_align": "left",
           "title": "Donate A Pair To Families In Need",
@@ -392,7 +394,11 @@
           "1664173457268d2b5f-0": {
             "type": "image",
             "settings": {
+              "image": "shopify:\/\/shop_images\/Group_340.png",
+              "mobile_image": "shopify:\/\/shop_images\/Group_340.png",
               "link": "",
+              "title": "shopify:\/\/shop_images\/heading-text.png",
+              "mtitle": "shopify:\/\/shop_images\/Group_336.png",
               "text": "<p><strong>Form-fitting clothing for trans girls.<\/strong><\/p><p><\/p><p>We want every active trans girl to be as confident and comfortable in her clothes as her friends.<\/p>",
               "button_label": "Shop Shaping Wear",
               "button_link": "#",
@@ -504,14 +510,14 @@
           "47bda5f8-fba2-4ee0-bf2b-aa1f7af658e6": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/CNN_97fea391-eb75-4d52-94e0-585eb2a2dfe5.png",
+              "image": "shopify:\/\/shop_images\/CNN.png",
               "link": "https:\/\/edition.cnn.com\/2021\/02\/06\/us\/dad-trans-swimwear-daughter-trnd\/index.html"
             }
           },
           "d78a853f-d021-47ea-be04-0ae284dc2282": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/today_19cfc091-e6e9-4f14-aeb4-06ac236b2e15.png",
+              "image": "shopify:\/\/shop_images\/todays-parents.png",
               "link": "https:\/\/www.todaysparent.com\/family\/style\/rubies-swimwear-line-for-trans-girls\/"
             }
           },
@@ -532,7 +538,7 @@
           "cbee5106-64e5-449f-95a6-3e2692fa0ef2": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/today_19cfc091-e6e9-4f14-aeb4-06ac236b2e15.png",
+              "image": "shopify:\/\/shop_images\/today.png",
               "link": "https:\/\/www.today.com\/parents\/dad-designs-swimwear-transgender-girls-daughter-t206361"
             }
           },
@@ -605,6 +611,7 @@
           "166296728818c2c2ea-0": {
             "type": "image",
             "settings": {
+              "image": "shopify:\/\/shop_images\/CONFIDENCE.png",
               "label": "Shop Beach & Pool",
               "link": "shopify:\/\/products\/form-fitting-bikini-bottom",
               "title": "Confidence At The Beach",
@@ -614,6 +621,7 @@
           "166296728818c2c2ea-3": {
             "type": "image",
             "settings": {
+              "image": "shopify:\/\/shop_images\/Image_18.png",
               "label": "Shop Everyday Wear",
               "link": "shopify:\/\/collections\/underwear",
               "title": "Comfortable In Everything",
@@ -623,6 +631,7 @@
           "166296728818c2c2ea-1": {
             "type": "image",
             "settings": {
+              "image": "shopify:\/\/shop_images\/Group_333.png",
               "label": "Shop Dance & Gym",
               "link": "shopify:\/\/collections\/tees",
               "title": "Ready For The Gym And Dance",
@@ -803,6 +812,7 @@
         "type": "featured-row",
         "settings": {
           "section_padding": true,
+          "image": "shopify:\/\/shop_images\/swim_590x_50055bc7-5ea7-4d9c-a397-7683db446cd6.gif",
           "layout": "left",
           "text_align": "left",
           "title": "Send A Gift Of Comfort And Confidence",
@@ -964,6 +974,12 @@
       },
       "14060646107696862457": {
         "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "776302416715791028": {
+        "type": "shopify:\/\/apps\/bucks-currency-converter-pro\/blocks\/app-embed\/4f0a9b06-9da4-4a49-b378-2de9d23a3af3",
         "disabled": false,
         "settings": {
         }
